@@ -218,51 +218,44 @@ export function Menu({
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
-      <div className="flex-grow-[0.6] overflow-hidden">
+      <div className="flex-grow-[0.9] overflow-hidden">
         {/* Top display section */}
-        <div className="h-full flex flex-col overflow-hidden">
-          <div className="flex-grow overflow-hidden">
-            <div
-              {...swipeHandlers}
-              className="relative h-full rounded-lg overflow-hidden"
-            >
-              <Image
-                src={selectedItem?.image || "/placeholder.svg"}
-                alt={selectedItem?.name || "Selected item"}
-                fill
-                className="object-cover"
-                priority
-              />
-              {selectedItem?.isChefSpecial && (
-                <div className="absolute top-2 right-2 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
-                  <Star className="w-4 h-4 mr-1" />
-                  Chef's Special
-                </div>
-              )}
+        <div className="h-full flex max-lg:flex-col p-3 gap-4 overflow-hidden">
+          <div className="h-full flex flex-col flex-grow-[0.7]">
+            <div className="flex-grow overflow-hidden">
+              <div
+                {...swipeHandlers}
+                className="relative h-full rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={selectedItem?.image || "/placeholder.svg"}
+                  alt={selectedItem?.name || "Selected item"}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                {selectedItem?.isChefSpecial && (
+                  <div className="absolute top-2 right-2 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                    <Star className="w-4 h-4 mr-1" />
+                    Chef's Special
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="mt-4 text-center">
+              <h1 className="font-playfair text-2xl font-semibold mb-2 text-[#2c2c2c]">
+                {selectedItem?.name || "Select an item"}
+              </h1>
+              <p className="text-sm text-[#7c7c7c]">
+                {selectedItem?.description ||
+                  "Item description will appear here"}
+              </p>
             </div>
           </div>
-          <div className="mt-4 text-center">
-            <h1 className="font-playfair text-2xl font-semibold mb-2 text-[#2c2c2c]">
-              {selectedItem?.name || "Select an item"}
-            </h1>
-            <p className="text-sm text-[#7c7c7c]">
-              {selectedItem?.description || "Item description will appear here"}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex-grow-[0.4] overflow-hidden mt-4">
-        {/* Bottom section */}
-        <div className="h-full flex flex-col overflow-hidden">
           {/* Right Column - Details */}
-          <div className="mb-4">
-            <div className="bg-white rounded-lg p-4 space-y-3 shadow-md relative overflow-hidden pricing-section">
-              <div className="absolute opacity-10" />
-              <div
-                className="absolute inset-0 border border-[#ffd700] rounded-lg"
-                style={{ boxShadow: "inset 0 0 10px rgba(255, 215, 0, 0.5)" }}
-              />
+          <div className="mb-4 flex-grow-[0.3]">
+            <div className="bg-white rounded-lg p-4 space-y-3 shadow-sm relative overflow-hidden">
+              <div className="absolute rounded-lg" />
               <div className="relative z-10">
                 <h3 className="font-playfair font-medium text-lg mb-2 text-[#2c2c2c]">
                   Pricing
@@ -271,13 +264,13 @@ export function Menu({
                   <div className="space-y-1">
                     <div className="text-xs text-[#7c7c7c]">Full</div>
                     <div className="font-medium text-sm">
-                      ${selectedItem?.price?.full?.toFixed(2) ?? "N/A"}
+                      ${selectedItem?.price?.full.toFixed(2) ?? "N/A"}
                     </div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-xs text-[#7c7c7c]">Half</div>
                     <div className="font-medium text-sm">
-                      ${selectedItem?.price?.half?.toFixed(2) ?? "N/A"}
+                      ${selectedItem?.price?.half.toFixed(2) ?? "N/A"}
                     </div>
                   </div>
                 </div>
@@ -289,13 +282,13 @@ export function Menu({
                   <div className="space-y-1">
                     <div className="text-xs text-[#7c7c7c]">Full</div>
                     <div className="text-xs">
-                      {selectedItem?.calories?.full || "N/A"} cal
+                      {selectedItem?.calories.full || "N/A"} cal
                     </div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-xs text-[#7c7c7c]">Half</div>
                     <div className="text-xs">
-                      {selectedItem?.calories?.half || "N/A"} cal
+                      {selectedItem?.calories.half || "N/A"} cal
                     </div>
                   </div>
                 </div>
@@ -327,9 +320,14 @@ export function Menu({
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
+      <div className="flex-grow-[0.1] overflow-hidden mt-4">
+        {/* Bottom section */}
+        <div className="h-full flex flex-col overflow-hidden">
           {/* Category Section */}
-          <div className="bg-white shadow-md">
+          <div className="bg-white shadow-sm">
             <ScrollArea className="w-full" ref={categoryRef}>
               <div className="flex p-2 gap-2">
                 {categories.map((category) => (
