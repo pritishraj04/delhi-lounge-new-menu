@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import { Button } from "@/components/ui/button"
-import { Info } from "lucide-react"
+import { useState, useEffect } from "react";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Button } from "@/components/ui/button";
+import { Info } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -11,24 +11,33 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import Image from "next/image"
+} from "@/components/ui/dialog";
+import Image from "next/image";
 
 interface DrinkItem {
-  id: number
-  name: string
-  price: number
-  category: string
-  description: string
+  id: number;
+  name: string;
+  price: number;
+  category: string;
+  image: string;
+  description: string;
 }
 
 const drinkItems: DrinkItem[] = [
-  { id: 1, name: "Old Monk Rum", price: 8.99, category: "Rum", description: "A dark rum with a strong, smooth flavor" },
+  {
+    id: 1,
+    name: "Old Monk Rum",
+    price: 8.99,
+    category: "Rum",
+    image: "/menu-imgs/bar/tropic-city.jpg",
+    description: "A dark rum with a strong, smooth flavor",
+  },
   {
     id: 2,
     name: "Johnnie Walker Black Label",
     price: 12.99,
     category: "Whiskey",
+    image: "/menu-imgs/bar/tropic-tingle.jpg",
     description: "A blend of whiskies, each aged for at least 12 years",
   },
   {
@@ -36,6 +45,7 @@ const drinkItems: DrinkItem[] = [
     name: "Absolut Vodka",
     price: 9.99,
     category: "Vodka",
+    image: "/menu-imgs/bar/turmeric-gin-old-fashioned.jpg",
     description: "A Swedish vodka made from winter wheat",
   },
   {
@@ -43,6 +53,7 @@ const drinkItems: DrinkItem[] = [
     name: "Bombay Sapphire Gin",
     price: 10.99,
     category: "Gin",
+    image: "/menu-imgs/bar/very-berry-sour.jpg",
     description: "A London dry gin with a distinctive blue bottle",
   },
   {
@@ -50,26 +61,29 @@ const drinkItems: DrinkItem[] = [
     name: "Jose Cuervo Tequila",
     price: 11.99,
     category: "Tequila",
+    image: "/menu-imgs/bar/imag.jpg",
     description: "A mixto tequila made from blue agave",
   },
   // Add more drink items here...
-]
+];
 
-const categories = ["All", "Rum", "Whiskey", "Vodka", "Gin", "Tequila"]
+const categories = ["All", "Rum", "Whiskey", "Vodka", "Gin", "Tequila"];
 
 export function BarMenu({ selectedItem }) {
-  const [currentCategory, setCurrentCategory] = useState("All")
-  const [highlightedItem, setHighlightedItem] = useState(null)
+  const [currentCategory, setCurrentCategory] = useState("All");
+  const [highlightedItem, setHighlightedItem] = useState(null);
 
   useEffect(() => {
     if (selectedItem) {
-      setHighlightedItem(selectedItem.id)
-      setTimeout(() => setHighlightedItem(null), 3000)
+      setHighlightedItem(selectedItem.id);
+      setTimeout(() => setHighlightedItem(null), 3000);
     }
-  }, [selectedItem])
+  }, [selectedItem]);
 
   const filteredDrinks =
-    currentCategory === "All" ? drinkItems : drinkItems.filter((item) => item.category === currentCategory)
+    currentCategory === "All"
+      ? drinkItems
+      : drinkItems.filter((item) => item.category === currentCategory);
 
   return (
     <div className="flex-1 flex flex-col overflow-hidden">
@@ -102,10 +116,14 @@ export function BarMenu({ selectedItem }) {
             >
               <div>
                 <span className="font-medium">{drink.name}</span>
-                <span className="text-sm text-gray-500 ml-2">({drink.category})</span>
+                <span className="text-sm text-gray-500 ml-2">
+                  ({drink.category})
+                </span>
               </div>
               <div className="flex items-center">
-                <span className="font-medium mr-2">${drink.price.toFixed(2)}</span>
+                <span className="font-medium mr-2">
+                  ${drink.price.toFixed(2)}
+                </span>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="ghost" size="sm">
@@ -116,7 +134,12 @@ export function BarMenu({ selectedItem }) {
                     <DialogHeader>
                       <DialogTitle>{drink.name}</DialogTitle>
                       <div className="relative w-full aspect-video mb-4">
-                        <Image src="/placeholder.svg" alt={drink.name} fill className="object-cover rounded-md" />
+                        <Image
+                          src={drink.image}
+                          alt={drink.name}
+                          fill
+                          className="object-cover rounded-md"
+                        />
                       </div>
                       <DialogDescription>{drink.description}</DialogDescription>
                     </DialogHeader>
@@ -129,8 +152,7 @@ export function BarMenu({ selectedItem }) {
         <ScrollBar />
       </ScrollArea>
     </div>
-  )
+  );
 }
 
-export { drinkItems }
-
+export { drinkItems };
