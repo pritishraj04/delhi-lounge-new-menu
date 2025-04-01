@@ -17,5 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 import './globals.css'
 
 export const metadata = {
-      generator: 'v0.dev'
+  title: 'The Delhi Lounge',
+  description: 'The Delhi Lounge menu application. This application is design and developed at polardot.in',
+
     };

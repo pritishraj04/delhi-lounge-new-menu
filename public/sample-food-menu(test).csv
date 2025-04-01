@@ -1,0 +1,14 @@
+category,sub category,title,description,metrics,image,chefSpecial,vegan,allergens
+Appetizers,Vegetarian,Paneer Tikka,Cottage cheese cubes marinated in yogurt and spices,portion:full;full_weight:200g;full_cal:350kcal;full_price:$12.99;portion:half;half_weight:100g;half_cal:175kcal;half_price:$7.99,/placeholder.svg,true,true,Dairy;Gluten
+Appetizers,Non-Vegetarian,Chicken Tikka,Boneless chicken pieces marinated in spices and yogurt,portion:full;full_weight:250g;full_cal:400kcal;full_price:$14.99;portion:half;half_weight:125g;half_cal:200kcal;half_price:$8.99,/placeholder.svg,false,false,Dairy
+Appetizers,,Vegetable Samosa,Crispy pastry filled with spiced potatoes and peas,weight:150g;cal:280kcal;price:$6.99,/placeholder.svg,false,true,Gluten
+Main Course,Vegetarian,Palak Paneer,Cottage cheese cubes in a creamy spinach sauce,portion:full;full_weight:300g;full_cal:450kcal;full_price:$15.99;portion:half;half_weight:150g;half_cal:225kcal;half_price:$8.99,/placeholder.svg,false,false,Dairy
+Main Course,Non-Vegetarian,Butter Chicken,Tender chicken in a creamy tomato sauce,portion:full;full_weight:350g;full_cal:550kcal;full_price:$18.99;portion:half;half_weight:175g;half_cal:275kcal;half_price:$10.99,/placeholder.svg,true,false,Dairy;Nuts
+Main Course,,Vegetable Biryani,Fragrant basmati rice cooked with mixed vegetables and spices,weight:400g;cal:480kcal;price:$14.99,/placeholder.svg,false,true,Gluten
+Desserts,,Gulab Jamun,Deep-fried milk solids soaked in sugar syrup,portion:full;full_weight:150g;full_cal:300kcal;full_price:$6.99;portion:half;half_weight:75g;half_cal:150kcal;half_price:$3.99,/placeholder.svg,false,false,Dairy;Gluten
+Desserts,,Rasmalai,Soft cottage cheese patties soaked in sweetened milk,portion:full;full_weight:200g;full_cal:350kcal;full_price:$7.99;portion:half;half_weight:100g;half_cal:175kcal;half_price:$4.99,/placeholder.svg,false,false,Dairy;Nuts
+Drinks,,Mango Lassi,Refreshing yogurt-based drink with mango pulp,weight:300ml;cal:200kcal;price:$4.99,/placeholder.svg,false,false,Dairy
+Drinks,,Masala Chai,Spiced Indian tea with milk,weight:200ml;cal:120kcal;price:$3.99,/placeholder.svg,false,false,Dairy
+Drinks,,Fresh Lime Soda,Refreshing lime juice with soda water and mint,weight:250ml;cal:80kcal;price:$3.99,/placeholder.svg,false,true,None
+Main Course,Vegetarian,Chana Masala,Spiced chickpea curry with fragrant spices,portion:full;full_weight:300g;full_cal:380kcal;full_price:$14.99;portion:half;half_weight:150g;half_cal:190kcal;half_price:$7.99,/placeholder.svg,false,true,None
+

@@ -1,14 +1,81 @@
 category,sub category,title,description,metrics,image,chefSpecial,vegan,allergens
-Appetizers,Vegetarian,Paneer Tikka,Cottage cheese cubes marinated in yogurt and spices,portion:full;full_weight:200g;full_cal:350kcal;full_price:$12.99;portion:half;half_weight:100g;half_cal:175kcal;half_price:$7.99,/placeholder.svg,true,true,Dairy;Gluten
-Appetizers,Non-Vegetarian,Chicken Tikka,Boneless chicken pieces marinated in spices and yogurt,portion:full;full_weight:250g;full_cal:400kcal;full_price:$14.99;portion:half;half_weight:125g;half_cal:200kcal;half_price:$8.99,/placeholder.svg,false,false,Dairy
-Appetizers,,Vegetable Samosa,Crispy pastry filled with spiced potatoes and peas,weight:150g;cal:280kcal;price:$6.99,/placeholder.svg,false,true,Gluten
-Main Course,Vegetarian,Palak Paneer,Cottage cheese cubes in a creamy spinach sauce,portion:full;full_weight:300g;full_cal:450kcal;full_price:$15.99;portion:half;half_weight:150g;half_cal:225kcal;half_price:$8.99,/placeholder.svg,false,false,Dairy
-Main Course,Non-Vegetarian,Butter Chicken,Tender chicken in a creamy tomato sauce,portion:full;full_weight:350g;full_cal:550kcal;full_price:$18.99;portion:half;half_weight:175g;half_cal:275kcal;half_price:$10.99,/placeholder.svg,true,false,Dairy;Nuts
-Main Course,,Vegetable Biryani,Fragrant basmati rice cooked with mixed vegetables and spices,weight:400g;cal:480kcal;price:$14.99,/placeholder.svg,false,true,Gluten
-Desserts,,Gulab Jamun,Deep-fried milk solids soaked in sugar syrup,portion:full;full_weight:150g;full_cal:300kcal;full_price:$6.99;portion:half;half_weight:75g;half_cal:150kcal;half_price:$3.99,/placeholder.svg,false,false,Dairy;Gluten
-Desserts,,Rasmalai,Soft cottage cheese patties soaked in sweetened milk,portion:full;full_weight:200g;full_cal:350kcal;full_price:$7.99;portion:half;half_weight:100g;half_cal:175kcal;half_price:$4.99,/placeholder.svg,false,false,Dairy;Nuts
-Drinks,,Mango Lassi,Refreshing yogurt-based drink with mango pulp,weight:300ml;cal:200kcal;price:$4.99,/placeholder.svg,false,false,Dairy
-Drinks,,Masala Chai,Spiced Indian tea with milk,weight:200ml;cal:120kcal;price:$3.99,/placeholder.svg,false,false,Dairy
-Drinks,,Fresh Lime Soda,Refreshing lime juice with soda water and mint,weight:250ml;cal:80kcal;price:$3.99,/placeholder.svg,false,true,None
-Main Course,Vegetarian,Chana Masala,Spiced chickpea curry with fragrant spices,portion:full;full_weight:300g;full_cal:380kcal;full_price:$14.99;portion:half;half_weight:150g;half_cal:190kcal;half_price:$7.99,/placeholder.svg,false,true,None
-
+Salads & Soups,,Desi-Caeser Salad (Malai Broccoli),"A twist to the iconic salad featuring crisp romaine, caeser dressing, parmesan, & your choice of toppings.",weight:180g;cal:178kcal;price:$12,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Gluten
+Salads & Soups,,Desi-Caeser Salad (Malai Chicken),"A twist to the iconic salad featuring crisp romaine, caeser dressing, parmesan, & your choice of toppings.",weight:180g;cal:178kcal;price:$14,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Gluten
+Salads & Soups,,Tandoori Pineapple & Kale Salad,"Charred pineapple marinated in tandoori spices, tossed with kale, feta cheese, & mint yogurt dressing.",weight:180g;cal:116kcal;price:$12,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
+Salads & Soups,,Smokey Tomato Soup,"Char-grilled tomato broth, delicately spiced, enhanced with the freshness of coriander.",weight:150g;cal:133kcal;price:$6,/img/food-menu/smokey-tomato-shorba.jpg,FALSE,TRUE,Gluten
+Salads & Soups,,Fenugreek Chicken Soup,"Exquisitely spiced chicken broth, enhanced with fenugreek leaves.",weight:150g;cal:154kcal;price:$8,/img/food-menu/chicken-fenugreek-shorba.jpg,FALSE,FALSE,Dairy
+Chaat,,Pani Puri (Jaljeera | Gud Imli | Pineapple),"Street style puffs stuffed with chickpeas and potatoes, topped with flavored waters.",weight:180g;cal:197kcal;price:$12,/img/food-menu/pani-puri.jpg,FALSE,TRUE,Dairy;Nuts
+Chaat,,Karol Bagh Aloo Tikki,"Stuffed potato patties, topped with whipped yogurt and chutneys.",weight:120g;cal:102kcal;price:$12,/img/food-menu/karol-bagh-aloo-tikki.jpg,FALSE,FALSE,Gluten
+Chaat,,Bhalla Papdi Chaat,"Yellow lentil dumplings soaked in sweetened yogurt with chutneys, served with crisp discs.",weight:150g;cal:204kcal;price:$12,/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,FALSE,Dairy;Gluten
+Chaat,,Samosa Platter,"Crisp fried triangular pastry, stuffed with Paneer | Potato | Peas | Corn mixtures.",weight:160g;cal:320kcal;price:$10,/img/food-menu/samosa-platter.jpg,FALSE,FALSE,Dairy;Nuts
+Chaat,,Palak Patta Chaat,"Crispy fried spinach leaves tossed with spices, yogurt, and chutneys.",weight:160g;cal:198kcal;price:$12,/img/food-menu/palak-patta-chaat.jpg,FALSE,TRUE,Dairy
+Appetizers,Vegetarian,Tandoori Cottage Cheese,"Stuffed paneer, capsicum and onions marinated in yogurt and char-grilled, lemon & black pepper chutney.",weight:250g;cal:643kcal;price:$22,/img/food-menu/tandoori-cottage-cheese.jpg,FALSE,FALSE,Dairy
+Appetizers,Vegetarian,Truffle Malai Broccoli,"Tender broccoli in a mixture of cream and spices, char-grilled, cranberry & ginger launji.",weight:250g;cal:283kcal;price:$18,/img/food-menu/malai-brocolli-tikka.jpg,FALSE,FALSE,None
+Appetizers,Vegetarian,Tandoori Russet Potatoes,"Scooped potatoes stuffed with a mixture of spiced potatoes and dry fruits, char-grilled, garlic chutney.",weight:250g;cal:319kcal;price:$18,/img/food-menu/tandoori-russet-potatoes.jpg,FALSE,FALSE,None
+Appetizers,Vegetarian,Peas & Mint Kebab,"Ground green pea patties enhanced with fresh mint and stuffed with cheese, cranberry & ginger launji.",weight:250g;cal:337kcal;price:$18,/img/food-menu/matar-ke-kebab.jpg,FALSE,FALSE,None
+Appetizers,Vegetarian,Beetroot Shammi Labgeer,"Melt-in-mouth beetroot patties stuffed with hung yogurt, lemon & black pepper chutney.",weight:250g;cal:311kcal;price:$18,/img/food-menu/betroot-shammi-labgeer.jpg,FALSE,FALSE,None
+Appetizers,Vegetarian,Garden Grill Seekh,"Minced vegetables marinated and skewered, char-grilled, pineapple & green chili chutney.",weight:250g;cal:325kcal;price:$18,/img/food-menu/garden-grill-seekh-kebab.jpg,FALSE,FALSE,None
+Appetizers,Seafood,Tandoori Lobster,"Lobster tail, marinated with spices, char-grilled, pineapple & green chili chutney.",weight:250g;cal:415kcal;price:$38,/img/food-menu/tandoori-prawns.jpg,FALSE,FALSE,None
+Appetizers,Seafood,Ajwaini Tilapia Tikka,"Tilapia steaks marinated with carom seeds, yogurt, and spices, char-grilled, cranberry & ginger launji.",weight:250g;cal:487kcal;price:$24,/img/food-menu/fish-tikka.jpg,FALSE,FALSE,None
+Appetizers,Seafood,Tandoori Pomfret,"Whole silver Pomfret, marinated with spices, char-grilled, lemon & black pepper chutney.",weight:220g;cal:359kcal;price:$30,/img/food-menu/tandoori-pomfret.jpg,FALSE,FALSE,None
+Appetizers,Poultry,Chicken Tikka,"Morsels of chicken marinated in a spicy yogurt marinade, char-grilled, pineapple & green chili chutney.",weight:260g;cal:684kcal;price:$24,/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,None
+Appetizers,Poultry,Chandi Tikka,"Creamy chicken kebabs marinated in cream and spices, char-grilled, adorned with silver leaf, garlic chutney.",weight:260g;cal:729kcal;price:$24,/img/food-menu/chicken-malai-tikka.jpg,FALSE,FALSE,None
+Appetizers,Poultry,Reshmi Seekh,"Minced chicken kebabs marinated and skewered, char-grilled, lemon & black pepper chutney.",weight:260g;cal:976kcal;price:$24,/img/food-menu/reshmi-seekh-kebab.jpg,FALSE,FALSE,None
+Appetizers,Poultry,Tandoori Chicken (Half),"Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",weight:350g;cal:732kcal;price:$20,/img/food-menu/tandoori-chicken-(half).jpg,FALSE,FALSE,None
+Appetizers,Poultry,Tandoori Chicken (Full),"Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",weight:750g;cal:1529kcal;price:$30,/img/food-menu/tandoori-chicken-(full).jpg,FALSE,FALSE,None
+Appetizers,Meats,Goat Seekh,"Minced goat meat marinated in spices, skewered and char-grilled, cranberry & ginger launji.",weight:260g;cal:718kcal;price:$28,/img/food-menu/mutton-seekh-gilafi.jpg,FALSE,FALSE,None
+Appetizers,Meats,Tandoori Lamb Chops,"Flavorful and marinated lamb chops char-grilled to perfection, pineapple & green chili chutney.",weight:260g;cal:804kcal;price:$38,/img/food-menu/tandoori-lamb-chops.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Basil Paneer Rarah,"Cottage cheese cubes simmered in onion-tomato masala gravy, flavored with basil.",weight:460g;cal:955kcal;price:$26,/img/food-menu/basil-paneer-rarah.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Paneer Tikka Masala,"Grilled cottage cheese tikka in creamy tomato-based gravy, infused with aromatic spices.",weight:440g;cal:1050kcal;price:$22,/img/food-menu/paneer-tikka-masala.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Paneer Khurchan,"Spiced cottage cheese cooked with onions, tomatoes, bell peppers, and aromatic spices.",weight:460g;cal:930kcal;price:$24,/img/food-menu/paneer-khurchan.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Saag Paneer,Cottage cheese cooked in luscious green gravy seasoned with spices.,weight:460g;cal:1000kcal;price:$22,/img/food-menu/palak-paneer.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Kanak Kofta,Exquisite croquettes of paneer and dry fruits simmered in a creamy nuts and yogurt gravy.,weight:440g;cal:1100kcal;price:$24,/img/food-menu/malai-kofta.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Fenugreek Cashew Curry,Fenugreek leaves and green peas simmered in creamy nuts gravy with cashew nuts and lotus seeds.,weight:460g;cal:960kcal;price:$26,/img/food-menu/kaju-methi-malai-matar.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Dum Aloo Kashmiri,Stuffed potatoes cooked in spicy and aromatic red gravy.,weight:440g;cal:920kcal;price:$22,/img/food-menu/dum-aloo-kashmiri.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Charcoal Roasted Baingan Bharta,"Roasted and mashed eggplant cooked with tomatoes, onions, and spices.",weight:460g;cal:310kcal;price:$18,/img/food-menu/charcoal-roasted-baingan-bharta.jpg,FALSE,FALSE,None
+Entrées,Vegetarian,Cauliflower Guncha-wa-Keema,"A delicate preparation of tender cauliflower florets and bell peppers, tossed in tomatoes and fenugreek.",weight:460g;cal:465kcal;price:$18,/img/food-menu/aloo-gobhi.jpg,FALSE,TRUE,None
+Entrées,Vegetarian,Dal Tadka,"Toor & moong lentils cooked with turmeric, tempered with ghee, cumin, and asafoetida.",weight:320g;cal:485kcal;price:$18,/img/food-menu/dal-tadka.jpg,FALSE,TRUE,None
+Entrées,Vegetarian,The Delhi Lounge Dal Makhani,"24 hour slow cooked black lentils, finished with fresh cream and butter.",weight:340g;cal:710kcal;price:$22,/img/food-menu/delhi-lounge-dal-makhani.jpg,FALSE,FALSE,None
+Entrées,Seafood,Kadhai Prawns,"Freshwater prawns tossed with tomatoes, capsicum and dry spices, tempered with ginger, green chilies.",weight:440g;cal:840kcal;price:$26,/img/food-menu/kadhai-prawns.jpg,FALSE,FALSE,None
+Entrées,Seafood,Chilean Sea Bass Coconut Curry,"Chilean Sea Bass delicately simmered in a coconut broth, tempered with mustard seeds.",weight:440g;cal:1360kcal;price:$28,/img/food-menu/chilian-sea-bass-coconut-curry.jpg,FALSE,FALSE,None
+Entrées,Poultry,The Delhi Lounge Butter Chicken,"Tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices.",weight:460g;cal:1240kcal;price:$28,/img/food-menu/delhi-lounge-butter-chicken.jpg,FALSE,FALSE,None
+Entrées,Poultry,Chicken Tikka Masala,Grilled chicken tikka pieces simmered in a rich tomato and onion gravy.,weight:460g;cal:1320kcal;price:$26,/img/food-menu/chicken-tikka-masala.jpg,FALSE,FALSE,None
+Entrées,Poultry,Tawa Chicken,"Shredded chicken tikka pieces tossed with fresh ginger, chili, onions, and tomatoes.",weight:440g;cal:863kcal;price:$26,/img/food-menu/delhi-lounge-tawa-chicken.jpg,FALSE,FALSE,None
+Entrées,Poultry,Chicken Khurchan,"Char-grilled chicken pieces cooked with onions, tomatoes, bell peppers, and aromatic spices.",weight:460g;cal:1190kcal;price:$26,/img/food-menu/chicken-khurchan.jpg,FALSE,FALSE,None
+Entrées,Poultry,Kali Mirch Chicken,"Grilled chicken malai pieces simmered in creamy nuts gravy, enhanced with black pepper.",weight:460g;cal:1210kcal;price:$28,/img/food-menu/kali-mirch-chicken.jpg,FALSE,FALSE,None
+Entrées,Poultry,Saag Chicken,Tender chicken pieces cooked in luscious green gravy delicately seasoned with spices.,weight:460g;cal:1150kcal;price:$26,/img/food-menu/saag-chicken.jpg,FALSE,FALSE,None
+Entrées,Meats,Tawa Masala Seekh,Luscious goat seekh kebab tossed in spicy masala gravy.,weight:440g;cal:1220kcal;price:$28,/img/food-menu/tawa-masala-seekh-kebab.jpg,FALSE,FALSE,None
+Entrées,Meats,Goat Rogan Josh,Slow-cooked lamb curry with a flavorful blend of aromatic Kashmiri spices and yogurt.,weight:460g;cal:1440kcal;price:$30,/img/food-menu/mutton-rogan-josh.jpg,FALSE,FALSE,None
+Entrées,Meats,The Delhi Lounge Goat Rarah,Tender mutton cooked in spicy and tangy tomato-based gravy with minced goat meat.,weight:480g;cal:1420kcal;price:$34,/img/food-menu/bakre-ke-nakhre.jpg,FALSE,FALSE,None
+Entrées,Meats,The Delhi Lounge Imperial Raan,"48-hours slow-cooked leg of spring lamb, char-grilled, adorned with 22 carat gold, & pine nuts.",weight:1600g;cal:3760kcal;price:$100,/img/food-menu/imperial-raan.jpg,FALSE,FALSE,None
+Combos,,Purani Dilli Chole Bhature,A semi-dry specialty preparation of spicy chickpea served with leavened deep-fried bread.,weight:320g;cal:675kcal;price:$18,/img/food-menu/purani-dilli-chole-bhature.jpg,FALSE,FALSE,None
+Combos,,"Sarson Ka Saag, Makke ki Roti","Punjabi specialty of mustard greens served with cornmeal flatbread, ghee, and jaggery.",weight:320g;cal:415kcal;price:$18,/img/food-menu/sarson-ka-saag-makke-ki-roti.jpg,FALSE,FALSE,None
+Rice,,Steamed Basmati Rice,,weight:250g;cal:210kcal;price:$4,/img/food-menu/steamed-basmati-rice.jpg,FALSE,TRUE,None
+Rice,,Cumin Coriander Rice,,weight:250g;cal:225kcal;price:$6,/img/food-menu/cumin-coriander-rice.jpg,FALSE,TRUE,None
+Rice,,Jackfruit Dum Biryani,"Spiced jackfruit layered with fragrant Basmati rice, served with raita.",weight:460g;cal:810kcal;price:$22,/img/food-menu/dum-jackfruit-parda-biryani.jpg,FALSE,FALSE,None
+Rice,,Chicken Dum Biryani,"Awadhi preparation of long grain Basmati rice, layered with choicest cuts of chicken, served with raita.",weight:460g;cal:983kcal;price:$24,/img/food-menu/dum-chicken-parda-biryani.jpg,FALSE,FALSE,None
+Rice,,Parda Goat Dum Biryani,"Awadhi preparation of long grain Basmati rice, layered with choicest cuts of goat, served with raita.",weight:460g;cal:1078kcal;price:$28,/img/food-menu/dum-mutton-parda-biryani.jpg,FALSE,FALSE,None
+Breads,,Tandoori Roti (Plain),,weight:60g;cal:180kcal;price:$3,/img/food-menu/missi-roti.jpg,FALSE,TRUE,None
+Breads,,Tandoori Roti (Butter),,weight:60g;cal:224kcal;price:$3,/img/food-menu/missi-roti.jpg,FALSE,TRUE,None
+Breads,,Missi Roti (Plain),,weight:60gg;cal:150kcal;price:$4,/img/food-menu/butter-laccha-paratha.jpg,FALSE,TRUE,None
+Breads,,Missi Roti (Butter),,weight:60g;cal:194kcal;price:$4,/img/food-menu/butter-laccha-paratha.jpg,FALSE,TRUE,None
+Breads,,Laccha Paratha (Plain | Butter | Pudina | Mirchi),,weight:90g;cal:360kcal;price:$6,/img/food-menu/butter-naan.jpg,FALSE,FALSE,None
+Breads,,Naan (Plain),,weight:70-90g;cal:275-315kcal;price:$3,/img/food-menu/scotch-whiskey-naan.jpg,FALSE,FALSE,None
+Breads,,Naan (Chur Chur),,weight:70-90g;cal:275-315kcal;price:$5,/img/food-menu/scotch-whiskey-naan.jpg,FALSE,FALSE,None
+Breads,,Naan (Garlic),,weight:70-90g;cal:275-315kcal;price:$5,/img/food-menu/scotch-whiskey-naan.jpg,FALSE,FALSE,None
+Breads,,Naan (Cheese),,weight:70-90g;cal:275-315kcal;price:$6,/img/food-menu/scotch-whiskey-naan.jpg,FALSE,FALSE,None
+Breads,,Kulcha (Aloo Pyaaz),,weight:150g;cal:410kcal;price:$8-$9,/img/food-menu/chicken-cheese-kulcha.jpg,FALSE,TRUE,None
+Breads,,Kulcha (Onion),,weight:150g;cal:390kcal;price:$8-$9,/img/food-menu/chicken-cheese-kulcha.jpg,FALSE,TRUE,None
+Breads,,Kulcha (Chicken & Cheese),,weight:150g;cal:490kcal;price:$8-$9,/img/food-menu/chicken-cheese-kulcha.jpg,FALSE,TRUE,None
+Breads,,Bread Basket,,weight:~230g;cal:873kcal;price:$12,/img/food-menu/assorted-bread-basket.jpg,FALSE,FALSE,None
+Sides,,Plain Dahi,,weight:180g;cal:110kcal;price:$4,/img/food-menu/burrhani-raita.jpg,FALSE,TRUE,None
+Sides,,Anardana Boondi Raita,,weight:180g;cal:165kcal;price:$6,/img/food-menu/anardana-boondi-raita.jpg,FALSE,FALSE,None
+Sides,,Mixed Vegetable Raita,,weight:180g;cal:140kcal;price:$6,/img/food-menu/mixed-vegetable-raita.jpg,FALSE,FALSE,None
+Sides,,Green Salad,,weight:150g;cal:60kcal;price:$6,/img/food-menu/green-salad.jpg,FALSE,TRUE,None
+Desserts,,Gulab Jamun,"Deep fried reduced milk spheres, soaked in a cardamom and saffron infused syrup.",weight:60g;cal:225kcal;price:$8,/img/food-menu/gulab-jamun.jpg,FALSE,FALSE,None
+Desserts,,Gajar Halwa,"Tender carrots cooked in ghee with reduced milk and cardamom syrup, garnished with nuts.",weight:120g;cal:325kcal;price:$8,/img/food-menu/gajar-halwa.jpg,FALSE,FALSE,None
+Desserts,,Moong Dal Halwa,"Moong dal lentils cooked in ghee and saffron syrup, garnished with nuts.",weight:120g;cal:386kcal;price:$8,/img/food-menu/moong-dal-halwa.jpg,FALSE,FALSE,None
+Desserts,,Saffron Rabri,"Reduced milk dessert, adorned with rose petals, served chilled.",weight:100g;cal:285kcal;price:$10,/img/food-menu/saffron-rabri.jpg,FALSE,FALSE,None
+Desserts,,Baileys Rasmalai (Contains alcohol),Rasmalai enhanced with Baileys Irish Cream and contains alcohol.,weight:100g;cal:368kcal;price:$10,/img/food-menu/baileys-rasmalai.jpg,FALSE,FALSE,None
+Desserts,,Kulfi Falooda,"A frozen dessert of reduced milk, served with thin noodles soaked in a saffron syrup.",weight:100g;cal:385kcal;price:$8,/img/food-menu/kulfi-falooda.jpg,FALSE,FALSE,None
+Desserts,,Rasgulla Tiramisu,Filter coffee soaked reduced milk spheres layered with cream cheese topped with dark cocoa.,weight:120g;cal:425kcal;price:$10,/img/food-menu/imag.jpg,FALSE,FALSE,None

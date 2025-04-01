@@ -56,8 +56,8 @@ export function AllergenFilter({
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center gap-1 text-white hover:bg-[#a02020] ${isOpen ? "bg-[#a02020]" : ""}`}
       >
-        <FilterIcon className="h-4 w-4" />
-        <span className="text-xs sm:text-sm whitespace-nowrap font-medium">Allergen Filter</span>
+        <FilterIcon className="text-gray-100 h-4 w-4" />
+        <span className="text-xs text-gray-100 sm:text-sm whitespace-nowrap font-medium">Allergen Filter</span>
       </Button>
 
       <AnimatePresence>
@@ -87,7 +87,7 @@ export function AllergenFilter({
                   className="h-7 w-7 text-white hover:bg-[#a02020]"
                   onClick={() => setIsOpen(false)}
                 >
-                  <X className="h-4 w-4" />
+                  <X className="text-gray-100 h-4 w-4" />
                 </Button>
               </div>
 
@@ -135,7 +135,7 @@ export function AllergenFilter({
                     Clear All
                   </Button>
                 </div>
-                <Button size="sm" onClick={applyFilters} className="text-xs bg-[#8B0000] hover:bg-[#a02020]">
+                <Button size="sm" onClick={applyFilters} className="text-xs text-gray-100 bg-[#8B0000] hover:bg-[#a02020]">
                   Apply
                 </Button>
               </div>

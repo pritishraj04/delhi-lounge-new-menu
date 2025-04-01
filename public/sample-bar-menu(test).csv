@@ -1,0 +1,14 @@
+category,sub category,title,description,price,image
+Rum,Dark,Old Monk,A dark rum with a strong smooth flavor,8.99,/placeholder.svg
+Rum,White,Bacardi Superior,A light-bodied white rum with a clean taste,9.99,/placeholder.svg
+Rum,,Captain Morgan Spiced,A spiced rum with hints of vanilla and caramel,10.99,/placeholder.svg
+Whiskey,Blended,Johnnie Walker Black Label,A blend of whiskies each aged for at least 12 years,12.99,/placeholder.svg
+Whiskey,Single Malt,Glenfiddich 12,A single malt Scotch whisky with notes of pear and oak,14.99,/placeholder.svg
+Whiskey,,Jack Daniel's,Tennessee whiskey with a smooth charcoal-mellowed flavor,11.99,/placeholder.svg
+Vodka,,Absolut,A Swedish vodka made from winter wheat,9.99,/placeholder.svg
+Vodka,Flavored,Grey Goose,A premium French vodka with a smooth finish,11.99,/placeholder.svg
+Gin,,Bombay Sapphire,A London dry gin with a distinctive blue bottle,10.99,/placeholder.svg
+Gin,Botanical,Hendrick's,A Scottish gin infused with cucumber and rose,13.99,/placeholder.svg
+Tequila,Silver,Jose Cuervo,A mixto tequila made from blue agave,11.99,/placeholder.svg
+Tequila,Reposado,Patron,A premium tequila aged in oak barrels,15.99,/placeholder.svg
+
