@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button";
-import { Info } from "lucide-react";
+import { useState, useEffect } from "react"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import { Button } from "@/components/ui/button"
+import { Info, MenuIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -11,93 +11,148 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import Image from "next/image";
+} from "@/components/ui/dialog"
+import Image from "next/image"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface DrinkItem {
-  id: number;
-  name: string;
-  price: number;
-  category: string;
-  image: string;
-  description: string;
+  id: number
+  name: string
+  price: number
+  category: string
+  subCategory?: string
+  description: string
+  image: string
 }
 
-const drinkItems: DrinkItem[] = [
-  {
-    id: 1,
-    name: "Old Monk Rum",
-    price: 8.99,
-    category: "Rum",
-    image: "/menu-imgs/bar/tropic-city.jpg",
-    description: "A dark rum with a strong, smooth flavor",
-  },
-  {
-    id: 2,
-    name: "Johnnie Walker Black Label",
-    price: 12.99,
-    category: "Whiskey",
-    image: "/menu-imgs/bar/tropic-tingle.jpg",
-    description: "A blend of whiskies, each aged for at least 12 years",
-  },
-  {
-    id: 3,
-    name: "Absolut Vodka",
-    price: 9.99,
-    category: "Vodka",
-    image: "/menu-imgs/bar/turmeric-gin-old-fashioned.jpg",
-    description: "A Swedish vodka made from winter wheat",
-  },
-  {
-    id: 4,
-    name: "Bombay Sapphire Gin",
-    price: 10.99,
-    category: "Gin",
-    image: "/menu-imgs/bar/very-berry-sour.jpg",
-    description: "A London dry gin with a distinctive blue bottle",
-  },
-  {
-    id: 5,
-    name: "Jose Cuervo Tequila",
-    price: 11.99,
-    category: "Tequila",
-    image: "/menu-imgs/bar/imag.jpg",
-    description: "A mixto tequila made from blue agave",
-  },
-  // Add more drink items here...
-];
+// Safe number formatter to prevent toFixed errors
+const formatPrice = (price?: number): string => {
+  if (price === undefined || price === null || isNaN(price)) return "N/A"
+  return price.toFixed(2)
+}
 
-const categories = ["All", "Rum", "Whiskey", "Vodka", "Gin", "Tequila"];
+// Add this near the top of the file, after the formatPrice function
+const safelyGetValue = (obj: any, path: string[], defaultValue: any = "N/A") => {
+  try {
+    let current = obj
+    for (const key of path) {
+      if (current === undefined || current === null) return defaultValue
+      current = current[key]
+    }
+    return current === undefined || current === null ? defaultValue : current
+  } catch (e) {
+    return defaultValue
+  }
+}
 
-export function BarMenu({ selectedItem }) {
-  const [currentCategory, setCurrentCategory] = useState("All");
-  const [highlightedItem, setHighlightedItem] = useState(null);
+const drinkItems: DrinkItem[] = []
+
+// Update the BarMenu component to include a mobile menu
+export function BarMenu({ selectedItem, setSelectedItem, drinkItems = [] }) {
+  const [currentCategory, setCurrentCategory] = useState("All")
+  const [highlightedItem, setHighlightedItem] = useState(null)
+  const [uniqueCategories, setUniqueCategories] = useState<{ category: string; subCategory?: string }[]>([])
+  const [items, setItems] = useState<DrinkItem[]>(drinkItems.length > 0 ? drinkItems : [])
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false)
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false)
+
+  // Extract unique categories and format them with subcategories
+  useEffect(() => {
+    if (items && items.length > 0) {
+      // Get unique category-subcategory combinations
+      const categoryMap = new Map<string, Set<string | undefined>>()
+
+      items.forEach((item) => {
+        if (!categoryMap.has(item.category)) {
+          categoryMap.set(item.category, new Set())
+        }
+        categoryMap.get(item.category)?.add(item.subCategory)
+      })
+
+      // Create formatted category list
+      const formattedCategories: { category: string; subCategory?: string }[] = []
+
+      // Add "All" category first
+      formattedCategories.push({ category: "All" })
+
+      // Add other categories with their subcategories
+      categoryMap.forEach((subCategories, category) => {
+        if (subCategories.size <= 1 && (subCategories.has(undefined) || subCategories.has(""))) {
+          // If category has no subcategories or only undefined/empty subcategory
+          formattedCategories.push({ category })
+        } else {
+          // Add each subcategory as a separate entry
+          subCategories.forEach((subCategory) => {
+            if (subCategory) {
+              formattedCategories.push({ category, subCategory })
+            } else {
+              // Add the main category without subcategory
+              formattedCategories.push({ category })
+            }
+          })
+        }
+      })
+
+      setUniqueCategories(formattedCategories)
+    }
+  }, [items])
 
   useEffect(() => {
     if (selectedItem) {
-      setHighlightedItem(selectedItem.id);
-      setTimeout(() => setHighlightedItem(null), 3000);
+      setHighlightedItem(selectedItem.id)
+      setTimeout(() => setHighlightedItem(null), 3000)
     }
-  }, [selectedItem]);
+  }, [selectedItem])
 
-  const filteredDrinks =
-    currentCategory === "All"
-      ? drinkItems
-      : drinkItems.filter((item) => item.category === currentCategory);
+  // Format category display text
+  const formatCategoryText = (category: string, subCategory?: string) => {
+    if (!subCategory) return category
+    return `${category} - ${subCategory}`
+  }
 
+  // Add a category selection modal function
+  const handleCategorySelect = (category: string, subCategory?: string) => {
+    if (category === "All") {
+      setCurrentCategory("All")
+    } else {
+      setCurrentCategory(`${category}${subCategory ? ` - ${subCategory}` : ""}`)
+    }
+    setIsCategoryOpen(false)
+    setIsOverlayVisible(false)
+  }
+
+  // Filter items based on category and subcategory
+  const filteredDrinks = items.filter((item) => {
+    if (currentCategory === "All") return true
+
+    // Handle the new format "Category - SubCategory"
+    if (currentCategory.includes(" - ")) {
+      const [category, subCategory] = currentCategory.split(" - ")
+      return item.category === category && item.subCategory === subCategory
+    }
+
+    // Handle just category
+    return item.category === currentCategory
+  })
+
+  // Update the return statement to include the mobile menu button and modal
   return (
-    <div className="flex-1 flex flex-col overflow-hidden">
+    <div className="flex-1 flex flex-col overflow-hidden bg-[#f9f7f3]">
       <div className="bg-white shadow-md">
         <ScrollArea className="w-full">
           <div className="flex p-2 gap-2">
-            {categories.map((category) => (
+            {uniqueCategories.map(({ category, subCategory }) => (
               <Button
-                key={category}
-                variant={currentCategory === category ? "default" : "outline"}
+                key={`${category}${subCategory ? `-${subCategory}` : ""}`}
+                variant={
+                  currentCategory === (category === "All" ? "All" : formatCategoryText(category, subCategory))
+                    ? "default"
+                    : "outline"
+                }
                 className="flex-shrink-0 text-sm py-1 px-3 rounded-full"
-                onClick={() => setCurrentCategory(category)}
+                onClick={() => handleCategorySelect(category, subCategory)}
               >
-                {category}
+                {category === "All" ? "All" : formatCategoryText(category, subCategory)}
               </Button>
             ))}
           </div>
@@ -108,22 +163,23 @@ export function BarMenu({ selectedItem }) {
       <ScrollArea className="flex-1">
         <div className="p-4">
           {filteredDrinks.map((drink) => (
-            <div
+            <motion.div
               key={drink.id}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
               className={`flex justify-between items-center py-2 border-b border-gray-200 transition-colors duration-300 ${
                 highlightedItem === drink.id ? "bg-yellow-100" : ""
               }`}
+              onClick={() => setSelectedItem(drink)}
+              id={`menu-item-${drink.id}`}
             >
               <div>
                 <span className="font-medium">{drink.name}</span>
-                <span className="text-sm text-gray-500 ml-2">
-                  ({drink.category})
-                </span>
+                {drink.subCategory && <span className="text-xs text-gray-400 ml-1 italic">({drink.subCategory})</span>}
               </div>
               <div className="flex items-center">
-                <span className="font-medium mr-2">
-                  ${drink.price.toFixed(2)}
-                </span>
+                <span className="font-medium mr-2">${formatPrice(safelyGetValue(drink, ["price"], 0))}</span>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="ghost" size="sm">
@@ -135,24 +191,93 @@ export function BarMenu({ selectedItem }) {
                       <DialogTitle>{drink.name}</DialogTitle>
                       <div className="relative w-full aspect-video mb-4">
                         <Image
-                          src={drink.image}
+                          src={drink.image || "/placeholder.svg"}
                           alt={drink.name}
                           fill
                           className="object-cover rounded-md"
                         />
                       </div>
                       <DialogDescription>{drink.description}</DialogDescription>
+                      {drink.subCategory && (
+                        <div className="mt-2 text-sm text-gray-500">
+                          Category: {drink.category} - {drink.subCategory}
+                        </div>
+                      )}
                     </DialogHeader>
                   </DialogContent>
                 </Dialog>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <ScrollBar />
       </ScrollArea>
+
+      {/* Category Selection Button */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <Button
+          size="icon"
+          variant="secondary"
+          className="h-12 w-12 rounded-full shadow-lg"
+          onClick={() => {
+            setIsCategoryOpen(!isCategoryOpen)
+            setIsOverlayVisible(!isCategoryOpen)
+          }}
+        >
+          <MenuIcon className="h-6 w-6" />
+          <span className="sr-only">Toggle categories</span>
+        </Button>
+        <AnimatePresence>
+          {isOverlayVisible && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40"
+              onClick={() => {
+                setIsCategoryOpen(false)
+                setIsOverlayVisible(false)
+              }}
+            />
+          )}
+          {isCategoryOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg w-72 max-h-96 overflow-hidden z-50"
+            >
+              <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
+                <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+              </div>
+              <ScrollArea className="max-h-80 overflow-y-auto">
+                <div className="p-2">
+                  {uniqueCategories.map(({ category, subCategory }, index) => (
+                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                      <Button
+                        variant="ghost"
+                        className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
+                        onClick={() => {
+                          handleCategorySelect(category, subCategory)
+                          setIsCategoryOpen(false)
+                        }}
+                      >
+                        {category === "All" ? "All" : formatCategoryText(category, subCategory)}
+                      </Button>
+                      {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
+                    </div>
+                  ))}
+                </div>
+              </ScrollArea>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
-  );
+  )
 }
 
-export { drinkItems };
+export { drinkItems }
+
