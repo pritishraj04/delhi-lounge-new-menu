@@ -49,7 +49,7 @@ export function AllergenFilter({
   }
 
   return (
-    <div className="relative z-50">
+    <div className="relative">
       <Button
         variant="ghost"
         size="sm"

@@ -47,10 +47,16 @@ const safelyGetValue = (obj: any, path: string[], defaultValue: any = "N/A") => 
 
 const drinkItems: DrinkItem[] = []
 
-// Update the BarMenu component to include a mobile menu
-export function BarMenu({ selectedItem, setSelectedItem, drinkItems = [] }) {
+// Explicitly type the props for BarMenu
+interface BarMenuProps {
+  selectedItem: DrinkItem | null;
+  setSelectedItem: (item: DrinkItem | null) => void;
+  drinkItems: DrinkItem[];
+}
+
+export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuProps) {
   const [currentCategory, setCurrentCategory] = useState("All")
-  const [highlightedItem, setHighlightedItem] = useState(null)
+  const [highlightedItem, setHighlightedItem] = useState<number | null>(null)
   const [uniqueCategories, setUniqueCategories] = useState<{ category: string; subCategory?: string }[]>([])
   const [items, setItems] = useState<DrinkItem[]>(drinkItems.length > 0 ? drinkItems : [])
   const [isCategoryOpen, setIsCategoryOpen] = useState(false)
@@ -99,7 +105,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems = [] }) {
 
   useEffect(() => {
     if (selectedItem) {
-      setHighlightedItem(selectedItem.id)
+      setHighlightedItem(selectedItem.id) // Now correctly typed
       setTimeout(() => setHighlightedItem(null), 3000)
     }
   }, [selectedItem])
@@ -214,7 +220,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems = [] }) {
       </ScrollArea>
 
       {/* Category Selection Button */}
-      <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 right-4">
         <Button
           size="icon"
           variant="secondary"
@@ -247,7 +253,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems = [] }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg w-72 max-h-96 overflow-hidden z-50"
+              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
             >
               <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
                 <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>

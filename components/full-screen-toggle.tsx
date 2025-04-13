@@ -29,7 +29,7 @@ export function FullScreenToggle() {
   }
 
   return (
-    <Button variant="ghost" size="icon" onClick={toggleFullScreen} className="fixed bottom-4 left-4 z-50">
+    <Button variant="ghost" size="icon" onClick={toggleFullScreen} className="fixed bottom-4 left-4">
       {isFullScreen ? <Minimize2 className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
     </Button>
   )

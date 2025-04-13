@@ -36,7 +36,8 @@ interface MenuItem {
   hasPortions?: boolean
 }
 
-const allergenIcons = {
+// Add a type-safe way to access allergenIcons
+const allergenIcons: Record<string, React.ComponentType<any>> = {
   Dairy: Milk,
   Gluten: Wheat,
   Eggs: Egg,
@@ -281,11 +282,11 @@ export function Menu({
     setSelectedItem(eligibleItems[newIndex])
   }
 
+  // Fix the useSwipeable configuration by removing the invalid property
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => navigateItem("next"),
     onSwipedRight: () => navigateItem("prev"),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
+    trackMouse: true, // Removed preventDefaultTouchmoveEvent
   })
 
   // Format category display text
@@ -354,9 +355,9 @@ export function Menu({
                 transition={{ duration: 0.3, delay: 0.2 }}
                 key={`pricing-${selectedItem?.id}`}
               >
-                <div className="relative z-10">
+                <div className="relative">
                   {/* Pricing Section */}
-                  <h3 className="font-playfair font-medium text-base lg:text-lg mb-1 lg:mb-2 text-[#2c2c2c]">
+                  {/* <h3 className="font-playfair font-medium text-base lg:text-lg mb-1 lg:mb-2 text-[#2c2c2c]">
                     Pricing
                   </h3>
                   {selectedItem?.hasPortions ? (
@@ -382,7 +383,7 @@ export function Menu({
                     </div>
                   )}
 
-                  <div className="my-2 border-t border-[#e0d9c8]"></div>
+                  <div className="my-2 border-t border-[#e0d9c8]"></div> */}
 
                   {/* Nutritional Info Section */}
                   <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Nutritional Info</h3>
@@ -452,9 +453,9 @@ export function Menu({
           <div className="bg-white shadow-md">
             <ScrollArea className="w-full" ref={categoryRef}>
               <div className="flex p-2 gap-2">
-                {uniqueCategories.map(({ category, subCategory }) => (
+                {uniqueCategories.map(({ category, subCategory }, index) => (
                   <Button
-                    key={`${category}${subCategory ? `-${subCategory}` : ""}`}
+                    key={`${category}-${subCategory || "none"}-${index}`} // Ensure uniqueness
                     variant={
                       currentCategory === (category === "All" ? "All" : formatCategoryText(category, subCategory))
                         ? "default"
@@ -477,7 +478,7 @@ export function Menu({
               <div className="flex gap-4 p-3 overflow-x-auto">
                 {filteredItems.map((item, index) => (
                   <motion.div
-                    key={item.id}
+                    key={`${item.id}-${index}`} // Ensure uniqueness
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -485,16 +486,15 @@ export function Menu({
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                   >
                     <Card
-                      className={`flex-shrink-0 w-[140px] cursor-pointer transition-all ${
+                      className={`flex-shrink-0 w-[140px] h-full cursor-pointer transition-all ${
                         selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
                       }`}
                       onClick={() => setSelectedItem(item)}
                       id={`menu-item-${item.id}`}
                     >
-                      {/* Update the menu item rendering to show vegan badge in thumbnail */}
-                      <CardContent className="p-2">
+                      <CardContent className="p-2 flex flex-col justify-between">
                         <div className="aspect-square relative rounded-md overflow-hidden mb-2">
-                          <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
+                          <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" priority />
                           {item.isChefSpecial && (
                             <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
                               <Star className="w-3 h-3 text-black" />
@@ -510,7 +510,6 @@ export function Menu({
                           )}
                         </div>
                         <div className="text-xs font-medium text-[#2c2c2c]">{item.name}</div>
-                        {/* Update the menu items display with safer property access */}
                         <div className="text-xs text-[#7c7c7c]">
                           ${formatPrice(safelyGetValue(item, ["price", "full"], 0))}
                         </div>
@@ -525,7 +524,7 @@ export function Menu({
         </div>
       </div>
       {/* Category Selection Button */}
-      <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 right-4">
         <Button
           size="icon"
           variant="secondary"
@@ -559,7 +558,7 @@ export function Menu({
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg w-72 max-h-96 overflow-hidden z-50"
+              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
             >
               <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
                 <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
