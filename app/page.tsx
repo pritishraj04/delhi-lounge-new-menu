@@ -108,6 +108,7 @@ export default function Page() {
   const [isSearchOverlayVisible, setIsSearchOverlayVisible] = useState(false)
   const [events, setEvents] = useState<Event[]>(upcomingEvents)
   const [selectedEventName, setSelectedEventName] = useState<string | null>(null)
+  const [isSearchTriggered, setIsSearchTriggered] = useState(false); // Track if search triggered the selection
 
   // Allergen filter state
   const [allAllergens, setAllAllergens] = useState<string[]>([])
@@ -200,6 +201,19 @@ export default function Page() {
     loadCSVData()
   }, [])
 
+  useEffect(() => {
+    if (!isSearchTriggered) { // Only reset if not triggered by search
+      if (activeMenu === "food" && menuItems.length > 0) {
+        setSelectedItem(menuItems[0]);
+      } else if (activeMenu === "bar" && drinkItems.length > 0) {
+        setSelectedItem(drinkItems[0]);
+      } else if (activeMenu === "events") {
+        setSelectedItem(null);
+      }
+    }
+    setIsSearchTriggered(false); // Reset the flag after handling
+  }, [activeMenu, menuItems, drinkItems]);
+
   // Update search results when search query changes
   useEffect(() => {
     if (searchQuery.length > 1) {
@@ -282,6 +296,7 @@ export default function Page() {
 
   // Adjust selectedItem handling to ensure compatibility
   const handleSearchItemClick = (item: SearchResult) => {
+    setIsSearchTriggered(true); // Mark that search triggered the selection
     if (item.type === "Upcoming Events") {
       setActiveMenu("events");
       const event = events.find((e) => e.name === item.name);

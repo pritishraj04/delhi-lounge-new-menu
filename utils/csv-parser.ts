@@ -46,6 +46,8 @@ export interface BarMenuItem {
 /**
  * Parse CSV data for food menu items
  */
+let uniqueIdCounter = 1; // Initialize a counter for unique numeric IDs
+
 export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
   const lines = csvContent.split("\n")
   const headers = lines[0].split(",").map((header) => header.trim())
@@ -70,7 +72,7 @@ export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
 
     try {
       const item: FoodMenuItem = {
-        id: i, // Use line number as ID for simplicity
+        id: uniqueIdCounter++, // Use the counter to generate unique numeric IDs
         category: values[headerMap["category"]] || "Uncategorized",
         subCategory: values[headerMap["sub category"]] || undefined,
         name: values[headerMap["title"]] || `Item ${i}`,
@@ -123,7 +125,7 @@ export function parseBarMenuCSV(csvContent: string): BarMenuItem[] {
 
     try {
       const item: BarMenuItem = {
-        id: i, // Use line number as ID for simplicity
+        id: uniqueIdCounter++, // Use line number as ID for simplicity
         category: values[headerMap["category"]] || "Uncategorized",
         subCategory: values[headerMap["sub category"]] || undefined,
         name: values[headerMap["title"]] || `Item ${i}`,
