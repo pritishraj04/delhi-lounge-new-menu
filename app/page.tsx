@@ -14,6 +14,9 @@ import { parseFoodMenuCSV, parseBarMenuCSV, convertToMenuItems, convertToBarItem
 import { AllergenFilter } from "@/components/allergen-filter"
 import { UpcomingEvents, type Event } from "@/components/upcoming-events"
 import Image from "next/image"
+import { useClickOutside } from "../hooks/useClickOutside"
+import { useScrollToItem } from "../hooks/useScrollToItem"
+import { useSearch } from "../hooks/useSearch"
 
 // Define types for menu items, drink items, and events
 interface MenuItem {
@@ -51,14 +54,14 @@ interface DrinkItem {
   image: string;
 }
 
-// Update SearchResult type to handle price as an object or a number
+// Update the SearchResult type to include optional properties
 interface SearchResult {
   id?: number | string;
   name: string;
-  type: "Food Menu" | "Bar Menu" | "Upcoming Events";
-  isVegan?: boolean;
-  category?: string;
-  subCategory?: string;
+  type: "Food Menu" | "Bar Menu" | "Upcoming Events"; // Ensure type is one of the allowed values
+  isVegan?: boolean; // Optional property
+  category?: string; // Optional property
+  subCategory?: string; // Optional property
   image?: string;
   price?: number | { full: number; half: number }; // Allow price as an object or a number
   calories?: number | { full: number; half: number }; // Allow calories as an object or a number
@@ -115,7 +118,24 @@ export default function Page() {
   const [selectedAllergens, setSelectedAllergens] = useState<string[]>([])
   const [isAllergenFilterOpen, setIsAllergenFilterOpen] = useState(false)
 
-  // Update the initial state handling to ensure selectedItem is properly initialized
+  useClickOutside(searchRef, () => {
+    setIsSearchOpen(false);
+    setSearchFocused(false);
+    setIsSearchOverlayVisible(false);
+    setSearchQuery("");
+  });
+
+  useScrollToItem(selectedItem?.id || null, activeMenu);
+
+  const searchResultsHook = useSearch({
+    searchQuery,
+    menuItems,
+    drinkItems,
+    events,
+    veganOnly,
+    selectedAllergens,
+  });
+
   useEffect(() => {
     const loadCSVData = async () => {
       setIsLoading(true)
@@ -214,76 +234,6 @@ export default function Page() {
     setIsSearchTriggered(false); // Reset the flag after handling
   }, [activeMenu, menuItems, drinkItems]);
 
-  // Update search results when search query changes
-  useEffect(() => {
-    if (searchQuery.length > 1) {
-      // Search in food menu items
-      const foodResults = menuItems
-        .filter((item) => {
-          // Apply vegan filter for food items if veganOnly is true
-          if (veganOnly && !item.isVegan) return false
-
-          // Apply allergen filter
-          if (
-            item.allergens &&
-            item.allergens.some(
-              (allergen) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none",
-            )
-          ) {
-            return false
-          }
-
-          const nameMatch = item.name?.toLowerCase().includes(searchQuery.toLowerCase())
-          const descMatch = item.description?.toLowerCase().includes(searchQuery.toLowerCase())
-          const categoryMatch = item.category?.toLowerCase().includes(searchQuery.toLowerCase())
-          const subCategoryMatch = item.subCategory?.toLowerCase().includes(searchQuery.toLowerCase())
-
-          return nameMatch || descMatch || categoryMatch || subCategoryMatch
-        })
-        .map((item) => ({ ...item, type: "Food Menu" } as SearchResult))
-
-      // Search in drink items (no vegan filtering for bar menu)
-      const drinkResults = drinkItems
-        .filter((item) => {
-          const nameMatch = item.name?.toLowerCase().includes(searchQuery.toLowerCase())
-          const descMatch = item.description?.toLowerCase().includes(searchQuery.toLowerCase())
-          const categoryMatch = item.category?.toLowerCase().includes(searchQuery.toLowerCase())
-          const subCategoryMatch = item.subCategory?.toLowerCase().includes(searchQuery.toLowerCase())
-
-          return nameMatch || descMatch || categoryMatch || subCategoryMatch
-        })
-        .map((item) => ({ ...item, type: "Bar Menu" } as SearchResult))
-
-      // Search in events
-      const eventResults = events
-        .filter((item) => {
-          const nameMatch = item.name?.toLowerCase().includes(searchQuery.toLowerCase())
-          return nameMatch
-        })
-        .map((item) => ({ ...item, type: "Upcoming Events" } as SearchResult))
-
-      setSearchResults([...foodResults, ...drinkResults, ...eventResults])
-    } else {
-      setSearchResults([])
-    }
-  }, [searchQuery, menuItems, drinkItems, veganOnly, selectedAllergens, events])
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !(searchRef.current as HTMLElement).contains(event.target as Node)) {
-        setIsSearchOpen(false)
-        setSearchFocused(false)
-        setIsSearchOverlayVisible(false)
-        setSearchQuery("")
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
-
   // Close search when allergen filter is opened
   useEffect(() => {
     if (isAllergenFilterOpen && isSearchOpen) {
@@ -296,21 +246,50 @@ export default function Page() {
 
   // Adjust selectedItem handling to ensure compatibility
   const handleSearchItemClick = (item: SearchResult) => {
-    setIsSearchTriggered(true); // Mark that search triggered the selection
+    setIsSearchTriggered(true);
+
     if (item.type === "Upcoming Events") {
-      setActiveMenu("events");
-      const event = events.find((e) => e.name === item.name);
-      if (event) {
-        setSelectedEventName(event.name);
-      }
+      handleEventSelection(item);
     } else {
-      setActiveMenu(item.type === "Food Menu" ? "food" : "bar");
-      setSelectedItem(item as unknown as MenuItem | DrinkItem); // Cast to compatible type
-      const itemElement = document.getElementById(`menu-item-${item.id}`);
-      if (itemElement) {
-        itemElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      handleMenuSelection(item);
     }
+
+    resetSearchState(item);
+  };
+
+  const handleEventSelection = (item: SearchResult) => {
+    setActiveMenu("events");
+    const event = events.find((e) => e.name === item.name);
+    if (event) {
+      setSelectedEventName(event.name);
+    }
+  };
+
+  const handleMenuSelection = (item: SearchResult) => {
+    setActiveMenu(item.type === "Food Menu" ? "food" : "bar");
+    setSelectedItem(item as unknown as MenuItem | DrinkItem);
+
+    if (item.type === "Bar Menu") {
+        const interval = setInterval(() => {
+            const barMenuElement = document.getElementById("bar-menu-container"); // Assuming BarMenu has this ID
+            if (barMenuElement) {
+                clearInterval(interval);
+                scrollToItem(item.id);
+            }
+        }, 100); // Check every 100ms
+    } else {
+        scrollToItem(item.id);
+    }
+  };
+
+  const scrollToItem = (id?: number | string) => {
+    const itemElement = document.getElementById(`menu-item-${id}`);
+    if (itemElement) {
+      itemElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  const resetSearchState = (item: SearchResult) => {
     setSearchQuery("");
     setSearchResults([]);
     setIsSearchOpen(false);
@@ -552,8 +531,8 @@ export default function Page() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className={searchResultsStyles}
             >
-              {searchResults.length > 0 ? (
-                searchResults.map((item, index) => (
+              {searchResultsHook.length > 0 ? (
+                searchResultsHook.map((item, index) => (
                   <motion.div
                     key={`${item.type}-${item.id || index}`}
                     initial={{ opacity: 0, y: -5 }}

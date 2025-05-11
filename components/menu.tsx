@@ -420,13 +420,13 @@ export function Menu({
                     )}
                   </div>
 
-                  {selectedItem?.allergens && selectedItem.allergens.length > 0 && (
+                  {selectedItem?.allergens?.length && (
                     <>
                       <div className="my-2 border-t border-[#e0d9c8]"></div>
                       <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Allergens</h3>
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
-                          .filter((allergen) => allergen.toLowerCase() !== "none")
+                          .filter((allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1)
                           .map((allergen) => {
                             const AllergenIcon = allergenIcons[allergen] || null
                             return (

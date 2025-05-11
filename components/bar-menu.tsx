@@ -143,7 +143,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
 
   // Update the return statement to include the mobile menu button and modal
   return (
-    <div className="flex-1 flex flex-col overflow-hidden bg-[#f9f7f3]">
+    <div className="flex-1 flex flex-col overflow-hidden bg-[#f9f7f3]" id="bar-menu-container">
       <div className="bg-white shadow-md">
         <ScrollArea className="w-full">
           <div className="flex p-2 gap-2">
