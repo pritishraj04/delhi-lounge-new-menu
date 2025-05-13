@@ -315,7 +315,9 @@ export function Menu({
                 alt={selectedItem?.name || "Selected item"}
                 fill
                 className="object-cover"
-                priority
+                priority={false} // Disable priority loading for non-critical images
+                placeholder="blur" // Use a blur placeholder
+                blurDataURL="/placeholder.svg" // Low-res placeholder image
               />
               {selectedItem?.isChefSpecial && (
                 <div className="absolute top-2 right-2 z-10 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -494,7 +496,15 @@ export function Menu({
                     >
                       <CardContent className="p-2 flex flex-col justify-between">
                         <div className="aspect-square relative rounded-md overflow-hidden mb-2">
-                          <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" priority />
+                          <Image
+                            src={item.image || "/placeholder.svg"}
+                            alt={item.name}
+                            fill
+                            className="object-cover"
+                            loading="lazy" // Enable lazy loading
+                            placeholder="blur" // Use a blur placeholder
+                            blurDataURL="/placeholder.svg" // Low-res placeholder image
+                          />
                           {item.isChefSpecial && (
                             <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
                               <Star className="w-3 h-3 text-black" />
