@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Rum and Coke",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "Smooth rum mixed with refreshing cola for a simple yet satisfying cocktail.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 2,
+    "name": "Screwdriver",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "Vodka and orange juice combine for a refreshing, zesty cocktail.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 3,
+    "name": "Cosmopolitan",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A zesty mix of vodka, lime, cranberry juice, and triple sec.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 4,
+    "name": "Old Fashioned",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "Bourbon, bitters, sugar, and orange peel create a timeless drink.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 5,
+    "name": "Mojito",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A cool mix of white rum, mint, lime, sugar, and club soda.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 6,
+    "name": "Martini",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A refined blend of gin, vermouth, and bitters, garnished with an olive or lemon twist.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 7,
+    "name": "Bloody Mary",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A unique mix of vodka, tomato juice, and lemon, garnished with a celery stalk.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 8,
+    "name": "Tom Collins",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "Gin, lemon juice, sugar, and sparkling water create a delightful cocktail.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 9,
+    "name": "Manhattan",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "Whiskey, vermouth, and bitters, garnished with a maraschino cherry.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 10,
+    "name": "Mai Tai",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A vibrant mix of white and dark rums, orange curaçao, syrup, and lime juice.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 11,
+    "name": "Long Island Iced Tea",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "description": "A bold mix of vodka, tequila, rum, gin, triple sec, and cola.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 12,
+    "name": "Very Berry Fizz",
+    "price": 12,
+    "category": "House Cocktails",
+    "description": "A vibrant mix of mixed berries, star anise, citrus, and ginger ale.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 13,
+    "name": "Gondhraj Lemonade",
+    "price": 12,
+    "category": "House Cocktails",
+    "description": "Lemon saccharum paired with an aperitif and tonic water.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 14,
+    "name": "Kiwi Fizz",
+    "price": 12,
+    "category": "House Cocktails",
+    "description": "A delightful mix of kiwi, mint, citrus, and fizz.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 15,
+    "name": "Orange Thyme Smash",
+    "price": 12,
+    "category": "House Cocktails",
+    "description": "A blend of orange, thyme, citrus, and pineapple cordial.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 16,
+    "name": "Cucumba",
+    "price": 12,
+    "category": "House Cocktails",
+    "description": "A light mix of cucumber, basil, elderflower, and citrus.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 17,
+    "name": "Soft Drinks",
+    "price": 4,
+    "category": "House Cocktails",
+    "description": "A sparkling blend of classic soda flavors to cool and delight.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 18,
+    "name": "Virgin Mai Tai",
+    "price": 10,
+    "category": "House Cocktails",
+    "description": "A vibrant, alcohol-free version of the classic Mai Tai, perfect for any occasion.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 19,
+    "name": "Coke",
+    "price": 4,
+    "category": "House Cocktails",
+    "description": "A timeless fizzy drink with bold flavor and perfect carbonation.",
+    "image": "/placeholder.svg?height=300&width=500"
+  },
+  {
+    "id": 20,
+    "name": "Diet Coke",
+    "price": 4,
+    "category": "House Cocktails",
+    "description": "A guilt-free version of the classic soda with the same bold taste.",
+    "image": "/placeholder.svg?height=300&width=500"
+  }
+]

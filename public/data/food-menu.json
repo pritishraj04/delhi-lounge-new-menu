@@ -1,0 +1,1812 @@
+[
+  {
+    "id": 1,
+    "name": "Pani Puri (Heeng Jeera | Orange)",
+    "description": "Street style puffs stuffed with chickpeas, and potatoes, topped with flavored waters",
+    "image": "/img/food-menu/pani-puri.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Gluten"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 2,
+    "name": "Aloo Tikki",
+    "description": "Stuffed potato patties, topped with whipped yogurt, and chutneys",
+    "image": "/img/food-menu/karol-bagh-aloo-tikki.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Nuts",
+      "Dairy"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 3,
+    "name": "Palak Patta Chaat",
+    "description": "Crispy fried spinach leaves tossed with spices, yogurt, and chutneys",
+    "image": "/img/food-menu/palak-patta-chaat.jpg",
+    "price": {
+      "full": 14,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 4,
+    "name": "Bhalla Papdi Chaat",
+    "description": "Yellow lentil dumplings soaked in sweetened yogurt with chutneys, served with crisp discs",
+    "image": "/img/food-menu/bhalla-papdi-chaat.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 5,
+    "name": "Samosa",
+    "description": "Triangular pastry, delicately spiced potatoes.",
+    "image": "/img/food-menu/samosa-platter.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Gluten"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 6,
+    "name": "Chili Corn Peanut Chaat",
+    "description": "Tender sweet corn, crunchy peanuts, zingy dressing",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Nuts"
+    ],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 7,
+    "name": "Achari Jalapeño Paneer Tikka",
+    "description": "Jalapeño stuffed paneer, pickling-spice marinade, shaslik",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 8,
+    "name": "Tandoori Avocado",
+    "description": "Tender avocado in a creamy yogurt marinade, char-grilled, peanut karam-podi",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 9,
+    "name": "Saag Til Kebab",
+    "description": "Spinach patties, til & kalonji crumble, pyaaz & chutney",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 22,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 10,
+    "name": "Truffle Parmesan Broccoli",
+    "description": "Tender broccoli in a mixture of cream and spices, char-grilled, enhanced with truffle-oil",
+    "image": "/img/food-menu/malai-brocolli-tikka.jpg",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 11,
+    "name": "Nadru Ki Seekh",
+    "description": "Minced lotus roots marinated and skewered, char-grilled",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 12,
+    "name": "Chili-Lime Tandoori Pomfret",
+    "description": "Whole Pomfret fish, marinated with spices, char-grilled",
+    "image": "/img/food-menu/tandoori-pomfret.jpg",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Seafood",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 13,
+    "name": "Chicken Tikka",
+    "description": "Morsels of chicken in a spicy yogurt marinade, char-grilled",
+    "image": "/img/food-menu/chicken-tikka.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 14,
+    "name": "Saffron Chicken",
+    "description": "Creamy chicken kebabs in saffron enhanced marinade, char-grilled",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 15,
+    "name": "Reshmi Seekh Kebab",
+    "description": "Minced chicken kebabs marinated and skewered, char-grilled",
+    "image": "/img/food-menu/reshmi-seekh-kebab.jpg",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 16,
+    "name": "Tandoori Chicken (Half)",
+    "description": "Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",
+    "image": "/img/food-menu/tandoori-chicken-(half).jpg",
+    "price": {
+      "full": 25,
+      "half": 0
+    },
+    "calories": {
+      "full": 732,
+      "half": 0
+    },
+    "weight": {
+      "full": 350,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 17,
+    "name": "Tandoori Chicken (Full)",
+    "description": "Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",
+    "image": "/img/food-menu/tandoori-chicken-(full).jpg",
+    "price": {
+      "full": 40,
+      "half": 0
+    },
+    "calories": {
+      "full": 1529,
+      "half": 0
+    },
+    "weight": {
+      "full": 750,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 18,
+    "name": "Goat Seekh Kebab",
+    "description": "Minced goat meat marinated in spices skewered, and char-grilled",
+    "image": "/img/food-menu/mutton-seekh-gilafi.jpg",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Meats",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 19,
+    "name": "Barrah Chops",
+    "description": "Flavorful marinated lamb chops char-grilled to perfection",
+    "image": "/img/food-menu/tandoori-lamb-chops.jpg",
+    "price": {
+      "full": 40,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Appetizers",
+    "subCategory": "Meats",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 20,
+    "name": "Paneer Matar Makhana",
+    "description": "Paneer cubes simmered in yellow gravy with lotus seeds, enhanced with garlic",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 21,
+    "name": "Paneer Khada Masala",
+    "description": "Paneer cubes tossed with crushed whole spices in onion-tomato masala gravy",
+    "image": "/img/food-menu/paneer-tikka-masala.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 22,
+    "name": "Paneer Khurchan",
+    "description": "Spiced paneer cooked with brown onions, tomatoes, bell peppers, and aromatic spices",
+    "image": "/img/food-menu/paneer-khurchan.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 23,
+    "name": "Saag Paneer",
+    "description": "Paneer cooked in luscious green spinach gravy seasoned with spices",
+    "image": "/img/food-menu/palak-paneer.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 24,
+    "name": "Kanak Kofta",
+    "description": "Exquisite croquettes of paneer and dry fruits simmered in a creamy nuts and yogurt gravy",
+    "image": "/img/food-menu/malai-kofta.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 25,
+    "name": "Fenugreek Cashew Curry",
+    "description": "Fenugreek leaves and green peas simmered in creamy nuts gravy with cashew nuts and lotus seeds",
+    "image": "/img/food-menu/kaju-methi-malai-matar.jpg",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 26,
+    "name": "Eggplant Bharta",
+    "description": "Roasted and mashed eggplant cooked with tomatoes, onions, and spices",
+    "image": "/img/food-menu/charcoal-roasted-baingan-bharta.jpg",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 27,
+    "name": "Aloo Gobhi Adraki",
+    "description": "A delicate preparation of tender cauliflower florets and potatoes, tossed with ginger and spices",
+    "image": "/img/food-menu/aloo-gobhi.jpg",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 28,
+    "name": "Masala Vegetables",
+    "description": "A mélange of vegetables tossed in spices",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 29,
+    "name": "Dal Tadka",
+    "description": "Toor & moong lentils cooked with turmeric, tempered with ghee, cumin, and asafetida",
+    "image": "/img/food-menu/dal-tadka.jpg",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 30,
+    "name": "Dal Makhani",
+    "description": "24 hour slow cooked black lentils with tomatoes, finished with fresh cream and butter",
+    "image": "/img/food-menu/delhi-lounge-dal-makhani.jpg",
+    "price": {
+      "full": 22,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 31,
+    "name": "Kadhai Prawns",
+    "description": "Freshwater prawns tossed with tomatoes, capsicum and dry spices, tempered with ginger, green chilies",
+    "image": "/img/food-menu/kadhai-prawns.jpg",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Seafood",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 32,
+    "name": "Butter Chicken (Bone In)",
+    "description": "Tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices",
+    "image": "/img/food-menu/delhi-lounge-butter-chicken.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 33,
+    "name": "Butter Chicken (Boneless)",
+    "description": "Bonless tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices",
+    "image": "/img/food-menu/delhi-lounge-butter-chicken.jpg",
+    "price": {
+      "full": 32,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 34,
+    "name": "Chicken Tikka Masala",
+    "description": "Grilled chicken tikka pieces simmered in a rich tomato gravy",
+    "image": "/img/food-menu/chicken-tikka-masala.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 35,
+    "name": "Chicken Khurchan",
+    "description": "Char-grilled chicken pieces cooked with brown onions, tomatoes, bell peppers, and aromatic spices",
+    "image": "/img/food-menu/chicken-khurchan.jpg",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 36,
+    "name": "Bhuna Chicken",
+    "description": "Chicken on the bone, onion-tomato masala gravy, whole spices",
+    "image": "/img/food-menu/delhi-lounge-tawa-chicken.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 37,
+    "name": "Methi Malai Chicken",
+    "description": "Chicken malai tikka, creamy onion & cashew nut gravy, garlic and fenugreek",
+    "image": "/img/food-menu/saag-chicken.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Mains",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 38,
+    "name": "Goat Nehari",
+    "description": "Slow-cooked, delicately spiced, fragrant goat stew",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 34,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Meats",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 39,
+    "name": "Goat Rogan Josh",
+    "description": "Slow-cooked goat curry with a flavorful blend of aromatic Kashmiri spices and yogurt",
+    "image": "/img/food-menu/mutton-rogan-josh.jpg",
+    "price": {
+      "full": 34,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Mains",
+    "subCategory": "Meats",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 40,
+    "name": "TDL Imperial Raan",
+    "description": "24-hours slow-cooked leg of spring lamb, char-grilled, adorned with 22 carat gold, & pine nuts. Served with a side of Dal Makhani and choice of Naan (48-hours’ notice required)",
+    "image": "/img/food-menu/imperial-raan.jpg",
+    "price": {
+      "full": 125,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Nuts",
+      "Dairy"
+    ],
+    "category": "Specialty",
+    "subCategory": "Meats",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 41,
+    "name": "Basmati Rice (8oz)",
+    "description": "Steamed plain rice",
+    "image": "/img/food-menu/steamed-basmati-rice.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Rice",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 42,
+    "name": "Cumin Coriander Rice (20oz)",
+    "description": "Fragrant rice tempered with cumin and coriander",
+    "image": "/img/food-menu/cumin-coriander-rice.jpg",
+    "price": {
+      "full": 10,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Rice",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 43,
+    "name": "Dum Jackfruit Pulao",
+    "description": "Spiced jackfruit layered with fragrant Basmati rice, served with raita",
+    "image": "/img/food-menu/dum-jackfruit-parda-biryani.jpg",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Rice",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 44,
+    "name": "Chicken Dum Biryani",
+    "description": "Awadhi preparation of long grain Basmati rice, layered with choicest cuts of chicken, served with raita",
+    "image": "/img/food-menu/dum-chicken-parda-biryani.jpg",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Rice",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 45,
+    "name": "Parda Goat Dum Biryani",
+    "description": "Awadhi preparation of long grain Basmati rice, layered with choicest cuts of goat, served with raita",
+    "image": "/img/food-menu/dum-mutton-parda-biryani.jpg",
+    "price": {
+      "full": 32,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Rice",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 46,
+    "name": "Truffle Chur Chur Naan",
+    "description": "",
+    "image": "/img/food-menu/chur-chur-naan.jpg",
+    "price": {
+      "full": 10,
+      "half": 0
+    },
+    "calories": {
+      "full": 180,
+      "half": 0
+    },
+    "weight": {
+      "full": 60,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": true,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 47,
+    "name": "Tandoori Roti (Plain)",
+    "description": "",
+    "image": "/img/food-menu/plain-tandoori-roti.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 180,
+      "half": 0
+    },
+    "weight": {
+      "full": 60,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 48,
+    "name": "Tandoori Roti (Butter)",
+    "description": "",
+    "image": "/img/food-menu/butter-tandoori-roti.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 224,
+      "half": 0
+    },
+    "weight": {
+      "full": 60,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 49,
+    "name": "Missi Roti (Plain)",
+    "description": "",
+    "image": "/img/food-menu/missi-roti-plain.jpg",
+    "price": {
+      "full": 5,
+      "half": 0
+    },
+    "calories": {
+      "full": 150,
+      "half": 0
+    },
+    "weight": {
+      "full": 60,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 50,
+    "name": "Missi Roti (Butter)",
+    "description": "",
+    "image": "/img/food-menu/missi-roti.jpg",
+    "price": {
+      "full": 5,
+      "half": 0
+    },
+    "calories": {
+      "full": 194,
+      "half": 0
+    },
+    "weight": {
+      "full": 60,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 51,
+    "name": "Laccha Paratha (Plain | Butter | Pudina)",
+    "description": "",
+    "image": "/img/food-menu/butter-laccha-paratha.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 360,
+      "half": 0
+    },
+    "weight": {
+      "full": 90,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 52,
+    "name": "Naan (Plain)",
+    "description": "",
+    "image": "/img/food-menu/plain-naan.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 275,
+      "half": 0
+    },
+    "weight": {
+      "full": 70,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 53,
+    "name": "Naan (Butter)",
+    "description": "",
+    "image": "/img/food-menu/butter-naan.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 275,
+      "half": 0
+    },
+    "weight": {
+      "full": 70,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 54,
+    "name": "Naan (Garlic)",
+    "description": "",
+    "image": "/img/food-menu/garlic-naan.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 275,
+      "half": 0
+    },
+    "weight": {
+      "full": 70,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 55,
+    "name": "Naan (Bullet)",
+    "description": "",
+    "image": "/img/food-menu/cheese-naan.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 275,
+      "half": 0
+    },
+    "weight": {
+      "full": 70,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 56,
+    "name": "Kulcha (Onion)",
+    "description": "",
+    "image": "/img/food-menu/kulcha-onion.jpg",
+    "price": {
+      "full": 8,
+      "half": 0
+    },
+    "calories": {
+      "full": 410,
+      "half": 0
+    },
+    "weight": {
+      "full": 150,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 57,
+    "name": "Kulcha (Chilli Cheese)",
+    "description": "",
+    "image": "/img/food-menu/chicken-cheese-kulcha.jpg",
+    "price": {
+      "full": 10,
+      "half": 0
+    },
+    "calories": {
+      "full": 490,
+      "half": 0
+    },
+    "weight": {
+      "full": 150,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Breads",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 58,
+    "name": "Plain Dahi",
+    "description": "Plain yogurt",
+    "image": "/img/food-menu/burrhani-raita.jpg",
+    "price": {
+      "full": 4,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Sides",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 59,
+    "name": "Beet & Boondi Raita",
+    "description": "Beetroot and crispy boondi in spiced yogurt",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Sides",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 60,
+    "name": "Kachumber Raita",
+    "description": "Mixed vegetable raita in yogurt",
+    "image": "/img/food-menu/mixed-vegetable-raita.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Sides",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 61,
+    "name": "Green Salad",
+    "description": "Fresh chopped vegetables salad",
+    "image": "/img/food-menu/green-salad.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "None"
+    ],
+    "category": "Sides",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 62,
+    "name": "Gulab Jamun",
+    "description": "Deep fried reduced milk spheres, soaked in a cardamom and saffron infused syrup",
+    "image": "/img/food-menu/gulab-jamun.jpg",
+    "price": {
+      "full": 10,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 63,
+    "name": "Moong Dal Halwa",
+    "description": "Moong dal lentils cooked in ghee and saffron syrup, garnished with nuts",
+    "image": "/img/food-menu/moong-dal-halwa.jpg",
+    "price": {
+      "full": 10,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Nuts"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 64,
+    "name": "Saffron Rasmalai",
+    "description": "Soft, spongy cottage cheese dumplings soaked in fragrant, saffron-infused milk",
+    "image": "/img/food-menu/baileys-rasmalai.jpg",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 65,
+    "name": "Kesar Pista Kulfi Falooda",
+    "description": "Saffron milk ice-cream, vermicelli, sesame chikki",
+    "image": "/img/food-menu/kulfi-falooda.jpg",
+    "price": {
+      "full": 16,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 66,
+    "name": "Rasgulla Tiramisu",
+    "description": "Filter coffee soaked reduced milk spheres layered with cream cheese topped with dark cocoa",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 14,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 67,
+    "name": "Mango Shahi Tukda",
+    "description": "Ghee fried brioche, mango milk reduction, aam papad",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 16,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ],
+    "category": "Desserts",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 68,
+    "name": "Plain Lassi",
+    "description": "Classic churned yogurt drink",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 5,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Beverages",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 69,
+    "name": "Salted Lassi",
+    "description": "Yogurt drink with salt and spices",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 5,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Beverages",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 70,
+    "name": "Mango Lassi",
+    "description": "Sweet mango flavored yogurt drink",
+    "image": "/img/food-menu/imag.jpg",
+    "price": {
+      "full": 6,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "weight": {
+      "full": 180,
+      "half": 0
+    },
+    "allergens": [
+      "Dairy"
+    ],
+    "category": "Beverages",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  }
+]

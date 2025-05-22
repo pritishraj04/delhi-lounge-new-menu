@@ -1,0 +1,1505 @@
+[
+  {
+    "id": 1,
+    "name": "Rum and Coke",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "Smooth rum mixed with refreshing cola for a simple yet satisfying cocktail.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Screwdriver",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "Vodka and orange juice combine for a refreshing, zesty cocktail.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cosmopolitan",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A zesty mix of vodka, lime, cranberry juice, and triple sec.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Old Fashioned",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "Bourbon, bitters, sugar, and orange peel create a timeless drink.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mojito",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A cool mix of white rum, mint, lime, sugar, and club soda.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Martini",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A refined blend of gin, vermouth, and bitters, garnished with an olive or lemon twist.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bloody Mary",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A unique mix of vodka, tomato juice, and lemon, garnished with a celery stalk.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tom Collins",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "Gin, lemon juice, sugar, and sparkling water create a delightful cocktail.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Manhattan",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "Whiskey, vermouth, and bitters, garnished with a maraschino cherry.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Mai Tai",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A vibrant mix of white and dark rums, orange curaçao, syrup, and lime juice.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Long Island Iced Tea",
+    "price": 10,
+    "category": "Classic Cocktails",
+    "subCategory": "Classic Cocktails",
+    "description": "A bold mix of vodka, tequila, rum, gin, triple sec, and cola.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Very Berry Fizz",
+    "price": 12,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A vibrant mix of mixed berries, star anise, citrus, and ginger ale.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Gondhraj Lemonade",
+    "price": 12,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Lemon saccharum paired with an aperitif and tonic water.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Kiwi Fizz",
+    "price": 12,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A delightful mix of kiwi, mint, citrus, and fizz.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Orange Thyme Smash",
+    "price": 12,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A blend of orange, thyme, citrus, and pineapple cordial.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Cucumba",
+    "price": 12,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A light mix of cucumber, basil, elderflower, and citrus.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Soft Drinks",
+    "price": 4,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A sparkling blend of classic soda flavors to cool and delight.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Virgin Mai Tai",
+    "price": 10,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A vibrant, alcohol-free version of the classic Mai Tai, perfect for any occasion.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Coke",
+    "price": 4,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A timeless fizzy drink with bold flavor and perfect carbonation.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Diet Coke",
+    "price": 4,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "A guilt-free version of the classic soda with the same bold taste.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Banarasi Boulevardier",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Whisky, Campari, sweet vermouth, saffron, and betel leaf.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Royal Vodka Sour",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Vodka, lemon saccharum, Campari, rose, and citrus.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Tropical City",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Rum, pineapple cordial, coconut, curry leaf, Campari, and citrus.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Guava Dark & Stormy",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Rum, pink guava, thyme, and citrus.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Raw Mango Picante",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "Tequila, raw mango, citrus, celery, chili, and hemp seed salt.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Pani Puri Martini",
+    "price": 15,
+    "category": "House Cocktails",
+    "subCategory": "House Cocktails",
+    "description": "An innovative cocktail inspired by the popular Indian street snack.",
+    "image": "./assets/img/modal-images/food-menu/pani-puri-martini.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Castello Poggio Moscato Pavia IGT VT",
+    "price": 8,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Glass of Castello Poggio Moscato.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Castello Poggio Moscato Pavia IGT VT Bottle",
+    "price": 35,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Bottle of Castello Poggio Moscato.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Tobias Chardonnay",
+    "price": 10,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Glass of Tobias Chardonnay.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Tobias Chardonnay Bottle",
+    "price": 45,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Bottle of Tobias Chardonnay.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Taft Street Sauvignon Blanc Russian VT",
+    "price": 12,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Glass of Taft Street Sauvignon Blanc.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Taft Street Sauvignon Blanc Russian VT Bottle",
+    "price": 50,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Bottle of Taft Street Sauvignon Blanc.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Terracotta Pinot Grigio",
+    "price": 8,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Glass of Terracotta Pinot Grigio.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Terracotta Pinot Grigio Bottle",
+    "price": 35,
+    "category": "Wines",
+    "subCategory": "White Wine",
+    "description": "Bottle of Terracotta Pinot Grigio.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Highway 12 Vineyards Cabernet Sauvignon Sonoma County",
+    "price": 14,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A robust cabernet sauvignon with flavors of dark fruit, oak, and spice.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Cru Pinot Noir",
+    "price": 10,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A velvety red wine with notes of cherry, raspberry, and subtle spice.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 37,
+    "name": "CRU MONTEREY PINOT NOIR Bottle",
+    "price": 40,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A bottle of CRU Monterey Pinot Noir featuring bold fruit flavors and an exquisite finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 38,
+    "name": "HIGHWAY 12 CABERNET SAUVIGNON SONOMA Bottle",
+    "price": 60,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A premium bottle of Highway 12 Cabernet Sauvignon with intense flavors of dark berries and oak.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 39,
+    "name": "MUIRWOOD MERLOT CALIFORNIA VT",
+    "price": 10,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A balanced merlot with hints of plum, chocolate, and soft tannins.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 40,
+    "name": "MUIRWOOD MERLOT CALIFORNIA VT Bottle",
+    "price": 40,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A full bottle of Muirwood Merlot, rich with flavors of dark fruit and silky tannins.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Caymus Bottle",
+    "price": 130,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A bold red wine known for its rich flavors and full-bodied profile.",
+    "image": "./assets/img/modal-images/food-menu/caymus.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Austin Hope Bottle",
+    "price": 110,
+    "category": "Wines",
+    "subCategory": "Red Wine",
+    "description": "A luxurious, full-bodied red wine with layers of dark fruit and earthy undertones.",
+    "image": "./assets/img/modal-images/food-menu/austin-hope.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Jim Beam (bourbon)",
+    "price": 7,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Makers Mark (bourbon)",
+    "price": 11,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Four Roses (bourbon)",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Woodford Reserve (bourbon)",
+    "price": 13,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Knob Creek (bourbon)",
+    "price": 13,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 48,
+    "name": "TX Bourbon (bourbon)",
+    "price": 17,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Remy Martin VSOP (cognac)",
+    "price": 20,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Basil Hayden Bourbon",
+    "price": 14,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Buffalo Trace Bourbon",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Bullet Bourbon",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Bullet Rye",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Four Roses Bourbon",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Jim Beam Bourbon",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Knob Creek Bourbon",
+    "price": 15,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Maker's Mark Bourbon",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 58,
+    "name": "TX Bourbon",
+    "price": 20,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Woodford Reserve Bourbon",
+    "price": 15,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 60,
+    "name": "WhistlePig Black Bourbon (6Years)",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 61,
+    "name": "WhistlePig Small Batch Bourbon (10Years)",
+    "price": 15,
+    "category": "Liquors",
+    "subCategory": "Bourbon & Cognac",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Tanqueray (gin)",
+    "price": 11,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Smooth and crisp with notes of juniper and citrus.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Tanqueray 10 (gin)",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Rich and refreshing with citrus-forward botanicals.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Bombay Sapphire (gin)",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Bright and aromatic with a delicate spice finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Hendricks (gin)",
+    "price": 13,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Unique and refreshing with floral undertones.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Campari (liqueur)",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Bitter and aromatic with notes of orange and herbs.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Grand Marnier (liqueur)",
+    "price": 13,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Rich and smooth with a sweet orange finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Disaronno Amaretto (liqueur)",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Smooth and nutty with a hint of marzipan.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Cointreau (liqueur)",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Crisp and zesty with a balanced sweetness.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Kahlua (liqueur)",
+    "price": 11,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Velvety and bold with coffee and vanilla notes.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 71,
+    "name": "Aperol (liqueur)",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Gin & Liqueur",
+    "description": "Lightly bitter with citrus and herbal undertones.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Bacardi Silver",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Smooth and versatile silver rum.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Malibu",
+    "price": 9,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Coconut-infused rum with a sweet finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Captain Morgan",
+    "price": 11,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Bold spiced rum with a smooth finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Ypioca Cachaca Prata",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Premium cachaca with a smooth finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Flor de Cana 7 Year Reserve Rum",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Rich and full-bodied aged rum.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 77,
+    "name": "Bumbu The Original Barbados Rum",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Smooth rum with tropical notes.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 78,
+    "name": "Sailor Jerry Spiced Rum",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Rich spiced rum with a vanilla finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Malibu Coconut Rum",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Coconut-flavored rum with a sweet touch.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Bacardi Gold",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "Smooth golden rum with a hint of vanilla.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 81,
+    "name": "Old Monk",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Rum",
+    "description": "A legendary Indian rum known for its rich taste and smooth finish.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 82,
+    "name": "Glenlivet 12",
+    "price": 17,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Glenlivet 15",
+    "price": 27,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 84,
+    "name": "Glenlivet 18",
+    "price": 32,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 85,
+    "name": "Glenlivet 21",
+    "price": 55,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "./assets/img/modal-images/food-menu/glenlivet21.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Macallan 12 Yr",
+    "price": 23,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 87,
+    "name": "Macallan 18 Yr",
+    "price": 58,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 88,
+    "name": "Glenfiddich 12 Yr",
+    "price": 23,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 89,
+    "name": "JW Black Label",
+    "price": 14,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 90,
+    "name": "Amrut Single Malt",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Indri Single Malt",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 92,
+    "name": "JW Blue Label",
+    "price": 45,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Highland Park 12",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Highland Park 18",
+    "price": 32,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 95,
+    "name": "Chivas Regal 12",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 96,
+    "name": "Chivas Regal 18",
+    "price": 20,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Chivas Regal 21",
+    "price": 38,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 98,
+    "name": "JW Gold Label Reserve",
+    "price": 20,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Glenfiddich 14 Year Old",
+    "price": 25,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Glenfiddich 15 Year Old",
+    "price": 27,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 101,
+    "name": "Dalmore 12 Year Single Malt Scotch",
+    "price": 17,
+    "category": "Liquors",
+    "subCategory": "Scotch",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Don Julio 1942",
+    "price": 71,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "Rich, smooth, and aged to perfection for a refined taste.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Clase Azul Plata",
+    "price": 60,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A crystal-clear tequila with delicate agave flavors.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Clase Azul Reposado",
+    "price": 35,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "Aged to perfection, offering smooth oak and caramel notes.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 105,
+    "name": "El Jimador Silver",
+    "price": 7,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A clean and refreshing silver tequila perfect for mixing.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 106,
+    "name": "Patron Silver",
+    "price": 20,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A smooth and premium tequila made from the finest blue agave.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 107,
+    "name": "1800 Silver",
+    "price": 11,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A smooth, clean tequila with bold agave flavors.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 108,
+    "name": "Don Julio Silver",
+    "price": 18,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A premium silver tequila with a clean, refreshing taste.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 109,
+    "name": "Casamigos Blanco",
+    "price": 18,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "A smooth blanco tequila with a fresh, citrusy flavor.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 110,
+    "name": "Casamigos Reposado",
+    "price": 21,
+    "category": "Liquors",
+    "subCategory": "Tequila",
+    "description": "Aged for a rich and smooth flavor with subtle oak notes.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 111,
+    "name": "Tito's",
+    "price": 8,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Smooth and gluten-free vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 112,
+    "name": "Grey Goose",
+    "price": 12,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Premium French vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 113,
+    "name": "Beluga Noble",
+    "price": 13,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Ultra-premium vodka with a refined taste.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 114,
+    "name": "Ciroc",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Distinctive vodka with fruity undertones.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 115,
+    "name": "Absolute",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Smooth Swedish vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 116,
+    "name": "Amsterdam",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Affordable and versatile vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 117,
+    "name": "Belvedere Organic Vodka",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Certified organic Polish vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 118,
+    "name": "Grey Goose VX",
+    "price": 45,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Premium vodka with a hint of cognac.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 119,
+    "name": "Ketel One Vodka",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Smooth Dutch vodka with a rich heritage.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 120,
+    "name": "Aspen Vodka",
+    "price": 10,
+    "category": "Liquors",
+    "subCategory": "Vodka",
+    "description": "Smooth and crisp American vodka.",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 121,
+    "name": "Arka (India)",
+    "price": 6,
+    "category": "Beers (Indian)",
+    "subCategory": "Beers (Import: India)",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 122,
+    "name": "Maharaja IPA",
+    "price": 10,
+    "category": "Beers (Indian)",
+    "subCategory": "Beers (Import: India)",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 123,
+    "name": "Taj Mahal",
+    "price": 6,
+    "category": "Beers (Indian)",
+    "subCategory": "Beers (Import: India)",
+    "description": "",
+    "image": "./assets/img/modal-images/food-menu/taj-mahal.jpg"
+  },
+  {
+    "id": 124,
+    "name": "Taj Mahal 650ML",
+    "price": 12,
+    "category": "Beers (Indian)",
+    "subCategory": "Beers (Import: India)",
+    "description": "",
+    "image": "./assets/img/modal-images/food-menu/taj-mahal.jpg"
+  },
+  {
+    "id": 125,
+    "name": "Miller Lite",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 126,
+    "name": "Coors Lite",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 127,
+    "name": "Blue Moon",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 128,
+    "name": "Two Hearted Ale",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 129,
+    "name": "Fat Tire",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 130,
+    "name": "Yuengling",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 131,
+    "name": "Angry Orchard",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 132,
+    "name": "Sam Adams Boston Lager",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 133,
+    "name": "Sam Adams Winter Lager",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 134,
+    "name": "Half Life",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 135,
+    "name": "Red Gate",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 136,
+    "name": "Dadgum",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 137,
+    "name": "Shiner Light",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 138,
+    "name": "Taj Mahal",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "./assets/img/modal-images/food-menu/taj-mahal.jpg"
+  },
+  {
+    "id": 139,
+    "name": "Shiner Bock",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 140,
+    "name": "Dry Hopped",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 141,
+    "name": "50 ft Jackrabbit",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 142,
+    "name": "Fire Ant Funeral",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 143,
+    "name": "No Coast IPA",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 144,
+    "name": "German Pilsner",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 145,
+    "name": "Hefeweizen",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 146,
+    "name": "Dos Equis",
+    "price": 5,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 147,
+    "name": "Modelo Negra",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 148,
+    "name": "Modelo",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 149,
+    "name": "Modelo Especial",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 150,
+    "name": "Peroni",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 151,
+    "name": "Stella Artois",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 152,
+    "name": "Heineken",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 153,
+    "name": "Trinity Cider",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 154,
+    "name": "Garage Beer",
+    "price": 9,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 155,
+    "name": "Texas Blood Orange IPA",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 156,
+    "name": "Necessary Evil",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 157,
+    "name": "New Belgium 154",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 158,
+    "name": "Revolver Brewing",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 159,
+    "name": "Yuengling Flight",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 160,
+    "name": "El Chingo",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 161,
+    "name": "Pacifico",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 162,
+    "name": "Corona",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 163,
+    "name": "Corona (Non-Alcoholic)",
+    "price": 5,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 164,
+    "name": "Corona Premier",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 165,
+    "name": "Seriously Fun Beer",
+    "price": 8,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 166,
+    "name": "Flyin Horse Royal 650ML",
+    "price": 12,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  },
+  {
+    "id": 167,
+    "name": "DOS XX",
+    "price": 6,
+    "category": "Beers",
+    "subCategory": "Beers",
+    "description": "",
+    "image": "/img/food-menu/imag.jpg"
+  }
+]

@@ -109,11 +109,16 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
             >
               <div className="relative w-full h-full">
                 <Image
-                  src={selectedEvent.image || "/placeholder.svg"}
+                  src={selectedEvent.image || "/placeholder.svg?height=600&width=800"}
                   alt={selectedEvent.name}
                   fill
                   className="object-contain"
                   priority
+                  onError={(e) => {
+                    // Fallback to placeholder if image fails to load
+                    const imgElement = e.currentTarget as HTMLImageElement
+                    imgElement.src = "/placeholder.svg?height=600&width=800"
+                  }}
                 />
               </div>
             </motion.div>

@@ -19,5 +19,4 @@ import './globals.css'
 export const metadata = {
   title: 'The Delhi Lounge',
   description: 'The Delhi Lounge menu application. This application is design and developed at polardot.in',
-
-    };
+};

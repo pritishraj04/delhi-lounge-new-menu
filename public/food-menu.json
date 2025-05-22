@@ -1,0 +1,396 @@
+[
+  {
+    "id": 1,
+    "name": "Pani Puri (Heeng Jeera | Orange)",
+    "description": "Street style puffs stuffed with chickpeas, and potatoes, topped with flavored waters",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Gluten"],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 2,
+    "name": "Aloo Tikki",
+    "description": "Stuffed potato patties, topped with whipped yogurt, and chutneys",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Nuts", "Dairy"],
+    "category": "Chaat",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 3,
+    "name": "Palak Patta Chaat",
+    "description": "Crispy fried spinach leaves tossed with spices, yogurt, and chutneys",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 14,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 4,
+    "name": "Bhalla Papdi Chaat",
+    "description": "Yellow lentil dumplings soaked in sweetened yogurt with chutneys, served with crisp discs",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 5,
+    "name": "Samosa",
+    "description": "Triangular pastry, delicately spiced potatoes.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Gluten"],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 6,
+    "name": "Chili Corn Peanut Chaat",
+    "description": "Tender sweet corn, crunchy peanuts, zingy dressing",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 12,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Nuts"],
+    "category": "Chaat",
+    "isChefSpecial": false,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 7,
+    "name": "Achari Jalapeño Paneer Tikka",
+    "description": "Jalapeño stuffed paneer, pickling-spice marinade, shaslik",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 8,
+    "name": "Tandoori Avocado",
+    "description": "Tender avocado in a creamy yogurt marinade, char-grilled, peanut karam-podi",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 9,
+    "name": "Saag Til Kebab",
+    "description": "Spinach patties, til & kalonji crumble, pyaaz & chutney",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 22,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 10,
+    "name": "Truffle Parmesan Broccoli",
+    "description": "Tender broccoli in a mixture of cream and spices, char-grilled, enhanced with truffle-oil",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 20,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 11,
+    "name": "Nadru Ki Seekh",
+    "description": "Minced lotus roots marinated and skewered, char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": true,
+    "hasPortions": false
+  },
+  {
+    "id": 12,
+    "name": "Chili-Lime Tandoori Pomfret",
+    "description": "Whole Pomfret fish, marinated with spices, char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Seafood",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 13,
+    "name": "Chicken Tikka",
+    "description": "Morsels of chicken in a spicy yogurt marinade, char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 26,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 14,
+    "name": "Saffron Chicken",
+    "description": "Creamy chicken kebabs in saffron enhanced marinade, char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 15,
+    "name": "Reshmi Seekh Kebab",
+    "description": "Minced chicken kebabs marinated and skewered, char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 24,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 16,
+    "name": "Tandoori Chicken (Half)",
+    "description": "Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 25,
+      "half": 0
+    },
+    "calories": {
+      "full": 732,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 17,
+    "name": "Tandoori Chicken (Full)",
+    "description": "Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 40,
+      "half": 0
+    },
+    "calories": {
+      "full": 1529,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Appetizers",
+    "subCategory": "Poultry",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 18,
+    "name": "Goat Seekh Kebab",
+    "description": "Minced goat meat marinated in spices skewered, and char-grilled",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 30,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Meats",
+    "isChefSpecial": false,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 19,
+    "name": "Barrah Chops",
+    "description": "Flavorful marinated lamb chops char-grilled to perfection",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 40,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy"],
+    "category": "Appetizers",
+    "subCategory": "Meats",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  },
+  {
+    "id": 20,
+    "name": "Paneer Matar Makhana",
+    "description": "Paneer cubes simmered in yellow gravy with lotus seeds, enhanced with garlic",
+    "image": "/placeholder.svg?height=400&width=600",
+    "price": {
+      "full": 28,
+      "half": 0
+    },
+    "calories": {
+      "full": 178,
+      "half": 0
+    },
+    "allergens": ["Dairy", "Nuts"],
+    "category": "Mains",
+    "subCategory": "Vegetarian",
+    "isChefSpecial": true,
+    "isVegan": false,
+    "hasPortions": false
+  }
+]

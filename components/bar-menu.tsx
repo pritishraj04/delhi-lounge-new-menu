@@ -49,9 +49,9 @@ const drinkItems: DrinkItem[] = []
 
 // Explicitly type the props for BarMenu
 interface BarMenuProps {
-  selectedItem: DrinkItem | null;
-  setSelectedItem: (item: DrinkItem | null) => void;
-  drinkItems: DrinkItem[];
+  selectedItem: DrinkItem | null
+  setSelectedItem: (item: DrinkItem | null) => void
+  drinkItems: DrinkItem[]
 }
 
 export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuProps) {
@@ -197,10 +197,15 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
                       <DialogTitle>{drink.name}</DialogTitle>
                       <div className="relative w-full aspect-video mb-4">
                         <Image
-                          src={drink.image || "/placeholder.svg"}
+                          src={drink.image || "/placeholder.svg?height=300&width=500"}
                           alt={drink.name}
                           fill
                           className="object-cover rounded-md"
+                          onError={(e) => {
+                            // Fallback to placeholder if image fails to load
+                            const imgElement = e.currentTarget as HTMLImageElement
+                            imgElement.src = "/placeholder.svg?height=300&width=500"
+                          }}
                         />
                       </div>
                       <DialogDescription>{drink.description}</DialogDescription>
@@ -286,4 +291,3 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
 }
 
 export { drinkItems }
-
