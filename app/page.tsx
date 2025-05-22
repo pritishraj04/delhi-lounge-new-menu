@@ -10,7 +10,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import dynamic from "next/dynamic"
 import { FullScreenToggle } from "@/components/full-screen-toggle"
 import { BubbleNotification } from "@/components/bubble-notification"
-import { parseFoodMenuCSV, parseBarMenuCSV, convertToMenuItems, convertToBarItems } from "@/utils/csv-parser"
 import { AllergenFilter } from "@/components/allergen-filter"
 import { UpcomingEvents, type Event } from "@/components/upcoming-events"
 import Image from "next/image"
@@ -20,51 +19,47 @@ import { useSearch } from "../hooks/useSearch"
 
 // Define types for menu items, drink items, and events
 interface MenuItem {
-  id: number; // Changed from string to number
-  name: string;
-  description: string;
-  image: string;
+  id: number
+  name: string
+  description: string
+  image: string
   price: {
-    full: number;
-    half: number;
-  };
+    full: number
+    half: number
+  }
   calories: {
-    full: number;
-    half: number;
-  };
-  weight?: {
-    full: number;
-    half: number;
-  };
-  allergens?: string[];
-  category: string;
-  subCategory?: string;
-  isChefSpecial?: boolean;
-  isVegan?: boolean;
-  hasPortions?: boolean;
+    full: number
+    half: number
+  }
+  allergens?: string[]
+  category: string
+  subCategory?: string
+  isChefSpecial?: boolean
+  isVegan?: boolean
+  hasPortions?: boolean
 }
 
 interface DrinkItem {
-  id: number; // Changed from string to number
-  name: string;
-  price: number;
-  category: string;
-  subCategory?: string;
-  description: string;
-  image: string;
+  id: number
+  name: string
+  price: number
+  category: string
+  subCategory?: string
+  description: string
+  image: string
 }
 
 // Update the SearchResult type to include optional properties
 interface SearchResult {
-  id?: number | string;
-  name: string;
-  type: "Food Menu" | "Bar Menu" | "Upcoming Events"; // Ensure type is one of the allowed values
-  isVegan?: boolean; // Optional property
-  category?: string; // Optional property
-  subCategory?: string; // Optional property
-  image?: string;
-  price?: number | { full: number; half: number }; // Allow price as an object or a number
-  calories?: number | { full: number; half: number }; // Allow calories as an object or a number
+  id?: number | string
+  name: string
+  type: "Food Menu" | "Bar Menu" | "Upcoming Events" // Ensure type is one of the allowed values
+  isVegan?: boolean // Optional property
+  category?: string // Optional property
+  subCategory?: string // Optional property
+  image?: string
+  price?: number | { full: number; half: number } // Allow price as an object or a number
+  calories?: number | { full: number; half: number } // Allow calories as an object or a number
 }
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
@@ -78,21 +73,23 @@ const DynamicBarMenu = dynamic(() => import("@/components/bar-menu").then((mod) 
 const upcomingEvents: Event[] = [
   // {
   //   name: "Christmas Gala",
-  //   image: "/img/events/christmas.jpg",
+  //   image: "/placeholder.svg?height=600&width=800",
   // },
   // {
   //   name: "New Year Eve Bash",
-  //   image: "/img/events/new-year-eve.jpg",
+  //   image: "/placeholder.svg?height=600&width=800",
   // },
   // {
   //   name: "Valentine's Day Special",
-  //   image: "/img/events/valentines-day.jpg",
+  //   image: "/placeholder.svg?height=600&width=800",
   // },
 ]
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
-const searchInputStyles = "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 text-sm py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black";
-const searchResultsStyles = "w-full max-w-[500px] bg-white backdrop-blur-sm shadow-lg rounded-lg mt-2 max-h-[60vh] overflow-y-auto border border-gray-100";
+const searchInputStyles =
+  "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black"
+const searchResultsStyles =
+  "w-full max-w-[500px] bg-white backdrop-blur-sm shadow-lg rounded-lg mt-2 max-h-[60vh] overflow-y-auto border border-gray-100"
 
 export default function Page() {
   const [activeMenu, setActiveMenu] = useState<"food" | "bar" | "events">("food")
@@ -111,7 +108,7 @@ export default function Page() {
   const [isSearchOverlayVisible, setIsSearchOverlayVisible] = useState(false)
   const [events, setEvents] = useState<Event[]>(upcomingEvents)
   const [selectedEventName, setSelectedEventName] = useState<string | null>(null)
-  const [isSearchTriggered, setIsSearchTriggered] = useState(false); // Track if search triggered the selection
+  const [isSearchTriggered, setIsSearchTriggered] = useState(false) // Track if search triggered the selection
 
   // Allergen filter state
   const [allAllergens, setAllAllergens] = useState<string[]>([])
@@ -119,13 +116,13 @@ export default function Page() {
   const [isAllergenFilterOpen, setIsAllergenFilterOpen] = useState(false)
 
   useClickOutside(searchRef, () => {
-    setIsSearchOpen(false);
-    setSearchFocused(false);
-    setIsSearchOverlayVisible(false);
-    setSearchQuery("");
-  });
+    setIsSearchOpen(false)
+    setSearchFocused(false)
+    setIsSearchOverlayVisible(false)
+    setSearchQuery("")
+  })
 
-  useScrollToItem(selectedItem?.id || null, activeMenu);
+  useScrollToItem(selectedItem?.id || null, activeMenu)
 
   const searchResultsHook = useSearch({
     searchQuery,
@@ -134,38 +131,30 @@ export default function Page() {
     events,
     veganOnly,
     selectedAllergens,
-  });
+  })
 
   useEffect(() => {
-    const loadCSVData = async () => {
+    const loadMenuData = async () => {
       setIsLoading(true)
       try {
-        // Load food menu CSV
-        const foodMenuResponse = await fetch("/sample-food-menu.csv")
-        const foodMenuText = await foodMenuResponse.text()
-        const foodItems = parseFoodMenuCSV(foodMenuText)
-        const convertedFoodItems = convertToMenuItems(foodItems)
+        // Load food menu JSON
+        const foodMenuResponse = await fetch("/data/food-menu.json")
+        const foodMenuData = await foodMenuResponse.json()
+        setMenuItems(foodMenuData)
 
-        // Set menu items
-        setMenuItems(convertedFoodItems)
-
-        // Load bar menu CSV
-        const barMenuResponse = await fetch("/sample-bar-menu.csv")
-        const barMenuText = await barMenuResponse.text()
-        const barItems = parseBarMenuCSV(barMenuText)
-        const convertedBarItems = convertToBarItems(barItems)
-
-        // Set drink items
-        setDrinkItems(convertedBarItems)
+        // Load bar menu JSON
+        const barMenuResponse = await fetch("/data/bar-menu.json")
+        const barMenuData = await barMenuResponse.json()
+        setDrinkItems(barMenuData)
 
         // Set initial selected item only if we have items
-        if (convertedFoodItems && convertedFoodItems.length > 0) {
-          setSelectedItem(convertedFoodItems[0])
+        if (foodMenuData && foodMenuData.length > 0) {
+          setSelectedItem(foodMenuData[0])
         }
 
         // Extract all unique allergens
         const allergenSet = new Set<string>()
-        convertedFoodItems.forEach((item: MenuItem) => {
+        foodMenuData.forEach((item: MenuItem) => {
           if (item.allergens && Array.isArray(item.allergens)) {
             item.allergens.forEach((allergen: string) => allergenSet.add(allergen))
           }
@@ -174,65 +163,30 @@ export default function Page() {
         const uniqueAllergens = Array.from(allergenSet)
         setAllAllergens(uniqueAllergens)
         setSelectedAllergens(uniqueAllergens) // All allergens selected by default
-
-        // Remove notification on load
-        // setNotificationMessage("Menu data loaded successfully")
       } catch (error) {
-        console.error("Error loading CSV data:", error)
+        console.error("Error loading menu data:", error)
         setNotificationMessage("Error loading menu data")
-
-        // Fallback to default data
-        const loadDefaultData = async () => {
-          try {
-            const defaultMenuItems: MenuItem[] = []; // Define mock or fallback data here
-            const { drinkItems: defaultDrinkItems }: { drinkItems: DrinkItem[] } = await import("@/components/bar-menu").then((mod) => ({ drinkItems: mod.drinkItems || [] }));
-
-            if (defaultMenuItems.length > 0) {
-              setMenuItems(defaultMenuItems);
-              setSelectedItem(defaultMenuItems[0]);
-
-              // Extract allergens from default menu items
-              const allergenSet = new Set<string>();
-              defaultMenuItems.forEach((item: MenuItem) => {
-                if (item.allergens && Array.isArray(item.allergens)) {
-                  item.allergens.forEach((allergen: string) => allergenSet.add(allergen));
-                }
-              });
-
-              const uniqueAllergens = Array.from(allergenSet);
-              setAllAllergens(uniqueAllergens);
-              setSelectedAllergens(uniqueAllergens);
-            }
-
-            if (defaultDrinkItems.length > 0) {
-              setDrinkItems(defaultDrinkItems);
-            }
-          } catch (fallbackError) {
-            console.error("Error loading fallback data:", fallbackError);
-          }
-        };
-
-        loadDefaultData();
       } finally {
         setIsLoading(false)
       }
     }
 
-    loadCSVData()
+    loadMenuData()
   }, [])
 
   useEffect(() => {
-    if (!isSearchTriggered) { // Only reset if not triggered by search
+    if (!isSearchTriggered) {
+      // Only reset if not triggered by search
       if (activeMenu === "food" && menuItems.length > 0) {
-        setSelectedItem(menuItems[0]);
+        setSelectedItem(menuItems[0])
       } else if (activeMenu === "bar" && drinkItems.length > 0) {
-        setSelectedItem(drinkItems[0]);
+        setSelectedItem(drinkItems[0])
       } else if (activeMenu === "events") {
-        setSelectedItem(null);
+        setSelectedItem(null)
       }
     }
-    setIsSearchTriggered(false); // Reset the flag after handling
-  }, [activeMenu, menuItems, drinkItems]);
+    setIsSearchTriggered(false) // Reset the flag after handling
+  }, [activeMenu, menuItems, drinkItems])
 
   // Close search when allergen filter is opened
   useEffect(() => {
@@ -246,57 +200,57 @@ export default function Page() {
 
   // Adjust selectedItem handling to ensure compatibility
   const handleSearchItemClick = (item: SearchResult) => {
-    setIsSearchTriggered(true);
+    setIsSearchTriggered(true)
 
     if (item.type === "Upcoming Events") {
-      handleEventSelection(item);
+      handleEventSelection(item)
     } else {
-      handleMenuSelection(item);
+      handleMenuSelection(item)
     }
 
-    resetSearchState(item);
-  };
+    resetSearchState(item)
+  }
 
   const handleEventSelection = (item: SearchResult) => {
-    setActiveMenu("events");
-    const event = events.find((e) => e.name === item.name);
+    setActiveMenu("events")
+    const event = events.find((e) => e.name === item.name)
     if (event) {
-      setSelectedEventName(event.name);
+      setSelectedEventName(event.name)
     }
-  };
+  }
 
   const handleMenuSelection = (item: SearchResult) => {
-    setActiveMenu(item.type === "Food Menu" ? "food" : "bar");
-    setSelectedItem(item as unknown as MenuItem | DrinkItem);
+    setActiveMenu(item.type === "Food Menu" ? "food" : "bar")
+    setSelectedItem(item as unknown as MenuItem | DrinkItem)
 
     if (item.type === "Bar Menu") {
-        const interval = setInterval(() => {
-            const barMenuElement = document.getElementById("bar-menu-container"); // Assuming BarMenu has this ID
-            if (barMenuElement) {
-                clearInterval(interval);
-                scrollToItem(item.id);
-            }
-        }, 100); // Check every 100ms
+      const interval = setInterval(() => {
+        const barMenuElement = document.getElementById("bar-menu-container") // Assuming BarMenu has this ID
+        if (barMenuElement) {
+          clearInterval(interval)
+          scrollToItem(item.id)
+        }
+      }, 100) // Check every 100ms
     } else {
-        scrollToItem(item.id);
+      scrollToItem(item.id)
     }
-  };
+  }
 
   const scrollToItem = (id?: number | string) => {
-    const itemElement = document.getElementById(`menu-item-${id}`);
+    const itemElement = document.getElementById(`menu-item-${id}`)
     if (itemElement) {
-      itemElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      itemElement.scrollIntoView({ behavior: "smooth", block: "center" })
     }
-  };
+  }
 
   const resetSearchState = (item: SearchResult) => {
-    setSearchQuery("");
-    setSearchResults([]);
-    setIsSearchOpen(false);
-    setSearchFocused(false);
-    setIsSearchOverlayVisible(false);
-    setNotificationMessage(`Selected "${item.name}" from ${item.type}`);
-  };
+    setSearchQuery("")
+    setSearchResults([])
+    setIsSearchOpen(false)
+    setSearchFocused(false)
+    setIsSearchOverlayVisible(false)
+    setNotificationMessage(`Selected "${item.name}" from ${item.type}`)
+  }
 
   // Only show the Upcoming Events menu option if there are events
   const showEventsMenu = events.length > 0
@@ -308,7 +262,13 @@ export default function Page() {
         {/* Logo section */}
         <div className="flex justify-center items-center py-2">
           <div className="relative h-16 w-48">
-            <Image src="/delhi-lounge-logo.png" alt="The Delhi Lounge" fill className="object-contain" priority />
+            <Image
+              src="/delhi-lounge-logo.png?height=160&width=480"
+              alt="The Delhi Lounge"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
 

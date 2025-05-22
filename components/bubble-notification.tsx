@@ -35,4 +35,3 @@ export function BubbleNotification({ message, duration = 3000 }: BubbleNotificat
     </AnimatePresence>
   )
 }
-

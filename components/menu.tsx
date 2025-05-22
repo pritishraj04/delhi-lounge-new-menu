@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
@@ -311,13 +313,18 @@ export function Menu({
               key={selectedItem?.id}
             >
               <Image
-                src={selectedItem?.image || "/placeholder.svg"}
+                src={selectedItem?.image || "/placeholder.svg?height=400&width=600"}
                 alt={selectedItem?.name || "Selected item"}
                 fill
                 className="object-cover"
                 priority={false} // Disable priority loading for non-critical images
                 placeholder="blur" // Use a blur placeholder
-                blurDataURL="/placeholder.svg" // Low-res placeholder image
+                blurDataURL="/placeholder.svg?height=10&width=10" // Low-res placeholder image
+                onError={(e) => {
+                  // Fallback to placeholder if image fails to load
+                  const imgElement = e.currentTarget as HTMLImageElement
+                  imgElement.src = "/placeholder.svg?height=400&width=600"
+                }}
               />
               {selectedItem?.isChefSpecial && (
                 <div className="absolute top-2 right-2 z-10 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -428,7 +435,9 @@ export function Menu({
                       <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Allergens</h3>
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
-                          .filter((allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1)
+                          .filter(
+                            (allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1,
+                          )
                           .map((allergen) => {
                             const AllergenIcon = allergenIcons[allergen] || null
                             return (
@@ -497,13 +506,18 @@ export function Menu({
                       <CardContent className="p-2 flex flex-col justify-between">
                         <div className="aspect-square relative rounded-md overflow-hidden mb-2">
                           <Image
-                            src={item.image || "/placeholder.svg"}
+                            src={item.image || "/placeholder.svg?height=140&width=140"}
                             alt={item.name}
                             fill
                             className="object-cover"
                             loading="lazy" // Enable lazy loading
                             placeholder="blur" // Use a blur placeholder
-                            blurDataURL="/placeholder.svg" // Low-res placeholder image
+                            blurDataURL="/placeholder.svg?height=10&width=10" // Low-res placeholder image
+                            onError={(e) => {
+                              // Fallback to placeholder if image fails to load
+                              const imgElement = e.currentTarget as HTMLImageElement
+                              imgElement.src = "/placeholder.svg?height=140&width=140"
+                            }}
                           />
                           {item.isChefSpecial && (
                             <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
@@ -599,4 +613,3 @@ export function Menu({
     </div>
   )
 }
-
