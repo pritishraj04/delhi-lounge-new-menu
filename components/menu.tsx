@@ -485,7 +485,7 @@ export function Menu({
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    transition={{ duration: 0.5, delay: index * 0.0005 }}
                   >
                     <Card
                       className={`flex-shrink-0 w-[140px] h-full cursor-pointer transition-all ${
