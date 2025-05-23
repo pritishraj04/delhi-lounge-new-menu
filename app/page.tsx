@@ -70,7 +70,12 @@ interface SearchResult {
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 
 const DynamicBarMenu = dynamic(() => import("@/components/bar-menu").then((mod) => mod.BarMenu), {
-  loading: () => <p>Loading...</p>,
+  loading: () =>         <div className="flex-1 flex items-center justify-center bg-[#f9f7f3]">
+          <div className="flex flex-col items-center">
+            <div className="animate-spin h-8 w-8 border-4 border-[#8B0000] border-t-transparent rounded-full mb-4"></div>
+            <p className="text-[#7c7c7c]">Loading Bar Menu...</p>
+          </div>
+        </div>,
   ssr: false,
 })
 
@@ -91,7 +96,7 @@ const upcomingEvents: Event[] = [
 ]
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
-const searchInputStyles = "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 text-sm py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black";
+const searchInputStyles = "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black";
 const searchResultsStyles = "w-full max-w-[500px] bg-white backdrop-blur-sm shadow-lg rounded-lg mt-2 max-h-[60vh] overflow-y-auto border border-gray-100";
 
 export default function Page() {
@@ -141,7 +146,7 @@ export default function Page() {
       setIsLoading(true)
       try {
         // Load food menu CSV
-        const foodMenuResponse = await fetch("/sample-food-menu.csv")
+        const foodMenuResponse = await fetch("/data/food-menu.csv")
         const foodMenuText = await foodMenuResponse.text()
         const foodItems = parseFoodMenuCSV(foodMenuText)
         const convertedFoodItems = convertToMenuItems(foodItems)
@@ -150,7 +155,7 @@ export default function Page() {
         setMenuItems(convertedFoodItems)
 
         // Load bar menu CSV
-        const barMenuResponse = await fetch("/sample-bar-menu.csv")
+        const barMenuResponse = await fetch("/data/bar-menu.csv")
         const barMenuText = await barMenuResponse.text()
         const barItems = parseBarMenuCSV(barMenuText)
         const convertedBarItems = convertToBarItems(barItems)
@@ -181,38 +186,12 @@ export default function Page() {
         console.error("Error loading CSV data:", error)
         setNotificationMessage("Error loading menu data")
 
-        // Fallback to default data
-        const loadDefaultData = async () => {
-          try {
-            const defaultMenuItems: MenuItem[] = []; // Define mock or fallback data here
-            const { drinkItems: defaultDrinkItems }: { drinkItems: DrinkItem[] } = await import("@/components/bar-menu").then((mod) => ({ drinkItems: mod.drinkItems || [] }));
-
-            if (defaultMenuItems.length > 0) {
-              setMenuItems(defaultMenuItems);
-              setSelectedItem(defaultMenuItems[0]);
-
-              // Extract allergens from default menu items
-              const allergenSet = new Set<string>();
-              defaultMenuItems.forEach((item: MenuItem) => {
-                if (item.allergens && Array.isArray(item.allergens)) {
-                  item.allergens.forEach((allergen: string) => allergenSet.add(allergen));
-                }
-              });
-
-              const uniqueAllergens = Array.from(allergenSet);
-              setAllAllergens(uniqueAllergens);
-              setSelectedAllergens(uniqueAllergens);
-            }
-
-            if (defaultDrinkItems.length > 0) {
-              setDrinkItems(defaultDrinkItems);
-            }
-          } catch (fallbackError) {
-            console.error("Error loading fallback data:", fallbackError);
-          }
-        };
-
-        loadDefaultData();
+        // Fallback to empty arrays if CSVs fail to load
+        setMenuItems([])
+        setDrinkItems([])
+        setSelectedItem(null)
+        setAllAllergens([])
+        setSelectedAllergens([])
       } finally {
         setIsLoading(false)
       }
@@ -537,7 +516,7 @@ export default function Page() {
                     key={`${item.type}-${item.id || index}`}
                     initial={{ opacity: 0, y: -5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
+                    transition={{ delay: index * 0.005 }}
                     className="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                     onClick={() => handleSearchItemClick(item)}
                   >
@@ -567,10 +546,10 @@ export default function Page() {
       </AnimatePresence>
 
       {isLoading ? (
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center bg-[#f9f7f3]">
           <div className="flex flex-col items-center">
             <div className="animate-spin h-8 w-8 border-4 border-[#8B0000] border-t-transparent rounded-full mb-4"></div>
-            <p className="text-[#7c7c7c]">Loading menu data...</p>
+            <p className="text-[#7c7c7c]">Loading Food Menu...</p>
           </div>
         </div>
       ) : (
@@ -605,7 +584,7 @@ export default function Page() {
       <footer className="p-3 text-center bg-[#f9f7f3]">
         <p className="text-xs text-gray-500 italic">A gratuity of 18% will be added for parties of 5 or more.</p>
       </footer>
-      <FullScreenToggle />
+      {/* <FullScreenToggle /> */}
       {notificationMessage && <BubbleNotification message={notificationMessage} />}
     </main>
   )

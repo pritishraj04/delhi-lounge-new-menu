@@ -315,7 +315,7 @@ export function Menu({
                 alt={selectedItem?.name || "Selected item"}
                 fill
                 className="object-cover"
-                priority={false} // Disable priority loading for non-critical images
+                priority={true} // Disable priority loading for non-critical images
                 placeholder="blur" // Use a blur placeholder
                 blurDataURL="/placeholder.svg" // Low-res placeholder image
               />
@@ -501,9 +501,9 @@ export function Menu({
                             alt={item.name}
                             fill
                             className="object-cover"
-                            loading="lazy" // Enable lazy loading
                             placeholder="blur" // Use a blur placeholder
                             blurDataURL="/placeholder.svg" // Low-res placeholder image
+                            priority={true} // Disable priority loading for non-critical images
                           />
                           {item.isChefSpecial && (
                             <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">

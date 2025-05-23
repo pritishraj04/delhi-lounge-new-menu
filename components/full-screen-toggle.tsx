@@ -17,13 +17,41 @@ export function FullScreenToggle() {
   }, [])
 
   const toggleFullScreen = () => {
+    const elem = document.documentElement as HTMLElement & {
+      webkitRequestFullscreen?: () => Promise<void> | void
+      mozRequestFullScreen?: () => Promise<void> | void
+      msRequestFullscreen?: () => Promise<void> | void
+    }
+    const doc = document as Document & {
+      webkitExitFullscreen?: () => Promise<void> | void
+      mozCancelFullScreen?: () => Promise<void> | void
+      msExitFullscreen?: () => Promise<void> | void
+    }
     if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch((err) => {
-        console.error(`Error attempting to enable full-screen mode: ${err.message}`)
-      })
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch?.((err: any) => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message}`)
+        })
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen()
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen()
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen()
+      } else {
+        console.error('Fullscreen API is not supported')
+      }
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen()
+      if (doc.exitFullscreen) {
+        doc.exitFullscreen()
+      } else if (doc.webkitExitFullscreen) {
+        doc.webkitExitFullscreen()
+      } else if (doc.mozCancelFullScreen) {
+        doc.mozCancelFullScreen()
+      } else if (doc.msExitFullscreen) {
+        doc.msExitFullscreen()
+      } else {
+        console.error('Fullscreen API is not supported')
       }
     }
   }

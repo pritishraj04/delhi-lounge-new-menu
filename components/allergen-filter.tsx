@@ -93,12 +93,13 @@ export function AllergenFilter({
 
               <ScrollArea className="max-h-60">
                 <div className="p-2">
-                  {allergens
+                  {[...new Set(allergens)]
                     .filter((allergen) => allergen.toLowerCase() !== "none")
                     .map((allergen) => (
-                      <div
-                        key={allergen}
-                        className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer"
+                      <button
+                        type="button"
+                        key={allergen + "-option"}
+                        className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer appearance-none bg-transparent border-0 w-full text-left"
                         onClick={() => toggleAllergen(allergen)}
                       >
                         <div
@@ -111,7 +112,7 @@ export function AllergenFilter({
                           {localSelectedAllergens.includes(allergen) && <Check className="h-3 w-3 text-white" />}
                         </div>
                         <span className="text-sm text-gray-800">{allergen}</span>
-                      </div>
+                      </button>
                     ))}
                 </div>
               </ScrollArea>
