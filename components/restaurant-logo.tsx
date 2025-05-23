@@ -36,4 +36,3 @@ export function RestaurantLogo({ className = "" }: { className?: string }) {
     </svg>
   )
 }
-

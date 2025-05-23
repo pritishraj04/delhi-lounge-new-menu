@@ -13,7 +13,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
 
 interface DrinkItem {
   id: number
@@ -61,6 +60,24 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
   const [items, setItems] = useState<DrinkItem[]>(drinkItems.length > 0 ? drinkItems : [])
   const [isCategoryOpen, setIsCategoryOpen] = useState(false)
   const [isOverlayVisible, setIsOverlayVisible] = useState(false)
+  const [showCategoryContent, setShowCategoryContent] = useState(false)
+  const [itemsVisible, setItemsVisible] = useState(false)
+
+  // For CSS transitions
+  useEffect(() => {
+    setItemsVisible(true)
+  }, [])
+
+  // Handle category modal visibility
+  useEffect(() => {
+    if (isCategoryOpen) {
+      setIsOverlayVisible(true)
+      setTimeout(() => setShowCategoryContent(true), 50)
+    } else {
+      setShowCategoryContent(false)
+      setTimeout(() => setIsOverlayVisible(false), 300)
+    }
+  }, [isCategoryOpen])
 
   // Extract unique categories and format them with subcategories
   useEffect(() => {
@@ -168,57 +185,61 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
 
       <ScrollArea className="flex-1">
         <div className="p-4">
-          {filteredDrinks.map((drink) => (
-            <motion.div
+          {filteredDrinks.map((drink, index) => (
+            <div
               key={drink.id}
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className={`flex justify-between items-center py-2 border-b border-gray-200 transition-colors duration-300 ${
-                highlightedItem === drink.id ? "bg-yellow-100" : ""
-              }`}
-              onClick={() => setSelectedItem(drink)}
-              id={`menu-item-${drink.id}`}
+              className={`transition-all duration-300 opacity-0 translate-y-5 ${itemsVisible ? "opacity-100 translate-y-0" : ""}`}
+              style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <div>
-                <span className="font-medium">{drink.name}</span>
-                {drink.subCategory && <span className="text-xs text-gray-400 ml-1 italic">({drink.subCategory})</span>}
-              </div>
-              <div className="flex items-center">
-                <span className="font-medium mr-2">${formatPrice(safelyGetValue(drink, ["price"], 0))}</span>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="ghost" size="sm">
-                      <Info className="h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>{drink.name}</DialogTitle>
-                      <div className="relative w-full aspect-video mb-4">
-                        <Image
-                          src={drink.image || "/placeholder.svg?height=300&width=500"}
-                          alt={drink.name}
-                          fill
-                          className="object-cover rounded-md"
-                          onError={(e) => {
-                            // Fallback to placeholder if image fails to load
-                            const imgElement = e.currentTarget as HTMLImageElement
-                            imgElement.src = "/placeholder.svg?height=300&width=500"
-                          }}
-                        />
-                      </div>
-                      <DialogDescription>{drink.description}</DialogDescription>
-                      {drink.subCategory && (
-                        <div className="mt-2 text-sm text-gray-500">
-                          Category: {drink.category} - {drink.subCategory}
+              <div
+                className={`flex justify-between items-center py-2 border-b border-gray-200 transition-colors duration-300 ${
+                  highlightedItem === drink.id ? "bg-yellow-100" : ""
+                }`}
+                onClick={() => setSelectedItem(drink)}
+                id={`menu-item-${drink.id}`}
+              >
+                <div>
+                  <span className="font-medium">{drink.name}</span>
+                  {drink.subCategory && (
+                    <span className="text-xs text-gray-400 ml-1 italic">({drink.subCategory})</span>
+                  )}
+                </div>
+                <div className="flex items-center">
+                  <span className="font-medium mr-2">${formatPrice(safelyGetValue(drink, ["price"], 0))}</span>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="ghost" size="sm">
+                        <Info className="h-4 w-4" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>{drink.name}</DialogTitle>
+                        <div className="relative w-full aspect-video mb-4">
+                          <Image
+                            src={drink.image || "/placeholder.svg?height=300&width=500"}
+                            alt={drink.name}
+                            fill
+                            className="object-cover rounded-md"
+                            onError={(e) => {
+                              // Fallback to placeholder if image fails to load
+                              const imgElement = e.currentTarget as HTMLImageElement
+                              imgElement.src = "/placeholder.svg?height=300&width=500"
+                            }}
+                          />
                         </div>
-                      )}
-                    </DialogHeader>
-                  </DialogContent>
-                </Dialog>
+                        <DialogDescription>{drink.description}</DialogDescription>
+                        {drink.subCategory && (
+                          <div className="mt-2 text-sm text-gray-500">
+                            Category: {drink.category} - {drink.subCategory}
+                          </div>
+                        )}
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         <ScrollBar />
@@ -238,53 +259,49 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
           <MenuIcon className="h-6 w-6" />
           <span className="sr-only">Toggle categories</span>
         </Button>
-        <AnimatePresence>
-          {isOverlayVisible && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40"
-              onClick={() => {
-                setIsCategoryOpen(false)
-                setIsOverlayVisible(false)
-              }}
-            />
-          )}
-          {isCategoryOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
-            >
-              <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
-                <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+
+        {isOverlayVisible && (
+          <div
+            className={`fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+              showCategoryContent ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={() => {
+              setIsCategoryOpen(false)
+              setIsOverlayVisible(false)
+            }}
+          />
+        )}
+
+        {isCategoryOpen && (
+          <div
+            className={`absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50 transition-all duration-300 ease-out ${
+              showCategoryContent ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-20 scale-95"
+            }`}
+          >
+            <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
+              <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+            </div>
+            <ScrollArea className="max-h-80 overflow-y-auto">
+              <div className="p-2">
+                {uniqueCategories.map(({ category, subCategory }, index) => (
+                  <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                    <Button
+                      variant="ghost"
+                      className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
+                      onClick={() => {
+                        handleCategorySelect(category, subCategory)
+                        setIsCategoryOpen(false)
+                      }}
+                    >
+                      {category === "All" ? "All" : formatCategoryText(category, subCategory)}
+                    </Button>
+                    {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
+                  </div>
+                ))}
               </div>
-              <ScrollArea className="max-h-80 overflow-y-auto">
-                <div className="p-2">
-                  {uniqueCategories.map(({ category, subCategory }, index) => (
-                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
-                      <Button
-                        variant="ghost"
-                        className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
-                        onClick={() => {
-                          handleCategorySelect(category, subCategory)
-                          setIsCategoryOpen(false)
-                        }}
-                      >
-                        {category === "All" ? "All" : formatCategoryText(category, subCategory)}
-                      </Button>
-                      {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
-                    </div>
-                  ))}
-                </div>
-              </ScrollArea>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </ScrollArea>
+          </div>
+        )}
       </div>
     </div>
   )

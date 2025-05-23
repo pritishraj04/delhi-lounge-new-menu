@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -85,8 +84,26 @@ export function Menu({
   const [isCategoryOpen, setIsCategoryOpen] = useState(false)
   const categoryRef = useRef<HTMLDivElement>(null)
   const [isOverlayVisible, setIsOverlayVisible] = useState(false)
+  const [showCategoryContent, setShowCategoryContent] = useState(false)
   const [uniqueCategories, setUniqueCategories] = useState<{ category: string; subCategory?: string }[]>([])
   const [lastSelectedCategory, setLastSelectedCategory] = useState("All")
+  const [itemsVisible, setItemsVisible] = useState(false)
+
+  // For CSS transitions
+  useEffect(() => {
+    setItemsVisible(true)
+  }, [])
+
+  // Handle category modal visibility
+  useEffect(() => {
+    if (isCategoryOpen) {
+      setIsOverlayVisible(true)
+      setTimeout(() => setShowCategoryContent(true), 50)
+    } else {
+      setShowCategoryContent(false)
+      setTimeout(() => setIsOverlayVisible(false), 300)
+    }
+  }, [isCategoryOpen])
 
   // Auto-select "All" category when toggling Vegan Only
   useEffect(() => {
@@ -304,12 +321,9 @@ export function Menu({
         <div className="h-full flex flex-col lg:flex-row overflow-hidden relative">
           <div className="flex-grow lg:flex-grow-[0.95] overflow-hidden relative mb-4 lg:mb-0 lg:mr-4">
             {/* Update the image section to show the vegan badge */}
-            <motion.div
+            <div
               {...swipeHandlers}
-              className="relative h-full rounded-lg overflow-hidden"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
+              className="relative h-full rounded-lg overflow-hidden transition-opacity duration-300"
               key={selectedItem?.id}
             >
               <Image
@@ -341,59 +355,29 @@ export function Menu({
                   Vegan
                 </div>
               )}
-            </motion.div>
+            </div>
           </div>
           <div className="lg:flex-grow-[0.05] flex flex-col">
-            <motion.div
-              className="mb-4"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
+            <div
+              className="mb-4 transition-all duration-300 opacity-0 translate-y-10"
+              style={{ opacity: selectedItem ? 1 : 0, transform: selectedItem ? "translateY(0)" : "translateY(10px)" }}
               key={`title-${selectedItem?.id}`}
             >
               <h1 className="font-playfair text-2xl font-semibold mb-2">{selectedItem?.name || "Select an item"}</h1>
               <p className="text-sm text-[#7c7c7c] lg:max-w-sm">
                 {selectedItem?.description || "Item description will appear here"}
               </p>
-            </motion.div>
+            </div>
             <div className="mt-auto">
-              <motion.div
-                className="absolute top-4 left-4 lg:static lg:w-auto bg-white rounded-lg p-4 space-y-2 lg:space-y-3 shadow-lg overflow-hidden"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
+              <div
+                className="absolute top-4 left-4 lg:static lg:w-auto bg-white rounded-lg p-4 space-y-2 lg:space-y-3 shadow-lg overflow-hidden transition-all duration-300 opacity-0 -translate-x-10"
+                style={{
+                  opacity: selectedItem ? 1 : 0,
+                  transform: selectedItem ? "translateX(0)" : "translateX(-10px)",
+                }}
                 key={`pricing-${selectedItem?.id}`}
               >
                 <div className="relative">
-                  {/* Pricing Section */}
-                  {/* <h3 className="font-playfair font-medium text-base lg:text-lg mb-1 lg:mb-2 text-[#2c2c2c]">
-                    Pricing
-                  </h3>
-                  {selectedItem?.hasPortions ? (
-                    <div className="grid grid-cols-2 gap-1 lg:gap-2">
-                      <div className="space-y-0 lg:space-y-1">
-                        <div className="text-xs lg:text-sm text-[#7c7c7c]">Full</div>
-                        <div className="font-medium text-xs lg:text-sm">
-                          ${formatPrice(safelyGetValue(selectedItem, ["price", "full"], 0))}
-                        </div>
-                      </div>
-                      <div className="space-y-0 lg:space-y-1">
-                        <div className="text-xs lg:text-sm text-[#7c7c7c]">Half</div>
-                        <div className="font-medium text-xs lg:text-sm">
-                          ${formatPrice(safelyGetValue(selectedItem, ["price", "half"], 0))}
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="space-y-0 lg:space-y-1">
-                      <div className="font-medium text-xs lg:text-sm">
-                        ${formatPrice(safelyGetValue(selectedItem, ["price", "full"], 0))}
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="my-2 border-t border-[#e0d9c8]"></div> */}
-
                   {/* Nutritional Info Section */}
                   <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Nutritional Info</h3>
 
@@ -451,7 +435,7 @@ export function Menu({
                     </>
                   )}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -488,16 +472,13 @@ export function Menu({
             <ScrollArea className="h-full" style={{ touchAction: "pan-x" }}>
               <div className="flex gap-4 p-3 overflow-x-auto">
                 {filteredItems.map((item, index) => (
-                  <motion.div
+                  <div
                     key={`${item.id}-${index}`} // Ensure uniqueness
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className={`transition-all duration-300 opacity-0 translate-y-20 ${itemsVisible ? "opacity-100 translate-y-0" : ""}`}
+                    style={{ transitionDelay: `${index * 50}ms` }}
                   >
                     <Card
-                      className={`flex-shrink-0 w-[140px] h-full cursor-pointer transition-all ${
+                      className={`flex-shrink-0 w-[140px] h-full cursor-pointer transition-all hover:scale-105 active:scale-95 ${
                         selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
                       }`}
                       onClick={() => setSelectedItem(item)}
@@ -539,7 +520,7 @@ export function Menu({
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
               <ScrollBar orientation="horizontal" />
@@ -561,54 +542,50 @@ export function Menu({
           <MenuIcon className="h-6 w-6" />
           <span className="sr-only">Toggle categories</span>
         </Button>
-        <AnimatePresence>
-          {isOverlayVisible && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40"
-              onClick={() => {
-                setIsCategoryOpen(false)
-                setIsOverlayVisible(false)
-              }}
-            />
-          )}
-          {/* Redesigned category menu with fixed header */}
-          {isCategoryOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
-            >
-              <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
-                <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+
+        {isOverlayVisible && (
+          <div
+            className={`fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+              showCategoryContent ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={() => {
+              setIsCategoryOpen(false)
+              setIsOverlayVisible(false)
+            }}
+          />
+        )}
+
+        {/* Redesigned category menu with fixed header */}
+        {isCategoryOpen && (
+          <div
+            className={`absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50 transition-all duration-300 ease-out ${
+              showCategoryContent ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-20 scale-95"
+            }`}
+          >
+            <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
+              <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+            </div>
+            <ScrollArea className="max-h-80 overflow-y-auto">
+              <div className="p-2">
+                {uniqueCategories.map(({ category, subCategory }, index) => (
+                  <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                    <Button
+                      variant="ghost"
+                      className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
+                      onClick={() => {
+                        handleCategorySelect(category, subCategory)
+                        setIsCategoryOpen(false)
+                      }}
+                    >
+                      {category === "All" ? "All" : formatCategoryText(category, subCategory)}
+                    </Button>
+                    {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
+                  </div>
+                ))}
               </div>
-              <ScrollArea className="max-h-80 overflow-y-auto">
-                <div className="p-2">
-                  {uniqueCategories.map(({ category, subCategory }, index) => (
-                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
-                      <Button
-                        variant="ghost"
-                        className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
-                        onClick={() => {
-                          handleCategorySelect(category, subCategory)
-                          setIsCategoryOpen(false)
-                        }}
-                      >
-                        {category === "All" ? "All" : formatCategoryText(category, subCategory)}
-                      </Button>
-                      {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
-                    </div>
-                  ))}
-                </div>
-              </ScrollArea>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </ScrollArea>
+          </div>
+        )}
       </div>
     </div>
   )
