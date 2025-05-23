@@ -78,7 +78,8 @@
 }
 
 html, body {
-        overscroll-behavior: none;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: none;
 }
 
 /* Custom styles for animations */
