@@ -147,6 +147,9 @@ export default function Page() {
   useEffect(() => {
     const loadCSVData = async () => {
       setIsLoading(true)
+        // Check if the device is iOS
+        const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent)
+        setIsIOS(isIOSDevice)
       try {
         // Load food menu CSV
         const foodMenuResponse = await fetch("/data/food-menu.csv")
@@ -185,10 +188,6 @@ export default function Page() {
 
         // Remove notification on load
         // setNotificationMessage("Menu data loaded successfully")
-
-        // Check if the device is iOS
-        const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent)
-        setIsIOS(isIOSDevice)
       } catch (error) {
         console.error("Error loading CSV data:", error)
         setNotificationMessage("Error loading menu data")
