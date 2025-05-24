@@ -494,7 +494,8 @@ export function Menu({
                       onClick={() => setSelectedItem(item)}
                       id={`menu-item-${item.id}`}
                     >
-                      <CardContent className="p-2 flex flex-col justify-between">
+                      <CardContent className="p-2 flex flex-col h-full justify-between">
+                        <div>
                         <div className="aspect-square relative rounded-md overflow-hidden mb-2">
                           <Image
                             src={item.image || "/placeholder.svg"}
@@ -520,7 +521,9 @@ export function Menu({
                           )}
                         </div>
                         <div className="text-xs font-medium text-[#2c2c2c]">{item.name}</div>
+                        </div>
                         <div className="text-xs text-[#7c7c7c]">
+                          {item?.hasPortions && `$${formatPrice(safelyGetValue(item, ["price", "half"], 0))} - `}
                           ${formatPrice(safelyGetValue(item, ["price", "full"], 0))}
                         </div>
                       </CardContent>
