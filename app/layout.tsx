@@ -88,5 +88,4 @@ export const metadata = {
       { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
-    generator: 'v0.dev'
 }

@@ -17,6 +17,7 @@ import Image from "next/image"
 import { useClickOutside } from "../hooks/useClickOutside"
 import { useScrollToItem } from "../hooks/useScrollToItem"
 import { useSearch } from "../hooks/useSearch"
+import { PWAInstallPrompt } from "@/components/pwa-install-prompt"
 
 // Define types for menu items, drink items, and events
 interface MenuItem {
@@ -123,6 +124,8 @@ export default function Page() {
   const [selectedAllergens, setSelectedAllergens] = useState<string[]>([])
   const [isAllergenFilterOpen, setIsAllergenFilterOpen] = useState(false)
 
+  const [isIOS, setIsIOS] = useState(false)
+
   useClickOutside(searchRef, () => {
     setIsSearchOpen(false);
     setSearchFocused(false);
@@ -182,6 +185,10 @@ export default function Page() {
 
         // Remove notification on load
         // setNotificationMessage("Menu data loaded successfully")
+
+        // Check if the device is iOS
+        const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent)
+        setIsIOS(isIOSDevice)
       } catch (error) {
         console.error("Error loading CSV data:", error)
         setNotificationMessage("Error loading menu data")
@@ -585,6 +592,9 @@ export default function Page() {
         <p className="text-xs text-gray-500 italic">A gratuity of 18% will be added for parties of 5 or more.</p>
       </footer>
       {/* <FullScreenToggle /> */}
+      {!isIOS && (
+        <PWAInstallPrompt />
+      )}
       {notificationMessage && <BubbleNotification message={notificationMessage} />}
     </main>
   )

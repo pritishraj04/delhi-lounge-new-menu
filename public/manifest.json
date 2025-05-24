@@ -1,6 +1,6 @@
 {
   "name": "The Delhi Lounge - Menu App",
-  "short_name": "Delhi Lounge",
+  "short_name": "The Delhi Lounge",
   "description": "The Delhi Lounge restaurant menu application with food, bar, and events",
   "start_url": "/",
   "display": "standalone",
