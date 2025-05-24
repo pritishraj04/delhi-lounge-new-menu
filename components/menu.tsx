@@ -41,7 +41,7 @@ const allergenIcons: Record<string, React.ComponentType<any>> = {
   Dairy: Milk,
   Gluten: Wheat,
   Eggs: Egg,
-  Fish: Fish,
+  Seafood: Fish,
   Nuts: Peanut,
 }
 
