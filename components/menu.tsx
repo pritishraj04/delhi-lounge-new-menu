@@ -540,7 +540,7 @@ export function Menu({
       <div className="fixed bottom-4 right-4">
         <Button
           size="icon"
-          variant="secondary"
+          variant="outline"
           className="h-12 w-12 rounded-full shadow-lg"
           onClick={() => {
             setIsCategoryOpen(!isCategoryOpen)
