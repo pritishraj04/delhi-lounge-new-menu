@@ -223,8 +223,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
       <div className="fixed bottom-4 right-4">
         <Button
           size="icon"
-          variant="secondary"
-          className="h-12 w-12 rounded-full shadow-lg"
+          className="h-12 w-12 rounded-full shadow-lg bg-[#8B0000] hover:bg-[#a02020] text-white"
           onClick={() => {
             setIsCategoryOpen(!isCategoryOpen)
             setIsOverlayVisible(!isCategoryOpen)
@@ -255,8 +254,8 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
             >
-              <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
-                <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+              <div className="sticky top-0 bg-[#8B0000] p-4 border-b border-gray-100 z-10">
+                <h2 className="text-xl font-playfair font-medium text-white">Category</h2>
               </div>
               <ScrollArea className="max-h-80 overflow-y-auto">
                 <div className="p-2">

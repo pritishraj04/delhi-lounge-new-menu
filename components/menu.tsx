@@ -388,7 +388,7 @@ export function Menu({
                   <div className="my-2 border-t border-[#e0d9c8]"></div> */}
 
                   {/* Nutritional Info Section */}
-                  <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Nutritional Info</h3>
+                  <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Nutritional Info</h3>
 
                   {/* Weight Information */}
                   {selectedItem?.weight && (
@@ -425,14 +425,14 @@ export function Menu({
                   {selectedItem?.allergens?.length && (
                     <>
                       <div className="my-2 border-t border-[#e0d9c8]"></div>
-                      <h3 className="font-playfair font-medium text-sm mb-1 text-[#2c2c2c]">Allergens</h3>
+                      <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Allergens</h3>
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
                           .filter((allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1)
                           .map((allergen) => {
                             const AllergenIcon = allergenIcons[allergen] || null
                             return (
-                              <Badge key={allergen} variant="outline" className="text-xs py-0 px-1 flex items-center">
+                              <Badge key={allergen} variant="outline" className="text-xs py-1 px-2 flex items-center">
                                 {AllergenIcon && <AllergenIcon className="w-3 h-3 mr-1" />}
                                 {allergen}
                               </Badge>
@@ -488,7 +488,7 @@ export function Menu({
                     transition={{ duration: 0.5, delay: index * 0.0005 }}
                   >
                     <Card
-                      className={`flex-shrink-0 w-[140px] h-full cursor-pointer transition-all ${
+                      className={`flex-shrink-0 w-[160px] h-full cursor-pointer transition-all ${
                         selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
                       }`}
                       onClick={() => setSelectedItem(item)}
@@ -520,9 +520,9 @@ export function Menu({
                             </div>
                           )}
                         </div>
-                        <div className="text-xs font-medium text-[#2c2c2c]">{item.name}</div>
+                        <div className="text-sm font-medium mb-1 text-[#2c2c2c]">{item.name}</div>
                         </div>
-                        <div className="text-xs text-[#7c7c7c]">
+                        <div className="text-base font-semibold text-[#7c7c7c]">
                           {item?.hasPortions && `$${formatPrice(safelyGetValue(item, ["price", "half"], 0))} - `}
                           ${formatPrice(safelyGetValue(item, ["price", "full"], 0))}
                         </div>
@@ -540,8 +540,7 @@ export function Menu({
       <div className="fixed bottom-4 right-4">
         <Button
           size="icon"
-          variant="outline"
-          className="h-12 w-12 rounded-full shadow-lg"
+          className="h-12 w-12 rounded-full shadow-lg bg-[#8B0000] hover:bg-[#a02020] text-white"
           onClick={() => {
             setIsCategoryOpen(!isCategoryOpen)
             setIsOverlayVisible(!isCategoryOpen)
@@ -573,8 +572,8 @@ export function Menu({
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
             >
-              <div className="sticky top-0 bg-white p-4 border-b border-gray-100 z-10">
-                <h2 className="text-xl font-playfair font-medium text-[#2c2c2c]">Category</h2>
+              <div className="sticky top-0 bg-[#8B0000] p-4 border-b border-gray-100 z-10">
+                <h2 className="text-xl font-playfair font-medium text-white">Category</h2>
               </div>
               <ScrollArea className="max-h-80 overflow-y-auto">
                 <div className="p-2">

@@ -83,6 +83,13 @@ html, body {
 
 body {
   background-color: #8B0000;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.bg-accent {
+  background-color: #8B0000;
 }
 
 /* Custom styles for animations */

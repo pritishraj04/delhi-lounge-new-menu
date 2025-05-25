@@ -140,6 +140,13 @@ export function AllergenFilter({
                   Apply
                 </Button>
               </div>
+              <div className="pl-1 pr-3 py-2 bg-gray-100 rounded-b-lg">
+                <ul className="list-disc pl-5 text-xs text-gray-500 space-y-1">
+                  <li>Only items containing your selected allergens will be displayed.</li>
+                  <li>Items without any allergens are always included in the results.</li>
+                  <li>If an item has multiple allergens, it will only be shown if all its allergens are selected.</li>
+                </ul>
+              </div>
             </motion.div>
           </>
         )}

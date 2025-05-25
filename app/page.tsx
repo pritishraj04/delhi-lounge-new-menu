@@ -516,7 +516,9 @@ export default function Page() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className={searchResultsStyles}
             >
-              {searchResultsHook.length > 0 ? (
+              {searchQuery.length < 2 ? (
+                <div className="p-4 text-center text-gray-400">Type at least 2 characters to search</div>
+              ) : searchResultsHook.length > 0 ? (
                 searchResultsHook.map((item, index) => (
                   <motion.div
                     key={`${item.type}-${item.id || index}`}
