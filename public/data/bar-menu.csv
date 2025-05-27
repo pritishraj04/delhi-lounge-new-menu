@@ -1,168 +1,185 @@
 category,sub category,title,description,price,image
-Classic Cocktails,Classic Cocktails,Rum and Coke,Smooth rum mixed with refreshing cola for a simple yet satisfying cocktail.,10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Screwdriver,"Vodka and orange juice combine for a refreshing, zesty cocktail.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Cosmopolitan,"A zesty mix of vodka, lime, cranberry juice, and triple sec.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Old Fashioned,"Bourbon, bitters, sugar, and orange peel create a timeless drink.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Mojito,"A cool mix of white rum, mint, lime, sugar, and club soda.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Martini,"A refined blend of gin, vermouth, and bitters, garnished with an olive or lemon twist.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Bloody Mary,"A unique mix of vodka, tomato juice, and lemon, garnished with a celery stalk.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Tom Collins,"Gin, lemon juice, sugar, and sparkling water create a delightful cocktail.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Manhattan,"Whiskey, vermouth, and bitters, garnished with a maraschino cherry.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Mai Tai,"A vibrant mix of white and dark rums, orange curaçao, syrup, and lime juice.",10,/img/food-menu/imag.jpg
-Classic Cocktails,Classic Cocktails,Long Island Iced Tea,"A bold mix of vodka, tequila, rum, gin, triple sec, and cola.",10,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Very Berry Fizz,"A vibrant mix of mixed berries, star anise, citrus, and ginger ale.",12,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Gondhraj Lemonade,Lemon saccharum paired with an aperitif and tonic water.,12,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Kiwi Fizz,"A delightful mix of kiwi, mint, citrus, and fizz.",12,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Orange Thyme Smash,"A blend of orange, thyme, citrus, and pineapple cordial.",12,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Cucumba,"A light mix of cucumber, basil, elderflower, and citrus.",12,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Soft Drinks,A sparkling blend of classic soda flavors to cool and delight.,4,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Virgin Mai Tai,"A vibrant, alcohol-free version of the classic Mai Tai, perfect for any occasion.",10,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Coke,A timeless fizzy drink with bold flavor and perfect carbonation.,4,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Diet Coke,A guilt-free version of the classic soda with the same bold taste.,4,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Banarasi Boulevardier,"Whisky, Campari, sweet vermouth, saffron, and betel leaf.",15,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Royal Vodka Sour,"Vodka, lemon saccharum, Campari, rose, and citrus.",15,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Tropical City,"Rum, pineapple cordial, coconut, curry leaf, Campari, and citrus.",15,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Guava Dark & Stormy,"Rum, pink guava, thyme, and citrus.",15,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Raw Mango Picante,"Tequila, raw mango, citrus, celery, chili, and hemp seed salt.",15,/img/food-menu/imag.jpg
-House Cocktails,House Cocktails,Pani Puri Martini,An innovative cocktail inspired by the popular Indian street snack.,15,./assets/img/modal-images/food-menu/pani-puri-martini.jpg
-Wines,White Wine,Castello Poggio Moscato Pavia IGT VT,Glass of Castello Poggio Moscato.,8.00,/img/food-menu/imag.jpg
-Wines,White Wine,Castello Poggio Moscato Pavia IGT VT Bottle,Bottle of Castello Poggio Moscato.,35.00,/img/food-menu/imag.jpg
-Wines,White Wine,Tobias Chardonnay,Glass of Tobias Chardonnay.,10.00,/img/food-menu/imag.jpg
-Wines,White Wine,Tobias Chardonnay Bottle,Bottle of Tobias Chardonnay.,45.00,/img/food-menu/imag.jpg
-Wines,White Wine,Taft Street Sauvignon Blanc Russian VT,Glass of Taft Street Sauvignon Blanc.,12.00,/img/food-menu/imag.jpg
-Wines,White Wine,Taft Street Sauvignon Blanc Russian VT Bottle,Bottle of Taft Street Sauvignon Blanc.,50.00,/img/food-menu/imag.jpg
-Wines,White Wine,Terracotta Pinot Grigio,Glass of Terracotta Pinot Grigio.,8.00,/img/food-menu/imag.jpg
-Wines,White Wine,Terracotta Pinot Grigio Bottle,Bottle of Terracotta Pinot Grigio.,35.00,/img/food-menu/imag.jpg
-Wines,Red Wine,Highway 12 Vineyards Cabernet Sauvignon Sonoma County,"A robust cabernet sauvignon with flavors of dark fruit, oak, and spice.",14,/img/food-menu/imag.jpg
-Wines,Red Wine,Cru Pinot Noir,"A velvety red wine with notes of cherry, raspberry, and subtle spice.",10,/img/food-menu/imag.jpg
-Wines,Red Wine,CRU MONTEREY PINOT NOIR Bottle,A bottle of CRU Monterey Pinot Noir featuring bold fruit flavors and an exquisite finish.,40,/img/food-menu/imag.jpg
-Wines,Red Wine,HIGHWAY 12 CABERNET SAUVIGNON SONOMA Bottle,A premium bottle of Highway 12 Cabernet Sauvignon with intense flavors of dark berries and oak.,60,/img/food-menu/imag.jpg
-Wines,Red Wine,MUIRWOOD MERLOT CALIFORNIA VT,"A balanced merlot with hints of plum, chocolate, and soft tannins.",10,/img/food-menu/imag.jpg
-Wines,Red Wine,MUIRWOOD MERLOT CALIFORNIA VT Bottle,"A full bottle of Muirwood Merlot, rich with flavors of dark fruit and silky tannins.",40,/img/food-menu/imag.jpg
-Wines,Red Wine,Caymus Bottle,A bold red wine known for its rich flavors and full-bodied profile.,130,./assets/img/modal-images/food-menu/caymus.jpg
-Wines,Red Wine,Austin Hope Bottle,"A luxurious, full-bodied red wine with layers of dark fruit and earthy undertones.",110,./assets/img/modal-images/food-menu/austin-hope.jpg
-Liquors,Bourbon & Cognac,Jim Beam (bourbon),,7.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Makers Mark (bourbon),,11.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Four Roses (bourbon),,8.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Woodford Reserve (bourbon),,13.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Knob Creek (bourbon),,13.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,TX Bourbon (bourbon),,17.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Remy Martin VSOP (cognac),,20.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Basil Hayden Bourbon,,14.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Buffalo Trace Bourbon,,12.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Bullet Bourbon,,12.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Bullet Rye,,12.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Four Roses Bourbon,,10.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Jim Beam Bourbon,,8.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Knob Creek Bourbon,,15.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Maker's Mark Bourbon,,12.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,TX Bourbon,,20.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,Woodford Reserve Bourbon,,15.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,WhistlePig Black Bourbon (6Years),,10.00,/img/food-menu/imag.jpg
-Liquors,Bourbon & Cognac,WhistlePig Small Batch Bourbon (10Years),,15.00,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Tanqueray (gin),Smooth and crisp with notes of juniper and citrus.,11,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Tanqueray 10 (gin),Rich and refreshing with citrus-forward botanicals.,12,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Bombay Sapphire (gin),Bright and aromatic with a delicate spice finish.,10,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Hendricks (gin),Unique and refreshing with floral undertones.,13,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Campari (liqueur),Bitter and aromatic with notes of orange and herbs.,12,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Grand Marnier (liqueur),Rich and smooth with a sweet orange finish.,13,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Disaronno Amaretto (liqueur),Smooth and nutty with a hint of marzipan.,12,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Cointreau (liqueur),Crisp and zesty with a balanced sweetness.,12,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Kahlua (liqueur),Velvety and bold with coffee and vanilla notes.,11,/img/food-menu/imag.jpg
-Liquors,Gin & Liqueur,Aperol (liqueur),Lightly bitter with citrus and herbal undertones.,10,/img/food-menu/imag.jpg
-Liquors,Rum,Bacardi Silver,Smooth and versatile silver rum.,8.00,/img/food-menu/imag.jpg
-Liquors,Rum,Malibu,Coconut-infused rum with a sweet finish.,9.00,/img/food-menu/imag.jpg
-Liquors,Rum,Captain Morgan,Bold spiced rum with a smooth finish.,11.00,/img/food-menu/imag.jpg
-Liquors,Rum,Ypioca Cachaca Prata,Premium cachaca with a smooth finish.,10.00,/img/food-menu/imag.jpg
-Liquors,Rum,Flor de Cana 7 Year Reserve Rum,Rich and full-bodied aged rum.,10.00,/img/food-menu/imag.jpg
-Liquors,Rum,Bumbu The Original Barbados Rum,Smooth rum with tropical notes.,10.00,/img/food-menu/imag.jpg
-Liquors,Rum,Sailor Jerry Spiced Rum,Rich spiced rum with a vanilla finish.,10.00,/img/food-menu/imag.jpg
-Liquors,Rum,Malibu Coconut Rum,Coconut-flavored rum with a sweet touch.,10.00,/img/food-menu/imag.jpg
-Liquors,Rum,Bacardi Gold,Smooth golden rum with a hint of vanilla.,8.00,/img/food-menu/imag.jpg
-Liquors,Rum,Old Monk,A legendary Indian rum known for its rich taste and smooth finish.,8.00,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenlivet 12,,17,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenlivet 15,,27,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenlivet 18,,32,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenlivet 21,,55,./assets/img/modal-images/food-menu/glenlivet21.jpg
-Liquors,Scotch,Macallan 12 Yr,,23,/img/food-menu/imag.jpg
-Liquors,Scotch,Macallan 18 Yr,,58,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenfiddich 12 Yr,,23,/img/food-menu/imag.jpg
-Liquors,Scotch,JW Black Label,,14,/img/food-menu/imag.jpg
-Liquors,Scotch,Amrut Single Malt,,12,/img/food-menu/imag.jpg
-Liquors,Scotch,Indri Single Malt,,12,/img/food-menu/imag.jpg
-Liquors,Scotch,JW Blue Label,,45,/img/food-menu/imag.jpg
-Liquors,Scotch,Highland Park 12,,12,/img/food-menu/imag.jpg
-Liquors,Scotch,Highland Park 18,,32,/img/food-menu/imag.jpg
-Liquors,Scotch,Chivas Regal 12,,10,/img/food-menu/imag.jpg
-Liquors,Scotch,Chivas Regal 18,,20,/img/food-menu/imag.jpg
-Liquors,Scotch,Chivas Regal 21,,38,/img/food-menu/imag.jpg
-Liquors,Scotch,JW Gold Label Reserve,,20,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenfiddich 14 Year Old,,25,/img/food-menu/imag.jpg
-Liquors,Scotch,Glenfiddich 15 Year Old,,27,/img/food-menu/imag.jpg
-Liquors,Scotch,Dalmore 12 Year Single Malt Scotch,,17,/img/food-menu/imag.jpg
-Liquors,Tequila,Don Julio 1942,"Rich, smooth, and aged to perfection for a refined taste.",71,/img/food-menu/imag.jpg
-Liquors,Tequila,Clase Azul Plata,A crystal-clear tequila with delicate agave flavors.,60,/img/food-menu/imag.jpg
-Liquors,Tequila,Clase Azul Reposado,"Aged to perfection, offering smooth oak and caramel notes.",35,/img/food-menu/imag.jpg
-Liquors,Tequila,El Jimador Silver,A clean and refreshing silver tequila perfect for mixing.,7,/img/food-menu/imag.jpg
-Liquors,Tequila,Patron Silver,A smooth and premium tequila made from the finest blue agave.,20,/img/food-menu/imag.jpg
-Liquors,Tequila,1800 Silver,"A smooth, clean tequila with bold agave flavors.",11,/img/food-menu/imag.jpg
-Liquors,Tequila,Don Julio Silver,"A premium silver tequila with a clean, refreshing taste.",18,/img/food-menu/imag.jpg
-Liquors,Tequila,Casamigos Blanco,"A smooth blanco tequila with a fresh, citrusy flavor.",18,/img/food-menu/imag.jpg
-Liquors,Tequila,Casamigos Reposado,Aged for a rich and smooth flavor with subtle oak notes.,21,/img/food-menu/imag.jpg
-Liquors,Vodka,Tito's,Smooth and gluten-free vodka.,8.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Grey Goose,Premium French vodka.,12.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Beluga Noble,Ultra-premium vodka with a refined taste.,13.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Ciroc,Distinctive vodka with fruity undertones.,10.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Absolute,Smooth Swedish vodka.,10.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Amsterdam,Affordable and versatile vodka.,10.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Belvedere Organic Vodka,Certified organic Polish vodka.,10.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Grey Goose VX,Premium vodka with a hint of cognac.,45.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Ketel One Vodka,Smooth Dutch vodka with a rich heritage.,10.00,/img/food-menu/imag.jpg
-Liquors,Vodka,Aspen Vodka,Smooth and crisp American vodka.,10.00,/img/food-menu/imag.jpg
+Beverages,Non-Alcoholic,Plain Lassi,"Classic churned yogurt drink",5,/img/food-menu/imag.jpg
+Beverages,Non-Alcoholic,Salted Lassi,"Yogurt drink with salt and spices",5,/img/food-menu/imag.jpg
+Beverages,Non-Alcoholic,Mango Lassi,"Sweet mango flavored yogurt drink",6,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Rum and Coke,"A universally loved combination of smooth rum and cola, served over ice, making it a perfect companion for relaxed evenings or lively celebrations.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Screwdriver,"A simple yet vibrant cocktail featuring smooth vodka and freshly squeezed orange juice, delivering a refreshing citrus kick with every sip.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Cosmopolitan,"A stylish cocktail combining the tartness of cranberry and lime juices with smooth vodka and triple sec, served in a chilled martini glass for a touch of sophistication.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Old Fashioned,"A classic cocktail that highlights the bold flavors of bourbon, perfectly balanced with bitters, a touch of sugar, and the zest of orange peel, making it a true icon.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Mojito,"This Cuban classic blends white rum with fresh mint leaves, lime juice, sugar, and sparkling soda for a refreshing cocktail perfect for warm days.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Martini,"The ultimate cocktail of elegance, made with gin and dry vermouth, enhanced by a dash of bitters, and served with a choice of olive or lemon twist for a polished finish.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Bloody Mary,"This savory cocktail features vodka and tangy tomato juice, accented with lemon and spices, and garnished with a crisp celery stalk for a bold and refreshing experience.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Manhattan,"A rich and sophisticated cocktail made with whiskey, sweet vermouth, and bitters, topped with a maraschino cherry for a perfect blend of flavors.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Mai Tai,"This tropical cocktail combines the bold flavors of white and dark rums, balanced with orange curaçao, syrup, and fresh lime juice for a vibrant and refreshing experience.",11,/img/food-menu/imag.jpg
+Classic Cocktails,Classic Cocktails,Long Island Iced Tea,"A robust cocktail featuring a unique blend of vodka, tequila, light rum, gin, triple sec, and a splash of cola, delivering a dynamic and refreshing taste.",11,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Very Berry Fizz,"A refreshing concoction of mixed berries, star anise, and zesty citrus, topped with fizzy ginger ale, creating a drink that's bursting with flavor and charm.",12,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Gondhraj Lemonade,"A unique take on lemonade featuring the aromatic Gondhraj lime, blended with lemon saccharum, an aperitif, and effervescent tonic water for a refreshing twist.",12,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Kiwi Fizz,"A tropical delight combining the tangy sweetness of kiwi, the freshness of mint, a splash of citrus, and bubbly fizz, perfect for any occasion.",12,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Orange Thyme Smash,"A refreshing medley of juicy orange, aromatic thyme, and bright citrus, enhanced by the sweet notes of pineapple cordial for a drink that's both invigorating and satisfying.",12,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Cucumba,"A rejuvenating blend of fresh cucumber, fragrant basil, delicate elderflower, and a dash of citrus, delivering a cool and refreshing experience with every sip.",12,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Soft Drinks,"Experience the ultimate refreshment with our fizzy cold drinks. Bursting with vibrant flavors, each sip is perfectly carbonated and ice-cold, delivering a delightful zing that quenches your thirst and lifts your mood.",4,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Virgin Mai Tai,"Virgin Mai Tai is a flavorful mix of tropical juices with a hint of lime and almond, offering a refreshing taste without alcohol.",10,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Coke,Enjoy the classic and refreshing taste of Coke. Its bold flavor and sparkling fizz make it the ultimate companion to any meal or moment of relaxation.,4,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Diet Coke,"Savor the light and refreshing taste of Diet Coke. With zero calories and the same bold fizz, it’s the perfect choice for those who want flavor without compromise.",4,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Banarasi Boulevardier,"A sophisticated mix of whisky, Campari, and sweet vermouth infused with the richness of saffron and the earthy aroma of betel leaf, offering a unique Indian-inspired take on the Boulevardier.",15,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Royal Vodka Sour,"A regal cocktail featuring vodka and lemon saccharum, with hints of Campari and rose petals, rounded off by zesty citrus for a luxurious and refreshing experience.",15,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Tropical City,"A vibrant concoction of rum, tropical pineapple cordial, creamy coconut, and aromatic curry leaf, balanced with Campari and citrus for a truly tropical vibe.",15,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Guava Dark & Stormy,"A bold and refreshing drink combining the richness of rum with the tropical sweetness of pink guava, complemented by aromatic thyme and a splash of citrus.",15,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Raw Mango Picante,"A zesty blend of tequila, tangy raw mango, and a kick of chili, balanced with citrus and celery, finished with hemp seed salt for a bold and flavorful experience.",15,/img/food-menu/imag.jpg
+House Cocktails,House Cocktails,Pani Puri Martini,"The Pani Puri Martini combines the flavors of tangy tamarind, spicy mint, and crisp puri, blended with vodka for a unique twist on the classic martini. A perfect fusion of tradition and innovation.",15,/img/food-menu/imag.jpg
+Wines,White Wine,Castello Poggio Moscato Pavia IGT VT,"Indulge in the delicate flavors of Castello Poggio Moscato Pavia IGT VT, a perfectly balanced sweet wine with floral and fruity notes.",8,/img/food-menu/imag.jpg
+Wines,White Wine,Castello Poggio Moscato Pavia IGT VT Bottle,"Celebrate special moments with a bottle of Castello Poggio Moscato Pavia IGT VT, offering rich floral aromas and fruity sweetness.",35,/img/food-menu/imag.jpg
+Wines,White Wine,Tobias Chardonnay,"A delightful Chardonnay from California, Tobias offers a harmonious balance of crisp acidity and fruity richness.",10,/img/food-menu/imag.jpg
+Wines,White Wine,Tobias Chardonnay Bottle,"Elevate your gatherings with a bottle of Tobias Chardonnay, a sophisticated choice featuring hints of citrus and oak.",45,/img/food-menu/imag.jpg
+Wines,White Wine,Taft Street Sauvignon Blanc Russian VT,"Enjoy the vibrant flavors of Taft Street Sauvignon Blanc, featuring zesty citrus and herbal undertones for a refreshing sip.",12,/img/food-menu/imag.jpg
+Wines,White Wine,Taft Street Sauvignon Blanc Russian VT Bottle,"Perfect for dinners and celebrations, this bottle of Taft Street Sauvignon Blanc offers a crisp and invigorating wine experience.",50,/img/food-menu/imag.jpg
+Wines,White Wine,Terracotta Pinot Grigio,"Discover the vibrant charm of Terracotta Pinot Grigio, a light-bodied Italian white wine with fresh fruit flavors.",8,/img/food-menu/imag.jpg
+Wines,White Wine,Terracotta Pinot Grigio Bottle,"A bottle of Terracotta Pinot Grigio is an excellent companion for lively gatherings, offering crisp and fruity notes.",35,/img/food-menu/imag.jpg
+Wines,Sparkling/Rose Wine,Social Bird Rose 2023,,12,/img/food-menu/imag.jpg
+Wines,Sparkling/Rose Wine,Social Bird Rose 2025 Bottle,,50,/img/food-menu/imag.jpg
+Wines,Red Wine,Highway 12 Vineyards Cabernet Sauvignon Sonoma County,"The Highway 12 Vineyards Cabernet Sauvignon offers a luxurious, full-bodied experience with rich notes of dark fruits, a hint of oak, and a smooth finish. Perfect for pairing with hearty meals or enjoying on its own.",14,/img/food-menu/imag.jpg
+Wines,Red Wine,HIGHWAY 12 CABERNET SAUVIGNON SONOMA Bottle,"The Highway 12 Cabernet Sauvignon Sonoma Bottle brings a rich, bold experience with a deep concentration of flavors, including blackcurrant, dark cherry, and subtle oak nuances. Ideal for special occasions.",60,/img/food-menu/imag.jpg
+Wines,Red Wine,Cru Pinot Noir,"Cru Pinot Noir is a classic, smooth wine that brings forward elegant notes of cherry, raspberry, and a touch of spice. A versatile wine that pairs beautifully with lighter dishes or serves as a delightful sipper.",10,/img/food-menu/imag.jpg
+Wines,Red Wine,CRU MONTEREY PINOT NOIR Bottle,"The CRU Monterey Pinot Noir Bottle is crafted with care, showcasing the finest of Monterey's vineyards. Enjoy vibrant notes of ripe cherries, delicate spices, and a luxurious, smooth texture.",40,/img/food-menu/imag.jpg
+Wines,Red Wine,MUIRWOOD MERLOT CALIFORNIA VT,"Muirwood Merlot California VT delivers a smooth and approachable taste, featuring balanced notes of plum, chocolate, and soft tannins. A great choice for any occasion.",10,/img/food-menu/imag.jpg
+Wines,Red Wine,MUIRWOOD MERLOT CALIFORNIA VT Bottle,"The Muirwood Merlot California VT Bottle is a testament to California's winemaking excellence. Offering rich flavors of dark fruit and a velvety finish, this merlot is perfect for gatherings or quiet evenings.",40,/img/food-menu/imag.jpg
+Wines,Red Wine,Caymus Bottle,"Caymus Bottle offers an exquisite Napa Valley Cabernet Sauvignon with deep, rich flavors of blackberry, currant, and a touch of oak, ideal for wine lovers seeking sophistication.",130,/img/food-menu/imag.jpg
+Wines,Red Wine,Austin Hope Bottle,"Austin Hope Bottle is a Napa Valley Cabernet Sauvignon with a beautifully balanced profile, featuring aromas of dark chocolate, plum, and tobacco, perfect for connoisseurs and casual drinkers alike.",110,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Jim Beam (bourbon),"Jim Beam bourbon delivers a timeless flavor profile with notes of vanilla, caramel, and oak, embodying the spirit of traditional Kentucky craftsmanship.",7,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Makers Mark (bourbon),"Makers Mark bourbon is a handcrafted classic, offering a rich balance of sweet caramel, vanilla, and a subtle oak finish for a smooth sipping experience.",12,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Four Roses (bourbon),"Four Roses bourbon delivers a unique blend of delicate fruit flavors, spices, and a smooth finish, crafted with precision and care.",8,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Woodford Reserve (bourbon),"Woodford Reserve bourbon is a premium choice, offering layers of complex flavors including dark chocolate, spices, and a hint of tobacco for a luxurious finish.",15,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Knob Creek (bourbon),"Knob Creek bourbon is crafted to perfection, offering a bold flavor profile with maple syrup sweetness, nutmeg spice, and a lingering smoky finish.",15,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,TX Bourbon (bourbon),"TX Bourbon delivers a bold and distinctive flavor with hints of vanilla, caramel, and a uniquely smooth finish that pays homage to its Texan roots.",20,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Remy Martin VSOP (cognac),"Remy Martin VSOP cognac is a perfectly balanced spirit, showcasing harmonious notes of ripe fruit, subtle floral tones, and a silky smooth finish.",20,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Basil Hayden (bourbon),"Basil Hayden's high-rye mash bill creates a uniquely smooth sip with subtle oak, cinnamon, and a crisp peppery finish. Perfect for sipping neat or crafting elevated cocktails.",14,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Buffalo Trace (bourbon),"Buffalo Trace Bourbon is crafted using centuries-old traditions, offering a velvety texture and flavors of toffee, dried fruit, and a touch of spice. Ideal for Old Fashioneds or sipping straight.",12,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Bullet (bourbon),"Bullet Bourbon embraces its straight-from-the-barrel intensity, delivering bold notes of toasted caramel, dark chocolate, and a lingering smoky finish. A favorite for Manhattan enthusiasts.",12,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Bullet Rye (bourbon),"Bullet Rye combines 95% rye grain for a lively spice profile, balanced by hints of honey and citrus. A versatile choice for whiskey sours or bold sipping.",12,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Four Roses (bourbon),"Four Roses Bourbon blends ten unique recipes for a harmonious flavor of ripe pear, apricot, and gentle vanilla. A crowd-pleaser for casual sipping or mixed drinks.",10,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,Jim Beam (bourbon),"Jim Beam’s seven-generation legacy shines in this balanced bourbon, offering flavors of toasted oak, honey, and a hint of smoke. Perfect for classic whiskey highballs.",8,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,WhistlePig Black Bourbon (6Years),"WWhistlePig Whiskey, the premier independent craft whiskey brand, leads the industry by pushing boundaries to create the boldest and best rye whiskeys globally. Situated off the grid in Vermont, our whiskey is meticulously crafted by a new generation of distillers and blenders who reimagine and unlock the essence of Rye Whiskey. ",10,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac,WhistlePig Small Batch Bourbon (10Years),"WWhistlePig Whiskey, the premier independent craft whiskey brand, leads the industry by pushing boundaries to create the boldest and best rye whiskeys globally. Situated off the grid in Vermont, our whiskey is meticulously crafted by a new generation of distillers and blenders who reimagine and unlock the essence of Rye Whiskey. ",15,/img/food-menu/imag.jpg
+Liquors,Bourbon & Cognac, Angel Envy (bourbon),"WWhistlePig Whiskey, the premier independent craft whiskey brand, leads the industry by pushing boundaries to create the boldest and best rye whiskeys globally. Situated off the grid in Vermont, our whiskey is meticulously crafted by a new generation of distillers and blenders who reimagine and unlock the essence of Rye Whiskey. ",15,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Tanqueray (gin),"Tanqueray gin delivers a perfectly balanced blend of juniper, coriander, and citrus, making it an ideal choice for classic cocktails.",11,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Tanqueray 10 (gin),"Tanqueray 10 gin is a premium spirit crafted with the finest fresh citrus and botanicals, offering a velvety smooth finish for the discerning palate.",12,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Bombay Sapphire (gin),"Bombay Sapphire gin features a unique blend of 10 exotic botanicals, creating a refreshing and versatile spirit perfect for any occasion.",10,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Hendricks (gin),"Hendricks gin stands out with its infusion of cucumber and rose petals, offering a delightfully refreshing and smooth flavor profile.",13,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Campari (liqueur),"Campari is a timeless Italian liqueur, blending bold citrus and herbal flavors, perfect for cocktails like Negronis or as a pre-dinner aperitif.",12,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Grand Marnier (liqueur),"Grand Marnier combines the elegance of cognac with the vibrant flavors of orange essence, delivering a luxurious and versatile liqueur.",13,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Disaronno Amaretto (liqueur),"Disaronno Amaretto is a beloved Italian liqueur known for its rich almond flavor, smooth texture, and versatility in cocktails or on its own.",12,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Cointreau (liqueur),"Cointreau is a premium French liqueur, offering a perfect balance of sweet and bitter orange flavors, ideal for enhancing any cocktail.",12,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Kahlua (liqueur),"Kahlua is a renowned coffee liqueur, delivering deep coffee flavors with hints of vanilla, perfect for cocktails or as a standalone treat.",11,/img/food-menu/imag.jpg
+Liquors,Gin & Liqueur,Aperol (liqueur),"Aperol is a bright and refreshing Italian liqueur, featuring a unique blend of citrus, herbs, and a touch of sweetness, perfect for spritzes or sipping.",10,/img/food-menu/imag.jpg
+Liquors,Rum,Bacardi Silver,"A timeless silver rum known for its smoothness and versatility, perfect for cocktails or sipping neat.",8,/img/food-menu/imag.jpg
+Liquors,Rum,Bacardi Gold,"A smooth golden rum with subtle notes of vanilla and caramel, perfect for cocktails or on the rocks.",8,/img/food-menu/imag.jpg
+Liquors,Rum,Malibu,"A light, coconut-flavored rum that adds a touch of tropical sweetness to any cocktail or occasion.",9,/img/food-menu/imag.jpg
+Liquors,Rum,Captain Morgan,"A rich, spiced rum with bold flavors and a smooth finish, perfect for adding depth to your drinks.",11,/img/food-menu/imag.jpg
+Liquors,Rum,Ypioca Cachaca Prata,"A premium cachaca crafted in Brazil, offering a smooth and refined taste ideal for caipirinhas.",10,/img/food-menu/imag.jpg
+Liquors,Rum,Flor de Cana 7 Year Reserve Rum,"An exceptional 7-year-aged rum with rich, full-bodied flavors that elevate any sipping or cocktail experience.",10,/img/food-menu/imag.jpg
+Liquors,Rum,Bumbu The Original Barbados Rum,"A smooth and flavorful Barbados rum with hints of tropical spices and caramel, embodying Caribbean excellence.",10,/img/food-menu/imag.jpg
+Liquors,Rum,Sailor Jerry Spiced Rum,"A bold spiced rum infused with hints of vanilla and cinnamon, delivering a unique and unforgettable taste.",10,/img/food-menu/imag.jpg
+Liquors,Rum,Malibu Coconut Rum,"A tropical classic, Malibu Coconut Rum adds a smooth and sweet coconut flavor to any cocktail.",8,/img/food-menu/imag.jpg
+Liquors,Rum,Old Monk,"Old Monk is a premium dark rum from India, made with a blend of the finest aged rums, delivering a smooth and rich flavor with hints of vanilla and caramel.",8,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenlivet 12,"The Glenlivet 12 Yr offers a smooth and balanced single malt with floral and fruity notes, perfect for both newcomers and connoisseurs.",18,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenlivet 15,"The Glenlivet 15 Yr offers a smooth and balanced single malt with floral and fruity notes, perfect for both newcomers and connoisseurs.",27,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenlivet 18,"Glenlivet 18 offers a rich and creamy flavor profile, aged in French oak casks for a refined whisky experience.",32,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenlivet 21,"Glenlivet 21 offers a perfect balance of flavors, with hints of oak and a lingering finish, making it a connoisseur’s choice.",55,/img/food-menu/imag.jpg
+Liquors,Scotch,Macallan 12 Yr,"Macallan 12 Yr is renowned for its rich complexity and sherry oak cask influence, delivering a whisky with depth and character.",23,/img/food-menu/imag.jpg
+Liquors,Scotch,Macallan 18 Yr,"Macallan 18 Yr is a masterpiece of aging, offering unparalleled richness and depth with a luxurious sherry oak finish.",58,/img/food-menu/imag.jpg
+Liquors,Scotch,JW Black Label,"JW Black Label is a well-crafted blend of fine whiskies, offering a balance of smoky, rich, and fruity flavors.",14,/img/food-menu/imag.jpg
+Liquors,Scotch,Amrut Single Malt,"Amrut Single Malt showcases India’s craftsmanship in whisky making, with complex flavors and a smooth finish.",12,/img/food-menu/imag.jpg
+Liquors,Scotch,Indri Single Malt,"Indri Single Malt delivers a distinctive taste, crafted with precision and innovation in India.",12,/img/food-menu/imag.jpg
+Liquors,Scotch,JW Blue Label,"JW Blue Label represents the pinnacle of blending, with rare and aged whiskies coming together for a luxurious taste.",45,/img/food-menu/imag.jpg
+Liquors,Scotch,Highland Park 12,"Highland Park 12 offers a harmonious balance of smoky and sweet flavors, crafted in Orkney's rugged environment.",12,/img/food-menu/imag.jpg
+Liquors,Scotch,Highland Park 18,"Highland Park 18 showcases smoky elegance with layers of sweet and rich flavors, making it a standout whisky.",32,/img/food-menu/imag.jpg
+Liquors,Scotch,Chivas Regal 12,"Chivas Regal 12 is a harmonious blend of malt and grain whiskies, offering smooth and rich flavors.",10,/img/food-menu/imag.jpg
+Liquors,Scotch,Chivas Regal 18,"Chivas Regal 18 offers a deeper and richer whisky experience, aged to perfection for a sophisticated palate.",20,/img/food-menu/imag.jpg
+Liquors,Scotch,Chivas Regal 21,"Chivas Regal 21 delivers an exceptional and refined whisky experience, masterfully aged to perfection for the most sophisticated palate.",38,/img/food-menu/imag.jpg
+Liquors,Scotch,JW Gold Label Reserve,"JW Gold Label Reserve is a luxurious blend of smooth and creamy flavors, perfect for celebrations.",20,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenfiddich 12 Yr,"Glenfiddich 12 Yr is a classic single malt known for its fresh pear and subtly oaky character, a staple in whisky collections worldwide.",16,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenfiddich 14 Yr,"Glenfiddich 14 Yr offers a bold and rich flavor profile, influenced by aging in bourbon casks.",21,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenfiddich 15 Yr,"Glenfiddich 15 Yr is uniquely aged using the Solera system, delivering layers of rich and complex flavors.",25,/img/food-menu/imag.jpg
+Liquors,Scotch,Dalmore 12 Year Single Malt Scotch,"Dalmore 12 Yr showcases a balance of rich and bold flavors, crafted with precision and expertise.",17,/img/food-menu/imag.jpg
+Liquors,Tequila,Don Julio 1942,"Don Julio 1942 is a luxury tequila, meticulously crafted and aged for a rich, smooth, and unforgettable experience.",26,/img/food-menu/imag.jpg
+Liquors,Tequila,Don Julio Silver,"Don Julio Silver is a fresh and clean silver tequila, with smooth, balanced flavors and a crisp finish.",10,/img/food-menu/imag.jpg
+Liquors,Tequila,Don Julio Anejo,,10,/img/food-menu/imag.jpg
+Liquors,Tequila,Clase Azul Plata,Clase Azul Plata is a premium silver tequila known for its smooth texture and the refined taste of pure blue agave.,24,/img/food-menu/imag.jpg
+Liquors,Tequila,Clase Azul Reposado,Clase Azul Reposado is an aged tequila that offers a rich and smooth flavor with subtle hints of oak and caramel.,30,/img/food-menu/imag.jpg
+Liquors,Tequila,El Jimador Silver,"El Jimador Silver is a high-quality, crisp tequila made from 100% blue agave, offering a smooth and clean finish.",8,/img/food-menu/imag.jpg
+Liquors,Tequila,Patron Rasposado,,8,/img/food-menu/imag.jpg
+Liquors,Tequila,Patron Silver,"Patron Silver is a premium, crystal-clear tequila crafted from the finest blue agave, perfect for sipping or cocktails.",14,/img/food-menu/imag.jpg
+Liquors,Tequila,1800 Silver,"1800 Silver is a bold and crisp tequila with vibrant agave flavors, perfect for sipping or mixing into cocktails.",12,/img/food-menu/imag.jpg
+Liquors,Tequila,Casa Amigos Blanco,"Casamigos Blanco is a clean, crisp tequila with fresh citrus notes and a smooth finish, perfect for sipping or cocktails.",10,/img/food-menu/imag.jpg
+Liquors,Tequila,Casa Amigos Reposado,"Casamigos Reposado is a premium tequila aged to perfection, offering a rich, smooth taste with a hint of oak.",11,/img/food-menu/imag.jpg
+Liquors,Vodka,Tito's,"A high-quality gluten-free vodka known for its clean and smooth taste, perfect for cocktails or sipping neat.",8,/img/food-menu/imag.jpg
+Liquors,Vodka,Grey Goose,"A premium French vodka crafted with the finest wheat, offering exceptional smoothness and flavor.",12,/img/food-menu/imag.jpg
+Liquors,Vodka,Grey Goose VX,"A luxurious vodka infused with a subtle hint of cognac, delivering an unparalleled smoothness and complexity.",45,/img/food-menu/imag.jpg
+Liquors,Vodka,Beluga Noble,"An ultra-premium Russian vodka known for its refined taste, crafted from pure artesian water and malt spirit.",13,/img/food-menu/imag.jpg
+Liquors,Vodka,Ciroc,"A distinctive vodka distilled from fine French grapes, delivering a smooth texture and fruity undertones.",10,/img/food-menu/imag.jpg
+Liquors,Vodka,Absolute,"A globally loved Swedish vodka known for its purity, smoothness, and versatility in cocktails.",10,/img/food-menu/imag.jpg
+Liquors,Vodka,Amsterdam,"An affordable vodka crafted for smoothness, perfect for mixing in cocktails or enjoying on the rocks.",10,/img/food-menu/imag.jpg
+Liquors,Vodka,Belvedere Organic Vodka,"A certified organic vodka crafted in Poland, offering a clean and smooth taste with a commitment to sustainability.",10,/img/food-menu/imag.jpg
+Liquors,Vodka,Ketel One Vodka,"A smooth and versatile Dutch vodka, crafted with care and a rich heritage spanning generations.",10,/img/food-menu/imag.jpg
+Liquors,Vodka,Aspen Vodka,"A smooth and crisp American vodka inspired by the pure mountain waters of Aspen, perfect for any occasion.",10,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Arka (India),,6,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Maharaja IPA,,10,/img/food-menu/imag.jpg
-Beers (Indian),Beers (Import: India),Taj Mahal,,6,./assets/img/modal-images/food-menu/taj-mahal.jpg
-Beers (Indian),Beers (Import: India),Taj Mahal 650ML,,12,./assets/img/modal-images/food-menu/taj-mahal.jpg
-Beers,Beers,Miller Lite,,6,/img/food-menu/imag.jpg
-Beers,Beers,Coors Lite,,6,/img/food-menu/imag.jpg
-Beers,Beers,Blue Moon,,8,/img/food-menu/imag.jpg
-Beers,Beers,Two Hearted Ale,,8,/img/food-menu/imag.jpg
-Beers,Beers,Fat Tire,,8,/img/food-menu/imag.jpg
-Beers,Beers,Yuengling,,8,/img/food-menu/imag.jpg
-Beers,Beers,Angry Orchard,,8,/img/food-menu/imag.jpg
-Beers,Beers,Sam Adams Boston Lager,,8,/img/food-menu/imag.jpg
-Beers,Beers,Sam Adams Winter Lager,,8,/img/food-menu/imag.jpg
-Beers,Beers,Half Life,,8,/img/food-menu/imag.jpg
-Beers,Beers,Red Gate,,8,/img/food-menu/imag.jpg
-Beers,Beers,Dadgum,,8,/img/food-menu/imag.jpg
-Beers,Beers,Shiner Light,,8,/img/food-menu/imag.jpg
-Beers,Beers,Taj Mahal,,6,./assets/img/modal-images/food-menu/taj-mahal.jpg
-Beers,Beers,Shiner Bock,,8,/img/food-menu/imag.jpg
-Beers,Beers,Dry Hopped,,8,/img/food-menu/imag.jpg
-Beers,Beers,50 ft Jackrabbit,,8,/img/food-menu/imag.jpg
-Beers,Beers,Fire Ant Funeral,,8,/img/food-menu/imag.jpg
-Beers,Beers,No Coast IPA,,8,/img/food-menu/imag.jpg
-Beers,Beers,German Pilsner,,8,/img/food-menu/imag.jpg
-Beers,Beers,Hefeweizen,,8,/img/food-menu/imag.jpg
-Beers,Beers,Dos Equis,,5,/img/food-menu/imag.jpg
-Beers,Beers,Modelo Negra,,6,/img/food-menu/imag.jpg
+Beers (Indian),Beers (Import: India),Taj Mahal,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",6,/img/food-menu/imag.jpg
+Beers (Indian),Beers (Import: India),Taj Mahal 650ML,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",12,/img/food-menu/imag.jpg
+Beers,Beers,Miller Lite,"Miller Lite is a light American lager known for its crisp, refreshing taste.",6,/img/food-menu/imag.jpg
+Beers,Beers,Coors Lite,"Coors Lite is a crisp, light lager with a clean, refreshing taste.",6,/img/food-menu/imag.jpg
+Beers,Beers,Blue Moon,Blue Moon is a Belgian-style wheat beer brewed with orange peel and coriander for a unique flavor.,8,/img/food-menu/imag.jpg
+Beers,Beers,Two Hearted Ale,"Two Hearted Ale is an American IPA known for its bold, hoppy flavor with pine and citrus notes.",8,/img/food-menu/imag.jpg
+Beers,Beers,Fat Tire,Fat Tire is an amber ale with a balance of malt sweetness and hop bitterness.,8,/img/food-menu/imag.jpg
+Beers,Beers,Yuengling,"Yuengling is an American lager, smooth and rich with a malty sweetness.",8,/img/food-menu/imag.jpg
+Beers,Beers,Angry Orchard,Angry Orchard is a crisp and refreshing hard cider with a sweet apple flavor.,8,/img/food-menu/imag.jpg
+Beers,Beers,Sam Adams Boston Lager,Sam Adams Boston Lager is a well-balanced American lager with a rich malty flavor.,8,/img/food-menu/imag.jpg
+Beers,Beers,Sam Adams Winter Lager,"Sam Adams Winter Lager is a spiced lager brewed with cinnamon, ginger, and orange peel.",8,/img/food-menu/imag.jpg
+Beers,Beers,Half Life,"Half Life is a hoppy IPA with citrus and pine notes, balanced with malt sweetness.",8,/img/food-menu/imag.jpg
+Beers,Beers,Red Gate,Red Gate is a red ale with a rich malty backbone and a balanced hop profile.,8,/img/food-menu/imag.jpg
+Beers,Beers,Dadgum,Dadgum is a smooth amber ale with a caramel malt profile and a slightly hoppy finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,Shiner Light,Shiner Light is a light lager with a mild malt flavor and a crisp finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,Taj Mahal,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",6,/img/food-menu/imag.jpg
+Beers,Beers,Shiner Bock,Shiner Bock is a dark amber lager with a rich malt flavor and subtle hop bitterness.,8,/img/food-menu/imag.jpg
+Beers,Beers,Dry Hopped,"Dry Hopped is an IPA with bold hop flavors and a crisp, refreshing finish.",8,/img/food-menu/imag.jpg
+Beers,Beers,50 ft Jackrabbit,50 ft Jackrabbit is a strong IPA with a bold hoppy flavor and a smooth malt body.,8,/img/food-menu/imag.jpg
+Beers,Beers,Fire Ant Funeral,Fire Ant Funeral is a bold IPA with a hoppy bite and a crisp finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,No Coast IPA,"No Coast IPA is a balanced IPA with citrus and pine notes, smooth bitterness.",8,/img/food-menu/imag.jpg
+Beers,Beers,German Pilsner,German Pilsner is a crisp and refreshing lager with a delicate hop bitterness.,8,/img/food-menu/imag.jpg
+Beers,Beers,Hefeweizen,Hefeweizen is a cloudy wheat beer with a fruity aroma and smooth malt finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,Dos Equis,"Dos Equis is a well-known Mexican lager, light and crisp with subtle malt flavors.",5,/img/food-menu/imag.jpg
+Beers,Beers,Modelo Negra,Modelo Negra is a dark lager with rich malt flavors and a smooth finish.,6,/img/food-menu/imag.jpg
 Beers,Beers,Modelo,,6,/img/food-menu/imag.jpg
-Beers,Beers,Modelo Especial,,8,/img/food-menu/imag.jpg
-Beers,Beers,Peroni,,8,/img/food-menu/imag.jpg
-Beers,Beers,Stella Artois,,6,/img/food-menu/imag.jpg
-Beers,Beers,Heineken,,6,/img/food-menu/imag.jpg
-Beers,Beers,Trinity Cider,,8,/img/food-menu/imag.jpg
-Beers,Beers,Garage Beer,,9,/img/food-menu/imag.jpg
-Beers,Beers,Texas Blood Orange IPA,,8,/img/food-menu/imag.jpg
-Beers,Beers,Necessary Evil,,8,/img/food-menu/imag.jpg
-Beers,Beers,New Belgium 154,,8,/img/food-menu/imag.jpg
-Beers,Beers,Revolver Brewing,,8,/img/food-menu/imag.jpg
-Beers,Beers,Yuengling Flight,,6,/img/food-menu/imag.jpg
-Beers,Beers,El Chingo,,8,/img/food-menu/imag.jpg
-Beers,Beers,Pacifico,,6,/img/food-menu/imag.jpg
-Beers,Beers,Corona,,6,/img/food-menu/imag.jpg
-Beers,Beers,Corona (Non-Alcoholic),,5,/img/food-menu/imag.jpg
-Beers,Beers,Corona Premier,,6,/img/food-menu/imag.jpg
-Beers,Beers,Seriously Fun Beer,,8,/img/food-menu/imag.jpg
+Beers,Beers,Modelo Especial,"Modelo Especial is a crisp, golden pilsner-style lager with a refreshing taste.",8,/img/food-menu/imag.jpg
+Beers,Beers,Peroni,"Peroni is a light, crisp lager with a slight hoppy bitterness and malty finish.",8,/img/food-menu/imag.jpg
+Beers,Beers,Stella Artois,Stella Artois is a classic Belgian lager with a balanced flavor and crisp finish.,6,/img/food-menu/imag.jpg
+Beers,Beers,Heineken,"Heineken is a pale lager with a light, crisp taste and a mild bitterness.",6,/img/food-menu/imag.jpg
+Beers,Beers,Trinity Cider,Trinity Cider is a refreshing hard cider with crisp apple flavors and a dry finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,Garage Beer,Garage Beer is a full-bodied craft beer with malty sweetness and hop bitterness.,9,/img/food-menu/imag.jpg
+Beers,Beers,Texas Blood Orange IPA,Texas Blood Orange IPA is a citrusy IPA with bold hop flavors and a tangy blood orange twist.,8,/img/food-menu/imag.jpg
+Beers,Beers,Necessary Evil,"Necessary Evil is a smooth, rich stout with chocolate and coffee notes.",8,/img/food-menu/imag.jpg
+Beers,Beers,New Belgium 154,New Belgium 154 is a malty amber beer with a well-balanced flavor and smooth finish.,8,/img/food-menu/imag.jpg
+Beers,Beers,Revolver Brewing,"Revolver Brewing offers a variety of craft beers, known for bold, full-bodied flavors.",8,/img/food-menu/imag.jpg
+Beers,Beers,Yuengling Flight,"Yuengling Flight is a light lager with a crisp, refreshing taste and low calories.",6,/img/food-menu/imag.jpg
+Beers,Beers,El Chingo,El Chingo is a crisp and refreshing Mexican lager with subtle malt sweetness.,8,/img/food-menu/imag.jpg
+Beers,Beers,Pacifico,"Pacifico is a light, crisp lager brewed with a smooth, slightly sweet finish.",6,/img/food-menu/imag.jpg
+Beers,Beers,Corona,"Corona is a pale lager known for its light, refreshing taste and smooth finish.",6,/img/food-menu/imag.jpg
+Beers,Beers,Corona (Non-Alcoholic),Corona Non-Alcoholic,5,/img/food-menu/imag.jpg
+Beers,Beers,Corona Premier,"Corona Premier is a light lager with a crisp, clean flavor and fewer calories.",6,/img/food-menu/imag.jpg
+Beers,Beers,Seriously Fun Beer,"Seriously Fun Beer is a light, crisp, and easy-drinking beer with a fun personality.",8,/img/food-menu/imag.jpg
 Beers,Beers,Flyin Horse Royal 650ML,,12,/img/food-menu/imag.jpg
 Beers,Beers,DOS XX,,6,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Coke,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Coke Diet,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Pepsi,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Diet Pepsi,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Sprite,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Cranberry Juice,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Dr. Pepper,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Ginger Ale,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Lemonade,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Orange Juice,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Red Bull,,5,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Starry,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Club Soda,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",2,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Club Soda with Lime,,2.5,/img/food-menu/imag.jpg
