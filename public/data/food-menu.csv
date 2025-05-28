@@ -7,13 +7,13 @@ Chaat,,Samosa,"Triangular pastry, delicately spiced potatoes, chutneys","weight:
 Chaat,,Chili Corn Peanut Chaat,"Tender sweet corn, crunchy peanuts, zingy dressing","weight:0g;cal:0kcal;price:$12",/img/food-menu/imag.jpg,FALSE,TRUE,Nuts
 Appetizers,Vegetarian,Achari Jalapeño Paneer Tikka ,"Jalapeño stuffed paneer, pickling-spice marinade, shaslik","weight:0g;cal:0kcal;price:$24",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Nuts
 Appetizers,Vegetarian,Tandoori Avocado,"Tender avocado, spiced yogurt marinade, moong dal karam-podi","weight:0g;cal:0kcal;price:$24",/img/food-menu/imag.jpg,TRUE,FALSE,Dairy;Nuts
-Appetizers,Vegetarian,Saag Til Kebab,"Spinach patties, til & kalonji crumble, pyaaz & chutney | Contains Sesame","weight:0g;cal:0kcal;price:$24",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
+Appetizers,Vegetarian,Saag Til Kebab,"Spinach patties, til & kalonji crumble, pyaaz & chutney | Contains Sesame","weight:0g;cal:0kcal;price:$22",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
 Appetizers,Vegetarian,Truffle Parmesan Broccoli,"Tender broccoli, parmesan cream marinade, black truffle-oil","weight:0g;cal:0kcal;price:$20",/img/food-menu/malai-brocolli-tikka.jpg,FALSE,FALSE,Dairy;Nuts
 Appetizers,Vegetarian,Nadru Ki Seekh,"Minced lotus stem, chili lotus seed crumble, lotus-stem chips","weight:0g;cal:0kcal;price:$24",/img/food-menu/imag.jpg,TRUE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chili-Lime Tandoori Pomfret,"Whole Pomfret fish, spicy zesty yogurt marinade, mustard dip | Contains Fish","weight:0g;cal:0kcal;price:$30",/img/food-menu/tandoori-pomfret.jpg,TRUE,FALSE,Dairy;Nuts;Seafood
 Appetizers,Non-Vegetarian,Chicken Tikka,"Chicken morsels, spicy yogurt marinade, pyaaz & chutney","weight:0g;cal:0kcal;price:$26",/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Saffron Chicken,"Creamy chicken, saffron enhanced marinade, pickled cucumber ribbons","weight:0g;cal:0kcal;price:$26",/img/food-menu/imag.jpg,TRUE,FALSE,Dairy;Nuts
-Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,"Minced chicken skewers, spices, pyaaz & chutney",weight:0g;cal:0kcal;price:$26,/img/food-menu/reshmi-seekh-kebab.jpg,FALSE,FALSE,Dairy
+Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,"Minced chicken skewers, spices, pyaaz & chutney",weight:0g;cal:0kcal;price:$24,/img/food-menu/reshmi-seekh-kebab.jpg,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Tandoori Chicken,"Whole roasted chicken, signature yellow marinade, pyaaz & chutney | Half or Full option available.",portion:full;full_weight:0g;full_cal:0kcal;full_price:$40;portion:half;half_weight:g;half_cal:kcal;half_price:$25,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Nuts
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,"Minced goat skewers, spices, pyaaz & chutney","weight:0g;cal:0kcal;price:$28",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,"Melt-in-mouth lamb chops, chili yogurt marinade, pickled mooli ribbons","weight:0g;cal:0kcal;price:$40",/img/food-menu/tandoori-lamb-chops.jpg,TRUE,FALSE,Dairy
