@@ -35,6 +35,8 @@ Wines,White Wine,Taft Street Sauvignon Blanc Russian VT,"Enjoy the vibrant flavo
 Wines,White Wine,Taft Street Sauvignon Blanc Russian VT Bottle,"Perfect for dinners and celebrations, this bottle of Taft Street Sauvignon Blanc offers a crisp and invigorating wine experience.",50,/img/food-menu/imag.jpg
 Wines,White Wine,Terracotta Pinot Grigio,"Discover the vibrant charm of Terracotta Pinot Grigio, a light-bodied Italian white wine with fresh fruit flavors.",8,/img/food-menu/imag.jpg
 Wines,White Wine,Terracotta Pinot Grigio Bottle,"A bottle of Terracotta Pinot Grigio is an excellent companion for lively gatherings, offering crisp and fruity notes.",35,/img/food-menu/imag.jpg
+Wines,White Wine,Whispering Angel,"A crisp and elegant wine with delicate notes of red berries, citrus, and a smooth, dry finish. Refreshing and refined.",10,/img/food-menu/imag.jpg
+Wines,White Wine,Whispering Angel Bottle,"A crisp and elegant wine with delicate notes of red berries, citrus, and a smooth, dry finish. Refreshing and refined.",60,/img/food-menu/imag.jpg
 Wines,Sparkling/Rose Wine,Social Bird Rose 2023,,12,/img/food-menu/imag.jpg
 Wines,Sparkling/Rose Wine,Social Bird Rose 2025 Bottle,,50,/img/food-menu/imag.jpg
 Wines,Red Wine,Highway 12 Vineyards Cabernet Sauvignon Sonoma County,"The Highway 12 Vineyards Cabernet Sauvignon offers a luxurious, full-bodied experience with rich notes of dark fruits, a hint of oak, and a smooth finish. Perfect for pairing with hearty meals or enjoying on its own.",14,/img/food-menu/imag.jpg
@@ -86,9 +88,16 @@ Liquors,Scotch,Glenlivet 15,"The Glenlivet 15 Yr offers a smooth and balanced si
 Liquors,Scotch,Glenlivet 18,"Glenlivet 18 offers a rich and creamy flavor profile, aged in French oak casks for a refined whisky experience.",32,/img/food-menu/imag.jpg
 Liquors,Scotch,Glenlivet 21,"Glenlivet 21 offers a perfect balance of flavors, with hints of oak and a lingering finish, making it a connoisseur’s choice.",55,/img/food-menu/imag.jpg
 Liquors,Scotch,Macallan 12 Yr,"Macallan 12 Yr is renowned for its rich complexity and sherry oak cask influence, delivering a whisky with depth and character.",23,/img/food-menu/imag.jpg
+Liquors,Scotch,Macallan 15 Yr,"",34,/img/food-menu/imag.jpg
 Liquors,Scotch,Macallan 18 Yr,"Macallan 18 Yr is a masterpiece of aging, offering unparalleled richness and depth with a luxurious sherry oak finish.",58,/img/food-menu/imag.jpg
 Liquors,Scotch,JW Black Label,"JW Black Label is a well-crafted blend of fine whiskies, offering a balance of smoky, rich, and fruity flavors.",14,/img/food-menu/imag.jpg
+Liquors,Scotch,JW Gold Label Reserve,"",20,/img/food-menu/imag.jpg
+Liquors,Scotch,JW Blue Label,"",45,/img/food-menu/imag.jpg
 Liquors,Scotch,Amrut Single Malt,"Amrut Single Malt showcases India’s craftsmanship in whisky making, with complex flavors and a smooth finish.",12,/img/food-menu/imag.jpg
+Liquors,Scotch,Amrut Fusion Single Malt,"",15,/img/food-menu/imag.jpg
+Liquors,Scotch,Amrut Aatma Peated Single Cask,"",36,/img/food-menu/imag.jpg
+Liquors,Scotch,Paul John,"",13,/img/food-menu/imag.jpg
+Liquors,Scotch,Oban 14 Yr,"",19,/img/food-menu/imag.jpg
 Liquors,Scotch,Indri Single Malt,"Indri Single Malt delivers a distinctive taste, crafted with precision and innovation in India.",12,/img/food-menu/imag.jpg
 Liquors,Scotch,JW Blue Label,"JW Blue Label represents the pinnacle of blending, with rare and aged whiskies coming together for a luxurious taste.",45,/img/food-menu/imag.jpg
 Liquors,Scotch,Highland Park 12,"Highland Park 12 offers a harmonious balance of smoky and sweet flavors, crafted in Orkney's rugged environment.",12,/img/food-menu/imag.jpg
@@ -100,6 +109,8 @@ Liquors,Scotch,JW Gold Label Reserve,"JW Gold Label Reserve is a luxurious blend
 Liquors,Scotch,Glenfiddich 12 Yr,"Glenfiddich 12 Yr is a classic single malt known for its fresh pear and subtly oaky character, a staple in whisky collections worldwide.",16,/img/food-menu/imag.jpg
 Liquors,Scotch,Glenfiddich 14 Yr,"Glenfiddich 14 Yr offers a bold and rich flavor profile, influenced by aging in bourbon casks.",21,/img/food-menu/imag.jpg
 Liquors,Scotch,Glenfiddich 15 Yr,"Glenfiddich 15 Yr is uniquely aged using the Solera system, delivering layers of rich and complex flavors.",25,/img/food-menu/imag.jpg
+Liquors,Scotch,Glenfiddich 18 Yr,"Glenfiddich 18 Yr is uniquely aged using the Solera system, delivering layers of rich and complex flavors.",30,/img/food-menu/imag.jpg
+Liquors,Scotch,Rampur Single Malt Indian Double Cask,"",15,/img/food-menu/imag.jpg
 Liquors,Scotch,Dalmore 12 Year Single Malt Scotch,"Dalmore 12 Yr showcases a balance of rich and bold flavors, crafted with precision and expertise.",17,/img/food-menu/imag.jpg
 Liquors,Tequila,Don Julio 1942,"Don Julio 1942 is a luxury tequila, meticulously crafted and aged for a rich, smooth, and unforgettable experience.",26,/img/food-menu/imag.jpg
 Liquors,Tequila,Don Julio Silver,"Don Julio Silver is a fresh and clean silver tequila, with smooth, balanced flavors and a crisp finish.",10,/img/food-menu/imag.jpg
