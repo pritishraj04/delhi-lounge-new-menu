@@ -360,7 +360,7 @@ export function Menu({
             </motion.div>
             <div className="mt-auto">
               <motion.div
-                className="absolute top-4 left-4 lg:static lg:w-auto bg-white rounded-lg p-4 space-y-2 lg:space-y-3 shadow-lg overflow-hidden"
+                className="absolute bottom-28 left-4 lg:static lg:w-auto bg-white rounded-lg p-4 space-y-2 lg:space-y-3 shadow-lg overflow-hidden"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
@@ -392,15 +392,15 @@ export function Menu({
                         ${formatPrice(safelyGetValue(selectedItem, ["price", "full"], 0))}
                       </div>
                     </div>
-                  )}
+                  )} */}
 
-                  <div className="my-2 border-t border-[#e0d9c8]"></div> */}
+                  {/* <div className="my-2 border-t border-[#e0d9c8]"></div> */}
 
                   {/* Nutritional Info Section */}
-                  <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Nutritional Info</h3>
+                  {/* <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Nutritional Info</h3> */}
 
                   {/* Weight Information */}
-                  {selectedItem?.weight && (
+                  {/* {selectedItem?.weight && (
                     <div className="mb-2">
                       <div className="text-xs text-[#7c7c7c] mb-1">Weight</div>
                       {selectedItem.hasPortions ? (
@@ -412,10 +412,10 @@ export function Menu({
                         <div className="text-xs">{safelyGetValue(selectedItem, ["weight", "full"], 0)} g</div>
                       )}
                     </div>
-                  )}
+                  )} */}
 
                   {/* Calories Information */}
-                  <div className="mb-2">
+                  {/* <div className="mb-2">
                     <div className="text-xs text-[#7c7c7c] mb-1">Calories</div>
                     {selectedItem?.hasPortions ? (
                       <div className="grid grid-cols-2 gap-2">
@@ -429,11 +429,11 @@ export function Menu({
                     ) : (
                       <div className="text-xs">{safelyGetValue(selectedItem, ["calories", "full"], 0)} kcal</div>
                     )}
-                  </div>
+                  </div> */}
 
                   {selectedItem?.allergens?.length && (
                     <>
-                      <div className="my-2 border-t border-[#e0d9c8]"></div>
+                      {/* <div className="my-2 border-t border-[#e0d9c8]"></div> */}
                       <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Allergens</h3>
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
