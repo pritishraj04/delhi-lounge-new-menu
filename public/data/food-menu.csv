@@ -58,7 +58,7 @@ Sides,,Kachumber Raita,"Spiced yogurt, onions, cucumbers, tomatoes",weight:0g;ca
 Sides,,Green Salad,"Sliced onions, tomatoes, cucumbers, lime, chili",weight:0g;cal:0kcal;price:$6,/img/food-menu/green-salad.jpg,FALSE,FALSE,TRUE,None
 Desserts,,Gulab Jamun,"Reduced milk dumplings, cardamom-saffron syrup, pistachios",weight:0g;cal:0kcal;price:$10,/img/food-menu/gulab-jamun.jpg,FALSE,FALSE,FALSE,Dairy;Gluten
 Desserts,,Gajar Halwa,"Carrot fudge, ghee and cardamom syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/gajar-halwa.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
-Desserts,,Moong Dal Halwa,"Moong lentil fudge, ghee and saffron syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/moong-dal-halwa.jpg,FALSE,FALSE,FALSE,Dairy;Nuts;Gluten
+Desserts,,Moong Dal Halwa,"Moong lentil fudge, ghee and saffron syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/moong-dal-halwa.jpg,FALSE,TRUE,FALSE,Dairy;Nuts;Gluten
 Desserts,,Saffron Rasmalai,"Cheese dumplings, saffron milk, pistachios | Nut-free option available",weight:0g;cal:0kcal;price:$10,/img/food-menu/baileys-rasmalai.jpg,FALSE,FALSE,FALSE,Dairy;Nuts;Gluten
 Desserts,,Kesar Pista Kulfi Falooda,"Saffron milk ice-cream, vermicelli, sesame chikki. Contains sesame.",weight:0g;cal:0kcal;price:$14,/img/food-menu/imag.jpg,TRUE,FALSE,FALSE,Dairy;Nuts
 Desserts,,Rasgulla Tiramisu,"Filter coffee cheese dumplings, mascarpone cream, dark chocolate",weight:0g;cal:0kcal;price:$12,/img/food-menu/imag.jpg,FALSE,TRUE,FALSE,Dairy;Gluten
