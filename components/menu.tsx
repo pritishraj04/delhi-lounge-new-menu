@@ -85,14 +85,16 @@ export function Menu({
   const [isOverlayVisible, setIsOverlayVisible] = useState(false)
   const [uniqueCategories, setUniqueCategories] = useState<{ category: string; subCategory?: string }[]>([])
   const [lastSelectedCategory, setLastSelectedCategory] = useState("All")
+  const prevVeganOnly = useRef(veganOnly)
 
   // Auto-select "All" category when toggling Vegan Only
   useEffect(() => {
-    // Only reset to "All" when toggling Vegan Only, not when changing allergen filters
-    if (veganOnly) {
+    // Only reset to "All" when veganOnly transitions from false to true and not already on "All"
+    if (veganOnly && !prevVeganOnly.current && currentCategory !== "All") {
       setLastSelectedCategory(currentCategory)
       setCurrentCategory("All")
     }
+    prevVeganOnly.current = veganOnly
 
     // Auto-select first vegan item when vegan toggle is enabled
     if (veganOnly && menuItems.length > 0) {
@@ -103,7 +105,7 @@ export function Menu({
         // Apply allergen filter
         if (
           item.allergens &&
-          item.allergens.some((allergen) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
+          item.allergens.some((allergen: string) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
         ) {
           return false
         }
@@ -116,7 +118,7 @@ export function Menu({
         setSelectedItem(firstFilteredItem)
       }
     }
-  }, [veganOnly, selectedAllergens, menuItems, selectedItem, setSelectedItem])
+  }, [veganOnly, selectedAllergens, menuItems, selectedItem, setSelectedItem, currentCategory])
 
   // Extract unique categories and format them with subcategories
   useEffect(() => {
@@ -477,7 +479,7 @@ export function Menu({
           {/* Menu Items */}
           <div className="flex-grow overflow-hidden">
             <ScrollArea className="h-full" style={{ touchAction: "pan-x" }}>
-              <div className="flex gap-4 p-3 overflow-x-auto">
+              <div className="flex gap-4 p-3 overflow-x-auto overflow-y-hidden items-stretch">
                 {filteredItems.map((item, index) => (
                   <motion.div
                     key={`${item.id}-${index}`} // Ensure uniqueness
@@ -488,41 +490,41 @@ export function Menu({
                     transition={{ duration: 0.5, delay: index * 0.0005 }}
                   >
                     <Card
-                      className={`flex-shrink-0 w-[160px] h-full cursor-pointer transition-all ${
+                      className={`flex-shrink-0 w-[160px] cursor-pointer transition-all ${
                         selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
-                      }`}
+                      } min-h-64 h-full`}
                       onClick={() => setSelectedItem(item)}
                       id={`menu-item-${item.id}`}
                     >
                       <CardContent className="p-2 flex flex-col h-full justify-between">
-                        <div>
-                        <div className="aspect-square relative rounded-md overflow-hidden mb-2">
-                          <Image
-                            src={item.image || "/placeholder.svg"}
-                            alt={item.name}
-                            fill
-                            className="object-cover"
-                            placeholder="blur" // Use a blur placeholder
-                            blurDataURL="/placeholder.svg" // Low-res placeholder image
-                            priority={true} // Disable priority loading for non-critical images
-                          />
-                          {item.isChefSpecial && (
-                            <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
-                              <Star className="w-3 h-3 text-black" />
-                            </div>
-                          )}
-                          {item.isVegan && (
-                            <div
-                              className="absolute top-1 right-1 bg-green-600 rounded-full p-1"
-                              style={{ top: item.isChefSpecial ? "25px" : "4px" }}
-                            >
-                              <Leaf className="w-3 h-3 text-white" />
-                            </div>
-                          )}
+                        <div className="flex-1 flex flex-col">
+                          <div className="aspect-square relative rounded-md overflow-hidden mb-2">
+                            <Image
+                              src={item.image || "/placeholder.svg"}
+                              alt={item.name}
+                              fill
+                              className="object-cover"
+                              placeholder="blur" // Use a blur placeholder
+                              blurDataURL="/placeholder.svg" // Low-res placeholder image
+                              priority={true} // Disable priority loading for non-critical images
+                            />
+                            {item.isChefSpecial && (
+                              <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
+                                <Star className="w-3 h-3 text-black" />
+                              </div>
+                            )}
+                            {item.isVegan && (
+                              <div
+                                className="absolute top-1 right-1 bg-green-600 rounded-full p-1"
+                                style={{ top: item.isChefSpecial ? "25px" : "4px" }}
+                              >
+                                <Leaf className="w-3 h-3 text-white" />
+                              </div>
+                            )}
+                          </div>
+                          <div className="text-sm font-medium mb-1 text-[#2c2c2c] line-clamp-3">{item.name}</div>
                         </div>
-                        <div className="text-sm font-medium mb-1 text-[#2c2c2c]">{item.name}</div>
-                        </div>
-                        <div className="text-base font-semibold text-[#7c7c7c]">
+                        <div className="text-base font-semibold text-[#7c7c7c] mt-1">
                           {item?.hasPortions && `$${formatPrice(safelyGetValue(item, ["price", "half"], 0))} - `}
                           ${formatPrice(safelyGetValue(item, ["price", "full"], 0))}
                         </div>

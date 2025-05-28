@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Search, MenuIcon, X, Leaf } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import dynamic from "next/dynamic"
-import { FullScreenToggle } from "@/components/full-screen-toggle"
+// import { FullScreenToggle } from "@/components/full-screen-toggle"
 import { BubbleNotification } from "@/components/bubble-notification"
 import { parseFoodMenuCSV, parseBarMenuCSV, convertToMenuItems, convertToBarItems } from "@/utils/csv-parser"
 import { AllergenFilter } from "@/components/allergen-filter"
@@ -285,6 +285,23 @@ export default function Page() {
 
   // Only show the Upcoming Events menu option if there are events
   const showEventsMenu = events.length > 0
+
+  // Ensure selectedItem is vegan when veganOnly is enabled
+  useEffect(() => {
+    if (activeMenu === "food" && veganOnly) {
+      // Only run if selectedItem is not vegan or is null
+      if (!selectedItem || !(selectedItem as MenuItem).isVegan) {
+        const firstVegan = menuItems.find(
+          (item) => item.isVegan && (!item.allergens || item.allergens.every((allergen) => selectedAllergens.includes(allergen) || allergen.toLowerCase() === "none"))
+        )
+        if (firstVegan) {
+          setSelectedItem(firstVegan)
+        } else {
+          setSelectedItem(null)
+        }
+      }
+    }
+  }, [veganOnly, activeMenu, menuItems, selectedAllergens])
 
   return (
     <main className={`h-[100dvh] flex flex-col ${playfair.variable} font-sans overflow-hidden`}>
