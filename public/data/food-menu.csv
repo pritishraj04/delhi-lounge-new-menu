@@ -27,7 +27,7 @@ Entrées,Vegetarian,Eggplant Bharta,"Roasted eggplant, onion-tomato masala, smok
 Entrées,Vegetarian,Aloo Gobhi Adraki,"Tender cauliflower florets, potatoes, ginger and spices | Vegan option available, Nut-free option available","weight:0g;cal:0kcal;price:$18",/img/food-menu/aloo-gobhi.jpg,FALSE,TRUE,Dairy;Nuts
 Entrées,Vegetarian,Masala Vegetables,"A mélange of vegetables, onion-tomato masala, spices | Vegan option available, Nut-free option available","weight:0g;cal:0kcal;price:$18",/img/food-menu/imag.jpg,FALSE,TRUE,Dairy;Nuts
 Entrées,Vegetarian,Dal Tadka,"Toor & moong lentils, onions-tomatoes, ghee-cumin-asafetida | Vegan option available. ","weight:0g;cal:0kcal;price:$18",/img/food-menu/dal-tadka.jpg,FALSE,TRUE,Dairy
-Entrées,Vegetarian,Dal Makhani,"24 hour slow cooked black lentils, tomatoes, fresh cream and butter","weight:0g;cal:0kcal;price:$22",/img/food-menu/delhi-lounge-dal-makhani.jpg,TRUE,FALSE,Dairy
+Entrées,Vegetarian,Dal Makhani,"24 hour slow cooked black lentils, tomatoes, fresh cream and butter","weight:0g;cal:0kcal;price:$24",/img/food-menu/delhi-lounge-dal-makhani.jpg,TRUE,FALSE,Dairy
 Entrées,Non-Vegetarian,Kadhai Prawns,"Freshwater prawns, tomatoes-capsicum, crushed kadhai masala | Contains Shellfish","weight:0g;cal:0kcal;price:$28",/img/food-menu/kadhai-prawns.jpg,FALSE,FALSE,Dairy;Nuts;Seafood
 Entrées,Non-Vegetarian,Butter Chicken,"Tandoori chicken morsels, smoked creamy tomato gravy, dried fenugreek | Option available : Bone In - $28 | Boneless - $32","weight:0g;cal:0kcal;price:$28",/img/food-menu/delhi-lounge-butter-chicken.jpg,TRUE,FALSE,Dairy;Nuts
 Entrées,Non-Vegetarian,Chicken Tikka Masala,"Chicken tikka, bellpeppers, onion-tomato masala gravy","weight:0g;cal:0kcal;price:$28",/img/food-menu/chicken-tikka-masala.jpg,FALSE,FALSE,Dairy;Nuts
@@ -38,7 +38,7 @@ Entrées,Non-Vegetarian,Goat Nehari,"Tender goat stew, caramelised onions, fragr
 Entrées,Non-Vegetarian,Goat Rogan Josh,"Slow-cooked goat, gingery onion gravy, aromatic Kashmiri spices","weight:0g;cal:0kcal;price:$30",/img/food-menu/mutton-rogan-josh.jpg,FALSE,FALSE,Dairy
 Specialty,,"TDL Imperial Raan (48-hrs Notice Required)","24-hours slow-cooked leg of spring lamb, 18 carat gold, toasted pine nuts. Served with a side of Dal Makhani and Millet Gilafi Naan","weight:0g;cal:0kcal;price:$125",/img/food-menu/imperial-raan.jpg,TRUE,FALSE,Nuts;Dairy
 Rice,,Basmati Rice (8oz),"Steamed plain rice","weight:0g;cal:0kcal;price:$4",/img/food-menu/steamed-basmati-rice.jpg,FALSE,TRUE,None
-Rice,,Cumin Coriander Rice (20oz),"Fragrant rice tempered with cumin and coriander | Vegan option available","weight:0g;cal:0kcal;price:$6",/img/food-menu/cumin-coriander-rice.jpg,FALSE,TRUE,Dairy
+Rice,,Cumin Coriander Rice (20oz),"Fragrant rice tempered with cumin and coriander | Vegan option available","weight:0g;cal:0kcal;price:$8",/img/food-menu/cumin-coriander-rice.jpg,FALSE,TRUE,Dairy
 Rice,,Dum Jackfruit Pulao,"Spiced jackfruit, fragrant Basmati rice, kachumber raita","weight:0g;cal:0kcal;price:$26",/img/food-menu/dum-jackfruit-parda-biryani.jpg,FALSE,FALSE,Dairy
 Rice,,Chicken Dum Biryani,"Choicest cuts of chicken, fragrant Basmati rice, kachumber raita","weight:0g;cal:0kcal;price:$28",/img/food-menu/dum-chicken-parda-biryani.jpg,FALSE,FALSE,Dairy
 Rice,,Parda Goat Dum Biryani,"Choicest cuts of goat, fragrant Basmati rice, beet-boondi raita","weight:0g;cal:0kcal;price:$30",/img/food-menu/dum-mutton-parda-biryani.jpg,TRUE,FALSE,Dairy
