@@ -1,8 +1,8 @@
 category,sub category,title,description,metrics,image,chefSpecial,vegan,allergens
-Chaat,,Pani Puri (Heeng Jeera | Orange),"Street style puffs, spicy potatoes, flavored waters","weight:180g;cal:178kcal;price:$12",/img/food-menu/pani-puri.jpg,FALSE,TRUE,Gluten
+Chaat,,Pani Puri (Heeng Jeera | Orange),"Street style puffs, spicy potatoes, flavored waters","weight:0;cal:0;price:$12",/img/food-menu/pani-puri.jpg,FALSE,TRUE,Gluten
 Chaat,,Aloo Tikki,"Stuffed potato patties, whipped yogurt, chutneys","weight:180g;cal:178kcal;price:$12",/img/food-menu/karol-bagh-aloo-tikki.jpg,TRUE,FALSE,Nuts;Dairy
-Chaat,,Palak Patta Chaat,"Crispy fried spinach, yogurt, chutneys | Vegan option Available.","weight:180g;cal:178kcal;price:$14",/img/food-menu/palak-patta-chaat.jpg,FALSE,TRUE,Dairy
-Chaat,,Bhalla Papdi Chaat,"Crumbled lentil dumplings, sweetened yogurt and chutneys, crsipy papdi  | Vegan option Available.","weight:180g;cal:178kcal;price:$12",/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,TRUE,Dairy
+Chaat,,Palak Patta Chaat,"Crispy fried spinach, yogurt, chutneys | Vegan option available.","weight:180g;cal:178kcal;price:$14",/img/food-menu/palak-patta-chaat.jpg,FALSE,TRUE,Dairy
+Chaat,,Bhalla Papdi Chaat,"Crumbled lentil dumplings, sweetened yogurt and chutneys, crsipy papdi  | Vegan option available.","weight:180g;cal:178kcal;price:$12",/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,TRUE,Dairy
 Chaat,,Samosa,"Triangular pastry, delicately spiced potatoes, chutneys","weight:180g;cal:178kcal;price:$12",/img/food-menu/imag.jpg,FALSE,TRUE,Gluten
 Chaat,,Chili Corn Peanut Chaat,"Tender sweet corn, crunchy peanuts, zingy dressing","weight:180g;cal:178kcal;price:$12",/img/food-menu/imag.jpg,FALSE,TRUE,Nuts
 Appetizers,Vegetarian,Achari Jalapeño Paneer Tikka ,"Jalapeño stuffed paneer, pickling-spice marinade, shaslik","weight:180g;cal:178kcal;price:$24",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Nuts
@@ -14,7 +14,7 @@ Appetizers,Non-Vegetarian,Chili-Lime Tandoori Pomfret,"Whole Pomfret fish, spicy
 Appetizers,Non-Vegetarian,Chicken Tikka,"Chicken morsels, spicy yogurt marinade, pyaaz & chutney","weight:180g;cal:178kcal;price:$26",/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Saffron Chicken,"Creamy chicken, saffron enhanced marinade, pickled cucumber ribbons","weight:180g;cal:178kcal;price:$28",/img/food-menu/imag.jpg,TRUE,FALSE,Dairy;Nuts
 Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,"Minced chicken skewers, spices, pyaaz & chutney",weight:180g;cal:178kcal;price:$24,/img/food-menu/reshmi-seekh-kebab.jpg,FALSE,FALSE,Dairy
-Appetizers,Non-Vegetarian,Tandoori Chicken,"Whole chicken marinated in spicy yogurt marinade, char-grilled, cranberry & ginger launji.",portion:full;full_weight:750g;full_cal:1529kcal;full_price:$40;portion:half;half_weight:350g;half_cal:732kcal;half_price:$25,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Nuts
+Appetizers,Non-Vegetarian,Tandoori Chicken,"Whole roasted chicken, signature yellow marinade, pyaaz & chutney | Half or Full option available.",portion:full;full_weight:750g;full_cal:1529kcal;full_price:$40;portion:half;half_weight:350g;half_cal:732kcal;half_price:$25,/img/food-menu/imag.jpg,FALSE,FALSE,Dairy;Nuts
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,"Minced goat skewers, spices, pyaaz & chutney","weight:180g;cal:178kcal;price:$30",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,"Melt-in-mouth lamb chops, chili yogurt marinade, pickled mooli ribbons","weight:180g;cal:178kcal;price:$40",/img/food-menu/tandoori-lamb-chops.jpg,TRUE,FALSE,Dairy
 Entrées,Vegetarian,Paneer Matar Makhana,"Paneer cubes, green peas, lotus seeds, yellow gravy","weight:180g;cal:178kcal;price:$28",/img/food-menu/imag.jpg,TRUE,FALSE,Dairy;Nuts
@@ -24,13 +24,13 @@ Entrées,Vegetarian,Saag Paneer,"Paneer cubes, luscious spinach gravy, spices | 
 Entrées,Vegetarian,Malai Kofta,"Exquisite paneer croquettes, golden nuts and yogurt gravy, rose petals","weight:180g;cal:178kcal;price:$26",/img/food-menu/malai-kofta.jpg,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Fenugreek Cashew Curry,"Fenugreek leaves, green peas and cashew nuts, creamy nuts gravy","weight:180g;cal:178kcal;price:$24",/img/food-menu/kaju-methi-malai-matar.jpg,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Eggplant Bharta,"Roasted eggplant, onion-tomato masala, smoked butter","weight:180g;cal:178kcal;price:$20",/img/food-menu/charcoal-roasted-baingan-bharta.jpg,FALSE,FALSE,Dairy
-Entrées,Vegetarian,Aloo Gobhi Adraki,"Tender cauliflower florets, potatoes, ginger and spices | Vegan Option Available, Nut-free option Available","weight:180g;cal:178kcal;price:$20",/img/food-menu/aloo-gobhi.jpg,FALSE,TRUE,Dairy;Nuts
-Entrées,Vegetarian,Masala Vegetables,"A mélange of vegetables, onion-tomato masala, spices | Vegan Option Available, Nut-free option Available","weight:180g;cal:178kcal;price:$22",/img/food-menu/imag.jpg,FALSE,TRUE,Dairy;Nuts
-Entrées,Vegetarian,Dal Tadka,"Toor & moong lentils, onions-tomatoes, ghee-cumin-asafetida | Vegan Option Available. ","weight:180g;cal:178kcal;price:$20",/img/food-menu/dal-tadka.jpg,FALSE,TRUE,Dairy
+Entrées,Vegetarian,Aloo Gobhi Adraki,"Tender cauliflower florets, potatoes, ginger and spices | Vegan option available, Nut-free option available","weight:180g;cal:178kcal;price:$20",/img/food-menu/aloo-gobhi.jpg,FALSE,TRUE,Dairy;Nuts
+Entrées,Vegetarian,Masala Vegetables,"A mélange of vegetables, onion-tomato masala, spices | Vegan option available, Nut-free option available","weight:180g;cal:178kcal;price:$22",/img/food-menu/imag.jpg,FALSE,TRUE,Dairy;Nuts
+Entrées,Vegetarian,Dal Tadka,"Toor & moong lentils, onions-tomatoes, ghee-cumin-asafetida | Vegan option available. ","weight:180g;cal:178kcal;price:$20",/img/food-menu/dal-tadka.jpg,FALSE,TRUE,Dairy
 Entrées,Vegetarian,Dal Makhani,"24 hour slow cooked black lentils, tomatoes, fresh cream and butter","weight:180g;cal:178kcal;price:$22",/img/food-menu/delhi-lounge-dal-makhani.jpg,TRUE,FALSE,Dairy
 Entrées,Non-Vegetarian,Kadhai Prawns,"Freshwater prawns, tomatoes-capsicum, crushed kadhai masala | Contains Shellfish","weight:180g;cal:178kcal;price:$30",/img/food-menu/kadhai-prawns.jpg,FALSE,FALSE,Dairy;Nuts;Seafood
-Entrées,Non-Vegetarian,Butter Chicken (Bone In),"Tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices","weight:180g;cal:178kcal;price:$28",/img/food-menu/delhi-lounge-butter-chicken.jpg,FALSE,FALSE,Dairy;Nuts
-Entrées,Non-Vegetarian,Butter Chicken (Boneless),"Bonless tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices","weight:180g;cal:178kcal;price:$32",/img/food-menu/delhi-lounge-butter-chicken.jpg,FALSE,FALSE,Dairy;Nuts
+Entrées,Non-Vegetarian,Butter Chicken (Bone In),"Tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices","weight:180g;cal:178kcal;price:$28",/img/food-menu/delhi-lounge-butter-chicken.jpg,TRUE,FALSE,Dairy;Nuts
+Entrées,Non-Vegetarian,Butter Chicken (Boneless),"Bonless tender chicken pieces cooked in smoky creamy tomato-based gravy, infused with aromatic spices","weight:180g;cal:178kcal;price:$32",/img/food-menu/delhi-lounge-butter-chicken.jpg,TRUE,FALSE,Dairy;Nuts
 Entrées,Non-Vegetarian,Chicken Tikka Masala,"Chicken tikka, bellpeppers, onion-tomato masala gravy","weight:180g;cal:178kcal;price:$28",/img/food-menu/chicken-tikka-masala.jpg,FALSE,FALSE,Dairy;Nuts
 Entrées,Non-Vegetarian,Chicken Khurchan,"Char-grilled chicken, bell peppers & caramelised onions, tomato gravy","weight:180g;cal:178kcal;price:$30",/img/food-menu/chicken-khurchan.jpg,FALSE,FALSE,Dairy;Nuts
 Entrées,Non-Vegetarian,Bhuna Chicken,"Chicken on the bone, onion-tomato masala gravy, whole spices","weight:180g;cal:178kcal;price:$28",/img/food-menu/imag.jpg,FALSE,FALSE,Dairy
