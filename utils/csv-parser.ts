@@ -28,6 +28,7 @@ export interface FoodMenuItem {
   }
   image: string
   isChefSpecial?: boolean
+  isMustTry?: boolean
   isVegan?: boolean
   allergens?: string[]
 }
@@ -80,6 +81,7 @@ export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
         metrics: parseMetrics(values[headerMap["metrics"]] || ""),
         image: values[headerMap["image"]] || "/placeholder.svg",
         isChefSpecial: values[headerMap["chefSpecial"]]?.toLowerCase() === "true",
+        isMustTry: values[headerMap["mustTry"]]?.toLowerCase() === "true",
         isVegan: values[headerMap["vegan"]]?.toLowerCase() === "true",
         allergens:
           values[headerMap["allergens"]]
@@ -311,6 +313,7 @@ export function convertToMenuItems(foodItems: FoodMenuItem[]): any[] {
     category: item.category,
     subCategory: item.subCategory,
     isChefSpecial: item.isChefSpecial,
+    isMustTry: item.isMustTry,
     isVegan: item.isVegan,
     hasPortions: !!item.metrics.portions.half && item.metrics.portions.half.price > 0,
   }))

@@ -7,7 +7,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { MenuIcon, Milk, Wheat, Egg, Fish, NutIcon as Peanut, Star, Leaf } from "lucide-react"
+import { MenuIcon, Milk, Wheat, Egg, Fish, NutIcon as Peanut, Star, Leaf, Sparkle} from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
 // Update the MenuItem interface to include isVegan
@@ -32,6 +32,7 @@ interface MenuItem {
   category: string
   subCategory?: string
   isChefSpecial?: boolean
+  isMustTry?: boolean
   isVegan?: boolean
   hasPortions?: boolean
 }
@@ -321,6 +322,12 @@ export function Menu({
                 placeholder="blur" // Use a blur placeholder
                 blurDataURL="/placeholder.svg" // Low-res placeholder image
               />
+              {selectedItem?.isMustTry && (
+                <div className="absolute top-2 left-2 z-10 bg-[#b42668] text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                  <Sparkle className="w-4 h-4 mr-1" />
+                  Must Try
+                </div>
+              )}
               {selectedItem?.isChefSpecial && (
                 <div className="absolute top-2 right-2 z-10 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
                   <Star className="w-4 h-4 mr-1" />
@@ -508,6 +515,11 @@ export function Menu({
                               blurDataURL="/placeholder.svg" // Low-res placeholder image
                               priority={true} // Disable priority loading for non-critical images
                             />
+                            {item.isMustTry && (
+                              <div className="absolute top-1 left-1 bg-[#b42668] rounded-full p-1">
+                                <Sparkle className="w-3 h-3 text-white" />
+                              </div>
+                            )}
                             {item.isChefSpecial && (
                               <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
                                 <Star className="w-3 h-3 text-black" />

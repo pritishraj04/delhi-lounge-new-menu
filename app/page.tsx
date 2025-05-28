@@ -41,6 +41,7 @@ interface MenuItem {
   category: string;
   subCategory?: string;
   isChefSpecial?: boolean;
+  isMustTry?: boolean;
   isVegan?: boolean;
   hasPortions?: boolean;
 }

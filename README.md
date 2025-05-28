@@ -25,6 +25,7 @@ The Food Menu CSV should include the following columns:
 - `metrics`: Structured string containing weight, calories, and pricing information
 - `image`: URL or path to the image
 - `chefSpecial`: Boolean value (true/false) indicating if the item is a chef's special
+- `mustTry` : Boolean value (true/false) indicating if the item is a must try
 - `allergens`: Semicolon-separated list of allergens (e.g., "Dairy;Nuts;Gluten")
 
 #### Metrics Format
