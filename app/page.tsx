@@ -83,18 +83,10 @@ const DynamicBarMenu = dynamic(() => import("@/components/bar-menu").then((mod) 
 
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
-  // {
-  //   name: "Christmas Gala",
-  //   image: "/img/events/christmas.jpg",
-  // },
-  // {
-  //   name: "New Year Eve Bash",
-  //   image: "/img/events/new-year-eve.jpg",
-  // },
-  // {
-  //   name: "Valentine's Day Special",
-  //   image: "/img/events/valentines-day.jpg",
-  // },
+  {
+    name: "Weekend Brunch",
+    image: "/img/events/brunchmenu8.jpg",
+  },
 ]
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
@@ -342,8 +334,8 @@ export default function Page() {
                     className={`text-sm whitespace-nowrap relative text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "events" ? "bg-[#a02020] font-semibold" : ""}`}
                     onClick={() => setActiveMenu("events")}
                   >
-                    Upcoming Events
-                    <span className="absolute inset-0 border border-[#ffd700] rounded-md gold-shine"></span>
+                    Events
+                    <span className="absolute inset-0 border-2 border-[#ffd700] rounded-md gold-shine"></span>
                   </Button>
                 </>
               )}
@@ -514,7 +506,7 @@ export default function Page() {
                       setIsMobileMenuOpen(false)
                     }}
                   >
-                    Upcoming Events
+                    Events
                   </Button>
                 )}
               </div>
