@@ -1,23 +1,28 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { Menu } from "@/components/menu"
-import { Playfair_Display } from "next/font/google"
-import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
-import { Search, MenuIcon, X, Leaf } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import dynamic from "next/dynamic"
+import { useState, useEffect, useRef } from "react";
+import { Menu } from "@/components/menu";
+import { Playfair_Display } from "next/font/google";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Search, MenuIcon, X, Leaf } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import dynamic from "next/dynamic";
 // import { FullScreenToggle } from "@/components/full-screen-toggle"
-import { BubbleNotification } from "@/components/bubble-notification"
-import { parseFoodMenuCSV, parseBarMenuCSV, convertToMenuItems, convertToBarItems } from "@/utils/csv-parser"
-import { AllergenFilter } from "@/components/allergen-filter"
-import { UpcomingEvents, type Event } from "@/components/upcoming-events"
-import Image from "next/image"
-import { useClickOutside } from "../hooks/useClickOutside"
-import { useScrollToItem } from "../hooks/useScrollToItem"
-import { useSearch } from "../hooks/useSearch"
-import { PWAInstallPrompt } from "@/components/pwa-install-prompt"
+import { BubbleNotification } from "@/components/bubble-notification";
+import {
+  parseFoodMenuCSV,
+  parseBarMenuCSV,
+  convertToMenuItems,
+  convertToBarItems,
+} from "@/utils/csv-parser";
+import { AllergenFilter } from "@/components/allergen-filter";
+import { UpcomingEvents, type Event } from "@/components/upcoming-events";
+import Image from "next/image";
+import { useClickOutside } from "../hooks/useClickOutside";
+import { useScrollToItem } from "../hooks/useScrollToItem";
+import { useSearch } from "../hooks/useSearch";
+import { PWAInstallPrompt } from "@/components/pwa-install-prompt";
 
 // Define types for menu items, drink items, and events
 interface MenuItem {
@@ -69,17 +74,25 @@ interface SearchResult {
   calories?: number | { full: number; half: number }; // Allow calories as an object or a number
 }
 
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
-const DynamicBarMenu = dynamic(() => import("@/components/bar-menu").then((mod) => mod.BarMenu), {
-  loading: () =>         <div className="flex-1 flex items-center justify-center bg-[#f9f7f3]">
-          <div className="flex flex-col items-center">
-            <div className="animate-spin h-8 w-8 border-4 border-[#8B0000] border-t-transparent rounded-full mb-4"></div>
-            <p className="text-[#7c7c7c]">Loading Bar Menu...</p>
-          </div>
-        </div>,
-  ssr: false,
-})
+const DynamicBarMenu = dynamic(
+  () => import("@/components/bar-menu").then((mod) => mod.BarMenu),
+  {
+    loading: () => (
+      <div className="flex-1 flex items-center justify-center bg-[#f9f7f3]">
+        <div className="flex flex-col items-center">
+          <div className="animate-spin h-8 w-8 border-4 border-[#8B0000] border-t-transparent rounded-full mb-4"></div>
+          <p className="text-[#7c7c7c]">Loading Bar Menu...</p>
+        </div>
+      </div>
+    ),
+    ssr: false,
+  }
+);
 
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
@@ -87,37 +100,47 @@ const upcomingEvents: Event[] = [
     name: "Weekend Brunch",
     image: "/img/events/brunchmenu8.jpg",
   },
-]
+];
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
-const searchInputStyles = "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black";
-const searchResultsStyles = "w-full max-w-[500px] bg-white backdrop-blur-sm shadow-lg rounded-lg mt-2 max-h-[60vh] overflow-y-auto border border-gray-100";
+const searchInputStyles =
+  "absolute top-0 w-full transform -translate-x-1/2 max-w-[500px] border border-gray-200 rounded-lg bg-white/95 py-3 px-4 focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-md text-black";
+const searchResultsStyles =
+  "w-full max-w-[500px] bg-white backdrop-blur-sm shadow-lg rounded-lg mt-2 max-h-[60vh] overflow-y-auto border border-gray-100";
 
 export default function Page() {
-  const [activeMenu, setActiveMenu] = useState<"food" | "bar" | "events">("food")
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState("")
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([])
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([])
-  const [drinkItems, setDrinkItems] = useState<DrinkItem[]>([])
-  const [selectedItem, setSelectedItem] = useState<MenuItem | DrinkItem | null>(null)
-  const [notificationMessage, setNotificationMessage] = useState<string | null>(null)
-  const searchRef = useRef(null)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [veganOnly, setVeganOnly] = useState(false)
-  const [searchFocused, setSearchFocused] = useState(false)
-  const [isSearchOverlayVisible, setIsSearchOverlayVisible] = useState(false)
-  const [events, setEvents] = useState<Event[]>(upcomingEvents)
-  const [selectedEventName, setSelectedEventName] = useState<string | null>(null)
+  const [activeMenu, setActiveMenu] = useState<"food" | "bar" | "events">(
+    "food"
+  );
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [drinkItems, setDrinkItems] = useState<DrinkItem[]>([]);
+  const [selectedItem, setSelectedItem] = useState<MenuItem | DrinkItem | null>(
+    null
+  );
+  const [notificationMessage, setNotificationMessage] = useState<string | null>(
+    null
+  );
+  const searchRef = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [veganOnly, setVeganOnly] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [isSearchOverlayVisible, setIsSearchOverlayVisible] = useState(false);
+  const [events, setEvents] = useState<Event[]>(upcomingEvents);
+  const [selectedEventName, setSelectedEventName] = useState<string | null>(
+    null
+  );
   const [isSearchTriggered, setIsSearchTriggered] = useState(false); // Track if search triggered the selection
 
   // Allergen filter state
-  const [allAllergens, setAllAllergens] = useState<string[]>([])
-  const [selectedAllergens, setSelectedAllergens] = useState<string[]>([])
-  const [isAllergenFilterOpen, setIsAllergenFilterOpen] = useState(false)
+  const [allAllergens, setAllAllergens] = useState<string[]>([]);
+  const [selectedAllergens, setSelectedAllergens] = useState<string[]>([]);
+  const [isAllergenFilterOpen, setIsAllergenFilterOpen] = useState(false);
 
-  const [isIOS, setIsIOS] = useState(false)
+  const [isIOS, setIsIOS] = useState(false);
 
   useClickOutside(searchRef, () => {
     setIsSearchOpen(false);
@@ -139,68 +162,71 @@ export default function Page() {
 
   useEffect(() => {
     const loadCSVData = async () => {
-      setIsLoading(true)
-        // Check if the device is iOS
-        const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent)
-        setIsIOS(isIOSDevice)
+      setIsLoading(true);
+      // Check if the device is iOS
+      const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      setIsIOS(isIOSDevice);
       try {
         // Load food menu CSV
-        const foodMenuResponse = await fetch("/data/food-menu.csv")
-        const foodMenuText = await foodMenuResponse.text()
-        const foodItems = parseFoodMenuCSV(foodMenuText)
-        const convertedFoodItems = convertToMenuItems(foodItems)
+        const foodMenuResponse = await fetch("/data/food-menu.csv");
+        const foodMenuText = await foodMenuResponse.text();
+        const foodItems = parseFoodMenuCSV(foodMenuText);
+        const convertedFoodItems = convertToMenuItems(foodItems);
 
         // Set menu items
-        setMenuItems(convertedFoodItems)
+        setMenuItems(convertedFoodItems);
 
         // Load bar menu CSV
-        const barMenuResponse = await fetch("/data/bar-menu.csv")
-        const barMenuText = await barMenuResponse.text()
-        const barItems = parseBarMenuCSV(barMenuText)
-        const convertedBarItems = convertToBarItems(barItems)
+        const barMenuResponse = await fetch("/data/bar-menu.csv");
+        const barMenuText = await barMenuResponse.text();
+        const barItems = parseBarMenuCSV(barMenuText);
+        const convertedBarItems = convertToBarItems(barItems);
 
         // Set drink items
-        setDrinkItems(convertedBarItems)
+        setDrinkItems(convertedBarItems);
 
         // Set initial selected item only if we have items
         if (convertedFoodItems && convertedFoodItems.length > 0) {
-          setSelectedItem(convertedFoodItems[0])
+          setSelectedItem(convertedFoodItems[0]);
         }
 
         // Extract all unique allergens
-        const allergenSet = new Set<string>()
+        const allergenSet = new Set<string>();
         convertedFoodItems.forEach((item: MenuItem) => {
           if (item.allergens && Array.isArray(item.allergens)) {
-            item.allergens.forEach((allergen: string) => allergenSet.add(allergen))
+            item.allergens.forEach((allergen: string) =>
+              allergenSet.add(allergen)
+            );
           }
-        })
+        });
 
-        const uniqueAllergens = Array.from(allergenSet)
-        setAllAllergens(uniqueAllergens)
-        setSelectedAllergens(uniqueAllergens) // All allergens selected by default
+        const uniqueAllergens = Array.from(allergenSet);
+        setAllAllergens(uniqueAllergens);
+        setSelectedAllergens(uniqueAllergens); // All allergens selected by default
 
         // Remove notification on load
         // setNotificationMessage("Menu data loaded successfully")
       } catch (error) {
-        console.error("Error loading CSV data:", error)
-        setNotificationMessage("Error loading menu data")
+        console.error("Error loading CSV data:", error);
+        setNotificationMessage("Error loading menu data");
 
         // Fallback to empty arrays if CSVs fail to load
-        setMenuItems([])
-        setDrinkItems([])
-        setSelectedItem(null)
-        setAllAllergens([])
-        setSelectedAllergens([])
+        setMenuItems([]);
+        setDrinkItems([]);
+        setSelectedItem(null);
+        setAllAllergens([]);
+        setSelectedAllergens([]);
       } finally {
-        setIsLoading(false)
+        setIsLoading(false);
       }
-    }
+    };
 
-    loadCSVData()
-  }, [])
+    loadCSVData();
+  }, []);
 
   useEffect(() => {
-    if (!isSearchTriggered) { // Only reset if not triggered by search
+    if (!isSearchTriggered) {
+      // Only reset if not triggered by search
       if (activeMenu === "food" && menuItems.length > 0) {
         setSelectedItem(menuItems[0]);
       } else if (activeMenu === "bar" && drinkItems.length > 0) {
@@ -215,12 +241,12 @@ export default function Page() {
   // Close search when allergen filter is opened
   useEffect(() => {
     if (isAllergenFilterOpen && isSearchOpen) {
-      setIsSearchOpen(false)
-      setSearchFocused(false)
-      setIsSearchOverlayVisible(false)
-      setSearchQuery("")
+      setIsSearchOpen(false);
+      setSearchFocused(false);
+      setIsSearchOverlayVisible(false);
+      setSearchQuery("");
     }
-  }, [isAllergenFilterOpen, isSearchOpen])
+  }, [isAllergenFilterOpen, isSearchOpen]);
 
   // Adjust selectedItem handling to ensure compatibility
   const handleSearchItemClick = (item: SearchResult) => {
@@ -248,15 +274,15 @@ export default function Page() {
     setSelectedItem(item as unknown as MenuItem | DrinkItem);
 
     if (item.type === "Bar Menu") {
-        const interval = setInterval(() => {
-            const barMenuElement = document.getElementById("bar-menu-container"); // Assuming BarMenu has this ID
-            if (barMenuElement) {
-                clearInterval(interval);
-                scrollToItem(item.id);
-            }
-        }, 100); // Check every 100ms
+      const interval = setInterval(() => {
+        const barMenuElement = document.getElementById("bar-menu-container"); // Assuming BarMenu has this ID
+        if (barMenuElement) {
+          clearInterval(interval);
+          scrollToItem(item.id);
+        }
+      }, 100); // Check every 100ms
     } else {
-        scrollToItem(item.id);
+      scrollToItem(item.id);
     }
   };
 
@@ -277,7 +303,7 @@ export default function Page() {
   };
 
   // Only show the Upcoming Events menu option if there are events
-  const showEventsMenu = events.length > 0
+  const showEventsMenu = events.length > 0;
 
   // Ensure selectedItem is vegan when veganOnly is enabled
   useEffect(() => {
@@ -285,25 +311,40 @@ export default function Page() {
       // Only run if selectedItem is not vegan or is null
       if (!selectedItem || !(selectedItem as MenuItem).isVegan) {
         const firstVegan = menuItems.find(
-          (item) => item.isVegan && (!item.allergens || item.allergens.every((allergen) => selectedAllergens.includes(allergen) || allergen.toLowerCase() === "none"))
-        )
+          (item) =>
+            item.isVegan &&
+            (!item.allergens ||
+              item.allergens.every(
+                (allergen) =>
+                  selectedAllergens.includes(allergen) ||
+                  allergen.toLowerCase() === "none"
+              ))
+        );
         if (firstVegan) {
-          setSelectedItem(firstVegan)
+          setSelectedItem(firstVegan);
         } else {
-          setSelectedItem(null)
+          setSelectedItem(null);
         }
       }
     }
-  }, [veganOnly, activeMenu, menuItems, selectedAllergens])
+  }, [veganOnly, activeMenu, menuItems, selectedAllergens]);
 
   return (
-    <main className={`h-[100dvh] flex flex-col ${playfair.variable} font-sans overflow-hidden`}>
+    <main
+      className={`h-[100dvh] flex flex-col ${playfair.variable} font-sans overflow-hidden`}
+    >
       {/* Header with dark red background */}
       <header className="flex flex-col bg-[#8B0000] text-white">
         {/* Logo section */}
         <div className="flex justify-center items-center py-2">
           <div className="relative h-16 w-48">
-            <Image src="/delhi-lounge-logo.png" alt="The Delhi Lounge" fill className="object-contain" priority />
+            <Image
+              src="/delhi-lounge-logo.png"
+              alt="The Delhi Lounge"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
 
@@ -313,14 +354,18 @@ export default function Page() {
             <div className="hidden md:flex items-center gap-2">
               <Button
                 variant="ghost"
-                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "food" ? "bg-[#a02020] font-semibold" : ""}`}
+                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${
+                  activeMenu === "food" ? "bg-[#a02020] font-semibold" : ""
+                }`}
                 onClick={() => setActiveMenu("food")}
               >
                 Food Menu
               </Button>
               <Button
                 variant="ghost"
-                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "bar" ? "bg-[#a02020] font-semibold" : ""}`}
+                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${
+                  activeMenu === "bar" ? "bg-[#a02020] font-semibold" : ""
+                }`}
                 onClick={() => setActiveMenu("bar")}
               >
                 Bar Menu
@@ -328,10 +373,17 @@ export default function Page() {
 
               {showEventsMenu && (
                 <>
-                  <Separator orientation="vertical" className="h-6 bg-[#a02020]" />
+                  <Separator
+                    orientation="vertical"
+                    className="h-6 bg-[#a02020]"
+                  />
                   <Button
                     variant="ghost"
-                    className={`text-sm whitespace-nowrap relative text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "events" ? "bg-[#a02020] font-semibold" : ""}`}
+                    className={`text-sm whitespace-nowrap relative text-white hover:text-white hover:bg-[#a02020] ${
+                      activeMenu === "events"
+                        ? "bg-[#a02020] font-semibold"
+                        : ""
+                    }`}
                     onClick={() => setActiveMenu("events")}
                   >
                     Events
@@ -354,11 +406,15 @@ export default function Page() {
                 >
                   <span
                     className={`${
-                      veganOnly ? "translate-x-6 bg-white" : "translate-x-1 bg-white"
+                      veganOnly
+                        ? "translate-x-6 bg-white"
+                        : "translate-x-1 bg-white"
                     } inline-block h-4 w-4 rounded-full transition-transform`}
                   />
                 </button>
-                <span className="text-xs sm:text-sm whitespace-nowrap text-white font-medium">Vegan Only</span>
+                <span className="text-xs sm:text-sm whitespace-nowrap text-white font-medium">
+                  Vegan Only
+                </span>
               </div>
             )}
 
@@ -391,8 +447,8 @@ export default function Page() {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       onFocus={() => {
-                        setSearchFocused(true)
-                        setIsSearchOverlayVisible(true)
+                        setSearchFocused(true);
+                        setIsSearchOverlayVisible(true);
                       }}
                       autoFocus
                     />
@@ -404,21 +460,23 @@ export default function Page() {
                 size="icon"
                 onClick={() => {
                   if (!isAllergenFilterOpen) {
-                    setIsSearchOpen(!isSearchOpen)
+                    setIsSearchOpen(!isSearchOpen);
                     if (!isSearchOpen) {
                       setTimeout(() => {
-                        setSearchFocused(true)
-                        setIsSearchOverlayVisible(true)
-                      }, 300)
+                        setSearchFocused(true);
+                        setIsSearchOverlayVisible(true);
+                      }, 300);
                     } else {
-                      setSearchFocused(false)
-                      setIsSearchOverlayVisible(false)
-                      setSearchQuery("")
+                      setSearchFocused(false);
+                      setIsSearchOverlayVisible(false);
+                      setSearchQuery("");
                     }
                   }
                 }}
                 className={`text-white hover:text-white ${
-                  isAllergenFilterOpen ? "opacity-50 cursor-not-allowed hover:bg-transparent" : "hover:bg-[#a02020]"
+                  isAllergenFilterOpen
+                    ? "opacity-50 cursor-not-allowed hover:bg-transparent"
+                    : "hover:bg-[#a02020]"
                 }`}
                 disabled={isAllergenFilterOpen}
               >
@@ -447,10 +505,10 @@ export default function Page() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
             onClick={() => {
-              setIsSearchOpen(false)
-              setSearchFocused(false)
-              setIsSearchOverlayVisible(false)
-              setSearchQuery("")
+              setIsSearchOpen(false);
+              setSearchFocused(false);
+              setIsSearchOverlayVisible(false);
+              setSearchQuery("");
             }}
           />
         )}
@@ -479,20 +537,28 @@ export default function Page() {
               <div className="flex-1 overflow-y-auto p-4">
                 <Button
                   variant="ghost"
-                  className={`w-full justify-start text-lg mb-2 ${activeMenu === "food" ? "text-[#8B0000] font-semibold" : "text-[#7c7c7c]"}`}
+                  className={`w-full justify-start text-lg mb-2 ${
+                    activeMenu === "food"
+                      ? "text-[#8B0000] font-semibold"
+                      : "text-[#7c7c7c]"
+                  }`}
                   onClick={() => {
-                    setActiveMenu("food")
-                    setIsMobileMenuOpen(false)
+                    setActiveMenu("food");
+                    setIsMobileMenuOpen(false);
                   }}
                 >
                   Food Menu
                 </Button>
                 <Button
                   variant="ghost"
-                  className={`w-full justify-start text-lg mb-2 ${activeMenu === "bar" ? "text-[#8B0000] font-semibold" : "text-[#7c7c7c]"}`}
+                  className={`w-full justify-start text-lg mb-2 ${
+                    activeMenu === "bar"
+                      ? "text-[#8B0000] font-semibold"
+                      : "text-[#7c7c7c]"
+                  }`}
                   onClick={() => {
-                    setActiveMenu("bar")
-                    setIsMobileMenuOpen(false)
+                    setActiveMenu("bar");
+                    setIsMobileMenuOpen(false);
                   }}
                 >
                   Bar Menu
@@ -500,10 +566,14 @@ export default function Page() {
                 {showEventsMenu && (
                   <Button
                     variant="ghost"
-                    className={`w-full justify-start text-lg mb-2 ${activeMenu === "events" ? "text-[#8B0000] font-semibold" : "text-[#7c7c7c]"}`}
+                    className={`w-full justify-start text-lg mb-2 ${
+                      activeMenu === "events"
+                        ? "text-[#8B0000] font-semibold"
+                        : "text-[#7c7c7c]"
+                    }`}
                     onClick={() => {
-                      setActiveMenu("events")
-                      setIsMobileMenuOpen(false)
+                      setActiveMenu("events");
+                      setIsMobileMenuOpen(false);
                     }}
                   >
                     Events
@@ -527,7 +597,9 @@ export default function Page() {
               className={searchResultsStyles}
             >
               {searchQuery.length < 2 ? (
-                <div className="p-4 text-center text-gray-400">Type at least 2 characters to search</div>
+                <div className="p-4 text-center text-gray-400">
+                  Type at least 2 characters to search
+                </div>
               ) : searchResultsHook.length > 0 ? (
                 searchResultsHook.map((item, index) => (
                   <motion.div
@@ -556,7 +628,9 @@ export default function Page() {
                   </motion.div>
                 ))
               ) : (
-                <div className="p-4 text-center text-gray-500">No results found</div>
+                <div className="p-4 text-center text-gray-500">
+                  No results found
+                </div>
               )}
             </motion.div>
           </div>
@@ -573,23 +647,44 @@ export default function Page() {
       ) : (
         <>
           {activeMenu === "food" && (
-            <Menu
-              selectedItem={selectedItem as MenuItem | undefined} // Cast to MenuItem or undefined
-              setSelectedItem={(item: MenuItem | undefined) => setSelectedItem(item || null)}
-              menuItems={menuItems}
-              veganOnly={veganOnly}
-              selectedAllergens={selectedAllergens}
-            />
+            <>
+              <Menu
+                selectedItem={selectedItem as MenuItem | undefined} // Cast to MenuItem or undefined
+                setSelectedItem={(item: MenuItem | undefined) =>
+                  setSelectedItem(item || null)
+                }
+                menuItems={menuItems}
+                veganOnly={veganOnly}
+                selectedAllergens={selectedAllergens}
+              />
+              <footer className="p-3 text-center bg-[#f9f7f3]">
+                <p className="text-xs text-gray-500 italic">
+                  A gratuity of 18% will be added for parties of 5 or more.
+                </p>
+              </footer>
+            </>
           )}
           {activeMenu === "bar" && (
-            <DynamicBarMenu
-              selectedItem={selectedItem as DrinkItem | null} // Cast to DrinkItem or null
-              setSelectedItem={(item: DrinkItem | null) => setSelectedItem(item)}
-              drinkItems={drinkItems}
-            />
+            <>
+              <DynamicBarMenu
+                selectedItem={selectedItem as DrinkItem | null} // Cast to DrinkItem or null
+                setSelectedItem={(item: DrinkItem | null) =>
+                  setSelectedItem(item)
+                }
+                drinkItems={drinkItems}
+              />
+              <footer className="p-3 text-center bg-[#f9f7f3]">
+                <p className="text-xs text-gray-500 italic">
+                  A gratuity of 18% will be added for parties of 5 or more.
+                </p>
+              </footer>
+            </>
           )}
           {activeMenu === "events" && events.length > 0 && (
-            <UpcomingEvents events={events} selectedEventName={selectedEventName} />
+            <UpcomingEvents
+              events={events}
+              selectedEventName={selectedEventName}
+            />
           )}
           {activeMenu === "events" && events.length === 0 && (
             <div className="flex-1 flex items-center justify-center text-2xl text-[#7c7c7c]">
@@ -599,14 +694,11 @@ export default function Page() {
         </>
       )}
 
-      <footer className="p-3 text-center bg-[#f9f7f3]">
-        <p className="text-xs text-gray-500 italic">A gratuity of 18% will be added for parties of 5 or more.</p>
-      </footer>
       {/* <FullScreenToggle /> */}
-      {!isIOS && (
-        <PWAInstallPrompt />
+      {!isIOS && <PWAInstallPrompt />}
+      {notificationMessage && (
+        <BubbleNotification message={notificationMessage} />
       )}
-      {notificationMessage && <BubbleNotification message={notificationMessage} />}
     </main>
-  )
+  );
 }
