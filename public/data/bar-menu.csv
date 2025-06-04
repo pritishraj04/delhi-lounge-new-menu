@@ -37,6 +37,8 @@ Wines,White Wine,Terracotta Pinot Grigio,"Discover the vibrant charm of Terracot
 Wines,White Wine,Terracotta Pinot Grigio Bottle,"A bottle of Terracotta Pinot Grigio is an excellent companion for lively gatherings, offering crisp and fruity notes.",35,/img/food-menu/imag.jpg
 Wines,White Wine,Whispering Angel,"A crisp and elegant wine with delicate notes of red berries, citrus, and a smooth, dry finish. Refreshing and refined.",10,/img/food-menu/imag.jpg
 Wines,White Wine,Whispering Angel Bottle,"A crisp and elegant wine with delicate notes of red berries, citrus, and a smooth, dry finish. Refreshing and refined.",60,/img/food-menu/imag.jpg
+Wines,White Wine,Hahn Founder's Chardonnay,,8,/img/food-menu/imag.jpg
+Wines,White Wine,Hahn Founder's Chardonnay Bottle,,40,/img/food-menu/imag.jpg
 Wines,Sparkling/Rose Wine,Social Bird Rose 2023,,12,/img/food-menu/imag.jpg
 Wines,Sparkling/Rose Wine,Social Bird Rose 2025 Bottle,,50,/img/food-menu/imag.jpg
 Wines,Red Wine,Highway 12 Vineyards Cabernet Sauvignon Sonoma County,"The Highway 12 Vineyards Cabernet Sauvignon offers a luxurious, full-bodied experience with rich notes of dark fruits, a hint of oak, and a smooth finish. Perfect for pairing with hearty meals or enjoying on its own.",14,/img/food-menu/imag.jpg
@@ -47,6 +49,14 @@ Wines,Red Wine,Muirwood Merlot California VT,"Muirwood Merlot California VT deli
 Wines,Red Wine,Muirwood Merlot California VT Bottle,"The Muirwood Merlot California VT Bottle is a testament to California's winemaking excellence. Offering rich flavors of dark fruit and a velvety finish, this merlot is perfect for gatherings or quiet evenings.",40,/img/food-menu/imag.jpg
 Wines,Red Wine,Caymus Bottle,"Caymus Bottle offers an exquisite Napa Valley Cabernet Sauvignon with deep, rich flavors of blackberry, currant, and a touch of oak, ideal for wine lovers seeking sophistication.",130,/img/food-menu/imag.jpg
 Wines,Red Wine,Austin Hope Bottle,"Austin Hope Bottle is a Napa Valley Cabernet Sauvignon with a beautifully balanced profile, featuring aromas of dark chocolate, plum, and tobacco, perfect for connoisseurs and casual drinkers alike.",110,/img/food-menu/imag.jpg
+Wines,Red Wine,DAOU Reserve Cabernet Sauvignon Paso Robles,,10,/img/food-menu/imag.jpg
+Wines,Red Wine,DAOU Reserve Cabernet Sauvignon Paso Robles Bottle,,65,/img/food-menu/imag.jpg
+Wines,Red Wine,Decoy Cabernet Sauvignon,,10,/img/food-menu/imag.jpg
+Wines,Red Wine,Decoy Cabernet Sauvignon Bottle,,65,/img/food-menu/imag.jpg
+Wines,Red Wine,Hahn Founder's Cabernet Sauvignon,,8,/img/food-menu/imag.jpg
+Wines,Red Wine,Hahn Founder's Cabernet Sauvignon Bottle,,40,/img/food-menu/imag.jpg
+Wines,Red Wine,Hahn Founder's Pinot Noir,,8,/img/food-menu/imag.jpg
+Wines,Red Wine,Hahn Founder's Pinot Noir Bottle,,40,/img/food-menu/imag.jpg
 Liquors,Bourbon & Cognac,Jim Beam (Bourbon),"Jim Beam bourbon delivers a timeless flavor profile with notes of vanilla, caramel, and oak, embodying the spirit of traditional Kentucky craftsmanship.",7,/img/food-menu/imag.jpg
 Liquors,Bourbon & Cognac,Makers Mark (Bourbon),"Makers Mark bourbon is a handcrafted classic, offering a rich balance of sweet caramel, vanilla, and a subtle oak finish for a smooth sipping experience.",12,/img/food-menu/imag.jpg
 Liquors,Bourbon & Cognac,Four Roses (Bourbon),"Four Roses bourbon delivers a unique blend of delicate fruit flavors, spices, and a smooth finish, crafted with precision and care.",8,/img/food-menu/imag.jpg
@@ -98,6 +108,7 @@ Liquors,Scotch,Amrut Fusion Single Malt,"",15,/img/food-menu/imag.jpg
 Liquors,Scotch,Amrut Aatma Peated Single Cask,"",36,/img/food-menu/imag.jpg
 Liquors,Scotch,Paul John,"",13,/img/food-menu/imag.jpg
 Liquors,Scotch,Oban 14 Yr,"",19,/img/food-menu/imag.jpg
+Liquors,Scotch,Yamazaki 12 Yr,"",40,/img/food-menu/imag.jpg
 Liquors,Scotch,Indri Single Malt,"Indri Single Malt delivers a distinctive taste, crafted with precision and innovation in India.",12,/img/food-menu/imag.jpg
 Liquors,Scotch,JW Blue Label,"JW Blue Label represents the pinnacle of blending, with rare and aged whiskies coming together for a luxurious taste.",45,/img/food-menu/imag.jpg
 Liquors,Scotch,Highland Park 12,"Highland Park 12 offers a harmonious balance of smoky and sweet flavors, crafted in Orkney's rugged environment.",12,/img/food-menu/imag.jpg
@@ -134,8 +145,8 @@ Liquors,Vodka,Amsterdam,"An affordable vodka crafted for smoothness, perfect for
 Liquors,Vodka,Belvedere Organic Vodka,"A certified organic vodka crafted in Poland, offering a clean and smooth taste with a commitment to sustainability.",10,/img/food-menu/imag.jpg
 Liquors,Vodka,Ketel One Vodka,"A smooth and versatile Dutch vodka, crafted with care and a rich heritage spanning generations.",10,/img/food-menu/imag.jpg
 Liquors,Vodka,Aspen Vodka,"A smooth and crisp American vodka inspired by the pure mountain waters of Aspen, perfect for any occasion.",10,/img/food-menu/imag.jpg
-Beers (Indian),Beers (Import: India),Arka (India),,6,/img/food-menu/imag.jpg
-Beers (Indian),Beers (Import: India),Maharaja IPA,,10,/img/food-menu/imag.jpg
+Beers (Indian),Beers (Import: India),Rupee Beer Basmati Rice,,7,/img/food-menu/imag.jpg
+Beers (Indian),Beers (Import: India),Rupee Beer India Pale Ale (IPA),,7,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Taj Mahal,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",6,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Taj Mahal 650ML,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",12,/img/food-menu/imag.jpg
 Beers,Beers,Miller Lite,"Miller Lite is a light American lager known for its crisp, refreshing taste.",6,/img/food-menu/imag.jpg
@@ -161,6 +172,8 @@ Beers,Beers,German Pilsner,German Pilsner is a crisp and refreshing lager with a
 Beers,Beers,Hefeweizen,Hefeweizen is a cloudy wheat beer with a fruity aroma and smooth malt finish.,8,/img/food-menu/imag.jpg
 Beers,Beers,Dos Equis,"Dos Equis is a well-known Mexican lager, light and crisp with subtle malt flavors.",5,/img/food-menu/imag.jpg
 Beers,Beers,Modelo Negra,Modelo Negra is a dark lager with rich malt flavors and a smooth finish.,6,/img/food-menu/imag.jpg
+Beers,Beers,Rupee Beer Basmati Rice,,7,/img/food-menu/imag.jpg
+Beers,Beers,Rupee Beer India Pale Ale (IPA),,7,/img/food-menu/imag.jpg
 Beers,Beers,Modelo,,6,/img/food-menu/imag.jpg
 Beers,Beers,Modelo Especial,"Modelo Especial is a crisp, golden pilsner-style lager with a refreshing taste.",8,/img/food-menu/imag.jpg
 Beers,Beers,Peroni,"Peroni is a light, crisp lager with a slight hoppy bitterness and malty finish.",8,/img/food-menu/imag.jpg
@@ -179,19 +192,20 @@ Beers,Beers,Corona,"Corona is a pale lager known for its light, refreshing taste
 Beers,Beers,Corona (Non-Alcoholic),Corona Non-Alcoholic,5,/img/food-menu/imag.jpg
 Beers,Beers,Corona Premier,"Corona Premier is a light lager with a crisp, clean flavor and fewer calories.",6,/img/food-menu/imag.jpg
 Beers,Beers,Seriously Fun Beer,"Seriously Fun Beer is a light, crisp, and easy-drinking beer with a fun personality.",8,/img/food-menu/imag.jpg
-Beers,Beers,Flyin Horse Royal 650ML,,12,/img/food-menu/imag.jpg
+
 Beers,Beers,DOS XX,,6,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke,,3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Coke Diet,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Coke Zero,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Pepsi,,3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Diet Pepsi,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Diet Pepsi,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Sprite,,3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Cranberry Juice,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Cranberry Juice,",3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Dr. Pepper,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Ginger Ale,,3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Lemonade,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Orange Juice,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Lemonade,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Orange Juice,,4,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Red Bull,,5,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Starry,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Club Soda,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",2,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Club Soda with Lime,,2.5,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Starry,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Club Soda,,3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Club Soda with Lime,,3,/img/food-menu/imag.jpg
+
