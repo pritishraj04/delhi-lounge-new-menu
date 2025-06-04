@@ -200,14 +200,13 @@ Beers,Beers,Corona,"Corona is a pale lager known for its light, refreshing taste
 Beers,Beers,Corona (Non-Alcoholic),Corona Non-Alcoholic,5,/img/food-menu/imag.jpg
 Beers,Beers,Corona Premier,"Corona Premier is a light lager with a crisp, clean flavor and fewer calories.",6,/img/food-menu/imag.jpg
 Beers,Beers,Seriously Fun Beer,"Seriously Fun Beer is a light, crisp, and easy-drinking beer with a fun personality.",8,/img/food-menu/imag.jpg
-
 Beers,Beers,DOS XX,,6,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke Zero,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Pepsi,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Diet Pepsi,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Sprite,,3,/img/food-menu/imag.jpg
-Soft Drinks,Soft Drinks,Cranberry Juice,",3,/img/food-menu/imag.jpg
+Soft Drinks,Soft Drinks,Cranberry Juice,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Dr. Pepper,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Ginger Ale,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Lemonade,,3,/img/food-menu/imag.jpg
@@ -216,4 +215,3 @@ Soft Drinks,Soft Drinks,Red Bull,,5,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Starry,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Club Soda,,3,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Club Soda with Lime,,3,/img/food-menu/imag.jpg
-
