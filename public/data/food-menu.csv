@@ -56,7 +56,6 @@ Sides,,Plain Dahi,Whipped yogurt,weight:0g;cal:0kcal;price:$4,/img/food-menu/bur
 Sides,,Beet & Boondi Raita,"Spiced yogurt, roasted beets, crisp gram flour droplets",weight:0g;cal:0kcal;price:$6,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
 Sides,,Kachumber Raita,"Spiced yogurt, onions, cucumbers, tomatoes",weight:0g;cal:0kcal;price:$6,/img/food-menu/mixed-vegetable-raita.jpg,FALSE,FALSE,FALSE,Dairy
 Sides,,Green Salad,"Sliced onions, tomatoes, cucumbers, lime, chili",weight:0g;cal:0kcal;price:$6,/img/food-menu/green-salad.jpg,FALSE,FALSE,TRUE,None
-
 Desserts,,Gajar Halwa,"Carrot fudge, ghee and cardamom syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/gajar-halwa.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Desserts,,Moong Dal Halwa,"Moong lentil fudge, ghee and saffron syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/moong-dal-halwa.jpg,FALSE,TRUE,FALSE,Dairy;Nuts;Gluten
 Desserts,,Saffron Rasmalai,"Cheese dumplings, saffron milk, pistachios | Nut-free option available",weight:0g;cal:0kcal;price:$10,/img/food-menu/baileys-rasmalai.jpg,FALSE,FALSE,FALSE,Dairy;Nuts;Gluten
