@@ -1,5 +1,5 @@
 category,sub category,title,description,metrics,image,chefSpecial,mustTry,vegan,allergens
-Chaat,,Pani Puri (Heeng Jeera | Pineapple),"Street style puffs, spicy potatoes, flavored waters",weight:0;cal:0;price:$12,/img/food-menu/pani-puri.jpg,FALSE,FALSE,TRUE,Gluten
+Chaat,,Pani Puri (Heeng Jeera | Pineapple | Gud Imli),"Street style puffs, spicy potatoes, flavored waters",weight:0;cal:0;price:$12,/img/food-menu/pani-puri.jpg,FALSE,FALSE,TRUE,Gluten
 Chaat,,Aloo Tikki,"Stuffed potato patties, whipped yogurt, chutneys",weight:0g;cal:0kcal;price:$12,/img/food-menu/karol-bagh-aloo-tikki.jpg,TRUE,FALSE,FALSE,Nuts;Dairy
 Chaat,,Palak Patta Chaat,"Crispy fried spinach, yogurt, chutneys | Vegan option available.",weight:0g;cal:0kcal;price:$14,/img/food-menu/palak-patta-chaat.jpg,FALSE,TRUE,TRUE,Dairy
 Chaat,,Bhalla Papdi Chaat,"Crumbled lentil dumplings, sweetened yogurt and chutneys, crsipy papdi  | Vegan option available.",weight:0g;cal:0kcal;price:$14,/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy
@@ -21,7 +21,7 @@ Entrées,Vegetarian,Paneer Matar Makhana,"Paneer cubes, green peas, lotus seeds,
 Entrées,Vegetarian,Paneer Khada Masala,"Spiced paneer cubes, whole spices, onion-tomato masala gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-tikka-masala.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Paneer Khurchan,"Batons of paneer, bell peppers & caramelised onions, tomato gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-khurchan.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Saag Paneer,"Paneer cubes, luscious spinach gravy, spices | Vegan Option Available",weight:0g;cal:0kcal;price:$22,/img/food-menu/palak-paneer.jpg,FALSE,FALSE,TRUE,Dairy
-Entrées,Vegetarian,Malai Kofta,"Exquisite paneer croquettes, golden nuts and yogurt gravy, rose petals",weight:0g;cal:0kcal;price:$24,/img/food-menu/malai-kofta.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
+Entrées,Vegetarian,Malai Kofta,"Exquisite paneer croquettes, golden nuts and yogurt gravy, rose petals",weight:0g;cal:0kcal;price:$24,/img/fogit config --global user.email "email@example.com"od-menu/malai-kofta.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Fenugreek Cashew Curry,"Fenugreek leaves, green peas and cashew nuts, creamy nuts gravy",weight:0g;cal:0kcal;price:$24,/img/food-menu/kaju-methi-malai-matar.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Eggplant Bharta,"Roasted eggplant, onion-tomato masala, smoked butter",weight:0g;cal:0kcal;price:$20,/img/food-menu/charcoal-roasted-baingan-bharta.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Vegetarian,Aloo Gobhi Adraki,"Tender cauliflower florets, potatoes, ginger and spices | Vegan option available, Nut-free option available",weight:0g;cal:0kcal;price:$18,/img/food-menu/aloo-gobhi.jpg,FALSE,FALSE,TRUE,Dairy;Nuts
