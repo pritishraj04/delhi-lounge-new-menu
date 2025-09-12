@@ -31,6 +31,9 @@ export interface FoodMenuItem {
   isMustTry?: boolean
   isVegan?: boolean
   allergens?: string[]
+  enabled?: boolean
+  timeWindowStart?: string // "HH:MM:SS" format
+  timeWindowEnd?: string   // "HH:MM:SS" format
 }
 
 // Bar Menu item interface based on CSV structure
@@ -42,6 +45,9 @@ export interface BarMenuItem {
   description: string
   price: number
   image: string
+  enabled?: boolean
+  timeWindowStart?: string // "HH:MM:SS" format
+  timeWindowEnd?: string   // "HH:MM:SS" format
 }
 
 /**
@@ -88,6 +94,9 @@ export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
             ?.split(";")
             .map((a) => a.trim())
             .filter(Boolean) || [],
+        enabled: values[headerMap["enabled"]]?.toLowerCase() === "true",
+        timeWindowStart: values[headerMap["timeWindowStart"]] || undefined,
+        timeWindowEnd: values[headerMap["timeWindowEnd"]] || undefined,
       }
 
       foodMenuItems.push(item)
@@ -134,6 +143,9 @@ export function parseBarMenuCSV(csvContent: string): BarMenuItem[] {
         description: values[headerMap["description"]] || "",
         price: Number.parseFloat(values[headerMap["price"]]) || 0,
         image: values[headerMap["image"]] || "/placeholder.svg",
+        enabled: values[headerMap["enabled"]]?.toLowerCase() === "true",
+        timeWindowStart: values[headerMap["timeWindowStart"]] || undefined,
+        timeWindowEnd: values[headerMap["timeWindowEnd"]] || undefined,
       }
 
       barMenuItems.push(item)
@@ -292,38 +304,53 @@ function parseMetrics(metricsStr: string): FoodMenuItem["metrics"] {
  * Convert FoodMenuItem to the existing MenuItem format
  */
 export function convertToMenuItems(foodItems: FoodMenuItem[]): any[] {
-  return foodItems.map((item) => ({
-    id: item.id,
-    name: item.name,
-    description: item.description,
-    image: item.image,
-    price: {
-      full: item.metrics.portions.full?.price || item.metrics.price || 0,
-      half: item.metrics.portions.half?.price || 0,
-    },
-    calories: {
-      full: item.metrics.portions.full?.calories || item.metrics.calories || 0,
-      half: item.metrics.portions.half?.calories || 0,
-    },
-    weight: {
-      full: item.metrics.portions.full?.weight || item.metrics.weight || 0,
-      half: item.metrics.portions.half?.weight || 0,
-    },
-    allergens: item.allergens,
-    category: item.category,
-    subCategory: item.subCategory,
-    isChefSpecial: item.isChefSpecial,
-    isMustTry: item.isMustTry,
-    isVegan: item.isVegan,
-    hasPortions: !!item.metrics.portions.half && item.metrics.portions.half.price > 0,
-  }))
+  return foodItems.map((item) => {
+    // Compose timeWindow object if both start and end are present
+    let timeWindow = undefined;
+    if (item.timeWindowStart && item.timeWindowEnd) {
+      timeWindow = { start: item.timeWindowStart, end: item.timeWindowEnd };
+    }
+    return {
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      image: item.image,
+      price: {
+        full: item.metrics.portions.full?.price || item.metrics.price || 0,
+        half: item.metrics.portions.half?.price || 0,
+      },
+      calories: {
+        full: item.metrics.portions.full?.calories || item.metrics.calories || 0,
+        half: item.metrics.portions.half?.calories || 0,
+      },
+      weight: {
+        full: item.metrics.portions.full?.weight || item.metrics.weight || 0,
+        half: item.metrics.portions.half?.weight || 0,
+      },
+      allergens: item.allergens,
+      category: item.category,
+      subCategory: item.subCategory,
+      isChefSpecial: item.isChefSpecial,
+      isMustTry: item.isMustTry,
+      isVegan: item.isVegan,
+      hasPortions: !!item.metrics.portions.half && item.metrics.portions.half.price > 0,
+      enabled: item.enabled,
+      timeWindow,
+    }
+  })
 }
 
 /**
  * Convert BarMenuItem to the existing DrinkItem format
  */
 export function convertToBarItems(barItems: BarMenuItem[]): any[] {
-  return barItems.map((item) => ({
+  return barItems.map((item) => {
+    // Compose timeWindow object if both start and end are present
+    let timeWindow = undefined;
+    if (item.timeWindowStart && item.timeWindowEnd) {
+      timeWindow = { start: item.timeWindowStart, end: item.timeWindowEnd };
+    }
+    return {
     id: item.id,
     name: item.name,
     description: item.description,
@@ -331,6 +358,8 @@ export function convertToBarItems(barItems: BarMenuItem[]): any[] {
     category: item.category,
     subCategory: item.subCategory,
     image: item.image,
-  }))
+    enabled: item.enabled,
+    timeWindow,
+  }})
 }
 
