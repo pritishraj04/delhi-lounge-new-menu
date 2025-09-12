@@ -35,6 +35,8 @@ interface MenuItem {
   isMustTry?: boolean
   isVegan?: boolean
   hasPortions?: boolean
+  enabled?: boolean // New: enable/disable item
+  timeWindow?: { start: string; end: string } // New: time window in HH:mm 24h format, US/Central time
 }
 
 // Add a type-safe way to access allergenIcons
@@ -197,11 +199,36 @@ export function Menu({
     }
   }, [selectedItem, setSelectedItem, menuItems])
 
-  // Filter items based on category, vegan status, and allergens
+  // Helper: get current time in US/Central (Texas) as minutes since midnight
+  const getCurrentCentralTimeMinutes = () => {
+    const now = new Date()
+    // Convert to US/Central time
+    const central = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }))
+    return central.getHours() * 60 + central.getMinutes()
+  }
+
+  // Helper: check if item is in its time window
+  const isInTimeWindow = (item: MenuItem) => {
+    if (!item.timeWindow) return true // default: always visible
+    const now = getCurrentCentralTimeMinutes()
+    const [startH, startM, startS] = item.timeWindow.start.split(":").map(Number)
+    const [endH, endM, endS] = item.timeWindow.end.split(":").map(Number)
+    const start = startH * 60 + startM + (startS ? startS / 60 : 0)
+    const end = endH * 60 + endM + (endS ? endS / 60 : 0)
+    if (start <= end) {
+      return now >= start && now < end
+    } else {
+      // Overnight window (e.g., 22:00-02:00)
+      return now >= start || now < end
+    }
+  }
+
+  // Filter items based on category, vegan status, allergens, enabled, and time window
   const filteredItems = menuItems.filter((item) => {
+    if (item.enabled === false) return false
+    if (!isInTimeWindow(item)) return false
     // Apply vegan filter
     if (veganOnly && !item.isVegan) return false
-
     // Apply allergen filter
     if (
       item.allergens &&
@@ -209,16 +236,13 @@ export function Menu({
     ) {
       return false
     }
-
     // Apply category filter
     if (currentCategory === "All") return true
-
     // Handle the new format "Category - SubCategory"
     if (currentCategory.includes(" - ")) {
       const [category, subCategory] = currentCategory.split(" - ")
       return item.category === category && item.subCategory === subCategory
     }
-
     // Handle just category
     return item.category === currentCategory
   })

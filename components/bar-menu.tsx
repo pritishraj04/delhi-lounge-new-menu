@@ -23,6 +23,8 @@ interface DrinkItem {
   subCategory?: string
   description: string
   image: string
+  enabled?: boolean // New: enable/disable item
+  timeWindow?: { start: string; end: string } // New: time window in HH:mm 24h format, US/Central time
 }
 
 // Safe number formatter to prevent toFixed errors
@@ -127,17 +129,39 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
     setIsOverlayVisible(false)
   }
 
-  // Filter items based on category and subcategory
-  const filteredDrinks = items.filter((item) => {
-    if (currentCategory === "All") return true
+  // Helper: get current time in US/Central (Texas) as minutes since midnight
+  const getCurrentCentralTimeMinutes = () => {
+    const now = new Date()
+    // Convert to US/Central time
+    const central = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }))
+    return central.getHours() * 60 + central.getMinutes()
+  }
 
-    // Handle the new format "Category - SubCategory"
+  // Helper: check if item is in its time window
+  const isInTimeWindow = (item: DrinkItem) => {
+    if (!item.timeWindow) return true // default: always visible
+    const now = getCurrentCentralTimeMinutes()
+    const [startH, startM, startS] = item.timeWindow.start.split(":").map(Number)
+    const [endH, endM, endS] = item.timeWindow.end.split(":").map(Number)
+    const start = startH * 60 + startM + (startS ? startS / 60 : 0)
+    const end = endH * 60 + endM + (endS ? endS / 60 : 0)
+    if (start <= end) {
+      return now >= start && now < end
+    } else {
+      // Overnight window (e.g., 22:00-02:00)
+      return now >= start || now < end
+    }
+  }
+
+  // Filter items based on category, enabled, and time window
+  const filteredDrinks = items.filter((item) => {
+    if (item.enabled === false) return false
+    if (!isInTimeWindow(item)) return false
+    if (currentCategory === "All") return true
     if (currentCategory.includes(" - ")) {
       const [category, subCategory] = currentCategory.split(" - ")
       return item.category === category && item.subCategory === subCategory
     }
-
-    // Handle just category
     return item.category === currentCategory
   })
 
