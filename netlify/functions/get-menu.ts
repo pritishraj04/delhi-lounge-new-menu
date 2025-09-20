@@ -1,4 +1,7 @@
-import { Client } from "@neondatabase/serverless";
+import { Client, neonConfig } from "@neondatabase/serverless";
+import ws from "ws";
+
+neonConfig.webSocketConstructor = ws;
 
 const handler = async (event: any, context: any) => {
   const client = new Client(process.env.NETLIFY_DATABASE_URL!);
