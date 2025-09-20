@@ -3,7 +3,7 @@ const csv = require("csv-parser");
 const { Client } = require("pg");
 
 const client = new Client({
-  connectionString: process.env.NEON_DB_URL,
+  connectionString: process.env.NETLIFY_DATABASE_URL,
 });
 
 async function migrate() {

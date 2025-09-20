@@ -1,7 +1,7 @@
 import { Client } from "@neondatabase/serverless";
 
 const handler = async (event: any, context: any) => {
-  const client = new Client(process.env.NEON_DB_URL!);
+  const client = new Client(process.env.NETLIFY_DATABASE_URL!);
   await client.connect();
 
   try {
