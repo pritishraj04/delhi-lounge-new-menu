@@ -1,23 +1,26 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface BubbleNotificationProps {
-  message: string
-  duration?: number
+  message: string;
+  duration?: number;
 }
 
-export function BubbleNotification({ message, duration = 3000 }: BubbleNotificationProps) {
-  const [isVisible, setIsVisible] = useState(true)
+export function BubbleNotification({
+  message,
+  duration = 3000,
+}: BubbleNotificationProps) {
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false)
-    }, duration)
+      setIsVisible(false);
+    }, duration);
 
-    return () => clearTimeout(timer)
-  }, [duration])
+    return () => clearTimeout(timer);
+  }, [duration]);
 
   return (
     <AnimatePresence>
@@ -33,6 +36,5 @@ export function BubbleNotification({ message, duration = 3000 }: BubbleNotificat
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }
-

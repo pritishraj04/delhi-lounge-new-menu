@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { FilterIcon, X, Check } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { FilterIcon, X, Check } from "lucide-react";
 
 interface AllergenFilterProps {
-  allergens: string[]
-  selectedAllergens: string[]
-  setSelectedAllergens: (allergens: string[]) => void
-  isOpen: boolean
-  setIsOpen: (isOpen: boolean) => void
+  allergens: string[];
+  selectedAllergens: string[];
+  setSelectedAllergens: (allergens: string[]) => void;
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
 export function AllergenFilter({
@@ -21,32 +21,35 @@ export function AllergenFilter({
   isOpen,
   setIsOpen,
 }: AllergenFilterProps) {
-  const [localSelectedAllergens, setLocalSelectedAllergens] = useState<string[]>(selectedAllergens)
+  const [localSelectedAllergens, setLocalSelectedAllergens] =
+    useState<string[]>(selectedAllergens);
 
   useEffect(() => {
-    setLocalSelectedAllergens(selectedAllergens)
-  }, [selectedAllergens])
+    setLocalSelectedAllergens(selectedAllergens);
+  }, [selectedAllergens]);
 
   const toggleAllergen = (allergen: string) => {
     if (localSelectedAllergens.includes(allergen)) {
-      setLocalSelectedAllergens(localSelectedAllergens.filter((a) => a !== allergen))
+      setLocalSelectedAllergens(
+        localSelectedAllergens.filter((a) => a !== allergen),
+      );
     } else {
-      setLocalSelectedAllergens([...localSelectedAllergens, allergen])
+      setLocalSelectedAllergens([...localSelectedAllergens, allergen]);
     }
-  }
+  };
 
   const applyFilters = () => {
-    setSelectedAllergens(localSelectedAllergens)
-    setIsOpen(false)
-  }
+    setSelectedAllergens(localSelectedAllergens);
+    setIsOpen(false);
+  };
 
   const selectAll = () => {
-    setLocalSelectedAllergens([...allergens])
-  }
+    setLocalSelectedAllergens([...allergens]);
+  };
 
   const clearAll = () => {
-    setLocalSelectedAllergens([])
-  }
+    setLocalSelectedAllergens([]);
+  };
 
   return (
     <div className="relative">
@@ -57,7 +60,9 @@ export function AllergenFilter({
         className={`flex items-center gap-1 text-white hover:bg-[#a02020] ${isOpen ? "bg-[#a02020]" : ""}`}
       >
         <FilterIcon className="text-gray-100 h-4 w-4" />
-        <span className="text-xs text-gray-100 sm:text-sm whitespace-nowrap font-medium">Allergen Filter</span>
+        <span className="text-xs text-gray-100 sm:text-sm whitespace-nowrap font-medium">
+          Allergen Filter
+        </span>
       </Button>
 
       <AnimatePresence>
@@ -109,9 +114,13 @@ export function AllergenFilter({
                               : "border-gray-300"
                           }`}
                         >
-                          {localSelectedAllergens.includes(allergen) && <Check className="h-3 w-3 text-white" />}
+                          {localSelectedAllergens.includes(allergen) && (
+                            <Check className="h-3 w-3 text-white" />
+                          )}
                         </div>
-                        <span className="text-sm text-gray-800">{allergen}</span>
+                        <span className="text-sm text-gray-800">
+                          {allergen}
+                        </span>
                       </button>
                     ))}
                 </div>
@@ -136,15 +145,28 @@ export function AllergenFilter({
                     Clear All
                   </Button>
                 </div>
-                <Button size="sm" onClick={applyFilters} className="text-xs text-gray-100 bg-[#8B0000] hover:bg-[#a02020]">
+                <Button
+                  size="sm"
+                  onClick={applyFilters}
+                  className="text-xs text-gray-100 bg-[#8B0000] hover:bg-[#a02020]"
+                >
                   Apply
                 </Button>
               </div>
               <div className="pl-1 pr-3 py-2 bg-gray-100 rounded-b-lg">
                 <ul className="list-disc pl-5 text-xs text-gray-500 space-y-1">
-                  <li>Only items containing your selected allergens will be displayed.</li>
-                  <li>Items without any allergens are always included in the results.</li>
-                  <li>If an item has multiple allergens, it will only be shown if all its allergens are selected.</li>
+                  <li>
+                    Only items containing your selected allergens will be
+                    displayed.
+                  </li>
+                  <li>
+                    Items without any allergens are always included in the
+                    results.
+                  </li>
+                  <li>
+                    If an item has multiple allergens, it will only be shown if
+                    all its allergens are selected.
+                  </li>
                 </ul>
               </div>
             </motion.div>
@@ -152,6 +174,5 @@ export function AllergenFilter({
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
-

@@ -31,4 +31,3 @@ The Food Menu CSV should include the following columns:
 #### Metrics Format
 
 The `metrics` field should be formatted as a semicolon-separated string with key-value pairs:
-

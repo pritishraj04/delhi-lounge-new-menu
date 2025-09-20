@@ -10,69 +10,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 // import { FullScreenToggle } from "@/components/full-screen-toggle"
 import { BubbleNotification } from "@/components/bubble-notification";
-import {
-  parseFoodMenuCSV,
-  parseBarMenuCSV,
-  convertToMenuItems,
-  convertToBarItems,
-} from "@/utils/csv-parser";
 import { AllergenFilter } from "@/components/allergen-filter";
-import { UpcomingEvents, type Event } from "@/components/upcoming-events";
+import { UpcomingEvents } from "@/components/upcoming-events";
 import Image from "next/image";
 import { useClickOutside } from "../hooks/useClickOutside";
 import { useScrollToItem } from "../hooks/useScrollToItem";
 import { useSearch } from "../hooks/useSearch";
 import { PWAInstallPrompt } from "@/components/pwa-install-prompt";
-
-// Define types for menu items, drink items, and events
-interface MenuItem {
-  id: number; // Changed from string to number
-  name: string;
-  description: string;
-  image: string;
-  price: {
-    full: number;
-    half: number;
-  };
-  calories: {
-    full: number;
-    half: number;
-  };
-  weight?: {
-    full: number;
-    half: number;
-  };
-  allergens?: string[];
-  category: string;
-  subCategory?: string;
-  isChefSpecial?: boolean;
-  isMustTry?: boolean;
-  isVegan?: boolean;
-  hasPortions?: boolean;
-}
-
-interface DrinkItem {
-  id: number; // Changed from string to number
-  name: string;
-  price: number;
-  category: string;
-  subCategory?: string;
-  description: string;
-  image: string;
-}
-
-// Update the SearchResult type to include optional properties
-interface SearchResult {
-  id?: number | string;
-  name: string;
-  type: "Food Menu" | "Bar Menu" | "Upcoming Events"; // Ensure type is one of the allowed values
-  isVegan?: boolean; // Optional property
-  category?: string; // Optional property
-  subCategory?: string; // Optional property
-  image?: string;
-  price?: number | { full: number; half: number }; // Allow price as an object or a number
-  calories?: number | { full: number; half: number }; // Allow calories as an object or a number
-}
+import type { MenuItem, DrinkItem, SearchResult, Event } from "../types/menu";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -91,7 +36,7 @@ const DynamicBarMenu = dynamic(
       </div>
     ),
     ssr: false,
-  }
+  },
 );
 
 // Sample upcoming events data
@@ -110,7 +55,7 @@ const searchResultsStyles =
 
 export default function Page() {
   const [activeMenu, setActiveMenu] = useState<"food" | "bar" | "events">(
-    "food"
+    "food",
   );
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -118,10 +63,10 @@ export default function Page() {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [drinkItems, setDrinkItems] = useState<DrinkItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MenuItem | DrinkItem | null>(
-    null
+    null,
   );
   const [notificationMessage, setNotificationMessage] = useState<string | null>(
-    null
+    null,
   );
   const searchRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -131,7 +76,7 @@ export default function Page() {
   const [isSearchOverlayVisible, setIsSearchOverlayVisible] = useState(false);
   const [events, setEvents] = useState<Event[]>(upcomingEvents);
   const [selectedEventName, setSelectedEventName] = useState<string | null>(
-    null
+    null,
   );
   const [isSearchTriggered, setIsSearchTriggered] = useState(false); // Track if search triggered the selection
 
@@ -161,56 +106,43 @@ export default function Page() {
   });
 
   useEffect(() => {
-    const loadCSVData = async () => {
+    const loadMenuData = async () => {
       setIsLoading(true);
       // Check if the device is iOS
       const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
       setIsIOS(isIOSDevice);
       try {
-        // Load food menu CSV
-        const foodMenuResponse = await fetch("/data/food-menu.csv");
-        const foodMenuText = await foodMenuResponse.text();
-        const foodItems = parseFoodMenuCSV(foodMenuText);
-        const convertedFoodItems = convertToMenuItems(foodItems);
+        // Load food menu from Neon DB via Netlify Function
+        const foodMenuResponse = await fetch("/.netlify/functions/get-menu");
+        const foodItems = await foodMenuResponse.json();
+        setMenuItems(foodItems);
 
-        // Set menu items
-        setMenuItems(convertedFoodItems);
-
-        // Load bar menu CSV
-        const barMenuResponse = await fetch("/data/bar-menu.csv");
-        const barMenuText = await barMenuResponse.text();
-        const barItems = parseBarMenuCSV(barMenuText);
-        const convertedBarItems = convertToBarItems(barItems);
-
-        // Set drink items
-        setDrinkItems(convertedBarItems);
+        // Load bar menu from Neon DB via Netlify Function
+        const barMenuResponse = await fetch("/.netlify/functions/get-bar-menu");
+        const barItems = await barMenuResponse.json();
+        setDrinkItems(barItems);
 
         // Set initial selected item only if we have items
-        if (convertedFoodItems && convertedFoodItems.length > 0) {
-          setSelectedItem(convertedFoodItems[0]);
+        if (foodItems && foodItems.length > 0) {
+          setSelectedItem(foodItems[0]);
         }
 
         // Extract all unique allergens
         const allergenSet = new Set<string>();
-        convertedFoodItems.forEach((item: MenuItem) => {
+        foodItems.forEach((item: MenuItem) => {
           if (item.allergens && Array.isArray(item.allergens)) {
-            item.allergens.forEach((allergen: string) =>
-              allergenSet.add(allergen)
-            );
+            item.allergens.forEach((allergen: string) => {
+              allergenSet.add(allergen);
+            });
           }
         });
 
         const uniqueAllergens = Array.from(allergenSet);
         setAllAllergens(uniqueAllergens);
         setSelectedAllergens(uniqueAllergens); // All allergens selected by default
-
-        // Remove notification on load
-        // setNotificationMessage("Menu data loaded successfully")
       } catch (error) {
-        console.error("Error loading CSV data:", error);
+        console.error("Error loading menu data:", error);
         setNotificationMessage("Error loading menu data");
-
-        // Fallback to empty arrays if CSVs fail to load
         setMenuItems([]);
         setDrinkItems([]);
         setSelectedItem(null);
@@ -221,7 +153,7 @@ export default function Page() {
       }
     };
 
-    loadCSVData();
+    loadMenuData();
   }, []);
 
   useEffect(() => {
@@ -317,8 +249,8 @@ export default function Page() {
               item.allergens.every(
                 (allergen) =>
                   selectedAllergens.includes(allergen) ||
-                  allergen.toLowerCase() === "none"
-              ))
+                  allergen.toLowerCase() === "none",
+              )),
         );
         if (firstVegan) {
           setSelectedItem(firstVegan);
@@ -649,7 +581,7 @@ export default function Page() {
           {activeMenu === "food" && (
             <>
               <Menu
-                selectedItem={selectedItem as MenuItem | undefined} // Cast to MenuItem or undefined
+                selectedItem={selectedItem as MenuItem | undefined}
                 setSelectedItem={(item: MenuItem | undefined) =>
                   setSelectedItem(item || null)
                 }

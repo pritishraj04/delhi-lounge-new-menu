@@ -1,81 +1,89 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Download, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Download, X } from "lucide-react";
 
 interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[]
+  readonly platforms: string[];
   readonly userChoice: Promise<{
-    outcome: "accepted" | "dismissed"
-    platform: string
-  }>
-  prompt(): Promise<void>
+    outcome: "accepted" | "dismissed";
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
 }
 
 export function PWAInstallPrompt() {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isIOS, setIsIOS] = useState(false)
-  const [isStandalone, setIsStandalone] = useState(false)
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
+  const [isStandalone, setIsStandalone] = useState(false);
 
   useEffect(() => {
     // Check if device is iOS
-    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
-    setIsIOS(iOS)
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    setIsIOS(iOS);
 
     // Check if app is already installed (standalone mode)
     const standalone =
-      window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone === true
-    setIsStandalone(standalone)
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (window.navigator as any).standalone === true;
+    setIsStandalone(standalone);
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e as BeforeInstallPromptEvent)
-      setShowInstallPrompt(true)
-    }
+      e.preventDefault();
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setShowInstallPrompt(true);
+    };
 
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     // Hide prompt after app is installed
     const handleAppInstalled = () => {
-      setShowInstallPrompt(false)
-      setDeferredPrompt(null)
-    }
+      setShowInstallPrompt(false);
+      setDeferredPrompt(null);
+    };
 
-    window.addEventListener("appinstalled", handleAppInstalled)
+    window.addEventListener("appinstalled", handleAppInstalled);
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt)
-      window.removeEventListener("appinstalled", handleAppInstalled)
-    }
-  }, [])
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt,
+      );
+      window.removeEventListener("appinstalled", handleAppInstalled);
+    };
+  }, []);
 
   const handleInstallClick = async () => {
     if (deferredPrompt) {
-      deferredPrompt.prompt()
-      const { outcome } = await deferredPrompt.userChoice
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
 
       if (outcome === "accepted") {
-        setDeferredPrompt(null)
-        setShowInstallPrompt(false)
+        setDeferredPrompt(null);
+        setShowInstallPrompt(false);
       }
     }
-  }
+  };
 
   const handleDismiss = () => {
-    setShowInstallPrompt(false)
+    setShowInstallPrompt(false);
     // Hide for this session
     if (typeof window !== "undefined" && window.sessionStorage) {
-      window.sessionStorage.setItem("pwa-install-dismissed", "true")
+      window.sessionStorage.setItem("pwa-install-dismissed", "true");
     }
-  }
+  };
 
   // Don't show if already installed, dismissed this session, or no prompt available
-  const isDismissed = typeof window !== "undefined" && window.sessionStorage && window.sessionStorage.getItem("pwa-install-dismissed")
+  const isDismissed =
+    typeof window !== "undefined" &&
+    window.sessionStorage &&
+    window.sessionStorage.getItem("pwa-install-dismissed");
   if (isStandalone || isDismissed || (!showInstallPrompt && !isIOS)) {
-    return null
+    return null;
   }
 
   return (
@@ -87,9 +95,13 @@ export function PWAInstallPrompt() {
               <Download className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Install Delhi Lounge</h3>
+              <h3 className="font-semibold text-gray-900">
+                Install Delhi Lounge
+              </h3>
               <p className="text-sm text-gray-600">
-                {isIOS ? "Add to Home Screen for quick access" : "Install app for better experience"}
+                {isIOS
+                  ? "Add to Home Screen for quick access"
+                  : "Install app for better experience"}
               </p>
             </div>
           </div>
@@ -124,5 +136,5 @@ export function PWAInstallPrompt() {
         )}
       </div>
     </div>
-  )
+  );
 }

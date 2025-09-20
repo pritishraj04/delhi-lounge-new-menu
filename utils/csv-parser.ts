@@ -4,50 +4,50 @@
 
 // Food Menu item interface based on CSV structure
 export interface FoodMenuItem {
-  id: number
-  category: string
-  subCategory?: string
-  name: string
-  description: string
+  id: number;
+  category: string;
+  subCategory?: string;
+  name: string;
+  description: string;
   metrics: {
-    weight?: number
-    calories?: number
-    price?: number
+    weight?: number;
+    calories?: number;
+    price?: number;
     portions: {
       full?: {
-        price: number
-        calories?: number
-        weight?: number
-      }
+        price: number;
+        calories?: number;
+        weight?: number;
+      };
       half?: {
-        price: number
-        calories?: number
-        weight?: number
-      }
-    }
-  }
-  image: string
-  isChefSpecial?: boolean
-  isMustTry?: boolean
-  isVegan?: boolean
-  allergens?: string[]
-  enabled?: boolean
-  timeWindowStart?: string // "HH:MM:SS" format
-  timeWindowEnd?: string   // "HH:MM:SS" format
+        price: number;
+        calories?: number;
+        weight?: number;
+      };
+    };
+  };
+  image: string;
+  isChefSpecial?: boolean;
+  isMustTry?: boolean;
+  isVegan?: boolean;
+  allergens?: string[];
+  enabled?: boolean;
+  timeWindowStart?: string; // "HH:MM:SS" format
+  timeWindowEnd?: string; // "HH:MM:SS" format
 }
 
 // Bar Menu item interface based on CSV structure
 export interface BarMenuItem {
-  id: number
-  category: string
-  subCategory?: string
-  name: string
-  description: string
-  price: number
-  image: string
-  enabled?: boolean
-  timeWindowStart?: string // "HH:MM:SS" format
-  timeWindowEnd?: string   // "HH:MM:SS" format
+  id: number;
+  category: string;
+  subCategory?: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  enabled?: boolean;
+  timeWindowStart?: string; // "HH:MM:SS" format
+  timeWindowEnd?: string; // "HH:MM:SS" format
 }
 
 /**
@@ -56,26 +56,26 @@ export interface BarMenuItem {
 let uniqueIdCounter = 1; // Initialize a counter for unique numeric IDs
 
 export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
-  const lines = csvContent.split("\n")
-  const headers = lines[0].split(",").map((header) => header.trim())
+  const lines = csvContent.split("\n");
+  const headers = lines[0].split(",").map((header) => header.trim());
 
   // Create a map of header indices for easier access
   const headerMap = headers.reduce(
     (map, header, index) => {
-      map[header] = index
-      return map
+      map[header] = index;
+      return map;
     },
     {} as Record<string, number>,
-  )
+  );
 
-  const foodMenuItems: FoodMenuItem[] = []
+  const foodMenuItems: FoodMenuItem[] = [];
 
   // Start from index 1 to skip headers
   for (let i = 1; i < lines.length; i++) {
-    if (!lines[i].trim()) continue // Skip empty lines
+    if (!lines[i].trim()) continue; // Skip empty lines
 
-    const values = parseCSVLine(lines[i])
-    if (values.length < headers.length) continue // Skip malformed lines
+    const values = parseCSVLine(lines[i]);
+    if (values.length < headers.length) continue; // Skip malformed lines
 
     try {
       const item: FoodMenuItem = {
@@ -86,7 +86,8 @@ export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
         description: values[headerMap["description"]] || "",
         metrics: parseMetrics(values[headerMap["metrics"]] || ""),
         image: values[headerMap["image"]] || "/placeholder.svg",
-        isChefSpecial: values[headerMap["chefSpecial"]]?.toLowerCase() === "true",
+        isChefSpecial:
+          values[headerMap["chefSpecial"]]?.toLowerCase() === "true",
         isMustTry: values[headerMap["mustTry"]]?.toLowerCase() === "true",
         isVegan: values[headerMap["vegan"]]?.toLowerCase() === "true",
         allergens:
@@ -97,42 +98,42 @@ export function parseFoodMenuCSV(csvContent: string): FoodMenuItem[] {
         enabled: values[headerMap["enabled"]]?.toLowerCase() === "true",
         timeWindowStart: values[headerMap["timeWindowStart"]] || undefined,
         timeWindowEnd: values[headerMap["timeWindowEnd"]] || undefined,
-      }
+      };
 
-      foodMenuItems.push(item)
+      foodMenuItems.push(item);
     } catch (error) {
-      console.error(`Error parsing line ${i}:`, error)
+      console.error(`Error parsing line ${i}:`, error);
       // Continue with next line
     }
   }
 
-  return foodMenuItems
+  return foodMenuItems;
 }
 
 /**
  * Parse CSV data for bar menu items
  */
 export function parseBarMenuCSV(csvContent: string): BarMenuItem[] {
-  const lines = csvContent.split("\n")
-  const headers = lines[0].split(",").map((header) => header.trim())
+  const lines = csvContent.split("\n");
+  const headers = lines[0].split(",").map((header) => header.trim());
 
   // Create a map of header indices for easier access
   const headerMap = headers.reduce(
     (map, header, index) => {
-      map[header] = index
-      return map
+      map[header] = index;
+      return map;
     },
     {} as Record<string, number>,
-  )
+  );
 
-  const barMenuItems: BarMenuItem[] = []
+  const barMenuItems: BarMenuItem[] = [];
 
   // Start from index 1 to skip headers
   for (let i = 1; i < lines.length; i++) {
-    if (!lines[i].trim()) continue // Skip empty lines
+    if (!lines[i].trim()) continue; // Skip empty lines
 
-    const values = parseCSVLine(lines[i])
-    if (values.length < headers.length) continue // Skip malformed lines
+    const values = parseCSVLine(lines[i]);
+    if (values.length < headers.length) continue; // Skip malformed lines
 
     try {
       const item: BarMenuItem = {
@@ -146,43 +147,43 @@ export function parseBarMenuCSV(csvContent: string): BarMenuItem[] {
         enabled: values[headerMap["enabled"]]?.toLowerCase() === "true",
         timeWindowStart: values[headerMap["timeWindowStart"]] || undefined,
         timeWindowEnd: values[headerMap["timeWindowEnd"]] || undefined,
-      }
+      };
 
-      barMenuItems.push(item)
+      barMenuItems.push(item);
     } catch (error) {
-      console.error(`Error parsing line ${i}:`, error)
+      console.error(`Error parsing line ${i}:`, error);
       // Continue with next line
     }
   }
 
-  return barMenuItems
+  return barMenuItems;
 }
 
 /**
  * Parse a CSV line considering quoted values that may contain commas
  */
 function parseCSVLine(line: string): string[] {
-  const result: string[] = []
-  let current = ""
-  let inQuotes = false
+  const result: string[] = [];
+  let current = "";
+  let inQuotes = false;
 
   for (let i = 0; i < line.length; i++) {
-    const char = line[i]
+    const char = line[i];
 
     if (char === '"') {
-      inQuotes = !inQuotes
+      inQuotes = !inQuotes;
     } else if (char === "," && !inQuotes) {
-      result.push(current.trim())
-      current = ""
+      result.push(current.trim());
+      current = "";
     } else {
-      current += char
+      current += char;
     }
   }
 
   // Add the last value
-  result.push(current.trim())
+  result.push(current.trim());
 
-  return result
+  return result;
 }
 
 /**
@@ -196,108 +197,114 @@ function parseCSVLine(line: string): string[] {
 function parseMetrics(metricsStr: string): FoodMenuItem["metrics"] {
   const metrics: FoodMenuItem["metrics"] = {
     portions: {},
-  }
+  };
 
   if (!metricsStr) {
     // Default values if metrics string is empty
     metrics.portions = {
       full: { price: 0 },
-    }
-    return metrics
+    };
+    return metrics;
   }
 
-  const parts = metricsStr.split(";")
-  let hasPortions = false
-  let currentPortion: "full" | "half" | null = null
+  const parts = metricsStr.split(";");
+  let hasPortions = false;
+  let currentPortion: "full" | "half" | null = null;
 
   for (const part of parts) {
-    if (!part.trim()) continue
+    if (!part.trim()) continue;
 
-    const [key, rawValue] = part.split(":").map((s) => s.trim())
-    const value = rawValue ? rawValue.replace(/[$]/g, "") : ""
+    const [key, rawValue] = part.split(":").map((s) => s.trim());
+    const value = rawValue ? rawValue.replace(/[$]/g, "") : "";
 
     // Handle portion indicator
     if (key === "portion") {
       if (value === "full" || value === "half") {
-        currentPortion = value
-        hasPortions = true
+        currentPortion = value;
+        hasPortions = true;
       }
-      continue
+      continue;
     }
 
     // Handle new format with portion-specific metrics
     if (key.startsWith("full_") || key.startsWith("half_")) {
-      const portionType = key.startsWith("full_") ? "full" : "half"
-      const metricType = key.substring(portionType.length + 1)
+      const portionType = key.startsWith("full_") ? "full" : "half";
+      const metricType = key.substring(portionType.length + 1);
 
       if (!metrics.portions[portionType]) {
-        metrics.portions[portionType] = { price: 0 }
+        metrics.portions[portionType] = { price: 0 };
       }
 
       if (metricType === "weight") {
-        metrics.portions[portionType].weight = Number.parseInt(value.replace(/[^0-9]/g, ""))
+        metrics.portions[portionType].weight = Number.parseInt(
+          value.replace(/[^0-9]/g, ""),
+        );
       } else if (metricType === "cal" || metricType === "calories") {
-        metrics.portions[portionType].calories = Number.parseInt(value.replace(/[^0-9]/g, ""))
+        metrics.portions[portionType].calories = Number.parseInt(
+          value.replace(/[^0-9]/g, ""),
+        );
       } else if (metricType === "price") {
-        metrics.portions[portionType].price = Number.parseFloat(value.replace(/[^0-9.]/g, ""))
+        metrics.portions[portionType].price = Number.parseFloat(
+          value.replace(/[^0-9.]/g, ""),
+        );
       }
 
-      hasPortions = true
-      continue
+      hasPortions = true;
+      continue;
     }
 
     // Handle old format keys
     if (key === "weight") {
-      metrics.weight = Number.parseInt(value.replace(/[^0-9]/g, ""))
+      metrics.weight = Number.parseInt(value.replace(/[^0-9]/g, ""));
     } else if (key === "kcal" || key === "cal" || key === "calories") {
-      metrics.calories = Number.parseInt(value.replace(/[^0-9]/g, ""))
+      metrics.calories = Number.parseInt(value.replace(/[^0-9]/g, ""));
     } else if (key === "price") {
-      metrics.price = Number.parseFloat(value.replace(/[^0-9.]/g, ""))
+      metrics.price = Number.parseFloat(value.replace(/[^0-9.]/g, ""));
 
       // If we have a single price and no portions, set it as the full portion price
       if (!hasPortions) {
-        if (!metrics.portions.full) metrics.portions.full = { price: 0 }
-        metrics.portions.full.price = metrics.price
+        if (!metrics.portions.full) metrics.portions.full = { price: 0 };
+        metrics.portions.full.price = metrics.price;
       }
     } else if (key === "full") {
-      if (!metrics.portions.full) metrics.portions.full = { price: 0 }
-      metrics.portions.full.price = Number.parseFloat(value)
-      hasPortions = true
+      if (!metrics.portions.full) metrics.portions.full = { price: 0 };
+      metrics.portions.full.price = Number.parseFloat(value);
+      hasPortions = true;
     } else if (key === "half") {
-      if (!metrics.portions.half) metrics.portions.half = { price: 0 }
-      metrics.portions.half.price = Number.parseFloat(value)
-      hasPortions = true
+      if (!metrics.portions.half) metrics.portions.half = { price: 0 };
+      metrics.portions.half.price = Number.parseFloat(value);
+      hasPortions = true;
     } else if (key === "full_kcal" || key === "full_cal") {
-      if (!metrics.portions.full) metrics.portions.full = { price: 0 }
-      metrics.portions.full.calories = Number.parseInt(value)
+      if (!metrics.portions.full) metrics.portions.full = { price: 0 };
+      metrics.portions.full.calories = Number.parseInt(value);
     } else if (key === "half_kcal" || key === "half_cal") {
-      if (!metrics.portions.half) metrics.portions.half = { price: 0 }
-      metrics.portions.half.calories = Number.parseInt(value)
+      if (!metrics.portions.half) metrics.portions.half = { price: 0 };
+      metrics.portions.half.calories = Number.parseInt(value);
     }
   }
 
   // Ensure we have at least an empty object for full portion
-  if (!metrics.portions.full) metrics.portions.full = { price: 0 }
+  if (!metrics.portions.full) metrics.portions.full = { price: 0 };
 
   // If we have calories but no portion-specific calories, distribute them
   if (metrics.calories && !metrics.portions.full.calories) {
-    metrics.portions.full.calories = metrics.calories
+    metrics.portions.full.calories = metrics.calories;
 
     if (metrics.portions.half && !metrics.portions.half.calories) {
-      metrics.portions.half.calories = Math.floor(metrics.calories / 2)
+      metrics.portions.half.calories = Math.floor(metrics.calories / 2);
     }
   }
 
   // If we have weight but no portion-specific weight, distribute it
   if (metrics.weight && !metrics.portions.full.weight) {
-    metrics.portions.full.weight = metrics.weight
+    metrics.portions.full.weight = metrics.weight;
 
     if (metrics.portions.half && !metrics.portions.half.weight) {
-      metrics.portions.half.weight = Math.floor(metrics.weight / 2)
+      metrics.portions.half.weight = Math.floor(metrics.weight / 2);
     }
   }
 
-  return metrics
+  return metrics;
 }
 
 /**
@@ -320,7 +327,8 @@ export function convertToMenuItems(foodItems: FoodMenuItem[]): any[] {
         half: item.metrics.portions.half?.price || 0,
       },
       calories: {
-        full: item.metrics.portions.full?.calories || item.metrics.calories || 0,
+        full:
+          item.metrics.portions.full?.calories || item.metrics.calories || 0,
         half: item.metrics.portions.half?.calories || 0,
       },
       weight: {
@@ -333,11 +341,12 @@ export function convertToMenuItems(foodItems: FoodMenuItem[]): any[] {
       isChefSpecial: item.isChefSpecial,
       isMustTry: item.isMustTry,
       isVegan: item.isVegan,
-      hasPortions: !!item.metrics.portions.half && item.metrics.portions.half.price > 0,
+      hasPortions:
+        !!item.metrics.portions.half && item.metrics.portions.half.price > 0,
       enabled: item.enabled,
       timeWindow,
-    }
-  })
+    };
+  });
 }
 
 /**
@@ -351,15 +360,15 @@ export function convertToBarItems(barItems: BarMenuItem[]): any[] {
       timeWindow = { start: item.timeWindowStart, end: item.timeWindowEnd };
     }
     return {
-    id: item.id,
-    name: item.name,
-    description: item.description,
-    price: item.price,
-    category: item.category,
-    subCategory: item.subCategory,
-    image: item.image,
-    enabled: item.enabled,
-    timeWindow,
-  }})
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      price: item.price,
+      category: item.category,
+      subCategory: item.subCategory,
+      image: item.image,
+      enabled: item.enabled,
+      timeWindow,
+    };
+  });
 }
-

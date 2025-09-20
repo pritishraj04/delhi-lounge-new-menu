@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import withPWA from 'next-pwa';
+import withPWA from "next-pwa";
 
 const nextConfig = {
   // Your existing Next.js config options here
@@ -17,16 +17,16 @@ const nextConfig = {
 };
 
 export default withPWA({
-  dest: 'public',
+  dest: "public",
   register: true,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
+  disable: process.env.NODE_ENV === "development",
   runtimeCaching: [
     {
       urlPattern: /^https?.*/,
-      handler: 'NetworkFirst',
+      handler: "NetworkFirst",
       options: {
-        cacheName: 'offlineCache',
+        cacheName: "offlineCache",
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 24 * 60 * 60, // 24 hours
@@ -38,9 +38,9 @@ export default withPWA({
     },
     {
       urlPattern: /\.(png|jpg|jpeg|svg|gif|webp)$/,
-      handler: 'CacheFirst',
+      handler: "CacheFirst",
       options: {
-        cacheName: 'images',
+        cacheName: "images",
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
@@ -49,9 +49,9 @@ export default withPWA({
     },
     {
       urlPattern: /\.(js|css|woff|woff2|ttf|eot)$/,
-      handler: 'CacheFirst',
+      handler: "CacheFirst",
       options: {
-        cacheName: 'static-resources',
+        cacheName: "static-resources",
         expiration: {
           maxEntries: 100,
           maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
@@ -60,9 +60,9 @@ export default withPWA({
     },
     {
       urlPattern: /\/data\/food-menu\.csv$/,
-      handler: 'StaleWhileRevalidate',
+      handler: "StaleWhileRevalidate",
       options: {
-        cacheName: 'menu-data',
+        cacheName: "menu-data",
         expiration: {
           maxEntries: 10,
           maxAgeSeconds: 60 * 60, // 1 hour
@@ -71,9 +71,9 @@ export default withPWA({
     },
     {
       urlPattern: /\/data\/bar-menu\.csv$/,
-      handler: 'StaleWhileRevalidate',
+      handler: "StaleWhileRevalidate",
       options: {
-        cacheName: 'menu-data',
+        cacheName: "menu-data",
         expiration: {
           maxEntries: 10,
           maxAgeSeconds: 60 * 60, // 1 hour

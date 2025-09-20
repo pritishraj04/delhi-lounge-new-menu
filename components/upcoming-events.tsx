@@ -1,46 +1,51 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export interface Event {
-  name: string
-  image: string
+  name: string;
+  image: string;
 }
 
 interface UpcomingEventsProps {
-  events: Event[]
-  selectedEventName?: string | null
+  events: Event[];
+  selectedEventName?: string | null;
 }
 
-export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProps) {
+export function UpcomingEvents({
+  events,
+  selectedEventName,
+}: UpcomingEventsProps) {
   // Find the event that matches the selectedEventName, or use the first event as default
   const initialEvent = selectedEventName
     ? events.find((event) => event.name === selectedEventName) || events[0]
-    : events[0]
+    : events[0];
 
-  const [selectedEvent, setSelectedEvent] = useState<Event | null>(initialEvent)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(
+    initialEvent,
+  );
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Update selectedEvent when selectedEventName changes
   useEffect(() => {
     if (selectedEventName) {
-      const event = events.find((event) => event.name === selectedEventName)
+      const event = events.find((event) => event.name === selectedEventName);
       if (event) {
-        setSelectedEvent(event)
+        setSelectedEvent(event);
       }
     }
-  }, [selectedEventName, events])
+  }, [selectedEventName, events]);
 
   const handleEventSelect = (event: Event) => {
-    setSelectedEvent(event)
-    setIsDropdownOpen(false)
-  }
+    setSelectedEvent(event);
+    setIsDropdownOpen(false);
+  };
 
-  if (events.length === 0) return null
+  if (events.length === 0) return null;
 
   return (
     <div className="flex flex-col h-full overflow-hidden bg-[#f9f7f3]">
@@ -53,7 +58,9 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
             className="w-full justify-between border-gray-300 text-gray-800"
           >
             <span>{selectedEvent?.name || "Select an event"}</span>
-            <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            <ChevronDown
+              className={`h-4 w-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+            />
           </Button>
 
           <AnimatePresence>
@@ -84,7 +91,9 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
                         }`}
                         onClick={() => handleEventSelect(event)}
                       >
-                        <div className="font-medium text-gray-800">{event.name}</div>
+                        <div className="font-medium text-gray-800">
+                          {event.name}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -121,5 +130,5 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
         </AnimatePresence>
       </div>
     </div>
-  )
+  );
 }

@@ -1,43 +1,26 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { MenuIcon, Milk, Wheat, Egg, Fish, NutIcon as Peanut, Star, Leaf, Sparkle} from "lucide-react"
-import { useSwipeable } from "react-swipeable"
+import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  MenuIcon,
+  Milk,
+  Wheat,
+  Egg,
+  Fish,
+  NutIcon as Peanut,
+  Star,
+  Leaf,
+  Sparkle,
+} from "lucide-react";
+import { useSwipeable } from "react-swipeable";
 
-// Update the MenuItem interface to include isVegan
-interface MenuItem {
-  id: number
-  name: string
-  description: string
-  image: string
-  price: {
-    full: number
-    half: number
-  }
-  calories: {
-    full: number
-    half: number
-  }
-  weight?: {
-    full: number
-    half: number
-  }
-  allergens?: string[]
-  category: string
-  subCategory?: string
-  isChefSpecial?: boolean
-  isMustTry?: boolean
-  isVegan?: boolean
-  hasPortions?: boolean
-  enabled?: boolean // New: enable/disable item
-  timeWindow?: { start: string; end: string } // New: time window in HH:mm 24h format, US/Central time
-}
+import type { MenuItem } from "../types/menu";
 
 // Add a type-safe way to access allergenIcons
 const allergenIcons: Record<string, React.ComponentType<any>> = {
@@ -46,27 +29,24 @@ const allergenIcons: Record<string, React.ComponentType<any>> = {
   Eggs: Egg,
   Seafood: Fish,
   Nuts: Peanut,
-}
+};
 
-// Update the formatPrice function to be more robust
+// Format price for display
 const formatPrice = (price?: number): string => {
-  if (price === undefined || price === null || isNaN(price)) return "N/A"
-  return price.toFixed(2)
-}
+  if (price === undefined || price === null || isNaN(price)) return "N/A";
+  return price.toFixed(2);
+};
 
-// Add a helper function to safely access nested properties
-const safelyGetValue = (obj: any, path: string[], defaultValue: any = "N/A") => {
-  try {
-    let current = obj
-    for (const key of path) {
-      if (current === undefined || current === null) return defaultValue
-      current = current[key]
-    }
-    return current === undefined || current === null ? defaultValue : current
-  } catch (e) {
-    return defaultValue
-  }
-}
+// Helper to get price values from new structure
+const getPrice = (
+  price: MenuItem["price"],
+  portion: "full" | "half" = "full",
+): number => {
+  if (typeof price === "number") return price;
+  if (portion === "full") return price.full;
+  if (portion === "half") return price.half ?? 0;
+  return 0;
+};
 
 // In the Menu component function, add an additional prop for the vegan filter and allergen filter
 export function Menu({
@@ -76,251 +56,263 @@ export function Menu({
   veganOnly = false,
   selectedAllergens = [],
 }: {
-  selectedItem: MenuItem | undefined
-  setSelectedItem: (item: MenuItem | undefined) => void
-  menuItems: MenuItem[]
-  veganOnly?: boolean
-  selectedAllergens?: string[]
+  selectedItem: MenuItem | undefined;
+  setSelectedItem: (item: MenuItem | undefined) => void;
+  menuItems: MenuItem[];
+  veganOnly?: boolean;
+  selectedAllergens?: string[];
 }) {
-  const [currentCategory, setCurrentCategory] = useState("All")
-  const [isCategoryOpen, setIsCategoryOpen] = useState(false)
-  const categoryRef = useRef<HTMLDivElement>(null)
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false)
-  const [uniqueCategories, setUniqueCategories] = useState<{ category: string; subCategory?: string }[]>([])
-  const [lastSelectedCategory, setLastSelectedCategory] = useState("All")
-  const prevVeganOnly = useRef(veganOnly)
+  const [currentCategory, setCurrentCategory] = useState("All");
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  const categoryRef = useRef<HTMLDivElement>(null);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [uniqueCategories, setUniqueCategories] = useState<
+    { category: string; subCategory?: string }[]
+  >([]);
+  const [lastSelectedCategory, setLastSelectedCategory] = useState("All");
+  const prevVeganOnly = useRef(veganOnly);
 
   // Auto-select "All" category when toggling Vegan Only
   useEffect(() => {
     // Only reset to "All" when veganOnly transitions from false to true and not already on "All"
     if (veganOnly && !prevVeganOnly.current && currentCategory !== "All") {
-      setLastSelectedCategory(currentCategory)
-      setCurrentCategory("All")
+      setLastSelectedCategory(currentCategory);
+      setCurrentCategory("All");
     }
-    prevVeganOnly.current = veganOnly
+    prevVeganOnly.current = veganOnly;
 
     // Auto-select first vegan item when vegan toggle is enabled
     if (veganOnly && menuItems.length > 0) {
       const filteredItems = menuItems.filter((item) => {
         // Apply vegan filter
-        if (!item.isVegan) return false
+        if (!item.isVegan) return false;
 
         // Apply allergen filter
         if (
           item.allergens &&
-          item.allergens.some((allergen: string) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
+          item.allergens.some(
+            (allergen: string) =>
+              !selectedAllergens.includes(allergen) &&
+              allergen.toLowerCase() !== "none",
+          )
         ) {
-          return false
+          return false;
         }
 
-        return true
-      })
+        return true;
+      });
 
-      const firstFilteredItem = filteredItems[0]
+      const firstFilteredItem = filteredItems[0];
       if (firstFilteredItem && (!selectedItem || !selectedItem.isVegan)) {
-        setSelectedItem(firstFilteredItem)
+        setSelectedItem(firstFilteredItem);
       }
     }
-  }, [veganOnly, selectedAllergens, menuItems, selectedItem, setSelectedItem, currentCategory])
+  }, [
+    veganOnly,
+    selectedAllergens,
+    menuItems,
+    selectedItem,
+    setSelectedItem,
+    currentCategory,
+  ]);
 
   // Extract unique categories and format them with subcategories
   useEffect(() => {
     if (menuItems && menuItems.length > 0) {
       // Get unique category-subcategory combinations
-      const categoryMap = new Map<string, Set<string | undefined>>()
+      const categoryMap = new Map<string, Set<string | undefined>>();
 
       // Filter menu items based on current filters
       const filteredItems = menuItems.filter((item) => {
         // Apply vegan filter
-        if (veganOnly && !item.isVegan) return false
+        if (veganOnly && !item.isVegan) return false;
 
         // Apply allergen filter
         if (
           item.allergens &&
-          item.allergens.some((allergen) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
+          item.allergens.some(
+            (allergen) =>
+              !selectedAllergens.includes(allergen) &&
+              allergen.toLowerCase() !== "none",
+          )
         ) {
-          return false
+          return false;
         }
 
-        return true
-      })
+        return true;
+      });
 
       filteredItems.forEach((item) => {
         if (!categoryMap.has(item.category)) {
-          categoryMap.set(item.category, new Set())
+          categoryMap.set(item.category, new Set());
         }
-        categoryMap.get(item.category)?.add(item.subCategory)
-      })
+        categoryMap.get(item.category)?.add(item.subCategory);
+      });
 
       // Create formatted category list
-      const formattedCategories: { category: string; subCategory?: string }[] = []
+      const formattedCategories: { category: string; subCategory?: string }[] =
+        [];
 
       // Add "All" category first
-      formattedCategories.push({ category: "All" })
+      formattedCategories.push({ category: "All" });
 
       // Add other categories with their subcategories
       categoryMap.forEach((subCategories, category) => {
-        if (subCategories.size <= 1 && (subCategories.has(undefined) || subCategories.has(""))) {
+        if (
+          subCategories.size <= 1 &&
+          (subCategories.has(undefined) || subCategories.has(""))
+        ) {
           // If category has no subcategories or only undefined/empty subcategory
-          formattedCategories.push({ category })
+          formattedCategories.push({ category });
         } else {
           // Add each subcategory as a separate entry
           subCategories.forEach((subCategory) => {
             if (subCategory) {
-              formattedCategories.push({ category, subCategory })
+              formattedCategories.push({ category, subCategory });
             } else {
               // Add the main category without subcategory
-              formattedCategories.push({ category })
+              formattedCategories.push({ category });
             }
-          })
+          });
         }
-      })
+      });
 
-      setUniqueCategories(formattedCategories)
+      setUniqueCategories(formattedCategories);
     }
-  }, [menuItems, veganOnly, selectedAllergens])
+  }, [menuItems, veganOnly, selectedAllergens]);
 
   const handleCategorySelect = (category: string, subCategory?: string) => {
     if (category === "All") {
-      setCurrentCategory("All")
+      setCurrentCategory("All");
     } else {
-      setCurrentCategory(`${category}${subCategory ? ` - ${subCategory}` : ""}`)
+      setCurrentCategory(
+        `${category}${subCategory ? ` - ${subCategory}` : ""}`,
+      );
     }
-    setIsCategoryOpen(false)
-    setIsOverlayVisible(false)
-  }
+    setIsCategoryOpen(false);
+    setIsOverlayVisible(false);
+  };
 
   useEffect(() => {
     if (selectedItem) {
-      const item = menuItems.find((item) => item.id === selectedItem.id)
+      const item = menuItems.find((item) => item.id === selectedItem.id);
       if (item) {
-        setSelectedItem(item)
+        setSelectedItem(item);
       }
     }
-  }, [selectedItem, setSelectedItem, menuItems])
-
-  // Helper: get current time in US/Central (Texas) as minutes since midnight
-  const getCurrentCentralTimeMinutes = () => {
-    const now = new Date()
-    // Convert to US/Central time
-    const central = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }))
-    return central.getHours() * 60 + central.getMinutes()
-  }
-
-  // Helper: check if item is in its time window
-  const isInTimeWindow = (item: MenuItem) => {
-    if (!item.timeWindow) return true // default: always visible
-    const now = getCurrentCentralTimeMinutes()
-    const [startH, startM, startS] = item.timeWindow.start.split(":").map(Number)
-    const [endH, endM, endS] = item.timeWindow.end.split(":").map(Number)
-    const start = startH * 60 + startM + (startS ? startS / 60 : 0)
-    const end = endH * 60 + endM + (endS ? endS / 60 : 0)
-    if (start <= end) {
-      return now >= start && now < end
-    } else {
-      // Overnight window (e.g., 22:00-02:00)
-      return now >= start || now < end
-    }
-  }
+  }, [selectedItem, setSelectedItem, menuItems]);
 
   // Filter items based on category, vegan status, allergens, enabled, and time window
   const filteredItems = menuItems.filter((item) => {
-    if (item.enabled === false) return false
-    if (!isInTimeWindow(item)) return false
+    if (item.enabled === false) return false;
     // Apply vegan filter
-    if (veganOnly && !item.isVegan) return false
+    if (veganOnly && !item.isVegan) return false;
     // Apply allergen filter
     if (
       item.allergens &&
-      item.allergens.some((allergen) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
+      item.allergens.some(
+        (allergen) =>
+          !selectedAllergens.includes(allergen) &&
+          allergen.toLowerCase() !== "none",
+      )
     ) {
-      return false
+      return false;
     }
     // Apply category filter
-    if (currentCategory === "All") return true
+    if (currentCategory === "All") return true;
     // Handle the new format "Category - SubCategory"
     if (currentCategory.includes(" - ")) {
-      const [category, subCategory] = currentCategory.split(" - ")
-      return item.category === category && item.subCategory === subCategory
+      const [category, subCategory] = currentCategory.split(" - ");
+      return item.category === category && item.subCategory === subCategory;
     }
     // Handle just category
-    return item.category === currentCategory
-  })
+    return item.category === currentCategory;
+  });
 
   // Updated navigateItem function to respect filters and stay within category
   const navigateItem = (direction: "next" | "prev") => {
-    if (!selectedItem) return
+    if (!selectedItem) return;
 
     // Get the current category constraint
-    let categoryConstraint: string | undefined
-    let subCategoryConstraint: string | undefined
+    let categoryConstraint: string | undefined;
+    let subCategoryConstraint: string | undefined;
 
     if (currentCategory !== "All" && currentCategory.includes(" - ")) {
-      const [category, subCategory] = currentCategory.split(" - ")
-      categoryConstraint = category
-      subCategoryConstraint = subCategory
+      const [category, subCategory] = currentCategory.split(" - ");
+      categoryConstraint = category;
+      subCategoryConstraint = subCategory;
     } else if (currentCategory !== "All") {
-      categoryConstraint = currentCategory
+      categoryConstraint = currentCategory;
     }
 
     // Filter items based on constraints
     const eligibleItems = menuItems.filter((item) => {
       // Apply vegan filter if enabled
-      if (veganOnly && !item.isVegan) return false
+      if (veganOnly && !item.isVegan) return false;
 
       // Apply allergen filter
       if (
         item.allergens &&
-        item.allergens.some((allergen) => !selectedAllergens.includes(allergen) && allergen.toLowerCase() !== "none")
+        item.allergens.some(
+          (allergen) =>
+            !selectedAllergens.includes(allergen) &&
+            allergen.toLowerCase() !== "none",
+        )
       ) {
-        return false
+        return false;
       }
 
       // Apply category constraints if not "All"
       if (categoryConstraint) {
         if (subCategoryConstraint) {
-          return item.category === categoryConstraint && item.subCategory === subCategoryConstraint
+          return (
+            item.category === categoryConstraint &&
+            item.subCategory === subCategoryConstraint
+          );
         }
-        return item.category === categoryConstraint
+        return item.category === categoryConstraint;
       }
 
-      return true
-    })
+      return true;
+    });
 
-    if (eligibleItems.length === 0) return
+    if (eligibleItems.length === 0) return;
 
     // Find current index in eligible items
-    const currentIndex = eligibleItems.findIndex((item) => item.id === selectedItem.id)
+    const currentIndex = eligibleItems.findIndex(
+      (item) => item.id === selectedItem.id,
+    );
 
     // If item not found in eligible items, select first eligible item
     if (currentIndex === -1) {
-      setSelectedItem(eligibleItems[0])
-      return
+      setSelectedItem(eligibleItems[0]);
+      return;
     }
 
     // Calculate new index
-    let newIndex
+    let newIndex;
     if (direction === "next") {
-      newIndex = (currentIndex + 1) % eligibleItems.length
+      newIndex = (currentIndex + 1) % eligibleItems.length;
     } else {
-      newIndex = (currentIndex - 1 + eligibleItems.length) % eligibleItems.length
+      newIndex =
+        (currentIndex - 1 + eligibleItems.length) % eligibleItems.length;
     }
 
-    setSelectedItem(eligibleItems[newIndex])
-  }
+    setSelectedItem(eligibleItems[newIndex]);
+  };
 
   // Fix the useSwipeable configuration by removing the invalid property
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => navigateItem("next"),
     onSwipedRight: () => navigateItem("prev"),
     trackMouse: true, // Removed preventDefaultTouchmoveEvent
-  })
+  });
 
   // Format category display text
   const formatCategoryText = (category: string, subCategory?: string) => {
-    if (!subCategory) return category
-    return `${category} - ${subCategory}`
-  }
+    if (!subCategory) return category;
+    return `${category} - ${subCategory}`;
+  };
 
   return (
     <div className="flex flex-col h-full overflow-hidden bg-[#f9f7f3]">
@@ -377,9 +369,12 @@ export function Menu({
               transition={{ duration: 0.3, delay: 0.1 }}
               key={`title-${selectedItem?.id}`}
             >
-              <h1 className="font-playfair text-2xl font-semibold mb-2">{selectedItem?.name || "Select an item"}</h1>
+              <h1 className="font-playfair text-2xl font-semibold mb-2">
+                {selectedItem?.name || "Select an item"}
+              </h1>
               <p className="text-sm text-[#7c7c7c] lg:max-w-sm">
-                {selectedItem?.description || "Item description will appear here"}
+                {selectedItem?.description ||
+                  "Item description will appear here"}
               </p>
             </motion.div>
             <div className="mt-auto">
@@ -395,25 +390,25 @@ export function Menu({
                   {/* <h3 className="font-playfair font-medium text-base lg:text-lg mb-1 lg:mb-2 text-[#2c2c2c]">
                     Pricing
                   </h3>
-                  {selectedItem?.hasPortions ? (
+                  {selectedItem?.hasPortions && typeof selectedItem.price === 'object' ? (
                     <div className="grid grid-cols-2 gap-1 lg:gap-2">
                       <div className="space-y-0 lg:space-y-1">
                         <div className="text-xs lg:text-sm text-[#7c7c7c]">Full</div>
                         <div className="font-medium text-xs lg:text-sm">
-                          ${formatPrice(safelyGetValue(selectedItem, ["price", "full"], 0))}
+                          ${formatPrice(getPrice(selectedItem.price, 'full'))}
                         </div>
                       </div>
                       <div className="space-y-0 lg:space-y-1">
                         <div className="text-xs lg:text-sm text-[#7c7c7c]">Half</div>
                         <div className="font-medium text-xs lg:text-sm">
-                          ${formatPrice(safelyGetValue(selectedItem, ["price", "half"], 0))}
+                          ${formatPrice(getPrice(selectedItem.price, 'half'))}
                         </div>
                       </div>
                     </div>
                   ) : (
                     <div className="space-y-0 lg:space-y-1">
                       <div className="font-medium text-xs lg:text-sm">
-                        ${formatPrice(safelyGetValue(selectedItem, ["price", "full"], 0))}
+                        ${selectedItem ? formatPrice(getPrice(selectedItem.price)) : "N/A"}
                       </div>
                     </div>
                   )} */}
@@ -458,18 +453,31 @@ export function Menu({
                   {selectedItem?.allergens?.length && (
                     <>
                       {/* <div className="my-2 border-t border-[#e0d9c8]"></div> */}
-                      <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">Allergens</h3>
+                      <h3 className="font-playfair font-medium text-sm mb-2 text-[#2c2c2c]">
+                        Allergens
+                      </h3>
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
-                          .filter((allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1)
+                          .filter(
+                            (allergen) =>
+                              allergen.toLowerCase() !== "none" ||
+                              selectedItem.allergens?.length === 1,
+                          )
                           .map((allergen) => {
-                            const AllergenIcon = allergenIcons[allergen] || null
+                            const AllergenIcon =
+                              allergenIcons[allergen] || null;
                             return (
-                              <Badge key={allergen} variant="outline" className="text-xs py-1 px-2 flex items-center">
-                                {AllergenIcon && <AllergenIcon className="w-3 h-3 mr-1" />}
+                              <Badge
+                                key={allergen}
+                                variant="outline"
+                                className="text-xs py-1 px-2 flex items-center"
+                              >
+                                {AllergenIcon && (
+                                  <AllergenIcon className="w-3 h-3 mr-1" />
+                                )}
                                 {allergen}
                               </Badge>
-                            )
+                            );
                           })}
                       </div>
                     </>
@@ -492,14 +500,19 @@ export function Menu({
                   <Button
                     key={`${category}-${subCategory || "none"}-${index}`} // Ensure uniqueness
                     variant={
-                      currentCategory === (category === "All" ? "All" : formatCategoryText(category, subCategory))
+                      currentCategory ===
+                      (category === "All"
+                        ? "All"
+                        : formatCategoryText(category, subCategory))
                         ? "default"
                         : "outline"
                     }
                     className="flex-shrink-0 text-sm py-1 px-3 rounded-full"
                     onClick={() => handleCategorySelect(category, subCategory)}
                   >
-                    {category === "All" ? "All" : formatCategoryText(category, subCategory)}
+                    {category === "All"
+                      ? "All"
+                      : formatCategoryText(category, subCategory)}
                   </Button>
                 ))}
               </div>
@@ -522,7 +535,9 @@ export function Menu({
                   >
                     <Card
                       className={`flex-shrink-0 w-[160px] cursor-pointer transition-all ${
-                        selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
+                        selectedItem?.id === item.id
+                          ? "ring-2 ring-[#8B0000]"
+                          : ""
                       } min-h-64 h-full`}
                       onClick={() => setSelectedItem(item)}
                       id={`menu-item-${item.id}`}
@@ -552,17 +567,23 @@ export function Menu({
                             {item.isVegan && (
                               <div
                                 className="absolute top-1 right-1 bg-green-600 rounded-full p-1"
-                                style={{ top: item.isChefSpecial ? "25px" : "4px" }}
+                                style={{
+                                  top: item.isChefSpecial ? "25px" : "4px",
+                                }}
                               >
                                 <Leaf className="w-3 h-3 text-white" />
                               </div>
                             )}
                           </div>
-                          <div className="text-sm font-medium mb-1 text-[#2c2c2c] line-clamp-3">{item.name}</div>
+                          <div className="text-sm font-medium mb-1 text-[#2c2c2c] line-clamp-3">
+                            {item.name}
+                          </div>
                         </div>
                         <div className="text-base font-semibold text-[#7c7c7c] mt-1">
-                          {item?.hasPortions && `$${formatPrice(safelyGetValue(item, ["price", "half"], 0))} - `}
-                          ${formatPrice(safelyGetValue(item, ["price", "full"], 0))}
+                          {item?.hasPortions &&
+                            typeof item.price === "object" &&
+                            `$${formatPrice(getPrice(item.price, "half"))} - `}
+                          ${formatPrice(getPrice(item.price, "full"))}
                         </div>
                       </CardContent>
                     </Card>
@@ -580,8 +601,8 @@ export function Menu({
           size="icon"
           className="h-12 w-12 rounded-full shadow-lg bg-[#8B0000] hover:bg-[#a02020] text-white"
           onClick={() => {
-            setIsCategoryOpen(!isCategoryOpen)
-            setIsOverlayVisible(!isCategoryOpen)
+            setIsCategoryOpen(!isCategoryOpen);
+            setIsOverlayVisible(!isCategoryOpen);
           }}
         >
           <MenuIcon className="h-6 w-6" />
@@ -596,8 +617,8 @@ export function Menu({
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40"
               onClick={() => {
-                setIsCategoryOpen(false)
-                setIsOverlayVisible(false)
+                setIsCategoryOpen(false);
+                setIsOverlayVisible(false);
               }}
             />
           )}
@@ -611,23 +632,31 @@ export function Menu({
               className="absolute bottom-full right-0 mb-2 bg-white rounded-2xl shadow-lg min-w-72 max-h-96 overflow-hidden z-50"
             >
               <div className="sticky top-0 bg-[#8B0000] p-4 border-b border-gray-100 z-10">
-                <h2 className="text-xl font-playfair font-medium text-white">Category</h2>
+                <h2 className="text-xl font-playfair font-medium text-white">
+                  Category
+                </h2>
               </div>
               <ScrollArea className="max-h-80 overflow-y-auto">
                 <div className="p-2">
                   {uniqueCategories.map(({ category, subCategory }, index) => (
-                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                    <div
+                      key={`${category}${subCategory ? `-${subCategory}` : ""}`}
+                    >
                       <Button
                         variant="ghost"
                         className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"
                         onClick={() => {
-                          handleCategorySelect(category, subCategory)
-                          setIsCategoryOpen(false)
+                          handleCategorySelect(category, subCategory);
+                          setIsCategoryOpen(false);
                         }}
                       >
-                        {category === "All" ? "All" : formatCategoryText(category, subCategory)}
+                        {category === "All"
+                          ? "All"
+                          : formatCategoryText(category, subCategory)}
                       </Button>
-                      {index < uniqueCategories.length - 1 && <div className="h-px bg-gray-100 mx-3" />}
+                      {index < uniqueCategories.length - 1 && (
+                        <div className="h-px bg-gray-100 mx-3" />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -637,6 +666,5 @@ export function Menu({
         </AnimatePresence>
       </div>
     </div>
-  )
+  );
 }
-
