@@ -49,6 +49,7 @@ interface MenuItem {
   isMustTry?: boolean;
   isVegan?: boolean;
   hasPortions?: boolean;
+  
 }
 
 interface DrinkItem {
