@@ -17,7 +17,7 @@ Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,"Minced chicken skewers, spices, py
 Appetizers,Non-Vegetarian,Tandoori Chicken,"Whole roasted chicken, signature yellow marinade, pyaaz & chutney | Half or Full option available.",portion:full;full_weight:0g;full_cal:0kcal;full_price:$40;portion:half;half_weight:g;half_cal:kcal;half_price:$25,/img/food-menu/imag.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,"Minced goat skewers, spices, pyaaz & chutney",weight:0g;cal:0kcal;price:$26,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,"Melt-in-mouth lamb chops, chili yogurt marinade, pyaaz & chutney",weight:0g;cal:0kcal;price:$38,/img/food-menu/tandoori-lamb-chops.jpg,TRUE,FALSE,FALSE,Dairy
-Entrées,Vegetarian,Chole Bhature | Lunch Only on FRI-SAT-SUN,"Spiced chickpea curry, fluffy fried bread, onions & pickles (available for Lunch Only on Friday, Saturday and Sunday).",weight:0g;cal:0kcal;price:$22,/img/food-menu/chole-bhature.jpg,TRUE,FALSE,FALSE,Gluten
+Entrées,Vegetarian,Chole Bhature | Lunch Only on FRI-SAT-SUN,"Spiced chickpea curry, fluffy fried bread, onions & pickles (available for Lunch Only on Friday, Saturday and Sunday).",weight:0g;cal:0kcal;price:$25,/img/food-menu/chole-bhature.jpg,TRUE,FALSE,FALSE,Gluten
 
 Entrées,Vegetarian,Paneer Khada Masala,"Spiced paneer cubes, whole spices, onion-tomato masala gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-tikka-masala.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Paneer Khurchan,"Batons of paneer, bell peppers & caramelised onions, tomato gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-khurchan.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
