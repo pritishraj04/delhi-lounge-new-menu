@@ -18,9 +18,9 @@ Appetizers,Non-Vegetarian,Tandoori Chicken,"Whole roasted chicken, signature yel
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,"Minced goat skewers, spices, pyaaz & chutney",weight:0g;cal:0kcal;price:$26,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,"Melt-in-mouth lamb chops, chili yogurt marinade, pyaaz & chutney",weight:0g;cal:0kcal;price:$38,/img/food-menu/tandoori-lamb-chops.jpg,TRUE,FALSE,FALSE,Dairy
 Entrées,Vegetarian,Chole Bhature | Lunch Only on FRI-SAT-SUN,"Spiced chickpea curry, fluffy fried bread, onions & pickles (available for Lunch Only on Friday, Saturday and Sunday).",weight:0g;cal:0kcal;price:$25,/img/food-menu/chole-bhature.jpg,TRUE,FALSE,FALSE,Gluten
-
 Entrées,Vegetarian,Paneer Khada Masala,"Spiced paneer cubes, whole spices, onion-tomato masala gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-tikka-masala.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Paneer Khurchan,"Batons of paneer, bell peppers & caramelised onions, tomato gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-khurchan.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
+Entrées,Vegetarian,Paneer Matar Makhana,"Batons of paneer, bell peppers & caramelised onions, tomato gravy",weight:0g;cal:0kcal;price:$22,/img/food-menu/imag.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Saag Paneer,"Paneer cubes, luscious spinach gravy, spices | Vegan Option Available",weight:0g;cal:0kcal;price:$22,/img/food-menu/palak-paneer.jpg,FALSE,FALSE,TRUE,Dairy
 Entrées,Vegetarian,Malai Kofta,"Exquisite paneer croquettes, golden nuts and yogurt gravy, rose petals",weight:0g;cal:0kcal;price:$24,/img/food-menu/malai-kofta.jpg,FALSE,FALSE,FALSE,Dairy;Nuts
 Entrées,Vegetarian,Fenugreek Cashew Curry,"Fenugreek leaves, green peas and cashew nuts, creamy nuts gravy",weight:0g;cal:0kcal;price:$24,/img/food-menu/kaju-methi-malai-matar.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
@@ -61,4 +61,4 @@ Desserts,,Gajar Halwa,"Carrot fudge, ghee and cardamom syrup, almonds",weight:0g
 Desserts,,Moong Dal Halwa,"Moong lentil fudge, ghee and saffron syrup, almonds",weight:0g;cal:0kcal;price:$10,/img/food-menu/moong-dal-halwa.jpg,FALSE,TRUE,FALSE,Dairy;Nuts;Gluten
 Desserts,,Saffron Rasmalai,"Cheese dumplings, saffron milk, pistachios | Nut-free option available",weight:0g;cal:0kcal;price:$10,/img/food-menu/baileys-rasmalai.jpg,FALSE,FALSE,FALSE,Dairy;Nuts;Gluten
 Desserts,,Kesar Pista Kulfi Falooda,"Saffron milk ice-cream, vermicelli, sesame chikki. Contains sesame.",weight:0g;cal:0kcal;price:$14,/img/food-menu/imag.jpg,TRUE,FALSE,FALSE,Dairy;Nuts
-Desserts,,Rasgulla Tiramisu,"Filter coffee cheese dumplings, mascarpone cream, dark chocolate",weight:0g;cal:0kcal;price:$12,/img/food-menu/imag.jpg,FALSE,TRUE,FALSE,Dairy;Gluten
+Desserts,,Gulab Jamun,"Soft milk dumplings soaked in rose-flavored sugar syrup",weight:0g;cal:0kcal;price:$10,/img/food-menu/imag.jpg,FALSE,TRUE,FALSE,Dairy;Nuts
