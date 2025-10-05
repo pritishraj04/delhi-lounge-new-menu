@@ -97,10 +97,10 @@ const DynamicBarMenu = dynamic(
 
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
-  // {
-  //   name: "Weekend Brunch",
-  //   image: "/img/events/week21.jpg",
-  // },
+  {
+    name: "Weekend Brunch",
+    image: "/img/events/diwalispecial.jpeg",
+  },
 ];
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
