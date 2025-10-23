@@ -97,10 +97,10 @@ const DynamicBarMenu = dynamic(
 
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
-  // {
-  //   name: "Diwali Lunch Buffet",
-  //   image: "/img/events/diwalispecial.jpeg",
-  // },
+  {
+    name: "Diwali Lunch Buffet",
+    image: "/img/events/WLB.jpg",
+  },
 ];
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
@@ -322,7 +322,7 @@ export default function Page() {
               ))
         );
         if (firstVegan) {
-          setSelectedItem(firstVegan);
+          setSelectedItem(firstVegan); 
         } else {
           setSelectedItem(null);
         }
