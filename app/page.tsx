@@ -98,7 +98,7 @@ const DynamicBarMenu = dynamic(
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
   {
-    name: "Thanksgiving Special Dinner Buffet",
+    name: "DEC 27th - Thanksgiving Dinner Buffet",
     image: "/img/events/TDB.jpeg",
   },
   {
