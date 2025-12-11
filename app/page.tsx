@@ -102,10 +102,10 @@ const upcomingEvents: Event[] = [
     image: "/img/events/CGE.jpeg",
   },
   
-  // {
-  //   name: "Weekend Lunch Buffet",
-  //   image: "/img/events/WLB.jpg",
-  // },
+  {
+    name: "FRI, SAT & SUN - A La Carte Lunch",
+    image: "/img/events/WLB.jpg",
+  },
 ];
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
