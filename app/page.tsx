@@ -98,18 +98,14 @@ const DynamicBarMenu = dynamic(
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
   {
-    name: "NOV 27th - Thanksgiving Dinner Buffet",
-    image: "/img/events/TDB.jpeg",
-  },
-  {
     name: "DEC 12th, 13th & 14th - with Chef Manjit Gill",
     image: "/img/events/CGE.jpeg",
   },
   
-  {
-    name: "Weekend Lunch Buffet",
-    image: "/img/events/WLB.jpg",
-  },
+  // {
+  //   name: "Weekend Lunch Buffet",
+  //   image: "/img/events/WLB.jpg",
+  // },
 ];
 
 // Refine the styles for the search input and results to ensure proper horizontal centering
