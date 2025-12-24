@@ -97,10 +97,10 @@ const DynamicBarMenu = dynamic(
 
 // Sample upcoming events data
 const upcomingEvents: Event[] = [
-  // {
-  //   name: "DEC 12th, 13th & 14th - with Chef Manjit Gill",
-  //   image: "/img/events/CGE.jpeg",
-  // },
+  {
+    name: "DEC 24th 2025 - JAN 4th 2026 - Holiday Special Menu",
+    image: "/img/events/HSM.jpeg",
+  },
   
   {
     name: "FRI, SAT & SUN - A La Carte Lunch",
