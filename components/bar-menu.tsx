@@ -147,9 +147,9 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
       <div className="bg-white shadow-md">
         <ScrollArea className="w-full">
           <div className="flex p-2 gap-2">
-            {uniqueCategories.map(({ category, subCategory }) => (
+            {uniqueCategories.map(({ category, subCategory }, index) => (
               <Button
-                key={`${category}${subCategory ? `-${subCategory}` : ""}`}
+                key={`${category}-${subCategory || "none"}-${index}`}
                 variant={
                   currentCategory === (category === "All" ? "All" : formatCategoryText(category, subCategory))
                     ? "default"
@@ -174,9 +174,8 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
               initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex justify-between items-center py-2 border-b border-gray-200 transition-colors duration-300 ${
-                highlightedItem === drink.id ? "bg-yellow-100" : ""
-              }`}
+              className={`flex justify-between items-center py-2 border-b border-gray-200 transition-colors duration-300 ${highlightedItem === drink.id ? "bg-yellow-100" : ""
+                }`}
               onClick={() => setSelectedItem(drink)}
               id={`menu-item-${drink.id}`}
             >
@@ -235,6 +234,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
         <AnimatePresence>
           {isOverlayVisible && (
             <motion.div
+              key="bar-menu-overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -248,6 +248,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
           )}
           {isCategoryOpen && (
             <motion.div
+              key="bar-menu-dropdown"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -260,7 +261,7 @@ export function BarMenu({ selectedItem, setSelectedItem, drinkItems }: BarMenuPr
               <ScrollArea className="max-h-80 overflow-y-auto">
                 <div className="p-2">
                   {uniqueCategories.map(({ category, subCategory }, index) => (
-                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                    <div key={`${category}-${subCategory || "none"}-${index}`}>
                       <Button
                         variant="ghost"
                         className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"

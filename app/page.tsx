@@ -49,7 +49,7 @@ interface MenuItem {
   isMustTry?: boolean;
   isVegan?: boolean;
   hasPortions?: boolean;
-  
+
 }
 
 interface DrinkItem {
@@ -101,7 +101,7 @@ const upcomingEvents: Event[] = [
   //   name: "DEC 24th 2025 - JAN 4th 2026 - Holiday Special Menu",
   //   image: "/img/events/HSM.jpeg",
   // },
-  
+
   {
     name: "FRI, SAT & SUN - A La Carte Lunch",
     image: "/img/events/WLB.jpg",
@@ -327,7 +327,7 @@ export default function Page() {
               ))
         );
         if (firstVegan) {
-          setSelectedItem(firstVegan); 
+          setSelectedItem(firstVegan);
         } else {
           setSelectedItem(null);
         }
@@ -360,18 +360,16 @@ export default function Page() {
             <div className="hidden md:flex items-center gap-2">
               <Button
                 variant="ghost"
-                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${
-                  activeMenu === "food" ? "bg-[#a02020] font-semibold" : ""
-                }`}
+                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "food" ? "bg-[#a02020] font-semibold" : ""
+                  }`}
                 onClick={() => setActiveMenu("food")}
               >
                 Food Menu
               </Button>
               <Button
                 variant="ghost"
-                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${
-                  activeMenu === "bar" ? "bg-[#a02020] font-semibold" : ""
-                }`}
+                className={`text-sm whitespace-nowrap text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "bar" ? "bg-[#a02020] font-semibold" : ""
+                  }`}
                 onClick={() => setActiveMenu("bar")}
               >
                 Bar Menu
@@ -385,11 +383,10 @@ export default function Page() {
                   />
                   <Button
                     variant="ghost"
-                    className={`text-sm whitespace-nowrap relative text-white hover:text-white hover:bg-[#a02020] ${
-                      activeMenu === "events"
-                        ? "bg-[#a02020] font-semibold"
-                        : ""
-                    }`}
+                    className={`text-sm whitespace-nowrap relative text-white hover:text-white hover:bg-[#a02020] ${activeMenu === "events"
+                      ? "bg-[#a02020] font-semibold"
+                      : ""
+                      }`}
                     onClick={() => setActiveMenu("events")}
                   >
                     Events
@@ -406,16 +403,14 @@ export default function Page() {
               <div className="flex items-center gap-2 mr-2">
                 <button
                   onClick={() => setVeganOnly(!veganOnly)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
-                    veganOnly ? "bg-green-600" : "bg-gray-300"
-                  } hover:${veganOnly ? "bg-green-500" : "bg-gray-400"}`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${veganOnly ? "bg-green-600" : "bg-gray-300"
+                    } hover:${veganOnly ? "bg-green-500" : "bg-gray-400"}`}
                 >
                   <span
-                    className={`${
-                      veganOnly
-                        ? "translate-x-6 bg-white"
-                        : "translate-x-1 bg-white"
-                    } inline-block h-4 w-4 rounded-full transition-transform`}
+                    className={`${veganOnly
+                      ? "translate-x-6 bg-white"
+                      : "translate-x-1 bg-white"
+                      } inline-block h-4 w-4 rounded-full transition-transform`}
                   />
                 </button>
                 <span className="text-xs sm:text-sm whitespace-nowrap text-white font-medium">
@@ -440,6 +435,7 @@ export default function Page() {
               <AnimatePresence>
                 {isSearchOpen && (
                   <motion.div
+                    key="search-input-container"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -479,11 +475,10 @@ export default function Page() {
                     }
                   }
                 }}
-                className={`text-white hover:text-white ${
-                  isAllergenFilterOpen
-                    ? "opacity-50 cursor-not-allowed hover:bg-transparent"
-                    : "hover:bg-[#a02020]"
-                }`}
+                className={`text-white hover:text-white ${isAllergenFilterOpen
+                  ? "opacity-50 cursor-not-allowed hover:bg-transparent"
+                  : "hover:bg-[#a02020]"
+                  }`}
                 disabled={isAllergenFilterOpen}
               >
                 <Search className="h-5 w-5" />
@@ -505,6 +500,7 @@ export default function Page() {
       <AnimatePresence>
         {isSearchOverlayVisible && !isAllergenFilterOpen && (
           <motion.div
+            key="search-overlay-backdrop"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -523,6 +519,7 @@ export default function Page() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            key="mobile-menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -543,11 +540,10 @@ export default function Page() {
               <div className="flex-1 overflow-y-auto p-4">
                 <Button
                   variant="ghost"
-                  className={`w-full justify-start text-lg mb-2 ${
-                    activeMenu === "food"
-                      ? "text-[#8B0000] font-semibold"
-                      : "text-[#7c7c7c]"
-                  }`}
+                  className={`w-full justify-start text-lg mb-2 ${activeMenu === "food"
+                    ? "text-[#8B0000] font-semibold"
+                    : "text-[#7c7c7c]"
+                    }`}
                   onClick={() => {
                     setActiveMenu("food");
                     setIsMobileMenuOpen(false);
@@ -557,11 +553,10 @@ export default function Page() {
                 </Button>
                 <Button
                   variant="ghost"
-                  className={`w-full justify-start text-lg mb-2 ${
-                    activeMenu === "bar"
-                      ? "text-[#8B0000] font-semibold"
-                      : "text-[#7c7c7c]"
-                  }`}
+                  className={`w-full justify-start text-lg mb-2 ${activeMenu === "bar"
+                    ? "text-[#8B0000] font-semibold"
+                    : "text-[#7c7c7c]"
+                    }`}
                   onClick={() => {
                     setActiveMenu("bar");
                     setIsMobileMenuOpen(false);
@@ -572,11 +567,10 @@ export default function Page() {
                 {showEventsMenu && (
                   <Button
                     variant="ghost"
-                    className={`w-full justify-start text-lg mb-2 ${
-                      activeMenu === "events"
-                        ? "text-[#8B0000] font-semibold"
-                        : "text-[#7c7c7c]"
-                    }`}
+                    className={`w-full justify-start text-lg mb-2 ${activeMenu === "events"
+                      ? "text-[#8B0000] font-semibold"
+                      : "text-[#7c7c7c]"
+                      }`}
                     onClick={() => {
                       setActiveMenu("events");
                       setIsMobileMenuOpen(false);
@@ -594,7 +588,7 @@ export default function Page() {
       {/* Redesigned search results */}
       <AnimatePresence>
         {isSearchOpen && searchFocused && !isAllergenFilterOpen && (
-          <div className="fixed top-[130px] inset-x-0 flex justify-center z-50">
+          <div key="search-results-container" className="fixed top-[130px] inset-x-0 flex justify-center z-50">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

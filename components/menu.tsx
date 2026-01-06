@@ -7,7 +7,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { MenuIcon, Milk, Wheat, Egg, Fish, NutIcon as Peanut, Star, Leaf, Sparkle} from "lucide-react"
+import { MenuIcon, Milk, Wheat, Egg, Fish, NutIcon as Peanut, Star, Leaf, Sparkle } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
 // Update the MenuItem interface to include isVegan
@@ -314,6 +314,7 @@ export function Menu({
               key={selectedItem?.id}
             >
               <Image
+                key="main-item-image"
                 src={selectedItem?.image || "/placeholder.svg"}
                 alt={selectedItem?.name || "Selected item"}
                 fill
@@ -323,19 +324,26 @@ export function Menu({
                 blurDataURL="/placeholder.svg" // Low-res placeholder image
               />
               {selectedItem?.isMustTry && (
-                <div className="absolute top-2 left-2 z-10 bg-[#b42668] text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                <div
+                  key="must-try-badge"
+                  className="absolute top-2 left-2 z-10 bg-[#b42668] text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center"
+                >
                   <Sparkle className="w-4 h-4 mr-1" />
                   Must Try
                 </div>
               )}
               {selectedItem?.isChefSpecial && (
-                <div className="absolute top-2 right-2 z-10 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                <div
+                  key="chef-special-badge"
+                  className="absolute top-2 right-2 z-10 bg-[#ffd700] text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center"
+                >
                   <Star className="w-4 h-4 mr-1" />
                   Chef's Special
                 </div>
               )}
               {selectedItem?.isVegan && (
                 <div
+                  key="vegan-badge"
                   className="absolute top-2 right-2 z-10 bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center"
                   style={{ top: selectedItem.isChefSpecial ? "40px" : "8px" }}
                 >
@@ -438,10 +446,10 @@ export function Menu({
                       <div className="flex flex-wrap gap-1">
                         {selectedItem.allergens
                           .filter((allergen) => allergen.toLowerCase() !== "none" || selectedItem.allergens?.length === 1)
-                          .map((allergen) => {
+                          .map((allergen, index) => {
                             const AllergenIcon = allergenIcons[allergen] || null
                             return (
-                              <Badge key={allergen} variant="outline" className="text-xs py-1 px-2 flex items-center">
+                              <Badge key={`${allergen}-${index}`} variant="outline" className="text-xs py-1 px-2 flex items-center">
                                 {AllergenIcon && <AllergenIcon className="w-3 h-3 mr-1" />}
                                 {allergen}
                               </Badge>
@@ -497,9 +505,8 @@ export function Menu({
                     transition={{ duration: 0.5, delay: index * 0.0005 }}
                   >
                     <Card
-                      className={`flex-shrink-0 w-[160px] cursor-pointer transition-all ${
-                        selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
-                      } min-h-64 h-full`}
+                      className={`flex-shrink-0 w-[160px] cursor-pointer transition-all ${selectedItem?.id === item.id ? "ring-2 ring-[#8B0000]" : ""
+                        } min-h-64 h-full`}
                       onClick={() => setSelectedItem(item)}
                       id={`menu-item-${item.id}`}
                     >
@@ -516,17 +523,24 @@ export function Menu({
                               priority={true} // Disable priority loading for non-critical images
                             />
                             {item.isMustTry && (
-                              <div className="absolute top-1 left-1 bg-[#b42668] rounded-full p-1">
+                              <div
+                                key="must-try-icon"
+                                className="absolute top-1 left-1 bg-[#b42668] rounded-full p-1"
+                              >
                                 <Sparkle className="w-3 h-3 text-white" />
                               </div>
                             )}
                             {item.isChefSpecial && (
-                              <div className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1">
+                              <div
+                                key="chef-special-icon"
+                                className="absolute top-1 right-1 bg-[#ffd700] rounded-full p-1"
+                              >
                                 <Star className="w-3 h-3 text-black" />
                               </div>
                             )}
                             {item.isVegan && (
                               <div
+                                key="vegan-icon"
                                 className="absolute top-1 right-1 bg-green-600 rounded-full p-1"
                                 style={{ top: item.isChefSpecial ? "25px" : "4px" }}
                               >
@@ -566,6 +580,7 @@ export function Menu({
         <AnimatePresence>
           {isOverlayVisible && (
             <motion.div
+              key="category-overlay-bg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -580,6 +595,7 @@ export function Menu({
           {/* Redesigned category menu with fixed header */}
           {isCategoryOpen && (
             <motion.div
+              key="category-menu-dropdown"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -592,7 +608,7 @@ export function Menu({
               <ScrollArea className="max-h-80 overflow-y-auto">
                 <div className="p-2">
                   {uniqueCategories.map(({ category, subCategory }, index) => (
-                    <div key={`${category}${subCategory ? `-${subCategory}` : ""}`}>
+                    <div key={`${category}-${subCategory || "none"}-${index}`}>
                       <Button
                         variant="ghost"
                         className="justify-start text-base w-full py-3 rounded-none hover:bg-gray-50"

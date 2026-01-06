@@ -4,10 +4,7 @@ import withPWA from 'next-pwa';
 const nextConfig = {
   // Your existing Next.js config options here
   reactStrictMode: true,
-  swcMinify: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   typescript: {
     ignoreBuildErrors: true,
   },

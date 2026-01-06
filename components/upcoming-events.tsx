@@ -60,6 +60,7 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
             {isDropdownOpen && (
               <>
                 <motion.div
+                  key="events-dropdown-overlay"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -69,6 +70,7 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
                 />
 
                 <motion.div
+                  key="events-dropdown-menu"
                   initial={{ opacity: 0, y: -10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -79,9 +81,8 @@ export function UpcomingEvents({ events, selectedEventName }: UpcomingEventsProp
                     {events.map((event, index) => (
                       <div
                         key={index}
-                        className={`p-3 hover:bg-gray-50 cursor-pointer rounded-md ${
-                          selectedEvent?.name === event.name ? "bg-gray-50" : ""
-                        }`}
+                        className={`p-3 hover:bg-gray-50 cursor-pointer rounded-md ${selectedEvent?.name === event.name ? "bg-gray-50" : ""
+                          }`}
                         onClick={() => handleEventSelect(event)}
                       >
                         <div className="font-medium text-gray-800">{event.name}</div>

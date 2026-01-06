@@ -64,6 +64,7 @@ export function AllergenFilter({
         {isOpen && (
           <>
             <motion.div
+              key="allergen-overlay-bg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -73,6 +74,7 @@ export function AllergenFilter({
             />
 
             <motion.div
+              key="allergen-filter-dropdown"
               initial={{ opacity: 0, y: -10, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -103,11 +105,10 @@ export function AllergenFilter({
                         onClick={() => toggleAllergen(allergen)}
                       >
                         <div
-                          className={`w-5 h-5 rounded border flex items-center justify-center mr-2 ${
-                            localSelectedAllergens.includes(allergen)
+                          className={`w-5 h-5 rounded border flex items-center justify-center mr-2 ${localSelectedAllergens.includes(allergen)
                               ? "bg-[#8B0000] border-[#8B0000]"
                               : "border-gray-300"
-                          }`}
+                            }`}
                         >
                           {localSelectedAllergens.includes(allergen) && <Check className="h-3 w-3 text-white" />}
                         </div>
