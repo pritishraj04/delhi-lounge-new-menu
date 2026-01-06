@@ -46,24 +46,26 @@ const withPWA = withPWAInit({
       },
       {
         urlPattern: /\/data\/food-menu\.csv$/,
-        handler: 'StaleWhileRevalidate',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'menu-data',
           expiration: {
             maxEntries: 10,
             maxAgeSeconds: 60 * 60, // 1 hour
           },
+          networkTimeoutSeconds: 10, // Fallback to cache if network takes > 10s
         },
       },
       {
         urlPattern: /\/data\/bar-menu\.csv$/,
-        handler: 'StaleWhileRevalidate',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'menu-data',
           expiration: {
             maxEntries: 10,
             maxAgeSeconds: 60 * 60, // 1 hour
           },
+          networkTimeoutSeconds: 10,
         },
       },
     ],

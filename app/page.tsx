@@ -175,6 +175,9 @@ export default function Page() {
       try {
         // Load food menu CSV
         const foodMenuResponse = await fetch("/data/food-menu.csv");
+        if (!foodMenuResponse.ok) {
+          throw new Error(`Failed to fetch food menu: ${foodMenuResponse.statusText}`);
+        }
         const foodMenuText = await foodMenuResponse.text();
         const foodItems = parseFoodMenuCSV(foodMenuText);
         const convertedFoodItems = convertToMenuItems(foodItems);
@@ -184,6 +187,9 @@ export default function Page() {
 
         // Load bar menu CSV
         const barMenuResponse = await fetch("/data/bar-menu.csv");
+        if (!barMenuResponse.ok) {
+          throw new Error(`Failed to fetch bar menu: ${barMenuResponse.statusText}`);
+        }
         const barMenuText = await barMenuResponse.text();
         const barItems = parseBarMenuCSV(barMenuText);
         const convertedBarItems = convertToBarItems(barItems);
@@ -214,7 +220,7 @@ export default function Page() {
         // setNotificationMessage("Menu data loaded successfully")
       } catch (error) {
         console.error("Error loading CSV data:", error);
-        setNotificationMessage("Error loading menu data");
+        setNotificationMessage(error instanceof Error ? error.message : "Error loading menu data");
 
         // Fallback to empty arrays if CSVs fail to load
         setMenuItems([]);
