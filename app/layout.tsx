@@ -56,11 +56,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msapplication-wide310x150logo" content="/icons/icon-384x384.png" />
         <meta name="msapplication-square310x310logo" content="/icons/icon-512x512.png" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+        <CacheCleaner />
+        {children}
+      </body>
     </html>
   )
 }
 
+import { CacheCleaner } from "@/components/cache-cleaner"
 import "./globals.css"
 
 export const metadata = {
