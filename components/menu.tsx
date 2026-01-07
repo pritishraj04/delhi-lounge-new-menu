@@ -520,7 +520,7 @@ export function Menu({
                               className="object-cover"
                               placeholder="blur" // Use a blur placeholder
                               blurDataURL="/placeholder.svg" // Low-res placeholder image
-                              priority={true} // Disable priority loading for non-critical images
+                              priority={false} // Disable priority loading for non-critical images
                             />
                             {item.isMustTry && (
                               <div
