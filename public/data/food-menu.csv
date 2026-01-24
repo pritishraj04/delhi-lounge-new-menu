@@ -11,12 +11,12 @@ Appetizers,Vegetarian,Paneer Galouti,"Soft, melt-in-the-mouth paneer patties sea
 Appetizers,Vegetarian,Saag Til Kebab,"Spinach patties finished with sesame and kalonji crumble, served with onions and chutney.",weight:0g;cal:0kcal;price:$20,/img/food-menu/saag-til-kebab.jpg,FALSE,FALSE,FALSE,Sesame; Dairy
 Appetizers,Vegetarian,Bhutte ki Seekh,Chargrilled corn skewers brushed with chilli-lime butter.,weight:0g;cal:0kcal;price:$22,/img/food-menu/bhutte-ki-seekh.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Vegetarian,Truffle Malai Broccoli,"Tender broccoli marinated in cream and cheese, finished with aromatic truffle oil.",weight:0g;cal:0kcal;price:$20,/img/food-menu/truffle-malai-broccoli.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
-Appetizers,Non-Vegetarian,Malai Jheenga,"Chargrilled jumbo tiger prawns marinated in a delicate, creamy spice blend.",weight:0g;cal:0kcal;price:$40,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Shellfish; Nuts; Dairy
+
 Appetizers,Non-Vegetarian,Chili-Lime Tandoori Pomfret,"Whole pomfret marinated in a zesty spiced yogurt, grilled and served with lime-pepper chutney.",weight:0g;cal:0kcal;price:$30,/img/food-menu/chili-lime-tandoori-pomfret.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chicken Tikka,Juicy chicken morsels marinated in spiced yogurt and chargrilled.,weight:0g;cal:0kcal;price:$26,/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chicken Malai Tikka,"Creamy, mildly spiced chicken tikka with a soft, smoky finish.",weight:0g;cal:0kcal;price:$26,/img/food-menu/chicken-malai-tikka.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,Minced chicken skewers delicately spiced and grilled to tenderness.,weight:0g;cal:0kcal;price:$24,/img/food-menu/reshmi-seekh-kebab.jpg,FALSE,FALSE,FALSE,Dairy
-Appetizers,Non-Vegetarian,Tandoori Chicken ( Half | Full ),Whole chicken roasted in a signature yellow tandoori marinade.,portion:full;full_weight:0g;full_cal:0kcal;full_price:$35;portion:half;half_weight:g;half_cal:kcal;half_price:$20,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
+Appetizers,Non-Vegetarian,Tandoori Chicken ( Half | Full ),Whole chicken roasted in a signature yellow tandoori marinade.,portion:full;full_weight:0g;full_cal:0kcal;full_price:$35;portion:half;half_weight:g;half_cal:kcal;half_price:$20,/img/food-menu/tandoori-chicken.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,Minced goat meat skewers seasoned with spices and grilled over charcoal.,weight:0g;cal:0kcal;price:$28,/img/food-menu/goat-seekh-kebab.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,Tender lamb chops marinated in chilli yogurt and chargrilled.,weight:0g;cal:0kcal;price:$38,/img/food-menu/barrah-chops.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Vegetarian,Basil Paneer Rarah,"Spiced paneer cubes cooked in a chunky onion-tomato masala, finished with fresh basil.",weight:0g;cal:0kcal;price:$24,/img/food-menu/basil-paneer-rarah.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
@@ -25,7 +25,7 @@ Entrées,Vegetarian,Saag Paneer,"Paneer cubes cooked in a rich, spiced spinach g
 Entrées,Vegetarian,Saag Kofta Curry,Soft paneer croquettes served in a luscious spinach-based gravy.,weight:0g;cal:0kcal;price:$24,/img/food-menu/saag-kofta-curry.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Entrées,Vegetarian,Mushroom Matar,Button mushrooms and green peas cooked in a robust onion-tomato masala.,weight:0g;cal:0kcal;price:$22,/img/food-menu/mushroom-matar.jpg,FALSE,FALSE,TRUE,Nuts; Dairy
 Entrées,Vegetarian,Eggplant Bharta,"Fire-roasted eggplant mashed with onions, tomatoes, spices, and smoked butter.",weight:0g;cal:0kcal;price:$18,/img/food-menu/eggplant-bharta.jpg,FALSE,FALSE,FALSE,Dairy
-Entrées,Vegetarian,Bhindi Masala,Tender okra tossed in a lightly spiced onion-tomato masala.,weight:0g;cal:0kcal;price:$20,/img/food-menu/imag.jpg,FALSE,FALSE,TRUE,Nuts; Dairy
+Entrées,Vegetarian,Bhindi Masala,Tender okra tossed in a lightly spiced onion-tomato masala.,weight:0g;cal:0kcal;price:$20,/img/food-menu/bhindi-masala.jpg,FALSE,FALSE,TRUE,Nuts; Dairy
 Entrées,Vegetarian,Dal Tadka,"Toor and moong lentils tempered with ghee, cumin, asafoetida, onions, and tomatoes.",weight:0g;cal:0kcal;price:$18,/img/food-menu/dal-tadka.jpg,FALSE,FALSE,TRUE,Dairy
 Entrées,Vegetarian,TDL Black Dal,"Black lentils slow-cooked for 24 hours with tomatoes, cream, and butter.",weight:0g;cal:0kcal;price:$22,/img/food-menu/tdl-black-dal.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Non-Vegetarian,Coconut Prawn Curry,Prawns simmered in a fragrant coconut and pepper curry with curry leaf tempering.,weight:0g;cal:0kcal;price:$30,/img/food-menu/coconut-prawn-curry.jpg,FALSE,FALSE,FALSE,Shellfish
@@ -51,7 +51,7 @@ Breads,,Bullet Naan,Spicy leavened bread topped with fresh green chilies.,weight
 Breads,,Onion Kulcha,Leavened bread stuffed with a spiced onion mixture.,weight:0g;cal:0kcal;price:$8,/img/food-menu/onion-kulcha.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Breads,,Chili Cheese Kulcha,Leavened bread stuffed with cheese and green chilies.,weight:0g;cal:0kcal;price:$8,/img/food-menu/chili-cheese-kulcha.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Combos & Sides,,Chole Bhature,"Spiced chickpea curry served with leavened fried bread, pickle, and chutney.",weight:0g;cal:0kcal;price:$25,/img/food-menu/chole-bhature.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
-Combos & Sides,,"Sarson ka Saag, Makke ki Roti","Tempered mustard greens served with cornmeal flatbread, white butter, and jaggery.",weight:0g;cal:0kcal;price:$25,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
+Combos & Sides,,"Sarson ka Saag, Makke ki Roti","Tempered mustard greens served with cornmeal flatbread, white butter, and jaggery.",weight:0g;cal:0kcal;price:$25,/img/food-menu/sarson-ka-saag-makke-ki-roti.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Combos & Sides,,Plain Dahi,Lightly whipped fresh yogurt.,weight:0g;cal:0kcal;price:$4,/img/food-menu/plain-dahi.jpg,FALSE,FALSE,FALSE,Dairy
 Combos & Sides,,Anardana Boondi Raita,Spiced yogurt with crisp gram flour droplets and pomegranate pearls.,weight:0g;cal:0kcal;price:$6,/img/food-menu/anardana-boondi-raita.jpg,FALSE,FALSE,FALSE,Dairy
 Combos & Sides,,Kachumber Raita,"Yogurt mixed with onions, cucumber, tomatoes, and spices.",weight:0g;cal:0kcal;price:$6,/img/food-menu/kachumber-raita.jpg,FALSE,FALSE,FALSE,Dairy
