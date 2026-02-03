@@ -1,11 +1,11 @@
 category,sub category,title,description,metrics,image,chefSpecial,mustTry,vegan,allergens
-Chaat,,Pani Puri ( Jaljeera | Gud Imli ),"Crisp street-style puris filled with spiced potatoes, served with flavoured waters.",weight:0g;cal:0kcal;price:$12,/img/food-menu/pani-puri.jpg,FALSE,FALSE,TRUE,Gluten
-Chaat,,Aloo Tikki,"Crisp potato patties stuffed with lentils, topped with lightly sweetened yogurt and classic chutneys.",weight:0g;cal:0kcal;price:$10,/img/food-menu/aloo-tikki.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
-Chaat,,Palak Patta Chaat,Crispy fried spinach leaves layered with yogurt and house chutneys.,weight:0g;cal:0kcal;price:$14,/img/food-menu/palak-patta-chaat.jpg,FALSE,FALSE,TRUE,Dairy
-Chaat,,Bhalla Papdi Chaat,"Soft lentil dumplings crumbled with crisp papdi, finished with yogurt and tangy-sweet chutneys.",weight:0g;cal:0kcal;price:$14,/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy; Gluten
-Chaat,,Papdi Chaat,"Crunchy flour discs topped with spiced potatoes, yogurt, and signature chutneys.",weight:0g;cal:0kcal;price:$12,/img/food-menu/papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy; Gluten
-Chaat,,Samosa,"Golden triangular pastry filled with delicately spiced potatoes, served with chutneys.",weight:0g;cal:0kcal;price:$12,/img/food-menu/samosa.jpg,FALSE,FALSE,TRUE,Gluten
-Chaat,,Chili Corn Peanut Chaat,"Tender sweet corn and crunchy peanuts tossed in a zesty, spiced dressing.",weight:0g;cal:0kcal;price:$12,/img/food-menu/chili-corn-peanut-chaat.jpg,FALSE,FALSE,TRUE,Peanuts
+Chaat,,Pani Puri ( Jaljeera | Gud Imli ),"Crisp street-style puris filled with spiced potatoes, served with flavoured waters.",weight:0g;cal:0kcal;price:$13,/img/food-menu/pani-puri.jpg,FALSE,FALSE,TRUE,Gluten
+Chaat,,Aloo Tikki,"Crisp potato patties stuffed with lentils, topped with lightly sweetened yogurt and classic chutneys.",weight:0g;cal:0kcal;price:$11,/img/food-menu/aloo-tikki.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
+Chaat,,Palak Patta Chaat,Crispy fried spinach leaves layered with yogurt and house chutneys.,weight:0g;cal:0kcal;price:$15,/img/food-menu/palak-patta-chaat.jpg,FALSE,FALSE,TRUE,Dairy
+Chaat,,Bhalla Papdi Chaat,"Soft lentil dumplings crumbled with crisp papdi, finished with yogurt and tangy-sweet chutneys.",weight:0g;cal:0kcal;price:$15,/img/food-menu/bhalla-papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy; Gluten
+Chaat,,Papdi Chaat,"Crunchy flour discs topped with spiced potatoes, yogurt, and signature chutneys.",weight:0g;cal:0kcal;price:$13,/img/food-menu/papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy; Gluten
+Chaat,,Samosa,"Golden triangular pastry filled with delicately spiced potatoes, served with chutneys.",weight:0g;cal:0kcal;price:$13,/img/food-menu/samosa.jpg,FALSE,FALSE,TRUE,Gluten
+Chaat,,Chili Corn Peanut Chaat,"Tender sweet corn and crunchy peanuts tossed in a zesty, spiced dressing.",weight:0g;cal:0kcal;price:$13,/img/food-menu/chili-corn-peanut-chaat.jpg,FALSE,FALSE,TRUE,Peanuts
 Appetizers,Vegetarian,Tandoori Paneer Tikka,"Cheese-stuffed paneer steaks marinated in yogurt and spices, grilled with peppers and onions.",weight:0g;cal:0kcal;price:$22,/img/food-menu/tandoori-paneer-tikka.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Vegetarian,Paneer Galouti,"Soft, melt-in-the-mouth paneer patties seasoned with delicate spices, served with lime-pepper chutney.",weight:0g;cal:0kcal;price:$22,/img/food-menu/paneer-galouti.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Appetizers,Vegetarian,Saag Til Kebab,"Spinach patties finished with sesame and kalonji crumble, served with onions and chutney.",weight:0g;cal:0kcal;price:$20,/img/food-menu/saag-til-kebab.jpg,FALSE,FALSE,FALSE,Sesame; Dairy
