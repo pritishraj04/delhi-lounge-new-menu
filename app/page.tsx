@@ -103,8 +103,8 @@ const upcomingEvents: Event[] = [
   // },
 
   {
-    name: "FRI, SAT & SUN - A La Carte Lunch",
-    image: "/img/events/WLB.jpg",
+    name: "FRI, SAT & SUN - Lunch Buffet",
+    image: "/img/events/websitead.jpg",
   },
 ];
 
