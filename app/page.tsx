@@ -103,8 +103,8 @@ const upcomingEvents: Event[] = [
   // },
 
   {
-    name: "FRI, SAT & SUN - Lunch Buffet",
-    image: "/img/events/websitead.jpg",
+    name: "Introducing Thali - FRI & SAT | 12PM - 2:30PM (For Limited Time only)",
+    image: "/img/events/thali.webp",
   },
 ];
 
