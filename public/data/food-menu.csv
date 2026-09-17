@@ -6,11 +6,14 @@ Chaat,,Bhalla Papdi Chaat,"Soft lentil dumplings crumbled with crisp papdi, fini
 Chaat,,Papdi Chaat,"Crunchy flour discs topped with spiced potatoes, yogurt, and signature chutneys.",weight:0g;cal:0kcal;price:$10,/img/food-menu/papdi-chaat.jpg,FALSE,FALSE,TRUE,Dairy; Gluten
 Chaat,,Samosa,"Golden triangular pastry filled with delicately spiced potatoes, served with chutneys.",weight:0g;cal:0kcal;price:$10,/img/food-menu/samosa.jpg,FALSE,FALSE,TRUE,Gluten
 Chaat,,Chili Corn Peanut Chaat,"Tender sweet corn and crunchy peanuts tossed in a zesty, spiced dressing.",weight:0g;cal:0kcal;price:$10,/img/food-menu/chili-corn-peanut-chaat.jpg,FALSE,FALSE,TRUE,Peanuts
+Chaat,,Lotus Root & Raw Mango Bhel,"New age bhel with crisp lotus root, raw mango, and toasted makhanas.",weight:0g;cal:0kcal;price:$12,/img/food-menu/imag.jpg,FALSE,FALSE,TRUE,
 Appetizers,Vegetarian,Tandoori Paneer Tikka,"Cheese-stuffed paneer steaks marinated in yogurt and spices, grilled with peppers and onions.",weight:0g;cal:0kcal;price:$18,/img/food-menu/tandoori-paneer-tikka.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Vegetarian,Paneer Galouti,"Soft, melt-in-the-mouth paneer patties seasoned with delicate spices, served with lime-pepper chutney.",weight:0g;cal:0kcal;price:$18,/img/food-menu/paneer-galouti.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Appetizers,Vegetarian,Saag Til Kebab,"Spinach patties finished with sesame and kalonji crumble, served with onions and chutney.",weight:0g;cal:0kcal;price:$16,/img/food-menu/saag-til-kebab.jpg,FALSE,FALSE,FALSE,Sesame; Dairy
 Appetizers,Vegetarian,Bhutte ki Seekh,Chargrilled corn skewers brushed with chilli-lime butter.,weight:0g;cal:0kcal;price:$20,/img/food-menu/bhutte-ki-seekh.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Vegetarian,Truffle Malai Broccoli,"Tender broccoli marinated in cream and cheese, finished with aromatic truffle oil.",weight:0g;cal:0kcal;price:$18,/img/food-menu/truffle-malai-broccoli.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
+Appetizers,Vegetarian,Anjeer & Walnut Stuffed Dahi Kebab,Crumbed silken dahi kebab with anjeer and toasted walnut stuffing.,weight:0g;cal:0kcal;price:$20,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy; Nuts
+Appetizers,Vegetarian,Tandoori Bharwa Mushrooms,Tandoor-charred mushrooms with masala ricotta stuffing.,weight:0g;cal:0kcal;price:$18,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
 
 Appetizers,Non-Vegetarian,Chili-Lime Tandoori Pomfret,"Whole pomfret marinated in a zesty spiced yogurt, grilled and served with lime-pepper chutney.",weight:0g;cal:0kcal;price:$28,/img/food-menu/chili-lime-tandoori-pomfret.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chicken Tikka,Juicy chicken morsels marinated in spiced yogurt and chargrilled.,weight:0g;cal:0kcal;price:$22,/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,FALSE,Dairy
@@ -19,6 +22,8 @@ Appetizers,Non-Vegetarian,Reshmi Seekh Kebab,Minced chicken skewers delicately s
 Appetizers,Non-Vegetarian,Tandoori Chicken ( Half | Full ),Whole chicken roasted in a signature yellow tandoori marinade.,portion:full;full_weight:0g;full_cal:0kcal;full_price:$30;portion:half;half_weight:g;half_cal:kcal;half_price:$18,/img/food-menu/tandoori-chicken.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Goat Seekh Kebab,Minced goat meat skewers seasoned with spices and grilled over charcoal.,weight:0g;cal:0kcal;price:$26,/img/food-menu/goat-seekh-kebab.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Barrah Chops,Tender lamb chops marinated in chilli yogurt and chargrilled.,weight:0g;cal:0kcal;price:$38,/img/food-menu/barrah-chops.jpg,FALSE,FALSE,FALSE,Dairy
+Appetizers,Non-Vegetarian,Lemongrass Chicken Tikka,Lemongrass and kaffir lime infused chicken tikka served with tomato-chilli jam.,weight:0g;cal:0kcal;price:$22,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
+Appetizers,Non-Vegetarian,Haldi Chilli Fish Tikka,Delicate fish with a haldi chilli and ajwain-methi crust.,weight:0g;cal:0kcal;price:$24,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,
 Entrées,Vegetarian,Basil Paneer Rarah,"Spiced paneer cubes cooked in a chunky onion-tomato masala, finished with fresh basil.",weight:0g;cal:0kcal;price:$22,/img/food-menu/basil-paneer-rarah.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
 Entrées,Vegetarian,Paneer Butter Masala,"Paneer cubes simmered in a smooth tomato and butter gravy, finished with dried fenugreek.",weight:0g;cal:0kcal;price:$20,/img/food-menu/paneer-butter-masala.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
 Entrées,Vegetarian,Saag Paneer,"Paneer cubes cooked in a rich, spiced spinach gravy.",weight:0g;cal:0kcal;price:$20,/img/food-menu/saag-paneer.jpg,FALSE,FALSE,TRUE,Dairy
@@ -28,6 +33,9 @@ Entrées,Vegetarian,Eggplant Bharta,"Fire-roasted eggplant mashed with onions, t
 Entrées,Vegetarian,Bhindi Masala,Tender okra tossed in a lightly spiced onion-tomato masala.,weight:0g;cal:0kcal;price:$18,/img/food-menu/bhindi-masala.jpg,FALSE,FALSE,TRUE,Nuts; Dairy
 Entrées,Vegetarian,Dal Tadka,"Toor and moong lentils tempered with ghee, cumin, asafoetida, onions, and tomatoes.",weight:0g;cal:0kcal;price:$18,/img/food-menu/dal-tadka.jpg,FALSE,FALSE,TRUE,Dairy
 Entrées,Vegetarian,TDL Black Dal,"Black lentils slow-cooked for 24 hours with tomatoes, cream, and butter.",weight:0g;cal:0kcal;price:$22,/img/food-menu/tdl-black-dal.jpg,FALSE,FALSE,FALSE,Dairy
+Entrées,Vegetarian,Lehsooni Corn Palak,Sweet corn cooked in a velvety spinach gravy with burnt garlic.,weight:0g;cal:0kcal;price:$18,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
+Entrées,Vegetarian,Heeng Jeera Aloo,Seared baby potatoes tempered with cumin and heeng.,weight:0g;cal:0kcal;price:$18,/img/food-menu/imag.jpg,FALSE,FALSE,TRUE,
+Entrées,Vegetarian,Paneer Khurchan,"Pan-seared paneer strips tossed with bell peppers, tomatoes, and a tangy spice blend.",weight:0g;cal:0kcal;price:$20,/img/food-menu/paneer-khurchan.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Non-Vegetarian,Coconut Prawn Curry,Prawns simmered in a fragrant coconut and pepper curry with curry leaf tempering.,weight:0g;cal:0kcal;price:$26,/img/food-menu/coconut-prawn-curry.jpg,FALSE,FALSE,FALSE,Shellfish
 Entrées,Non-Vegetarian,Butter Chicken,"Tandoori chicken cooked in a smoky, creamy tomato gravy with dried fenugreek.",weight:0g;cal:0kcal;price:$24,/img/food-menu/butter-chicken.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
 Entrées,Non-Vegetarian,Chicken Tikka Masala,"Tandoori chicken morsels cooked in a tangy, spicy onion tomato gravy.",weight:0g;cal:0kcal;price:$24,/img/food-menu/chicken-tikka-masala.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
@@ -36,6 +44,8 @@ Entrées,Non-Vegetarian,Bhuna Chicken,"Chicken on the bone slow-cooked in a thic
 Entrées,Non-Vegetarian,Methi Malai Chicken,Creamy chicken tikka cooked in a mild onion-cashew gravy with garlic and fenugreek.,weight:0g;cal:0kcal;price:$24,/img/food-menu/methi-malai-chicken.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
 Entrées,Non-Vegetarian,Patiala Goat Curry,Punjabi-style slow-cooked goat in a yogurt-enriched onion-tomato gravy.,weight:0g;cal:0kcal;price:$28,/img/food-menu/patiala-goat-curry.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Non-Vegetarian,Goat Rarah,Goat on the bone cooked with minced goat meat and robust spices.,weight:0g;cal:0kcal;price:$30,/img/food-menu/goat-rarah.jpg,FALSE,FALSE,FALSE,Dairy
+Entrées,Non-Vegetarian,Chittaranjan Park Fish Curry,Charred tilapia in a Bengali curry with aromatic spices.,weight:0g;cal:0kcal;price:$24,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,
+Entrées,Non-Vegetarian,Chicken Khurchan,"Shredded chicken tossed with vibrant bell peppers, onions, and a tangy tomato masala.",weight:0g;cal:0kcal;price:$24,/img/food-menu/chicken-khurchan.jpg,FALSE,FALSE,FALSE,Dairy
 Specialty,Pre-Order,TDL Imperial Raan (48-hour's notice required),"Leg of spring lamb slow-cooked for 24 hours, finished with toasted pine nuts.",weight:0g;cal:0kcal;price:$125,/img/food-menu/tdl-imperial-raan.jpg,FALSE,FALSE,FALSE,Nuts; Dairy; Gluten
 Rice,,Jeera Rice,"Spiced Indian rice with cumin seeds.",weight:0g;cal:0kcal;price:$6,/img/food-menu/jeera-rice.jpg,FALSE,FALSE,TRUE,Dairy
 Rice,,Dum Jackfruit Pulao,"Spiced jackfruit layered with fragrant basmati rice, served with kachumber raita.",weight:0g;cal:0kcal;price:$22,/img/food-menu/dum-jackfruit-pulao.jpg,FALSE,FALSE,FALSE,Dairy
@@ -50,6 +60,7 @@ Breads,,Garlic Naan,Soft leavened bread topped with fresh garlic and cilantro.,w
 Breads,,Bullet Naan,Spicy leavened bread topped with fresh green chilies.,weight:0g;cal:0kcal;price:$5,/img/food-menu/bullet-naan.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Breads,,Onion Kulcha,Leavened bread stuffed with a spiced onion mixture.,weight:0g;cal:0kcal;price:$8,/img/food-menu/onion-kulcha.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Breads,,Chili Cheese Kulcha,Leavened bread stuffed with cheese and green chilies.,weight:0g;cal:0kcal;price:$8,/img/food-menu/chili-cheese-kulcha.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
+Breads,,Bread Basket,"Butter Naan, Garlic Naan and Laccha Paratha.",weight:0g;cal:0kcal;price:$12,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Combos & Sides,,Chole Bhature,"Spiced chickpea curry served with leavened fried bread, pickle, and chutney.",weight:0g;cal:0kcal;price:$18,/img/food-menu/chole-bhature.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Combos & Sides,,"Sarson ka Saag, Makke ki Roti","Tempered mustard greens served with cornmeal flatbread, white butter, and jaggery.",weight:0g;cal:0kcal;price:$18,/img/food-menu/sarson-ka-saag-makke-ki-roti.jpg,FALSE,FALSE,FALSE,Dairy; Gluten
 Combos & Sides,,Plain Dahi,Lightly whipped fresh yogurt.,weight:0g;cal:0kcal;price:$4,/img/food-menu/plain-dahi.jpg,FALSE,FALSE,FALSE,Dairy
