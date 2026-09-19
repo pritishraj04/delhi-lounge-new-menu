@@ -43,7 +43,6 @@ House Cocktails,Non-Alcoholic,Kiwi Fizz,"A tropical delight combining the tangy 
 House Cocktails,Non-Alcoholic,Orange Thyme Smash,"A refreshing medley of juicy orange, aromatic thyme, and bright citrus, enhanced by the sweet notes of pineapple cordial for a drink that's both invigoratin`g and satisfying.",12,/img/food-menu/imag.jpg
 House Cocktails,Non-Alcoholic,Cucumba,"A rejuvenating blend of fresh cucumber, fragrant basil, delicate elderflower, and a dash of citrus, delivering a cool and refreshing experience with every sip.",12,/img/food-menu/imag.jpg
 House Cocktails,Non-Alcoholic,Coconut On The Beach,"Virgin Mai Tai is a flavorful mix of tropical juices with a hint of lime and almond, offering a refreshing taste without alcohol.",12,/img/food-menu/imag.jpg
-
 House Cocktails,Alcoholic,Royal Vodka Sour,"A regal cocktail featuring vodka and lemon syrup, with hints of Campari and rose petals, rounded off by zesty citrus for a luxurious and refreshing experience.",17,/img/food-menu/imag.jpg
 House Cocktails,Alcoholic,Tropical City,"A vibrant concoction of rum, tropical pineapple cordial, creamy coconut, and aromatic curry leaf, balanced with Campari and citrus for a truly tropical vibe.",16,/img/food-menu/imag.jpg
 House Cocktails,Alcoholic,Guava Dark & Stormy,"A bold and refreshing drink combining the richness of rum with the tropical sweetness of pink guava, complemented by aromatic thyme and a splash of citrus.",16,/img/food-menu/imag.jpg
@@ -85,7 +84,6 @@ Wines,Red Wine,Hahn Founder's Cabernet Sauvignon,,8,/img/food-menu/imag.jpg
 Wines,Red Wine,Hahn Founder's Cabernet Sauvignon Bottle,,40,/img/food-menu/imag.jpg
 Wines,Red Wine,Hahn Founder's Pinot Noir,,8,/img/food-menu/imag.jpg
 Wines,Red Wine,Hahn Founder's Pinot Noir Bottle,,40,/img/food-menu/imag.jpg
-
 Liquors,Bourbon & Cognac,Makers Mark (Bourbon),"Makers Mark bourbon is a handcrafted classic, offering a rich balance of sweet caramel, vanilla, and a subtle oak finish for a smooth sipping experience.",15,/img/food-menu/imag.jpg
 Liquors,Bourbon & Cognac,Knob Creek (Bourbon),"Knob Creek bourbon is crafted to perfection, offering a bold flavor profile with maple syrup sweetness, nutmeg spice, and a lingering smoky finish.",16,/img/food-menu/imag.jpg
 Liquors,Bourbon & Cognac,TX Bourbon (Bourbon),"TX Bourbon delivers a bold and distinctive flavor with hints of vanilla, caramel, and a uniquely smooth finish that pays homage to its Texan roots.",15,/img/food-menu/imag.jpg
@@ -176,56 +174,60 @@ Liquors,Vodka,Belvedere Organic Vodka,"A certified organic vodka crafted in Pola
 Liquors,Vodka,Ketel One Vodka,"A smooth and versatile Dutch vodka, crafted with care and a rich heritage spanning generations.",10,/img/food-menu/imag.jpg
 Liquors,Vodka,Aspen Vodka,"A smooth and crisp American vodka inspired by the pure mountain waters of Aspen, perfect for any occasion.",10,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Rupee Beer Basmati Rice,,9,/img/food-menu/imag.jpg
-Beers (Indian),Beers (Import: India),Rupee Beer India Pale Ale (IPA),,9,/img/food-menu/imag.jpg
+Beers (Indian),Beers (Import: India),Rupee Beer India Pale Ale (IPA),,,9,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Taj Mahal,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",9,/img/food-menu/imag.jpg
 Beers (Indian),Beers (Import: India),Taj Mahal 650ML,"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India’s grandeur.",14,/img/food-menu/imag.jpg
-Beers,Beers,Miller Lite,"Miller Lite is a light American lager known for its crisp, refreshing taste.",12,/img/food-menu/imag.jpg
-Beers,Beers,Coors Lite,"Coors Lite is a crisp, light lager with a clean, refreshing taste.",12,/img/food-menu/imag.jpg
-Beers,Beers,Blue Moon,Blue Moon is a Belgian-style wheat beer brewed with orange peel and coriander for a unique flavor.,12,/img/food-menu/imag.jpg
-Beers,Beers,Two Hearted Ale,"Two Hearted Ale is an American IPA known for its bold, hoppy flavor with pine and citrus notes.",12,/img/food-menu/imag.jpg
-Beers,Beers,Fat Tire,Fat Tire is an amber ale with a balance of malt sweetness and hop bitterness.,12,/img/food-menu/imag.jpg
-Beers,Beers,Yuengling,"Yuengling is an American lager, smooth and rich with a malty sweetness.",12,/img/food-menu/imag.jpg
-Beers,Beers,Angry Orchard,Angry Orchard is a crisp and refreshing hard cider with a sweet apple flavor.,12,/img/food-menu/imag.jpg
-Beers,Beers,Sam Adams Boston Lager,Sam Adams Boston Lager is a well-balanced American lager with a rich malty flavor.,12,/img/food-menu/imag.jpg
-Beers,Beers,Sam Adams Winter Lager,"Sam Adams Winter Lager is a spiced lager brewed with cinnamon, ginger, and orange peel.",12,/img/food-menu/imag.jpg
+Beers,Beers,Miller Lite,"Miller Lite is a light American lager known for its crisp, refreshing taste.",8,/img/food-menu/imag.jpg
+Beers,Beers,Coors Lite,"Coors Lite is a crisp, light lager with a clean, refreshing taste.",10,/img/food-menu/imag.jpg
+Beers,Beers,Blue Moon,Blue Moon is a Belgian-style wheat beer brewed with orange peel and coriander for a unique flavor.,10,/img/food-menu/imag.jpg
+Beers,Beers,Two Hearted Ale,"Two Hearted Ale is an American IPA known for its bold, hoppy flavor with pine and citrus notes.",10,/img/food-menu/imag.jpg
+Beers,Beers,Fat Tire,Fat Tire is an amber ale with a balance of malt sweetness and hop bitterness.,10,/img/food-menu/imag.jpg
+Beers,Beers,Yuengling,"Yuengling is an American lager, smooth and rich with a malty sweetness.",10,/img/food-menu/imag.jpg
+Beers,Beers,Angry Orchard,Angry Orchard is a crisp and refreshing hard cider with a sweet apple flavor.,10,/img/food-menu/imag.jpg
+Beers,Beers,Sam Adams Boston Lager,Sam Adams Boston Lager is a well-balanced American lager with a rich malty flavor.,10,/img/food-menu/imag.jpg
+Beers,Beers,Sam Adams Winter Lager,"Sam Adams Winter Lager is a spiced lager brewed with cinnamon, ginger, and orange peel.",10,/img/food-menu/imag.jpg
 Beers,Beers,Manhattan Project Half Life,"Half Life is a hoppy IPA with citrus and pine notes, balanced with malt sweetness.",14,/img/food-menu/imag.jpg
-Beers,Beers,Manhattan Project Red Gate,Red Gate is a red ale with a rich malty backbone and a balanced hop profile.,14,/img/food-menu/imag.jpg
-Beers,Beers,Dadgum,Dadgum is a smooth amber ale with a caramel malt profile and a slightly hoppy finish.,12,/img/food-menu/imag.jpg
-Beers,Beers,Shiner Light,Shiner Light is a light lager with a mild malt flavor and a crisp finish.,12,/img/food-menu/imag.jpg
+Beers,Beers,Manhattan Project Red Gate,Red Gate is a red ale with a rich malty backbone and a balanced hop profile.,10,/img/food-menu/imag.jpg
+Beers,Beers,Dadgum,Dadgum is a smooth amber ale with a caramel malt profile and a slightly hoppy finish.,10,/img/food-menu/imag.jpg
+Beers,Beers,Shiner Light,Shiner Light is a light lager with a mild malt flavor and a crisp finish.,10,/img/food-menu/imag.jpg
 Beers,Beers,Taj Mahal (Bottle),"Taj Mahal is a premium lager from India, offering a crisp and smooth flavor with subtle hints of malt and hops. A perfect beer to enjoy on a warm day, embodying the spirit of India's grandeur.",9,/img/food-menu/imag.jpg
-Beers,Beers,Shiner Bock,Shiner Bock is a dark amber lager with a rich malt flavor and subtle hop bitterness.,12,/img/food-menu/imag.jpg
-Beers,Beers,Dry Hopped,"Dry Hopped is an IPA with bold hop flavors and a crisp, refreshing finish.",12,/img/food-menu/imag.jpg
-Beers,Beers,50FT Jackrabbit,50 ft Jackrabbit is a strong IPA with a bold hoppy flavor and a smooth malt body.,12,/img/food-menu/imag.jpg
-Beers,Beers,Fire Ant Funeral,Fire Ant Funeral is a bold IPA with a hoppy bite and a crisp finish.,12,/img/food-menu/imag.jpg
-Beers,Beers,Union Bear No Coast IPA,"No Coast IPA is a balanced IPA with citrus and pine notes, smooth bitterness.",12,/img/food-menu/imag.jpg
-Beers,Beers,Union Bear German Pilsner,German Pilsner is a crisp and refreshing lager with a delicate hop bitterness.,12,/img/food-menu/imag.jpg
-Beers,Beers,Union Bear Hefenweizen,Hefeweizen is a cloudy wheat beer with a fruity aroma and smooth malt finish.,12,/img/food-menu/imag.jpg
+Beers,Beers,Shiner Bock,Shiner Bock is a dark amber lager with a rich malt flavor and subtle hop bitterness.,10,/img/food-menu/imag.jpg
+Beers,Beers,Dry Hopped,"Dry Hopped is an IPA with bold hop flavors and a crisp, refreshing finish.",10,/img/food-menu/imag.jpg
+Beers,Beers,50FT Jackrabbit,50 ft Jackrabbit is a strong IPA with a bold hoppy flavor and a smooth malt body.,10,/img/food-menu/imag.jpg
+Beers,Beers,Fire Ant Funeral,Fire Ant Funeral is a bold IPA with a hoppy bite and a crisp finish.,10,/img/food-menu/imag.jpg
+Beers,Beers,Union Bear No Coast IPA,"No Coast IPA is a balanced IPA with citrus and pine notes, smooth bitterness.",10,/img/food-menu/imag.jpg
+Beers,Beers,Union Bear German Pilsner,German Pilsner is a crisp and refreshing lager with a delicate hop bitterness.,10,/img/food-menu/imag.jpg
+Beers,Beers,Union Bear Hefenweizen,Hefeweizen is a cloudy wheat beer with a fruity aroma and smooth malt finish.,10,/img/food-menu/imag.jpg
 Beers,Beers,Dos Equis (Bottle),"Dos Equis is a well-known Mexican lager, light and crisp with subtle malt flavors.",7,/img/food-menu/imag.jpg
-Beers,Beers,Modelo Negra,Modelo Negra is a dark lager with rich malt flavors and a smooth finish.,12,/img/food-menu/imag.jpg
+Beers,Beers,Modelo Negra,Modelo Negra is a dark lager with rich malt flavors and a smooth finish.,10,/img/food-menu/imag.jpg
 Beers,Beers,Rupee Beer Basmati Rice,,9,/img/food-menu/imag.jpg
 Beers,Beers,Rupee Beer India Pale Ale (IPA),,9,/img/food-menu/imag.jpg
 Beers,Beers,Modelo (Bottle),,7,/img/food-menu/imag.jpg
-Beers,Beers,Modelo Especial,"Modelo Especial is a crisp, golden pilsner-style lager with a refreshing taste.",12,/img/food-menu/imag.jpg
-Beers,Beers,Nimbu Bot Lager,"Nimbu Bot Lager is a unique lager infused with the refreshing taste of lime, offering a zesty twist on traditional beer.",12,/img/food-menu/imag.jpg
-Beers,Beers,X Roads Coriander Blonde Ale,,12,/img/food-menu/imag.jpg
-Beers,Beers,Stella Artois (Bottle),Stella Artois is a classic Belgian lager with a balanced flavor and crisp finish.,7,/img/food-menu/imag.jpg
-Beers,Beers,Heineken,"Heineken is a pale lager with a light, crisp taste and a mild bitterness.",12,/img/food-menu/imag.jpg
-Beers,Beers,Trinity Cider,Trinity Cider is a refreshing hard cider with crisp apple flavors and a dry finish.,13,/img/food-menu/imag.jpg
+Beers,Beers,Modelo Especial,"Modelo Especial is a crisp, golden pilsner-style lager with a refreshing taste.",10,/img/food-menu/imag.jpg
+Beers,Beers,Nimbu Bot Lager,"Nimbu Bot Lager is a unique lager infused with the refreshing taste of lime, offering a zesty twist on traditional beer.",10,/img/food-menu/imag.jpg
+Beers,Beers,X Roads Coriander Blonde Ale,,10,/img/food-menu/imag.jpg
+Beers,Beers,Stella Artois (Bottle),Stella Artois is a classic Belgian lager with a balanced flavor and crisp finish.,10,/img/food-menu/imag.jpg
+Beers,Beers,Heineken,"Heineken is a pale lager with a light, crisp taste and a mild bitterness.",10,/img/food-menu/imag.jpg
+Beers,Beers,Trinity Cider,Trinity Cider is a refreshing hard cider with crisp apple flavors and a dry finish.,10,/img/food-menu/imag.jpg
 Beers,Beers,Garage Beer,Garage Beer is a full-bodied craft beer with malty sweetness and hop bitterness.,12,/img/food-menu/imag.jpg
-Beers,Beers,Texas Blood Orange IPA,Texas Blood Orange IPA is a citrusy IPA with bold hop flavors and a tangy blood orange twist.,13,/img/food-menu/imag.jpg
-Beers,Beers,Manhattan Projetc Necessary Evil,"Necessary Evil is a smooth, rich stout with chocolate and coffee notes.",14,/img/food-menu/imag.jpg
-Beers,Beers,New Belgium 154,New Belgium 154 is a malty amber beer with a well-balanced flavor and smooth finish.,13,/img/food-menu/imag.jpg
-Beers,Beers,Revolver Blood & Honey,"Revolver Brewing offers a variety of craft beers, known for bold, full-bodied flavors.",13,/img/food-menu/imag.jpg
-Beers,Beers,Yuengling Flight,"Yuengling Flight is a light lager with a crisp, refreshing taste and low calories.",12,/img/food-menu/imag.jpg
-Beers,Beers,El Chingo,El Chingo is a crisp and refreshing Mexican lager with subtle malt sweetness.,12,/img/food-menu/imag.jpg
-Beers,Beers,Pacifico,"Pacifico is a light, crisp lager brewed with a smooth, slightly sweet finish.",12,/img/food-menu/imag.jpg
-Beers,Beers,Corona,"Corona is a pale lager known for its light, refreshing taste and smooth finish.",12,/img/food-menu/imag.jpg
+Beers,Beers,Texas Blood Orange IPA,Texas Blood Orange IPA is a citrusy IPA with bold hop flavors and a tangy blood orange twist.,10,/img/food-menu/imag.jpg
+Beers,Beers,Manhattan Projetc Necessary Evil,"Necessary Evil is a smooth, rich stout with chocolate and coffee notes.",10,/img/food-menu/imag.jpg
+Beers,Beers,New Belgium 154,New Belgium 154 is a malty amber beer with a well-balanced flavor and smooth finish.,10,/img/food-menu/imag.jpg
+Beers,Beers,Revolver Blood & Honey,"Revolver Brewing offers a variety of craft beers, known for bold, full-bodied flavors.",10,/img/food-menu/imag.jpg
+Beers,Beers,Yuengling Flight,"Yuengling Flight is a light lager with a crisp, refreshing taste and low calories.",10,/img/food-menu/imag.jpg
+Beers,Beers,El Chingo,El Chingo is a crisp and refreshing Mexican lager with subtle malt sweetness.,10,/img/food-menu/imag.jpg
+Beers,Beers,Pacifico,"Pacifico is a light, crisp lager brewed with a smooth, slightly sweet finish.",10,/img/food-menu/imag.jpg
+Beers,Beers,Corona,"Corona is a pale lager known for its light, refreshing taste and smooth finish.",10,/img/food-menu/imag.jpg
 Beers,Beers,Corona (Non-Alcoholic),Corona Non-Alcoholic,5,/img/food-menu/imag.jpg
-Beers,Beers,Corona Premier,"Corona Premier is a light lager with a crisp, clean flavor and fewer calories.",12,/img/food-menu/imag.jpg
-Beers,Beers,Seriously Fun Beer,"Seriously Fun Beer is a light, crisp, and easy-drinking beer with a fun personality.",8,/img/food-menu/imag.jpg
-Beers,Beers,Dos Equis,,12,/img/food-menu/imag.jpg
+Beers,Beers,Corona Premier,"Corona Premier is a light lager with a crisp, clean flavor and fewer calories.",10,/img/food-menu/imag.jpg
+Beers,Beers,Seriously Fun Beer,"Seriously Fun Beer is a light, crisp, and easy-drinking beer with a fun personality.",10,/img/food-menu/imag.jpg
+Beers,Beers,Dos Equis,,10,/img/food-menu/imag.jpg
 Beers,Beers,Dragons Milk (Milk Stout) (Bottle),"Dragons Milk is a rich and creamy milk stout with smooth chocolate and caramel notes, balanced with subtle hop bitterness for a decadent drinking experience.",10,/img/food-menu/imag.jpg
 Beers,Beers,Vodoo Ranger IPA (Draft),"Vodoo Ranger IPA is a bold and complex IPA with strong hop character, featuring citrus and pine notes that deliver a powerful and refreshing experience.",12,/img/food-menu/imag.jpg
+Beers,Beers,Abita Amber,,10,/img/food-menu/imag.jpg
+Beers,Beers,Garage Lime,,10,/img/food-menu/imag.jpg
+Beers,Beers,Hazy Half Life,,10,/img/food-menu/imag.jpg
+Beers,Beers,Peroni,,10,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke,,4,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke,,4,/img/food-menu/imag.jpg
 Soft Drinks,Soft Drinks,Coke Zero,,4,/img/food-menu/imag.jpg
