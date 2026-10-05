@@ -15,7 +15,6 @@ Appetizers,Vegetarian,Bhutte ki Seekh,Chargrilled corn skewers brushed with chil
 Appetizers,Vegetarian,Truffle Malai Broccoli,"Tender broccoli marinated in cream and cheese, finished with aromatic truffle oil.",weight:0g;cal:0kcal;price:$18,/img/food-menu/truffle-malai-broccoli.jpg,FALSE,FALSE,FALSE,Nuts; Dairy
 Appetizers,Vegetarian,Anjeer & Walnut Stuffed Dahi Kebab,Crumbed silken dahi kebab with anjeer and toasted walnut stuffing.,weight:0g;cal:0kcal;price:$20,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy; Nuts
 Appetizers,Vegetarian,Tandoori Bharwa Mushrooms,Tandoor-charred mushrooms with masala ricotta stuffing.,weight:0g;cal:0kcal;price:$18,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,Dairy
-
 Appetizers,Non-Vegetarian,Chili-Lime Tandoori Pomfret,"Whole pomfret marinated in a zesty spiced yogurt, grilled and served with lime-pepper chutney.",weight:0g;cal:0kcal;price:$28,/img/food-menu/chili-lime-tandoori-pomfret.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chicken Tikka,Juicy chicken morsels marinated in spiced yogurt and chargrilled.,weight:0g;cal:0kcal;price:$22,/img/food-menu/chicken-tikka.jpg,FALSE,FALSE,FALSE,Dairy
 Appetizers,Non-Vegetarian,Chicken Malai Tikka,"Creamy, mildly spiced chicken tikka with a soft, smoky finish.",weight:0g;cal:0kcal;price:$22,/img/food-menu/chicken-malai-tikka.jpg,FALSE,FALSE,FALSE,Dairy
@@ -47,7 +46,7 @@ Entrées,Non-Vegetarian,Patiala Goat Curry,Punjabi-style slow-cooked goat in a y
 Entrées,Non-Vegetarian,Goat Rarah,Goat on the bone cooked with minced goat meat and robust spices.,weight:0g;cal:0kcal;price:$30,/img/food-menu/goat-rarah.jpg,FALSE,FALSE,FALSE,Dairy
 Entrées,Non-Vegetarian,Chittaranjan Park Fish Curry,Charred tilapia in a Bengali curry with aromatic spices.,weight:0g;cal:0kcal;price:$24,/img/food-menu/imag.jpg,FALSE,FALSE,FALSE,
 Entrées,Non-Vegetarian,Chicken Khurchan,"Shredded chicken tossed with vibrant bell peppers, onions, and a tangy tomato masala.",weight:0g;cal:0kcal;price:$24,/img/food-menu/chicken-khurchan.jpg,FALSE,FALSE,FALSE,Dairy
-Specialty,Pre-Order,TDL Imperial Raan (48-hour's notice required),"Leg of spring lamb slow-cooked for 24 hours, finished with toasted pine nuts.",weight:0g;cal:0kcal;price:$125,/img/food-menu/tdl-imperial-raan2.jpg,FALSE,FALSE,FALSE,Nuts; Dairy; Gluten
+Specialty,Pre-Order,TDL Imperial Raan (48-hour's notice required),"Leg of spring lamb slow-cooked for 24 hours, finished with toasted pine nuts.",weight:0g;cal:0kcal;price:$125,/img/food-menu/imperial-raan2.jpg,FALSE,FALSE,FALSE,Nuts; Dairy; Gluten
 Rice,,Jeera Rice,"Spiced Indian rice with cumin seeds.",weight:0g;cal:0kcal;price:$6,/img/food-menu/jeera-rice.jpg,FALSE,FALSE,TRUE,Dairy
 Rice,,Dum Jackfruit Pulao,"Spiced jackfruit layered with fragrant basmati rice, served with kachumber raita.",weight:0g;cal:0kcal;price:$22,/img/food-menu/dum-jackfruit-pulao.jpg,FALSE,FALSE,FALSE,Dairy
 Rice,,Awadhi Chicken Biryani,"Aromatic basmati rice layered with tender chicken, served with kachumber raita.",weight:0g;cal:0kcal;price:$24,/img/food-menu/awadhi-chicken-biryani.jpg,FALSE,FALSE,FALSE,Dairy
